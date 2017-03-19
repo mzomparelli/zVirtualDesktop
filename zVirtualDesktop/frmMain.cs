@@ -96,6 +96,7 @@ namespace zVirtualDesktop
                 }
 
                 SystemTray.Visible = true;
+              
             }
             catch (Exception ex)
             {
@@ -105,6 +106,35 @@ namespace zVirtualDesktop
 
         }
 
+        private void CreateDesktopMenu()
+        {
+            Desktops = VirtualDesktop.GetDesktops();
+            mnuSwitchDesktop.DropDownItems.Clear();
+
+
+            for (int i = 0; i < Desktops.Count(); i++)
+            {
+                ToolStripMenuItem mnu = new ToolStripMenuItem();
+                mnu.Text = "Desktop " + (i + 1).ToString();
+                mnu.Tag = i + 1;
+                mnu.Click += DesktopMenu_Click;
+                if (GetDesktopNumber(VirtualDesktop.Current.Id) == i + 1)
+                {
+                    mnu.CheckState = CheckState.Checked;
+                }else
+                {
+                    mnu.CheckState = CheckState.Unchecked;
+                }
+              
+                mnuSwitchDesktop.DropDownItems.Add(mnu);
+            }
+        }
+
+        private void DesktopMenu_Click(object sender, EventArgs e)
+        {
+            ToolStripMenuItem mnu = (ToolStripMenuItem)sender;
+            GoToDesktop((int)mnu.Tag);
+        }
 
         private void frmMain_Load(object sender, EventArgs e)
         {
@@ -425,7 +455,15 @@ namespace zVirtualDesktop
         {
             SetSystemTrayIcon();
         }
-   
 
+        private void mnuSwitchDesktop_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SystemTrayMenu_Opening(object sender, CancelEventArgs e)
+        {
+            CreateDesktopMenu();
+        }
     }
 }
