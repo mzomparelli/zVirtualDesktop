@@ -9,9 +9,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>zVirtualDesktop</RootNamespace>
     <AssemblyName>zVirtualDesktop</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -26,11 +27,16 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
+    <Optimize>false</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="PresentationCore" />
@@ -97,6 +103,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="app.manifest" />
+    <None Include="bin\Debug\zVirtualDesktop.exe.config" />
+    <None Include="bin\Release\zVirtualDesktop.exe.config" />
+    <None Include="bin\Release\zVirtualDesktop.vshost.exe.config" />
+    <None Include="bin\Release\zVirtualDesktop.vshost.exe.manifest" />
+    <None Include="bin\Release\zVirtualDesktop.zip" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -112,6 +124,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Debug\zVirtualDesktop.exe" />
+    <Content Include="bin\Debug\zVirtualDesktop.pdb" />
+    <Content Include="bin\Release\zVirtualDesktop.exe" />
+    <Content Include="bin\Release\zVirtualDesktop.pdb" />
+    <Content Include="bin\Release\zVirtualDesktop.vshost.exe" />
     <Content Include="Icons\10.ico" />
     <Content Include="Icons\11.ico" />
     <Content Include="Icons\12.ico" />
