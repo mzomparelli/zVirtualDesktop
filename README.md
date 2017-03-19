@@ -1,14 +1,14 @@
 # zVirtualDesktop
 Windows 10 Virtual Desktop Hotkeys and System Tray Icon
 
-##Navigate Desktops:##  
-WIN+ALT+Numpad
+__Navigate Desktops:__  
+<kbd>WIN</kbd>+<kbd>ALT</kbd>+<kbd>Numpad</kbd>
 
-##Move Windows:##  
-WIN+CTRL+Numpad
+__Move Windows:__  
+<kbd>WIN</kbd>+<kbd>CTRL</kbd>+<kbd>Numpad</kbd>
 
-##Pin/Unpin Windows:##  
-WIN+ALT+Z
+__Pin/Unpin Windows:__  
+<kbd>WIN</kbd>+<kbd>ALT</kbd>+<kbd>Z</kbd>
 
 ![](https://github.com/mzomparelli/zVirtualDesktop/blob/master/Screenshot.png?raw=true)
 
