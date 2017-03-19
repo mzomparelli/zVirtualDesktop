@@ -412,8 +412,12 @@ namespace zVirtualDesktop
         {
             if (!ExitClicked)
             {
-                e.Cancel = true;
-                HideSettings();
+                if (Globals.GetSystemMetrics(Globals.SystemMetric.SM_SHUTTINGDOWN) == 0)
+                {
+                    e.Cancel = true;
+                    HideSettings();
+                }
+               
             }
         }
 
