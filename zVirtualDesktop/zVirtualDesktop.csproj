@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{58E2CC1A-B2D0-4B18-B893-B1848E58A337}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>zVirtualDesktop</RootNamespace>
+    <AssemblyName>zVirtualDesktop</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationHelper.cs" />
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Globals.cs" />
+    <Compile Include="Hotkey.cs" />
+    <Compile Include="Internal\Disposable.cs" />
+    <Compile Include="Internal\RawWindow.cs" />
+    <Compile Include="Internal\TransparentWindow.cs" />
+    <Compile Include="Interop\CLSID.cs" />
+    <Compile Include="Interop\ComObjects.cs" />
+    <Compile Include="Interop\HResult.cs" />
+    <Compile Include="Interop\IApplicationView.cs" />
+    <Compile Include="Interop\IApplicationViewCollection.cs" />
+    <Compile Include="Interop\IObjectArray.cs" />
+    <Compile Include="Interop\IServiceProvider.cs" />
+    <Compile Include="Interop\IVirtualDesktop.cs" />
+    <Compile Include="Interop\IVirtualDesktopManager.cs" />
+    <Compile Include="Interop\IVirtualDesktopManagerInternal.cs" />
+    <Compile Include="Interop\IVirtualDesktopNotification.cs" />
+    <Compile Include="Interop\IVirtualDesktopNotificationService.cs" />
+    <Compile Include="Interop\IVirtualDesktopPinnedApps.cs" />
+    <Compile Include="Interop\NativeMethods.cs" />
+    <Compile Include="Interop\VirtualDesktopManagerInternal.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VirtualDesktop.cs" />
+    <Compile Include="VirtualDesktop.static.cs" />
+    <Compile Include="VirtualDesktop.static.notification.cs" />
+    <Compile Include="VirtualDesktop.static.pin.cs" />
+    <Compile Include="VirtualDesktopChangedEventArgs.cs" />
+    <Compile Include="VirtualDesktopDestroyEventArgs.cs" />
+    <Compile Include="VirtualDesktopHelper.cs" />
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="VirtualDesktop.nuspec" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icons\10.ico" />
+    <Content Include="Icons\11.ico" />
+    <Content Include="Icons\12.ico" />
+    <Content Include="Icons\13.ico" />
+    <Content Include="Icons\14.ico" />
+    <Content Include="Icons\15.ico" />
+    <Content Include="Icons\16.ico" />
+    <Content Include="Icons\17.ico" />
+    <Content Include="Icons\18.ico" />
+    <Content Include="Icons\19.ico" />
+    <Content Include="Icons\20.ico" />
+    <Content Include="Icons\check.ico" />
+    <Content Include="Icons\number_0_blue.ico" />
+    <Content Include="Icons\number_0_green.ico" />
+    <Content Include="Icons\number_1_blue.ico" />
+    <Content Include="Icons\number_1_green.ico" />
+    <Content Include="Icons\number_2_blue.ico" />
+    <Content Include="Icons\number_2_green.ico" />
+    <Content Include="Icons\number_3_blue.ico" />
+    <Content Include="Icons\number_3_green.ico" />
+    <Content Include="Icons\number_4_blue.ico" />
+    <Content Include="Icons\number_4_green.ico" />
+    <Content Include="Icons\number_5_blue.ico" />
+    <Content Include="Icons\number_5_green.ico" />
+    <Content Include="Icons\number_6_blue.ico" />
+    <Content Include="Icons\number_6_green.ico" />
+    <Content Include="Icons\number_7_blue.ico" />
+    <Content Include="Icons\number_7_green.ico" />
+    <Content Include="Icons\number_8_blue.ico" />
+    <Content Include="Icons\number_8_green.ico" />
+    <Content Include="Icons\number_9_blue.ico" />
+    <Content Include="Icons\number_9_green.ico" />
+    <Content Include="Icons\st_0.ico" />
+    <Content Include="Icons\st_1.ico" />
+    <Content Include="Icons\st_2.ico" />
+    <Content Include="Icons\st_3.ico" />
+    <Content Include="Icons\st_4.ico" />
+    <Content Include="Icons\st_5.ico" />
+    <Content Include="Icons\st_6.ico" />
+    <Content Include="Icons\st_7.ico" />
+    <Content Include="Icons\st_8.ico" />
+    <Content Include="Icons\st_9.ico" />
+    <Content Include="Icons\st_dis_1.ico" />
+    <Content Include="Icons\st_dis_2.ico" />
+    <Content Include="Icons\st_ne_1.ico" />
+    <Content Include="Icons\st_ne_2.ico" />
+    <Content Include="Icons\st_nw_1.ico" />
+    <Content Include="Icons\st_nw_2.ico" />
+    <Content Include="Icons\st_se_1.ico" />
+    <Content Include="Icons\st_se_2.ico" />
+    <Content Include="Icons\st_sw_1.ico" />
+    <Content Include="Icons\st_sw_2.ico" />
+    <Content Include="Icons\virtuawin.ico" />
+    <Content Include="VirtualDesktop.csproj" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
