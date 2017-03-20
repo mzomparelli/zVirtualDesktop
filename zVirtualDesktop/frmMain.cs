@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO.IsolatedStorage;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,7 +14,9 @@ namespace zVirtualDesktop
 {
     public partial class frmMain : Form
     {
-        
+
+        public IsolatedStorageFile storage = IsolatedStorageFile.GetUserStoreForAssembly();
+
 
         public Hotkey keyGoTo01 = new Hotkey(1);
         public Hotkey keyGoTo02 = new Hotkey(2);
@@ -60,6 +63,277 @@ namespace zVirtualDesktop
 
         public void SetSystemTrayIcon()
         {
+            
+            switch(cmbIcons.Text)
+            {
+                case "Green":
+                    SystemTrayGreen();
+                    break;
+                case "Blue":
+                    SystemTrayBlue();
+                    break;
+                case "Digital Clock":
+                    SystemTrayDigitalClock();
+                    break;
+                case "Red Orb":
+                    SystemTrayRedOrb();
+                    break;
+                case "White Box":
+                    SystemTrayWhiteBox();
+                    break;
+                case "Black Box":
+                    SystemTrayBlackBox();
+                    break;
+            }
+        }
+
+        private void SystemTrayBlackBox()
+        {
+            try
+            {
+                VirtualDesktop current = VirtualDesktop.Current;
+                int i = GetDesktopNumber(current.Id);
+                switch (i)
+                {
+                    case 1:
+                        SystemTray.Icon = Properties.Resources.Windows_8_Numbers_1_Black;
+                        break;
+                    case 2:
+                        SystemTray.Icon = Properties.Resources.Windows_8_Numbers_2_Black;
+                        break;
+                    case 3:
+                        SystemTray.Icon = Properties.Resources.Windows_8_Numbers_3_Black;
+                        break;
+                    case 4:
+                        SystemTray.Icon = Properties.Resources.Windows_8_Numbers_4_Black;
+                        break;
+                    case 5:
+                        SystemTray.Icon = Properties.Resources.Windows_8_Numbers_5_Black;
+                        break;
+                    case 6:
+                        SystemTray.Icon = Properties.Resources.Windows_8_Numbers_6_Black;
+                        break;
+                    case 7:
+                        SystemTray.Icon = Properties.Resources.Windows_8_Numbers_7_Black;
+                        break;
+                    case 8:
+                        SystemTray.Icon = Properties.Resources.Windows_8_Numbers_8_Black;
+                        break;
+                    case 9:
+                        SystemTray.Icon = Properties.Resources.Windows_8_Numbers_9_Black;
+                        break;
+                }
+
+                SystemTray.Visible = true;
+
+            }
+            catch (Exception ex)
+            {
+                SystemTray.Icon = Properties.Resources.Windows_8_Numbers_1_Black;
+                MessageBox.Show("An error occured setting the system tray icon. See additional details below." + Environment.NewLine + Environment.NewLine +
+                    ex.Message + Environment.NewLine +
+                    ex.Source + "::" + ex.TargetSite.Name);
+            }
+        }
+
+        private void SystemTrayWhiteBox()
+        {
+            try
+            {
+                VirtualDesktop current = VirtualDesktop.Current;
+                int i = GetDesktopNumber(current.Id);
+                switch (i)
+                {
+                    case 1:
+                        SystemTray.Icon = Properties.Resources.Windows_8_Numbers_1;
+                        break;
+                    case 2:
+                        SystemTray.Icon = Properties.Resources.Windows_8_Numbers_2;
+                        break;
+                    case 3:
+                        SystemTray.Icon = Properties.Resources.Windows_8_Numbers_3;
+                        break;
+                    case 4:
+                        SystemTray.Icon = Properties.Resources.Windows_8_Numbers_4;
+                        break;
+                    case 5:
+                        SystemTray.Icon = Properties.Resources.Windows_8_Numbers_5;
+                        break;
+                    case 6:
+                        SystemTray.Icon = Properties.Resources.Windows_8_Numbers_6;
+                        break;
+                    case 7:
+                        SystemTray.Icon = Properties.Resources.Windows_8_Numbers_7;
+                        break;
+                    case 8:
+                        SystemTray.Icon = Properties.Resources.Windows_8_Numbers_8;
+                        break;
+                    case 9:
+                        SystemTray.Icon = Properties.Resources.Windows_8_Numbers_9;
+                        break;
+                }
+
+                SystemTray.Visible = true;
+
+            }
+            catch (Exception ex)
+            {
+                SystemTray.Icon = Properties.Resources.Windows_8_Numbers_1;
+                MessageBox.Show("An error occured setting the system tray icon. See additional details below." + Environment.NewLine + Environment.NewLine +
+                    ex.Message + Environment.NewLine +
+                    ex.Source + "::" + ex.TargetSite.Name);
+            }
+        }
+
+        private void SystemTrayRedOrb()
+        {
+            try
+            {
+                VirtualDesktop current = VirtualDesktop.Current;
+                int i = GetDesktopNumber(current.Id);
+                switch (i)
+                {
+                    case 1:
+                        SystemTray.Icon = Properties.Resources.Red_Orb_Alphabet_Number_1;
+                        break;
+                    case 2:
+                        SystemTray.Icon = Properties.Resources.Red_Orb_Alphabet_Number_2;
+                        break;
+                    case 3:
+                        SystemTray.Icon = Properties.Resources.Red_Orb_Alphabet_Number_3;
+                        break;
+                    case 4:
+                        SystemTray.Icon = Properties.Resources.Red_Orb_Alphabet_Number_4;
+                        break;
+                    case 5:
+                        SystemTray.Icon = Properties.Resources.Red_Orb_Alphabet_Number_5;
+                        break;
+                    case 6:
+                        SystemTray.Icon = Properties.Resources.Red_Orb_Alphabet_Number_6;
+                        break;
+                    case 7:
+                        SystemTray.Icon = Properties.Resources.Red_Orb_Alphabet_Number_7;
+                        break;
+                    case 8:
+                        SystemTray.Icon = Properties.Resources.Red_Orb_Alphabet_Number_8;
+                        break;
+                    case 9:
+                        SystemTray.Icon = Properties.Resources.Red_Orb_Alphabet_Number_9;
+                        break;
+                }
+
+                SystemTray.Visible = true;
+
+            }
+            catch (Exception ex)
+            {
+                SystemTray.Icon = Properties.Resources.Red_Orb_Alphabet_Number_1;
+                MessageBox.Show("An error occured setting the system tray icon. See additional details below." + Environment.NewLine + Environment.NewLine +
+                    ex.Message + Environment.NewLine +
+                    ex.Source + "::" + ex.TargetSite.Name);
+            }
+        }
+
+        private void SystemTrayDigitalClock()
+        {
+            try
+            {
+                VirtualDesktop current = VirtualDesktop.Current;
+                int i = GetDesktopNumber(current.Id);
+                switch (i)
+                {
+                    case 1:
+                        SystemTray.Icon = Properties.Resources.st_1;
+                        break;
+                    case 2:
+                        SystemTray.Icon = Properties.Resources.st_2;
+                        break;
+                    case 3:
+                        SystemTray.Icon = Properties.Resources.st_3;
+                        break;
+                    case 4:
+                        SystemTray.Icon = Properties.Resources.st_4;
+                        break;
+                    case 5:
+                        SystemTray.Icon = Properties.Resources.st_5;
+                        break;
+                    case 6:
+                        SystemTray.Icon = Properties.Resources.st_6;
+                        break;
+                    case 7:
+                        SystemTray.Icon = Properties.Resources.st_7;
+                        break;
+                    case 8:
+                        SystemTray.Icon = Properties.Resources.st_8;
+                        break;
+                    case 9:
+                        SystemTray.Icon = Properties.Resources.st_9;
+                        break;
+                }
+
+                SystemTray.Visible = true;
+
+            }
+            catch (Exception ex)
+            {
+                SystemTray.Icon = Properties.Resources.st_1;
+                MessageBox.Show("An error occured setting the system tray icon. See additional details below." + Environment.NewLine + Environment.NewLine +
+                    ex.Message + Environment.NewLine +
+                    ex.Source + "::" + ex.TargetSite.Name);
+            }
+        }
+
+        private void SystemTrayBlue()
+        {
+            try
+            {
+                VirtualDesktop current = VirtualDesktop.Current;
+                int i = GetDesktopNumber(current.Id);
+                switch (i)
+                {
+                    case 1:
+                        SystemTray.Icon = Properties.Resources.number_1_blue;
+                        break;
+                    case 2:
+                        SystemTray.Icon = Properties.Resources.number_2_blue;
+                        break;
+                    case 3:
+                        SystemTray.Icon = Properties.Resources.number_3_blue;
+                        break;
+                    case 4:
+                        SystemTray.Icon = Properties.Resources.number_4_blue;
+                        break;
+                    case 5:
+                        SystemTray.Icon = Properties.Resources.number_5_blue;
+                        break;
+                    case 6:
+                        SystemTray.Icon = Properties.Resources.number_6_blue;
+                        break;
+                    case 7:
+                        SystemTray.Icon = Properties.Resources.number_7_blue;
+                        break;
+                    case 8:
+                        SystemTray.Icon = Properties.Resources.number_8_blue;
+                        break;
+                    case 9:
+                        SystemTray.Icon = Properties.Resources.number_9_blue;
+                        break;
+                }
+
+                SystemTray.Visible = true;
+
+            }
+            catch (Exception ex)
+            {
+                SystemTray.Icon = Properties.Resources.number_1_blue;
+                MessageBox.Show("An error occured setting the system tray icon. See additional details below." + Environment.NewLine + Environment.NewLine +
+                    ex.Message + Environment.NewLine +
+                    ex.Source + "::" + ex.TargetSite.Name);
+            }
+        }
+
+        private void SystemTrayGreen()
+        {
             try
             {
                 VirtualDesktop current = VirtualDesktop.Current;
@@ -96,14 +370,15 @@ namespace zVirtualDesktop
                 }
 
                 SystemTray.Visible = true;
-              
+
             }
             catch (Exception ex)
             {
                 SystemTray.Icon = Properties.Resources.number_1_green;
-                MessageBox.Show("An error occured setting the system tray icon. See additional details below." + Environment.NewLine + Environment.NewLine + ex.Message + Environment.NewLine + ex.Source + "::" + ex.TargetSite.Name);
+                MessageBox.Show("An error occured setting the system tray icon. See additional details below." + Environment.NewLine + Environment.NewLine +
+                    ex.Message + Environment.NewLine +
+                    ex.Source + "::" + ex.TargetSite.Name);
             }
-
         }
 
         private void CreateDesktopMenu()
@@ -143,7 +418,7 @@ namespace zVirtualDesktop
                 this.Opacity = 0;
                 this.ShowInTaskbar = false;
                 RegisterHotKeys();
-
+                LoadSettings();
                 //Make sure there are at least 9 desktops.
                 int diff = Math.Abs(Desktops.Count() - 9);
                 for (int i = 1; i <= diff; i += 1)
@@ -247,7 +522,9 @@ namespace zVirtualDesktop
             }
             catch (Exception ex)
             {
-                MessageBox.Show("An error occured pinning or unpinning the specified window. See additional details below." + Environment.NewLine + Environment.NewLine + ex.Message + Environment.NewLine + ex.Source + "::" + ex.TargetSite.Name);
+                MessageBox.Show("An error occured pinning or unpinning the specified window. See additional details below." + Environment.NewLine + Environment.NewLine + 
+                    ex.Message + Environment.NewLine + 
+                    ex.Source + "::" + ex.TargetSite.Name);
             }
 
         }
@@ -268,7 +545,9 @@ namespace zVirtualDesktop
             }
             catch (Exception ex)
             {
-                MessageBox.Show("An error occured identifying the desktop number. See additional details below." + Environment.NewLine + Environment.NewLine + ex.Message + Environment.NewLine + ex.Source + "::" + ex.TargetSite.Name);
+                MessageBox.Show("An error occured identifying the desktop number. See additional details below." + Environment.NewLine + Environment.NewLine + 
+                    ex.Message + Environment.NewLine + 
+                    ex.Source + "::" + ex.TargetSite.Name);
                 return 1;
             }
 
@@ -310,7 +589,9 @@ namespace zVirtualDesktop
             }
             catch (Exception ex)
             {
-                MessageBox.Show("An error occured navigating to the specified desktop. See additional details below." + Environment.NewLine + Environment.NewLine + ex.Message + Environment.NewLine + ex.Source + "::" + ex.TargetSite.Name);
+                MessageBox.Show("An error occured navigating to the specified desktop. See additional details below." + Environment.NewLine + Environment.NewLine + 
+                    ex.Message + Environment.NewLine + 
+                    ex.Source + "::" + ex.TargetSite.Name);
             }
 
 
@@ -351,7 +632,9 @@ namespace zVirtualDesktop
             }
             catch (Exception ex)
             {
-                MessageBox.Show("An error occured moving the specified window. See additional details below." + Environment.NewLine + Environment.NewLine + ex.Message + Environment.NewLine + ex.Source + "::" + ex.TargetSite.Name);
+                MessageBox.Show("An error occured moving the specified window. See additional details below." + Environment.NewLine + Environment.NewLine + 
+                    ex.Message + Environment.NewLine + 
+                    ex.Source + "::" + ex.TargetSite.Name);
             }
 
 
@@ -395,6 +678,7 @@ namespace zVirtualDesktop
 
         private void btnApply_Click(object sender, EventArgs e)
         {
+            SaveSettings();
             HideSettings();
         }
 
@@ -408,7 +692,9 @@ namespace zVirtualDesktop
             }
             catch (Exception ex)
             {
-                MessageBox.Show("An error occured showing the settings window. See additional details below." + Environment.NewLine + Environment.NewLine + ex.Message + Environment.NewLine + ex.Source + "::" + ex.TargetSite.Name);
+                MessageBox.Show("An error occured showing the settings window. See additional details below." + Environment.NewLine + Environment.NewLine + 
+                    ex.Message + Environment.NewLine + 
+                    ex.Source + "::" + ex.TargetSite.Name);
             }
         }
 
@@ -422,7 +708,9 @@ namespace zVirtualDesktop
             }
             catch (Exception ex)
             {
-                MessageBox.Show("An error occured hiding the settings window. See additional details below." + Environment.NewLine + Environment.NewLine + ex.Message + Environment.NewLine + ex.Source + "::" + ex.TargetSite.Name);
+                MessageBox.Show("An error occured hiding the settings window. See additional details below." + Environment.NewLine + Environment.NewLine + 
+                    ex.Message + Environment.NewLine + 
+                    ex.Source + "::" + ex.TargetSite.Name);
             }
         }
 
@@ -464,6 +752,41 @@ namespace zVirtualDesktop
         private void SystemTrayMenu_Opening(object sender, CancelEventArgs e)
         {
             CreateDesktopMenu();
+        }
+
+        private void LoadSettings()
+        {
+            try
+            {
+                System.IO.Stream stream = new IsolatedStorageFileStream("zVirtualDesktop.bin", System.IO.FileMode.Open, storage);
+                System.Runtime.Serialization.Formatters.Binary.BinaryFormatter bf = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
+                object oo = bf.Deserialize(stream);
+                string iconTheme = (string)oo;
+                
+                cmbIcons.Text = iconTheme.Split(':')[1];
+                stream.Close();
+            }
+            catch (Exception ex)
+            {
+                
+            }
+        }
+
+        private void SaveSettings()
+        {
+            try
+            {
+                string iconTheme = "IconTheme:" + cmbIcons.Text;
+                System.IO.Stream stream = new IsolatedStorageFileStream("zVirtualDesktop.bin", System.IO.FileMode.OpenOrCreate, storage);
+                System.Runtime.Serialization.Formatters.Binary.BinaryFormatter bf = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
+                bf.Serialize(stream, iconTheme);
+                stream.Close();
+            }
+            catch (Exception ex)
+            {
+
+            }
+            
         }
     }
 }

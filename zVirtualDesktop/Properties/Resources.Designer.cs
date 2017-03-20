@@ -383,6 +383,206 @@ namespace zVirtualDesktop.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
+        internal static System.Drawing.Icon number_eight {
+            get {
+                object obj = ResourceManager.GetObject("number_eight", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon number_five {
+            get {
+                object obj = ResourceManager.GetObject("number_five", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon number_four {
+            get {
+                object obj = ResourceManager.GetObject("number_four", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon number_nine {
+            get {
+                object obj = ResourceManager.GetObject("number_nine", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon number_one {
+            get {
+                object obj = ResourceManager.GetObject("number_one", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon number_seven {
+            get {
+                object obj = ResourceManager.GetObject("number_seven", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon number_six {
+            get {
+                object obj = ResourceManager.GetObject("number_six", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon number_ten {
+            get {
+                object obj = ResourceManager.GetObject("number_ten", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon number_three {
+            get {
+                object obj = ResourceManager.GetObject("number_three", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon number_two {
+            get {
+                object obj = ResourceManager.GetObject("number_two", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Red_Orb_Alphabet_Number_0 {
+            get {
+                object obj = ResourceManager.GetObject("Red_Orb_Alphabet_Number_0", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Red_Orb_Alphabet_Number_1 {
+            get {
+                object obj = ResourceManager.GetObject("Red_Orb_Alphabet_Number_1", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Red_Orb_Alphabet_Number_2 {
+            get {
+                object obj = ResourceManager.GetObject("Red_Orb_Alphabet_Number_2", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Red_Orb_Alphabet_Number_3 {
+            get {
+                object obj = ResourceManager.GetObject("Red_Orb_Alphabet_Number_3", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Red_Orb_Alphabet_Number_4 {
+            get {
+                object obj = ResourceManager.GetObject("Red_Orb_Alphabet_Number_4", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Red_Orb_Alphabet_Number_5 {
+            get {
+                object obj = ResourceManager.GetObject("Red_Orb_Alphabet_Number_5", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Red_Orb_Alphabet_Number_6 {
+            get {
+                object obj = ResourceManager.GetObject("Red_Orb_Alphabet_Number_6", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Red_Orb_Alphabet_Number_7 {
+            get {
+                object obj = ResourceManager.GetObject("Red_Orb_Alphabet_Number_7", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Red_Orb_Alphabet_Number_8 {
+            get {
+                object obj = ResourceManager.GetObject("Red_Orb_Alphabet_Number_8", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Red_Orb_Alphabet_Number_9 {
+            get {
+                object obj = ResourceManager.GetObject("Red_Orb_Alphabet_Number_9", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
         internal static System.Drawing.Icon st_0 {
             get {
                 object obj = ResourceManager.GetObject("st_0", resourceCulture);
@@ -586,6 +786,206 @@ namespace zVirtualDesktop.Properties {
         internal static System.Drawing.Icon virtuawin {
             get {
                 object obj = ResourceManager.GetObject("virtuawin", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Windows_8_Numbers_0 {
+            get {
+                object obj = ResourceManager.GetObject("Windows_8_Numbers_0", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Windows_8_Numbers_0_Black {
+            get {
+                object obj = ResourceManager.GetObject("Windows_8_Numbers_0_Black", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Windows_8_Numbers_1 {
+            get {
+                object obj = ResourceManager.GetObject("Windows_8_Numbers_1", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Windows_8_Numbers_1_Black {
+            get {
+                object obj = ResourceManager.GetObject("Windows_8_Numbers_1_Black", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Windows_8_Numbers_2 {
+            get {
+                object obj = ResourceManager.GetObject("Windows_8_Numbers_2", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Windows_8_Numbers_2_Black {
+            get {
+                object obj = ResourceManager.GetObject("Windows_8_Numbers_2_Black", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Windows_8_Numbers_3 {
+            get {
+                object obj = ResourceManager.GetObject("Windows_8_Numbers_3", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Windows_8_Numbers_3_Black {
+            get {
+                object obj = ResourceManager.GetObject("Windows_8_Numbers_3_Black", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Windows_8_Numbers_4 {
+            get {
+                object obj = ResourceManager.GetObject("Windows_8_Numbers_4", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Windows_8_Numbers_4_Black {
+            get {
+                object obj = ResourceManager.GetObject("Windows_8_Numbers_4_Black", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Windows_8_Numbers_5 {
+            get {
+                object obj = ResourceManager.GetObject("Windows_8_Numbers_5", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Windows_8_Numbers_5_Black {
+            get {
+                object obj = ResourceManager.GetObject("Windows_8_Numbers_5_Black", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Windows_8_Numbers_6 {
+            get {
+                object obj = ResourceManager.GetObject("Windows_8_Numbers_6", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Windows_8_Numbers_6_Black {
+            get {
+                object obj = ResourceManager.GetObject("Windows_8_Numbers_6_Black", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Windows_8_Numbers_7 {
+            get {
+                object obj = ResourceManager.GetObject("Windows_8_Numbers_7", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Windows_8_Numbers_7_Black {
+            get {
+                object obj = ResourceManager.GetObject("Windows_8_Numbers_7_Black", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Windows_8_Numbers_8 {
+            get {
+                object obj = ResourceManager.GetObject("Windows_8_Numbers_8", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Windows_8_Numbers_8_Black {
+            get {
+                object obj = ResourceManager.GetObject("Windows_8_Numbers_8_Black", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Windows_8_Numbers_9 {
+            get {
+                object obj = ResourceManager.GetObject("Windows_8_Numbers_9", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon Windows_8_Numbers_9_Black {
+            get {
+                object obj = ResourceManager.GetObject("Windows_8_Numbers_9_Black", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
             }
         }

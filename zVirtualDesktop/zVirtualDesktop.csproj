@@ -103,7 +103,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="app.manifest" />
+    <None Include="app.manifest">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="bin\Debug\zVirtualDesktop.exe.config" />
     <None Include="bin\Release\zVirtualDesktop.exe.config" />
     <None Include="bin\Release\zVirtualDesktop.vshost.exe.config" />
@@ -141,6 +143,16 @@
     <Content Include="Icons\19.ico" />
     <Content Include="Icons\20.ico" />
     <Content Include="Icons\check.ico" />
+    <None Include="Icons\number-eight.ico" />
+    <None Include="Icons\number-five.ico" />
+    <None Include="Icons\number-four.ico" />
+    <None Include="Icons\number-nine.ico" />
+    <None Include="Icons\number-one.ico" />
+    <None Include="Icons\number-seven.ico" />
+    <None Include="Icons\number-six.ico" />
+    <None Include="Icons\number-ten.ico" />
+    <None Include="Icons\number-three.ico" />
+    <None Include="Icons\number-two.ico" />
     <Content Include="Icons\number_0_blue.ico" />
     <Content Include="Icons\number_0_green.ico" />
     <Content Include="Icons\number_1_blue.ico" />
@@ -161,6 +173,16 @@
     <Content Include="Icons\number_8_green.ico" />
     <Content Include="Icons\number_9_blue.ico" />
     <Content Include="Icons\number_9_green.ico" />
+    <None Include="Icons\Red-Orb-Alphabet-Number-0.ico" />
+    <None Include="Icons\Red-Orb-Alphabet-Number-1.ico" />
+    <None Include="Icons\Red-Orb-Alphabet-Number-2.ico" />
+    <None Include="Icons\Red-Orb-Alphabet-Number-3.ico" />
+    <None Include="Icons\Red-Orb-Alphabet-Number-4.ico" />
+    <None Include="Icons\Red-Orb-Alphabet-Number-5.ico" />
+    <None Include="Icons\Red-Orb-Alphabet-Number-6.ico" />
+    <None Include="Icons\Red-Orb-Alphabet-Number-7.ico" />
+    <None Include="Icons\Red-Orb-Alphabet-Number-8.ico" />
+    <None Include="Icons\Red-Orb-Alphabet-Number-9.ico" />
     <Content Include="Icons\st_0.ico" />
     <Content Include="Icons\st_1.ico" />
     <Content Include="Icons\st_2.ico" />
@@ -182,6 +204,26 @@
     <Content Include="Icons\st_sw_1.ico" />
     <Content Include="Icons\st_sw_2.ico" />
     <Content Include="Icons\virtuawin.ico" />
+    <None Include="Icons\Windows-8-Numbers-0.ico" />
+    <None Include="Icons\Windows-8-Numbers-0-Black.ico" />
+    <None Include="Icons\Windows-8-Numbers-1.ico" />
+    <None Include="Icons\Windows-8-Numbers-1-Black.ico" />
+    <None Include="Icons\Windows-8-Numbers-2.ico" />
+    <None Include="Icons\Windows-8-Numbers-2-Black.ico" />
+    <None Include="Icons\Windows-8-Numbers-3.ico" />
+    <None Include="Icons\Windows-8-Numbers-3-Black.ico" />
+    <None Include="Icons\Windows-8-Numbers-4.ico" />
+    <None Include="Icons\Windows-8-Numbers-4-Black.ico" />
+    <None Include="Icons\Windows-8-Numbers-5.ico" />
+    <None Include="Icons\Windows-8-Numbers-5-Black.ico" />
+    <None Include="Icons\Windows-8-Numbers-6.ico" />
+    <None Include="Icons\Windows-8-Numbers-6-Black.ico" />
+    <None Include="Icons\Windows-8-Numbers-7.ico" />
+    <None Include="Icons\Windows-8-Numbers-7-Black.ico" />
+    <None Include="Icons\Windows-8-Numbers-8.ico" />
+    <None Include="Icons\Windows-8-Numbers-8-Black.ico" />
+    <None Include="Icons\Windows-8-Numbers-9.ico" />
+    <None Include="Icons\Windows-8-Numbers-9-Black.ico" />
     <Content Include="VirtualDesktop.csproj" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

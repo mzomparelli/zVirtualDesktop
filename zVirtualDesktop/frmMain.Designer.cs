@@ -91,6 +91,7 @@
             this.SystemTray = new System.Windows.Forms.NotifyIcon(this.components);
             this.SystemTrayMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.mnuGithub = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuSwitchDesktop = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuSettings = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuExit = new System.Windows.Forms.ToolStripMenuItem();
             this.ListView1 = new System.Windows.Forms.ListView();
@@ -101,8 +102,10 @@
             this.Button5 = new System.Windows.Forms.Button();
             this.Button4 = new System.Windows.Forms.Button();
             this.Button3 = new System.Windows.Forms.Button();
-            this.mnuSwitchDesktop = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbIcons = new System.Windows.Forms.ComboBox();
             this.SystemTrayMenu.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblGithub
@@ -131,7 +134,7 @@
             this.mnuSettings,
             this.mnuExit});
             this.SystemTrayMenu.Name = "SystemTrayMenu";
-            this.SystemTrayMenu.Size = new System.Drawing.Size(281, 157);
+            this.SystemTrayMenu.Size = new System.Drawing.Size(281, 124);
             this.SystemTrayMenu.Opening += new System.ComponentModel.CancelEventHandler(this.SystemTrayMenu_Opening);
             // 
             // mnuGithub
@@ -139,6 +142,13 @@
             this.mnuGithub.Name = "mnuGithub";
             this.mnuGithub.Size = new System.Drawing.Size(280, 30);
             this.mnuGithub.Text = "Github zVirtualDesktop";
+            // 
+            // mnuSwitchDesktop
+            // 
+            this.mnuSwitchDesktop.Name = "mnuSwitchDesktop";
+            this.mnuSwitchDesktop.Size = new System.Drawing.Size(280, 30);
+            this.mnuSwitchDesktop.Text = "Switch Desktop";
+            this.mnuSwitchDesktop.Click += new System.EventHandler(this.mnuSwitchDesktop_Click);
             // 
             // mnuSettings
             // 
@@ -242,18 +252,39 @@
             this.Button3.Text = "Delete";
             this.Button3.UseVisualStyleBackColor = true;
             // 
-            // mnuSwitchDesktop
+            // groupBox1
             // 
-            this.mnuSwitchDesktop.Name = "mnuSwitchDesktop";
-            this.mnuSwitchDesktop.Size = new System.Drawing.Size(280, 30);
-            this.mnuSwitchDesktop.Text = "Switch Desktop";
-            this.mnuSwitchDesktop.Click += new System.EventHandler(this.mnuSwitchDesktop_Click);
+            this.groupBox1.Controls.Add(this.cmbIcons);
+            this.groupBox1.Location = new System.Drawing.Point(17, 409);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(240, 66);
+            this.groupBox1.TabIndex = 16;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "System Tray Icons";
+            // 
+            // cmbIcons
+            // 
+            this.cmbIcons.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbIcons.FormattingEnabled = true;
+            this.cmbIcons.Items.AddRange(new object[] {
+            "Black Box",
+            "Blue",
+            "Digital Clock",
+            "Green",
+            "Red Orb",
+            "White Box"});
+            this.cmbIcons.Location = new System.Drawing.Point(6, 25);
+            this.cmbIcons.Name = "cmbIcons";
+            this.cmbIcons.Size = new System.Drawing.Size(228, 28);
+            this.cmbIcons.Sorted = true;
+            this.cmbIcons.TabIndex = 0;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(526, 506);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblGithub);
             this.Controls.Add(this.ListView1);
             this.Controls.Add(this.btnApply);
@@ -265,6 +296,7 @@
             this.Name = "frmMain";
             this.Text = "zVirtualDesktop Settings";
             this.SystemTrayMenu.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -287,6 +319,8 @@
         internal System.Windows.Forms.Button Button4;
         internal System.Windows.Forms.Button Button3;
         private System.Windows.Forms.ToolStripMenuItem mnuSwitchDesktop;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ComboBox cmbIcons;
     }
 }
 
