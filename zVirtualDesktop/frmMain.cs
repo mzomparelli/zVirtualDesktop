@@ -553,10 +553,134 @@ namespace zVirtualDesktop
 
         }
 
+        private void SetWallpaper()
+        {
+            VirtualDesktop current = VirtualDesktop.Current;
+            int i = GetDesktopNumber(current.Id);
+            switch (i)
+            {
+                case 1:
+                    if (txtWallpaper1.Text != "" && System.IO.File.Exists(txtWallpaper1.Text))
+                    {
+                        Wallpaper.Set(new System.Uri(txtWallpaper1.Text), Wallpaper.Style.Stretched);
+                    }else {
+                        if (txtDefaultWallpaper.Text != "" && System.IO.File.Exists(txtDefaultWallpaper.Text))
+                        {
+                            Wallpaper.Set(new System.Uri(txtDefaultWallpaper.Text), Wallpaper.Style.Stretched);
+                        }
+                    }
+                    break;
+                case 2:
+                    if (txtWallpaper2.Text != "" && System.IO.File.Exists(txtWallpaper2.Text))
+                    {
+                        Wallpaper.Set(new System.Uri(txtWallpaper2.Text), Wallpaper.Style.Stretched);
+                    }
+                    else
+                    {
+                        if (txtDefaultWallpaper.Text != "" && System.IO.File.Exists(txtDefaultWallpaper.Text))
+                        {
+                            Wallpaper.Set(new System.Uri(txtDefaultWallpaper.Text), Wallpaper.Style.Stretched);
+                        }
+                    }
+                    break;
+                case 3:
+                    if (txtWallpaper3.Text != "" && System.IO.File.Exists(txtWallpaper3.Text))
+                    {
+                        Wallpaper.Set(new System.Uri(txtWallpaper3.Text), Wallpaper.Style.Stretched);
+                    }
+                    else
+                    {
+                        if (txtDefaultWallpaper.Text != "" && System.IO.File.Exists(txtDefaultWallpaper.Text))
+                        {
+                            Wallpaper.Set(new System.Uri(txtDefaultWallpaper.Text), Wallpaper.Style.Stretched);
+                        }
+                    }
+                    break;
+                case 4:
+                    if (txtWallpaper4.Text != "" && System.IO.File.Exists(txtWallpaper4.Text))
+                    {
+                        Wallpaper.Set(new System.Uri(txtWallpaper4.Text), Wallpaper.Style.Stretched);
+                    }
+                    else
+                    {
+                        if (txtDefaultWallpaper.Text != "" && System.IO.File.Exists(txtDefaultWallpaper.Text))
+                        {
+                            Wallpaper.Set(new System.Uri(txtDefaultWallpaper.Text), Wallpaper.Style.Stretched);
+                        }
+                    }
+                    break;
+                case 5:
+                    if (txtWallpaper5.Text != "" && System.IO.File.Exists(txtWallpaper5.Text))
+                    {
+                        Wallpaper.Set(new System.Uri(txtWallpaper5.Text), Wallpaper.Style.Stretched);
+                    }
+                    else
+                    {
+                        if (txtDefaultWallpaper.Text != "" && System.IO.File.Exists(txtDefaultWallpaper.Text))
+                        {
+                            Wallpaper.Set(new System.Uri(txtDefaultWallpaper.Text), Wallpaper.Style.Stretched);
+                        }
+                    }
+                    break;
+                case 6:
+                    if (txtWallpaper6.Text != "" && System.IO.File.Exists(txtWallpaper6.Text))
+                    {
+                        Wallpaper.Set(new System.Uri(txtWallpaper6.Text), Wallpaper.Style.Stretched);
+                    }
+                    else
+                    {
+                        if (txtDefaultWallpaper.Text != "" && System.IO.File.Exists(txtDefaultWallpaper.Text))
+                        {
+                            Wallpaper.Set(new System.Uri(txtDefaultWallpaper.Text), Wallpaper.Style.Stretched);
+                        }
+                    }
+                    break;
+                case 7:
+                    if (txtWallpaper7.Text != "" && System.IO.File.Exists(txtWallpaper7.Text))
+                    {
+                        Wallpaper.Set(new System.Uri(txtWallpaper7.Text), Wallpaper.Style.Stretched);
+                    }
+                    else
+                    {
+                        if (txtDefaultWallpaper.Text != "" && System.IO.File.Exists(txtDefaultWallpaper.Text))
+                        {
+                            Wallpaper.Set(new System.Uri(txtDefaultWallpaper.Text), Wallpaper.Style.Stretched);
+                        }
+                    }
+                    break;
+                case 8:
+                    if (txtWallpaper8.Text != "" && System.IO.File.Exists(txtWallpaper8.Text))
+                    {
+                        Wallpaper.Set(new System.Uri(txtWallpaper8.Text), Wallpaper.Style.Stretched);
+                    }
+                    else
+                    {
+                        if (txtDefaultWallpaper.Text != "" && System.IO.File.Exists(txtDefaultWallpaper.Text))
+                        {
+                            Wallpaper.Set(new System.Uri(txtDefaultWallpaper.Text), Wallpaper.Style.Stretched);
+                        }
+                    }
+                    break;
+                case 9:
+                    if (txtWallpaper9.Text != "" && System.IO.File.Exists(txtWallpaper9.Text))
+                    {
+                        Wallpaper.Set(new System.Uri(txtWallpaper9.Text), Wallpaper.Style.Stretched);
+                    }
+                    else
+                    {
+                        if (txtDefaultWallpaper.Text != "" && System.IO.File.Exists(txtDefaultWallpaper.Text))
+                        {
+                            Wallpaper.Set(new System.Uri(txtDefaultWallpaper.Text), Wallpaper.Style.Stretched);
+                        }
+                    }
+                    break;
+            }
+        }
+
         public void GoToDesktop(int desktopNumber)
         {
             try
-            {
+            {                
                 VirtualDesktop current = VirtualDesktop.Current;
                 int i = GetDesktopNumber(current.Id);
                 if (i == desktopNumber)
@@ -582,10 +706,11 @@ namespace zVirtualDesktop
                     }
 
                     current.Switch();
-
+                    
                 }
 
                 SetSystemTrayIcon();
+                SetWallpaper();
             }
             catch (Exception ex)
             {
@@ -593,6 +718,8 @@ namespace zVirtualDesktop
                     ex.Message + Environment.NewLine + 
                     ex.Source + "::" + ex.TargetSite.Name);
             }
+
+        
 
 
         }
@@ -758,17 +885,29 @@ namespace zVirtualDesktop
         {
             try
             {
+                if (storage.FileExists("zVirtualDesktop.bin") == false)
+                {
+                    cmbIcons.Text = "Green";
+                    SaveSettings();
+                }
                 System.IO.Stream stream = new IsolatedStorageFileStream("zVirtualDesktop.bin", System.IO.FileMode.Open, storage);
                 System.Runtime.Serialization.Formatters.Binary.BinaryFormatter bf = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
                 object oo = bf.Deserialize(stream);
-                string iconTheme = (string)oo;
-                if (iconTheme == "" || iconTheme.Split(':')[1] == "")
-                {
-                    iconTheme = "IconTheme:Green";
-                    cmbIcons.Text = iconTheme.Split(':')[1];
-                    SaveSettings();
-                }
-                cmbIcons.Text = iconTheme.Split(':')[1];
+                string settings = (string)oo;
+                string[] indivdualSettings = settings.Split('~');
+
+                cmbIcons.Text = indivdualSettings[0].Split(';')[1];
+                txtWallpaper1.Text = indivdualSettings[1].Split(';')[1];
+                txtWallpaper2.Text = indivdualSettings[2].Split(';')[1];
+                txtWallpaper3.Text = indivdualSettings[3].Split(';')[1];
+                txtWallpaper4.Text = indivdualSettings[4].Split(';')[1];
+                txtWallpaper5.Text = indivdualSettings[5].Split(';')[1];
+                txtWallpaper6.Text = indivdualSettings[6].Split(';')[1];
+                txtWallpaper7.Text = indivdualSettings[7].Split(';')[1];
+                txtWallpaper8.Text = indivdualSettings[8].Split(';')[1];
+                txtWallpaper9.Text = indivdualSettings[9].Split(';')[1];
+                txtDefaultWallpaper.Text = indivdualSettings[10].Split(';')[1];
+
                 stream.Close();
             }
             catch (Exception ex)
@@ -781,10 +920,23 @@ namespace zVirtualDesktop
         {
             try
             {
-                string iconTheme = "IconTheme:" + cmbIcons.Text;
+                StringBuilder settings = new StringBuilder();
+                settings.Append("IconTheme;" + cmbIcons.Text);
+                //Get the URI for each desktop
+                settings.Append("~DesktopWallpaper1;" + txtWallpaper1.Text);
+                settings.Append("~DesktopWallpaper2;" + txtWallpaper2.Text);
+                settings.Append("~DesktopWallpaper3;" + txtWallpaper3.Text);
+                settings.Append("~DesktopWallpaper4;" + txtWallpaper4.Text);
+                settings.Append("~DesktopWallpaper5;" + txtWallpaper5.Text);
+                settings.Append("~DesktopWallpaper6;" + txtWallpaper6.Text);
+                settings.Append("~DesktopWallpaper7;" + txtWallpaper7.Text);
+                settings.Append("~DesktopWallpaper8;" + txtWallpaper8.Text);
+                settings.Append("~DesktopWallpaper9;" + txtWallpaper9.Text);
+                settings.Append("~DefaultWallpaper;" + txtDefaultWallpaper.Text);
+
                 System.IO.Stream stream = new IsolatedStorageFileStream("zVirtualDesktop.bin", System.IO.FileMode.OpenOrCreate, storage);
                 System.Runtime.Serialization.Formatters.Binary.BinaryFormatter bf = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
-                bf.Serialize(stream, iconTheme);
+                bf.Serialize(stream, settings.ToString());
                 stream.Close();
             }
             catch (Exception ex)

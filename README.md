@@ -20,6 +20,9 @@ __System Tray Icon:__
 Choose from several sets of icons on the settings window.  
 The icons indicate which desktop you are viewing.
 
+__Wallpapers:__  
+Set a different wallpaper for each desktop.
+
 
 __Upcoming Features:__  
 *Configurable Hotkeys - It's really easy to change in code, but I'm working on allowing this on the settings window.
