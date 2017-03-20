@@ -762,7 +762,12 @@ namespace zVirtualDesktop
                 System.Runtime.Serialization.Formatters.Binary.BinaryFormatter bf = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
                 object oo = bf.Deserialize(stream);
                 string iconTheme = (string)oo;
-                
+                if (iconTheme == "" || iconTheme.Split(':')[1] == "")
+                {
+                    iconTheme = "IconTheme:Green";
+                    cmbIcons.Text = iconTheme.Split(':')[1];
+                    SaveSettings();
+                }
                 cmbIcons.Text = iconTheme.Split(':')[1];
                 stream.Close();
             }
