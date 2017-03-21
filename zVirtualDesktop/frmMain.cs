@@ -557,7 +557,7 @@ namespace zVirtualDesktop
         {
             try
             {
-                IntPtr window = Globals.GetForegroundWindow();
+                IntPtr window = PInvoke.GetForegroundWindow();
                 if (VirtualDesktop.IsPinnedWindow(window))
                 {
                     VirtualDesktop.UnpinWindow(window);
@@ -598,16 +598,16 @@ namespace zVirtualDesktop
                 //}
 
                 
-                MessageBox.Show(Globals.GetTopWindowName());
+                MessageBox.Show(PInvoke.GetTopWindowName());
                 return;
                 
-                if (VirtualDesktop.IsPinnedApplication(Globals.GetTopWindowName()))
+                if (VirtualDesktop.IsPinnedApplication(PInvoke.GetTopWindowName()))
                 {
-                    VirtualDesktop.PinApplication(Globals.GetTopWindowName());
+                    VirtualDesktop.PinApplication(PInvoke.GetTopWindowName());
                 }
                 else
                 {
-                    VirtualDesktop.PinApplication(Globals.GetTopWindowName());
+                    VirtualDesktop.PinApplication(PInvoke.GetTopWindowName());
                 }
             }
             catch (Exception ex)
@@ -782,14 +782,14 @@ namespace zVirtualDesktop
                     int diff = Math.Abs(i - desktopNumber);
                     if (i < desktopNumber)
                     {
-                        for (int z = 1; z <= diff; z += 1)
+                        for (int z = 1; z <= diff; z++)
                         {
                             current = current.GetRight();
                         }
                     }
                     else
                     {
-                        for (int z = 1; z <= diff; z += 1)
+                        for (int z = 1; z <= diff; z++)
                         {
                             current = current.GetLeft();
                         }
@@ -799,8 +799,6 @@ namespace zVirtualDesktop
                     
                 }
 
-                SetSystemTrayIcon();
-                SetWallpaper();
             }
             catch (Exception ex)
             {
@@ -830,22 +828,21 @@ namespace zVirtualDesktop
                     int diff = Math.Abs(i - desktopNumber);
                     if (i < desktopNumber)
                     {
-                        for (int z = 1; z <= diff; z += 1)
+                        for (int z = 1; z <= diff; z++)
                         {
                             current = current.GetRight();
                         }
                     }
                     else
                     {
-                        for (int z = 1; z <= diff; z += 1)
+                        for (int z = 1; z <= diff; z++)
                         {
                             current = current.GetLeft();
                         }
                     }
-                    VirtualDesktopHelper.MoveToDesktop(Globals.GetForegroundWindow(), current);
+                    VirtualDesktopHelper.MoveToDesktop(PInvoke.GetForegroundWindow(), current);
                 }
 
-                SetSystemTrayIcon();
             }
             catch (Exception ex)
             {
@@ -947,7 +944,7 @@ namespace zVirtualDesktop
         {
             if (!ExitClicked)
             {
-                if (Globals.GetSystemMetrics(Globals.SystemMetric.SM_SHUTTINGDOWN) == 0)
+                if (PInvoke.GetSystemMetrics(PInvoke.SystemMetric.SM_SHUTTINGDOWN) == 0)
                 {
                     e.Cancel = true;
                     HideSettings();

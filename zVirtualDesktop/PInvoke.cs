@@ -16,7 +16,7 @@ namespace zVirtualDesktop
     using System.Runtime.InteropServices;
     using System.Text;
 
-    public static class Globals
+    public static class PInvoke
     {
         [DllImport("user32.dll", SetLastError = true, CharSet = CharSet.Auto)]
         public static extern IntPtr FindWindow(string lpClassName, string lpWindowName);
