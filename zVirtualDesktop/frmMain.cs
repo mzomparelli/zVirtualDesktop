@@ -999,6 +999,8 @@ namespace zVirtualDesktop
                 txtDefaultWallpaper.Text = indivdualSettings[10].Split(';')[1];
 
                 stream.Close();
+                SetSystemTrayIcon();
+                SetWallpaper();
             }
             catch (Exception ex)
             {
@@ -1028,6 +1030,10 @@ namespace zVirtualDesktop
                 System.Runtime.Serialization.Formatters.Binary.BinaryFormatter bf = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
                 bf.Serialize(stream, settings.ToString());
                 stream.Close();
+
+                SetSystemTrayIcon();
+                SetWallpaper();
+
             }
             catch (Exception ex)
             {
