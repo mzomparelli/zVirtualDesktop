@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +18,7 @@ namespace zVirtualDesktop
 
         public IsolatedStorageFile storage = IsolatedStorageFile.GetUserStoreForAssembly();
 
+        
 
         public Hotkey keyGoTo01 = new Hotkey(1);
         public Hotkey keyGoTo02 = new Hotkey(2);
@@ -40,6 +42,7 @@ namespace zVirtualDesktop
         public Hotkey keyMoveTo09 = new Hotkey(9);
 
         public Hotkey keyPinWindow = new Hotkey(99);
+        public Hotkey keyPinApp = new Hotkey(99);
 
         VirtualDesktop[] Desktops = VirtualDesktop.GetDesktops();
 
@@ -58,6 +61,38 @@ namespace zVirtualDesktop
             lblGithub.LinkClicked += lblGithub_LinkClicked;
             mnuGithub.Click += mnuGithub_Click;
 
+            //Create a new thread to retrieve the ProgID and Executables on this machine.
+            //This is used so that the app is able to pin an application
+            //System.Threading.Thread tGetProgs = new System.Threading.Thread(new System.Threading.ThreadStart(GetProgs));
+            //tGetProgs.Start();
+       
+
+    }
+
+        private static void GetProgs()
+        {
+            //var regClis = Registry.ClassesRoot.OpenSubKey("CLSID");
+            //var progs = new List<COMProgram>();
+
+            //foreach (var clsid in regClis.GetSubKeyNames())
+            //{
+            //    var regClsidKey = regClis.OpenSubKey(clsid);
+            //    var ProgID = regClsidKey.OpenSubKey("ProgID");
+            //    var regPath = regClsidKey.OpenSubKey("InprocServer32");
+
+            //    if (regPath == null)
+            //        regPath = regClsidKey.OpenSubKey("LocalServer32");
+
+            //    if (regPath != null && ProgID != null)
+            //    {
+            //        var pid = ProgID.GetValue("");
+            //        var filePath = regPath.GetValue("");
+            //        progs.Add(new COMProgram(pid.ToString(), filePath.ToString()));
+            //        regPath.Close();
+            //    }
+
+            //    regClsidKey.Close();
+            //}
         }
 
 
@@ -504,6 +539,9 @@ namespace zVirtualDesktop
             keyPinWindow.HotkeyActivated += PinWindow;
             keyPinWindow.Register(Keys.Z, true, false, false, true);
 
+            keyPinApp.HotkeyActivated += PinApp;
+            keyPinApp.Register(Keys.A, true, false, false, true);
+
         }
 
         private void PinWindow(object sender, EventArgs e)
@@ -524,6 +562,49 @@ namespace zVirtualDesktop
             {
                 MessageBox.Show("An error occured pinning or unpinning the specified window. See additional details below." + Environment.NewLine + Environment.NewLine + 
                     ex.Message + Environment.NewLine + 
+                    ex.Source + "::" + ex.TargetSite.Name);
+            }
+
+        }
+
+        private void PinApp(object sender, EventArgs e)
+        {
+            try
+            {
+                //IntPtr window = Globals.GetForegroundWindow();
+                //System.Diagnostics.Process p = System.Diagnostics.Process.GetProcessById((int)Globals.GetProcessID());
+                //IntPtr hWnd = p.MainWindowHandle;
+                //int nRet;
+                //// Pre-allocate 256 characters, since this is the maximum class name length.
+                //StringBuilder ClassName = new StringBuilder(256);
+                ////Get the window class name
+                //nRet = Globals.GetClassName(window, ClassName, ClassName.Capacity);
+                //if (nRet != 0)
+                //{
+                //    MessageBox.Show(ClassName.ToString());
+                //}
+                //else
+                //{
+                    
+                //}
+
+                
+                MessageBox.Show(Globals.GetTopWindowName());
+                return;
+                
+                if (VirtualDesktop.IsPinnedApplication(Globals.GetTopWindowName()))
+                {
+                    VirtualDesktop.PinApplication(Globals.GetTopWindowName());
+                }
+                else
+                {
+                    VirtualDesktop.PinApplication(Globals.GetTopWindowName());
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occured pinning or unpinning the specified application. See additional details below." + Environment.NewLine + Environment.NewLine +
+                    ex.Message + Environment.NewLine +
                     ex.Source + "::" + ex.TargetSite.Name);
             }
 

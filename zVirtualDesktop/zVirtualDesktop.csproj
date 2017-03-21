@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationHelper.cs" />
+    <Compile Include="COMProgram.cs" />
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
