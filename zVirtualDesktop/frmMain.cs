@@ -19,6 +19,7 @@ namespace zVirtualDesktop
         public IsolatedStorageFile storage = IsolatedStorageFile.GetUserStoreForAssembly();
 
         
+        
 
         public Hotkey keyGoTo01 = new Hotkey(1);
         public Hotkey keyGoTo02 = new Hotkey(2);
@@ -60,6 +61,7 @@ namespace zVirtualDesktop
             btnApply.Click += btnApply_Click;
             lblGithub.LinkClicked += lblGithub_LinkClicked;
             mnuGithub.Click += mnuGithub_Click;
+            VirtualDesktop.CurrentChanged += VirtualDesktop_CurrentChanged;
 
             //Create a new thread to retrieve the ProgID and Executables on this machine.
             //This is used so that the app is able to pin an application
@@ -68,6 +70,13 @@ namespace zVirtualDesktop
        
 
     }
+
+        private void VirtualDesktop_CurrentChanged(object sender, VirtualDesktopChangedEventArgs e)
+        {
+            
+            SetSystemTrayIcon();
+            SetWallpaper();
+        }
 
         private static void GetProgs()
         {
@@ -474,7 +483,7 @@ namespace zVirtualDesktop
         private void TimerSystemTray_Tick(object sender, EventArgs e)
         {
 
-            SetSystemTrayIcon();
+            //SetSystemTrayIcon();
             }
         
 
