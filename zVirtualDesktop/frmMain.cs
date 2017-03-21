@@ -1026,5 +1026,71 @@ namespace zVirtualDesktop
             }
             
         }
+
+        private string GetFileDialogResult()
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Multiselect = false;
+            
+            DialogResult result = dlg.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                return dlg.FileName;
+            }else
+            {
+                return "";
+            }
+        }
+
+        private void btnBrowseWallpaper1_Click(object sender, EventArgs e)
+        {
+            txtWallpaper1.Text = GetFileDialogResult();
+        }
+
+        private void btnBrowseWallpaper2_Click(object sender, EventArgs e)
+        {
+            txtWallpaper2.Text = GetFileDialogResult();
+        }
+
+        private void btnBrowseWallpaper3_Click(object sender, EventArgs e)
+        {
+            txtWallpaper3.Text = GetFileDialogResult();
+        }
+
+        private void btnBrowseWallpaper4_Click(object sender, EventArgs e)
+        {
+            txtWallpaper4.Text = GetFileDialogResult();
+        }
+
+        private void btnBrowseWallpaper5_Click(object sender, EventArgs e)
+        {
+            txtWallpaper5.Text = GetFileDialogResult();
+        }
+
+        private void btnBrowseWallpaper6_Click(object sender, EventArgs e)
+        {
+            txtWallpaper6.Text = GetFileDialogResult();
+        }
+
+        private void btnBrowseWallpaper7_Click(object sender, EventArgs e)
+        {
+            txtWallpaper7.Text = GetFileDialogResult();
+        }
+
+        private void btnBrowseWallpaper8_Click(object sender, EventArgs e)
+        {
+            txtWallpaper8.Text = GetFileDialogResult();
+        }
+
+        private void btnBrowseWallpaper9_Click(object sender, EventArgs e)
+        {
+            txtWallpaper9.Text = GetFileDialogResult();
+        }
+
+        private void btnBrowseDefaultWalpaper_Click(object sender, EventArgs e)
+        {
+            txtDefaultWallpaper.Text = GetFileDialogResult();
+        }
     }
 }
