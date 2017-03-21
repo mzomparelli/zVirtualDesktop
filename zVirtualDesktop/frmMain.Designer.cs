@@ -30,61 +30,61 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-            System.Windows.Forms.ListViewItem listViewItem191 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "Navigate to Desktop 1",
             "WIN+ALT+Numpad1"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem192 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
             "Navigate to Desktop 2",
             "WIN+ALT+Numpad2"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem193 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
             "Navigate to Desktop 3",
             "WIN+ALT+Numpad3"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem194 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
             "Navigate to Desktop 4",
             "WIN+ALT+Numpad4"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem195 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new string[] {
             "Navigate to Desktop 5",
             "WIN+ALT+Numpad5"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem196 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem(new string[] {
             "Navigate to Desktop 6",
             "WIN+ALT+Numpad6"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem197 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem(new string[] {
             "Navigate to Desktop 7",
             "WIN+ALT+Numpad7"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem198 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem(new string[] {
             "Navigate to Desktop 8",
             "WIN+ALT+Numpad8"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem199 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem(new string[] {
             "Navigate to Desktop 9",
             "WIN+ALT+Numpad9"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem200 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem(new string[] {
             "Move to Desktop 1",
             "WIN+CTRL+Numpad1"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem201 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem(new string[] {
             "Move to Desktop 2",
             "WIN+CTRL+Numpad2"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem202 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem(new string[] {
             "Move to Desktop 3",
             "WIN+CTRL+Numpad3"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem203 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem13 = new System.Windows.Forms.ListViewItem(new string[] {
             "Move to Desktop 4",
             "WIN+CTRL+Numpad4"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem204 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem14 = new System.Windows.Forms.ListViewItem(new string[] {
             "Move to Desktop 5",
             "WIN+CTRL+Numpad5"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem205 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem15 = new System.Windows.Forms.ListViewItem(new string[] {
             "Move to Desktop 6",
             "WIN+CTRL+Numpad6"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem206 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem16 = new System.Windows.Forms.ListViewItem(new string[] {
             "Move to Desktop 7",
             "WIN+CTRL+Numpad7"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem207 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem17 = new System.Windows.Forms.ListViewItem(new string[] {
             "Move to Desktop 8",
             "WIN+CTRL+Numpad8"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem208 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem18 = new System.Windows.Forms.ListViewItem(new string[] {
             "Move to Desktop 9",
             "WIN+CTRL+Numpad9"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem209 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem19 = new System.Windows.Forms.ListViewItem(new string[] {
             "Pin/Unpin Window",
             "WIN+ALT+Z"}, -1);
             this.lblGithub = new System.Windows.Forms.LinkLabel();
@@ -173,32 +173,32 @@
             this.mnuSettings,
             this.mnuExit});
             this.SystemTrayMenu.Name = "SystemTrayMenu";
-            this.SystemTrayMenu.Size = new System.Drawing.Size(268, 124);
+            this.SystemTrayMenu.Size = new System.Drawing.Size(281, 124);
             this.SystemTrayMenu.Opening += new System.ComponentModel.CancelEventHandler(this.SystemTrayMenu_Opening);
             // 
             // mnuGithub
             // 
             this.mnuGithub.Name = "mnuGithub";
-            this.mnuGithub.Size = new System.Drawing.Size(267, 30);
+            this.mnuGithub.Size = new System.Drawing.Size(280, 30);
             this.mnuGithub.Text = "Github zVirtualDesktop";
             // 
             // mnuSwitchDesktop
             // 
             this.mnuSwitchDesktop.Name = "mnuSwitchDesktop";
-            this.mnuSwitchDesktop.Size = new System.Drawing.Size(267, 30);
+            this.mnuSwitchDesktop.Size = new System.Drawing.Size(280, 30);
             this.mnuSwitchDesktop.Text = "Switch Desktop";
             this.mnuSwitchDesktop.Click += new System.EventHandler(this.mnuSwitchDesktop_Click);
             // 
             // mnuSettings
             // 
             this.mnuSettings.Name = "mnuSettings";
-            this.mnuSettings.Size = new System.Drawing.Size(267, 30);
+            this.mnuSettings.Size = new System.Drawing.Size(280, 30);
             this.mnuSettings.Text = "Settings";
             // 
             // mnuExit
             // 
             this.mnuExit.Name = "mnuExit";
-            this.mnuExit.Size = new System.Drawing.Size(267, 30);
+            this.mnuExit.Size = new System.Drawing.Size(280, 30);
             this.mnuExit.Text = "Exit";
             // 
             // ListView1
@@ -207,25 +207,25 @@
             this.colTask,
             this.colHotKey});
             this.ListView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem191,
-            listViewItem192,
-            listViewItem193,
-            listViewItem194,
-            listViewItem195,
-            listViewItem196,
-            listViewItem197,
-            listViewItem198,
-            listViewItem199,
-            listViewItem200,
-            listViewItem201,
-            listViewItem202,
-            listViewItem203,
-            listViewItem204,
-            listViewItem205,
-            listViewItem206,
-            listViewItem207,
-            listViewItem208,
-            listViewItem209});
+            listViewItem1,
+            listViewItem2,
+            listViewItem3,
+            listViewItem4,
+            listViewItem5,
+            listViewItem6,
+            listViewItem7,
+            listViewItem8,
+            listViewItem9,
+            listViewItem10,
+            listViewItem11,
+            listViewItem12,
+            listViewItem13,
+            listViewItem14,
+            listViewItem15,
+            listViewItem16,
+            listViewItem17,
+            listViewItem18,
+            listViewItem19});
             this.ListView1.Location = new System.Drawing.Point(2, 0);
             this.ListView1.Name = "ListView1";
             this.ListView1.Size = new System.Drawing.Size(506, 433);
@@ -328,7 +328,7 @@
             this.tabPage1.Controls.Add(this.Button5);
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(518, 496);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Hotkeys";
@@ -368,7 +368,7 @@
             this.tabPage2.Controls.Add(this.lblWallpaper1);
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(518, 496);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Wallpaper";
@@ -380,9 +380,9 @@
             this.btnBrowseDefaultWalpaper.Name = "btnBrowseDefaultWalpaper";
             this.btnBrowseDefaultWalpaper.Size = new System.Drawing.Size(75, 31);
             this.btnBrowseDefaultWalpaper.TabIndex = 29;
+            this.btnBrowseDefaultWalpaper.Tag = "default";
             this.btnBrowseDefaultWalpaper.Text = "Browse";
             this.btnBrowseDefaultWalpaper.UseVisualStyleBackColor = true;
-            this.btnBrowseDefaultWalpaper.Click += new System.EventHandler(this.btnBrowseDefaultWalpaper_Click);
             // 
             // txtDefaultWallpaper
             // 
@@ -390,6 +390,7 @@
             this.txtDefaultWallpaper.Name = "txtDefaultWallpaper";
             this.txtDefaultWallpaper.Size = new System.Drawing.Size(318, 26);
             this.txtDefaultWallpaper.TabIndex = 28;
+            this.txtDefaultWallpaper.Tag = "default";
             // 
             // label9
             // 
@@ -406,9 +407,9 @@
             this.btnBrowseWallpaper9.Name = "btnBrowseWallpaper9";
             this.btnBrowseWallpaper9.Size = new System.Drawing.Size(75, 31);
             this.btnBrowseWallpaper9.TabIndex = 26;
+            this.btnBrowseWallpaper9.Tag = "9";
             this.btnBrowseWallpaper9.Text = "Browse";
             this.btnBrowseWallpaper9.UseVisualStyleBackColor = true;
-            this.btnBrowseWallpaper9.Click += new System.EventHandler(this.btnBrowseWallpaper9_Click);
             // 
             // txtWallpaper9
             // 
@@ -416,6 +417,7 @@
             this.txtWallpaper9.Name = "txtWallpaper9";
             this.txtWallpaper9.Size = new System.Drawing.Size(318, 26);
             this.txtWallpaper9.TabIndex = 25;
+            this.txtWallpaper9.Tag = "9";
             // 
             // label8
             // 
@@ -432,9 +434,9 @@
             this.btnBrowseWallpaper8.Name = "btnBrowseWallpaper8";
             this.btnBrowseWallpaper8.Size = new System.Drawing.Size(75, 31);
             this.btnBrowseWallpaper8.TabIndex = 23;
+            this.btnBrowseWallpaper8.Tag = "8";
             this.btnBrowseWallpaper8.Text = "Browse";
             this.btnBrowseWallpaper8.UseVisualStyleBackColor = true;
-            this.btnBrowseWallpaper8.Click += new System.EventHandler(this.btnBrowseWallpaper8_Click);
             // 
             // txtWallpaper8
             // 
@@ -442,6 +444,7 @@
             this.txtWallpaper8.Name = "txtWallpaper8";
             this.txtWallpaper8.Size = new System.Drawing.Size(318, 26);
             this.txtWallpaper8.TabIndex = 22;
+            this.txtWallpaper8.Tag = "8";
             // 
             // label7
             // 
@@ -458,9 +461,9 @@
             this.btnBrowseWallpaper7.Name = "btnBrowseWallpaper7";
             this.btnBrowseWallpaper7.Size = new System.Drawing.Size(75, 31);
             this.btnBrowseWallpaper7.TabIndex = 20;
+            this.btnBrowseWallpaper7.Tag = "7";
             this.btnBrowseWallpaper7.Text = "Browse";
             this.btnBrowseWallpaper7.UseVisualStyleBackColor = true;
-            this.btnBrowseWallpaper7.Click += new System.EventHandler(this.btnBrowseWallpaper7_Click);
             // 
             // txtWallpaper7
             // 
@@ -468,6 +471,7 @@
             this.txtWallpaper7.Name = "txtWallpaper7";
             this.txtWallpaper7.Size = new System.Drawing.Size(318, 26);
             this.txtWallpaper7.TabIndex = 19;
+            this.txtWallpaper7.Tag = "7";
             // 
             // label6
             // 
@@ -484,9 +488,9 @@
             this.btnBrowseWallpaper6.Name = "btnBrowseWallpaper6";
             this.btnBrowseWallpaper6.Size = new System.Drawing.Size(75, 31);
             this.btnBrowseWallpaper6.TabIndex = 17;
+            this.btnBrowseWallpaper6.Tag = "6";
             this.btnBrowseWallpaper6.Text = "Browse";
             this.btnBrowseWallpaper6.UseVisualStyleBackColor = true;
-            this.btnBrowseWallpaper6.Click += new System.EventHandler(this.btnBrowseWallpaper6_Click);
             // 
             // txtWallpaper6
             // 
@@ -494,6 +498,7 @@
             this.txtWallpaper6.Name = "txtWallpaper6";
             this.txtWallpaper6.Size = new System.Drawing.Size(318, 26);
             this.txtWallpaper6.TabIndex = 16;
+            this.txtWallpaper6.Tag = "6";
             // 
             // label5
             // 
@@ -510,9 +515,9 @@
             this.btnBrowseWallpaper5.Name = "btnBrowseWallpaper5";
             this.btnBrowseWallpaper5.Size = new System.Drawing.Size(75, 31);
             this.btnBrowseWallpaper5.TabIndex = 14;
+            this.btnBrowseWallpaper5.Tag = "5";
             this.btnBrowseWallpaper5.Text = "Browse";
             this.btnBrowseWallpaper5.UseVisualStyleBackColor = true;
-            this.btnBrowseWallpaper5.Click += new System.EventHandler(this.btnBrowseWallpaper5_Click);
             // 
             // txtWallpaper5
             // 
@@ -520,6 +525,7 @@
             this.txtWallpaper5.Name = "txtWallpaper5";
             this.txtWallpaper5.Size = new System.Drawing.Size(318, 26);
             this.txtWallpaper5.TabIndex = 13;
+            this.txtWallpaper5.Tag = "5";
             // 
             // label4
             // 
@@ -536,9 +542,9 @@
             this.btnBrowseWallpaper4.Name = "btnBrowseWallpaper4";
             this.btnBrowseWallpaper4.Size = new System.Drawing.Size(75, 31);
             this.btnBrowseWallpaper4.TabIndex = 11;
+            this.btnBrowseWallpaper4.Tag = "4";
             this.btnBrowseWallpaper4.Text = "Browse";
             this.btnBrowseWallpaper4.UseVisualStyleBackColor = true;
-            this.btnBrowseWallpaper4.Click += new System.EventHandler(this.btnBrowseWallpaper4_Click);
             // 
             // txtWallpaper4
             // 
@@ -546,6 +552,7 @@
             this.txtWallpaper4.Name = "txtWallpaper4";
             this.txtWallpaper4.Size = new System.Drawing.Size(318, 26);
             this.txtWallpaper4.TabIndex = 10;
+            this.txtWallpaper4.Tag = "4";
             // 
             // label3
             // 
@@ -562,9 +569,9 @@
             this.btnBrowseWallpaper3.Name = "btnBrowseWallpaper3";
             this.btnBrowseWallpaper3.Size = new System.Drawing.Size(75, 31);
             this.btnBrowseWallpaper3.TabIndex = 8;
+            this.btnBrowseWallpaper3.Tag = "3";
             this.btnBrowseWallpaper3.Text = "Browse";
             this.btnBrowseWallpaper3.UseVisualStyleBackColor = true;
-            this.btnBrowseWallpaper3.Click += new System.EventHandler(this.btnBrowseWallpaper3_Click);
             // 
             // txtWallpaper3
             // 
@@ -572,6 +579,7 @@
             this.txtWallpaper3.Name = "txtWallpaper3";
             this.txtWallpaper3.Size = new System.Drawing.Size(318, 26);
             this.txtWallpaper3.TabIndex = 7;
+            this.txtWallpaper3.Tag = "3";
             // 
             // label2
             // 
@@ -588,9 +596,9 @@
             this.btnBrowseWallpaper2.Name = "btnBrowseWallpaper2";
             this.btnBrowseWallpaper2.Size = new System.Drawing.Size(75, 31);
             this.btnBrowseWallpaper2.TabIndex = 5;
+            this.btnBrowseWallpaper2.Tag = "2";
             this.btnBrowseWallpaper2.Text = "Browse";
             this.btnBrowseWallpaper2.UseVisualStyleBackColor = true;
-            this.btnBrowseWallpaper2.Click += new System.EventHandler(this.btnBrowseWallpaper2_Click);
             // 
             // txtWallpaper2
             // 
@@ -598,6 +606,7 @@
             this.txtWallpaper2.Name = "txtWallpaper2";
             this.txtWallpaper2.Size = new System.Drawing.Size(318, 26);
             this.txtWallpaper2.TabIndex = 4;
+            this.txtWallpaper2.Tag = "2";
             // 
             // label1
             // 
@@ -614,9 +623,9 @@
             this.btnBrowseWallpaper1.Name = "btnBrowseWallpaper1";
             this.btnBrowseWallpaper1.Size = new System.Drawing.Size(75, 31);
             this.btnBrowseWallpaper1.TabIndex = 2;
+            this.btnBrowseWallpaper1.Tag = "1";
             this.btnBrowseWallpaper1.Text = "Browse";
             this.btnBrowseWallpaper1.UseVisualStyleBackColor = true;
-            this.btnBrowseWallpaper1.Click += new System.EventHandler(this.btnBrowseWallpaper1_Click);
             // 
             // txtWallpaper1
             // 
@@ -624,6 +633,7 @@
             this.txtWallpaper1.Name = "txtWallpaper1";
             this.txtWallpaper1.Size = new System.Drawing.Size(318, 26);
             this.txtWallpaper1.TabIndex = 1;
+            this.txtWallpaper1.Tag = "1";
             // 
             // lblWallpaper1
             // 
@@ -639,7 +649,7 @@
             this.tabPage3.Controls.Add(this.cmbIcons);
             this.tabPage3.Location = new System.Drawing.Point(4, 29);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(518, 496);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "System Tray Icons";

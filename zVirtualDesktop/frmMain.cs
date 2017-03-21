@@ -53,6 +53,8 @@ namespace zVirtualDesktop
         public frmMain()
         {
             InitializeComponent();
+
+            //Wire up some events
             this.Closing += frmMain_Closing;
             this.Load += frmMain_Load;
             mnuExit.Click += mnuExit_Click;
@@ -62,14 +64,24 @@ namespace zVirtualDesktop
             lblGithub.LinkClicked += lblGithub_LinkClicked;
             mnuGithub.Click += mnuGithub_Click;
             VirtualDesktop.CurrentChanged += VirtualDesktop_CurrentChanged;
+            btnBrowseWallpaper1.Click += btnBrowseWallpaper_Click;
+            btnBrowseWallpaper2.Click += btnBrowseWallpaper_Click;
+            btnBrowseWallpaper3.Click += btnBrowseWallpaper_Click;
+            btnBrowseWallpaper4.Click += btnBrowseWallpaper_Click;
+            btnBrowseWallpaper5.Click += btnBrowseWallpaper_Click;
+            btnBrowseWallpaper6.Click += btnBrowseWallpaper_Click;
+            btnBrowseWallpaper7.Click += btnBrowseWallpaper_Click;
+            btnBrowseWallpaper8.Click += btnBrowseWallpaper_Click;
+            btnBrowseWallpaper9.Click += btnBrowseWallpaper_Click;
+            btnBrowseDefaultWalpaper.Click += btnBrowseWallpaper_Click;
 
             //Create a new thread to retrieve the ProgID and Executables on this machine.
             //This is used so that the app is able to pin an application
             //System.Threading.Thread tGetProgs = new System.Threading.Thread(new System.Threading.ThreadStart(GetProgs));
             //tGetProgs.Start();
-       
 
-    }
+
+        }
 
         private void VirtualDesktop_CurrentChanged(object sender, VirtualDesktopChangedEventArgs e)
         {
@@ -1037,7 +1049,7 @@ namespace zVirtualDesktop
             
         }
 
-        private string GetFileDialogResult()
+        private void GetFileDialogResult(string desktop)
         {
             OpenFileDialog dlg = new OpenFileDialog();
             dlg.Multiselect = false;
@@ -1046,61 +1058,50 @@ namespace zVirtualDesktop
 
             if (result == DialogResult.OK)
             {
-                return dlg.FileName;
+                switch (desktop)
+                {
+                    case "1":
+                        txtWallpaper1.Text = dlg.FileName;
+                        break;
+                    case "2":
+                        txtWallpaper2.Text = dlg.FileName;
+                        break;
+                    case "3":
+                        txtWallpaper3.Text = dlg.FileName;
+                        break;
+                    case "4":
+                        txtWallpaper4.Text = dlg.FileName;
+                        break;
+                    case "5":
+                        txtWallpaper5.Text = dlg.FileName;
+                        break;
+                    case "6":
+                        txtWallpaper6.Text = dlg.FileName;
+                        break;
+                    case "7":
+                        txtWallpaper7.Text = dlg.FileName;
+                        break;
+                    case "8":
+                        txtWallpaper8.Text = dlg.FileName;
+                        break;
+                    case "9":
+                        txtWallpaper9.Text = dlg.FileName;
+                        break;
+                    case "default":
+                        txtDefaultWallpaper.Text = dlg.FileName;
+                        break;
+                }
             }else
             {
-                return "";
+                //do nothing
             }
         }
 
-        private void btnBrowseWallpaper1_Click(object sender, EventArgs e)
+        private void btnBrowseWallpaper_Click(object sender, EventArgs e)
         {
-            txtWallpaper1.Text = GetFileDialogResult();
+            Button btn = (Button)sender;
+            GetFileDialogResult(btn.Tag.ToString());
         }
 
-        private void btnBrowseWallpaper2_Click(object sender, EventArgs e)
-        {
-            txtWallpaper2.Text = GetFileDialogResult();
-        }
-
-        private void btnBrowseWallpaper3_Click(object sender, EventArgs e)
-        {
-            txtWallpaper3.Text = GetFileDialogResult();
-        }
-
-        private void btnBrowseWallpaper4_Click(object sender, EventArgs e)
-        {
-            txtWallpaper4.Text = GetFileDialogResult();
-        }
-
-        private void btnBrowseWallpaper5_Click(object sender, EventArgs e)
-        {
-            txtWallpaper5.Text = GetFileDialogResult();
-        }
-
-        private void btnBrowseWallpaper6_Click(object sender, EventArgs e)
-        {
-            txtWallpaper6.Text = GetFileDialogResult();
-        }
-
-        private void btnBrowseWallpaper7_Click(object sender, EventArgs e)
-        {
-            txtWallpaper7.Text = GetFileDialogResult();
-        }
-
-        private void btnBrowseWallpaper8_Click(object sender, EventArgs e)
-        {
-            txtWallpaper8.Text = GetFileDialogResult();
-        }
-
-        private void btnBrowseWallpaper9_Click(object sender, EventArgs e)
-        {
-            txtWallpaper9.Text = GetFileDialogResult();
-        }
-
-        private void btnBrowseDefaultWalpaper_Click(object sender, EventArgs e)
-        {
-            txtDefaultWallpaper.Text = GetFileDialogResult();
-        }
     }
 }
