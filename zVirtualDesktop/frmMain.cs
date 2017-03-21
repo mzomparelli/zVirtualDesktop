@@ -999,8 +999,6 @@ namespace zVirtualDesktop
                 txtDefaultWallpaper.Text = indivdualSettings[10].Split(';')[1];
 
                 stream.Close();
-                SetSystemTrayIcon();
-                SetWallpaper();
             }
             catch (Exception ex)
             {
