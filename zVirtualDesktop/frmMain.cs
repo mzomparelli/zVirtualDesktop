@@ -90,18 +90,6 @@ namespace zVirtualDesktop
 
         }
 
-        private void VirtualDesktop_ApplicationViewChanged(object sender, EventArgs e)
-        {
-            //throw new NotImplementedException();
-        }
-
-        private void VirtualDesktop_CurrentChanged(object sender, VirtualDesktopChangedEventArgs e)
-        {            
-            SetSystemTrayIcon();
-            SetWallpaper();
-            GC.Collect();
-        }
-
         private static void GetProgs()
         {
             //var regClis = Registry.ClassesRoot.OpenSubKey("CLSID");
@@ -476,13 +464,6 @@ namespace zVirtualDesktop
             }
         }
 
-        private void DesktopMenu_Click(object sender, EventArgs e)
-        {
-            ToolStripMenuItem mnu = (ToolStripMenuItem)sender;
-            GoToDesktop((int)mnu.Tag);
-        }
-
-
         public void RegisterHotKeys()
         {
             keyGoTo01.HotkeyActivated += DesktopGo;
@@ -574,6 +555,24 @@ namespace zVirtualDesktop
             {
             }
 
+        }
+
+        private void VirtualDesktop_ApplicationViewChanged(object sender, EventArgs e)
+        {
+            //throw new NotImplementedException();
+        }
+
+        private void VirtualDesktop_CurrentChanged(object sender, VirtualDesktopChangedEventArgs e)
+        {
+            SetSystemTrayIcon();
+            SetWallpaper();
+            GC.Collect();
+        }
+
+        private void DesktopMenu_Click(object sender, EventArgs e)
+        {
+            ToolStripMenuItem mnu = (ToolStripMenuItem)sender;
+            GoToDesktop((int)mnu.Tag);
         }
 
         private void PinWindow(object sender, EventArgs e)
