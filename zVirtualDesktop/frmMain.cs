@@ -128,6 +128,7 @@ namespace zVirtualDesktop
             //}
         }
 
+#region "SystemTrayIcon"
 
         public void SetSystemTrayIcon()
         {
@@ -449,6 +450,8 @@ namespace zVirtualDesktop
             }
         }
 
+#endregion
+
         private void CreateDesktopMenu()
         {
             Desktops = VirtualDesktop.GetDesktops();
@@ -479,37 +482,6 @@ namespace zVirtualDesktop
             GoToDesktop((int)mnu.Tag);
         }
 
-        private void frmMain_Load(object sender, EventArgs e)
-        {
-            try
-            {
-                this.Opacity = 0;
-                this.ShowInTaskbar = false;
-                RegisterHotKeys();
-                LoadSettings();
-                //Make sure there are at least 9 desktops.
-                int diff = Math.Abs(Desktops.Count() - 9);
-                for (int i = 1; i <= diff; i += 1)
-                {
-                    VirtualDesktop.Create();
-                }
-                timerSystemTray.Tick += TimerSystemTray_Tick;
-                timerSystemTray.Interval = 500;
-                timerSystemTray.Start();
-
-            }
-            catch (Exception ex)
-            {
-            }
-
-        }
-
-        private void TimerSystemTray_Tick(object sender, EventArgs e)
-        {
-
-            //SetSystemTrayIcon();
-            }
-        
 
         public void RegisterHotKeys()
         {
@@ -574,6 +546,33 @@ namespace zVirtualDesktop
 
             keyPinApp.HotkeyActivated += PinApp;
             keyPinApp.Register(Keys.A, true, false, false, true);
+
+        }
+
+        #region "Event Handlers"
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                this.Opacity = 0;
+                this.ShowInTaskbar = false;
+                RegisterHotKeys();
+                LoadSettings();
+                //Make sure there are at least 9 desktops.
+                int diff = Math.Abs(Desktops.Count() - 9);
+                for (int i = 1; i <= diff; i += 1)
+                {
+                    VirtualDesktop.Create();
+                }
+                timerSystemTray.Tick += timerGrabForegroundWindow_Tick;
+                timerSystemTray.Interval = 500;
+                timerSystemTray.Start();
+
+            }
+            catch (Exception ex)
+            {
+            }
 
         }
 
@@ -661,6 +660,147 @@ namespace zVirtualDesktop
 
         }
 
+        private void DesktopGo(object sender, EventArgs e)
+        {
+            Hotkey hotkey = (Hotkey)sender;
+            GoToDesktop(hotkey.ID);
+        }
+
+        private void DesktopMove(object sender, EventArgs e)
+        {
+
+            IntPtr hWnd = PInvoke.GetForegroundWindow();
+            Window win = null;
+            IEnumerable<Window> window = from Window w in windows where w.Handle == hWnd select w;
+            if (window.Count() < 1)
+            {
+                win = new Window(hWnd);
+                windows.Add(win);
+            }
+            else
+            {
+                foreach (Window foundWin in window)
+                {
+                    win = foundWin;
+                }
+            }
+
+            Hotkey hotkey = (Hotkey)sender;
+            win.MoveToDesktop(hotkey.ID);
+            //MoveToDesktop(hotkey.ID);
+        }
+
+        private void mnuExit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ExitClicked = true;
+                this.Close();
+
+            }
+            catch (Exception ex)
+            {
+            }
+
+        }
+
+        private void mnuSettings_Click(object sender, EventArgs e)
+        {
+            ShowSettings();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            HideSettings();
+        }
+
+        private void btnApply_Click(object sender, EventArgs e)
+        {
+            SaveSettings();
+            HideSettings();
+            GC.Collect();
+        }
+
+        private void lblGithub_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/mzomparelli/zVirtualDesktop");
+        }
+
+        private void mnuGithub_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/mzomparelli/zVirtualDesktop");
+        }
+
+        private void frmMain_Closing(object sender, CancelEventArgs e)
+        {
+            if (!ExitClicked)
+            {
+                if (PInvoke.GetSystemMetrics(PInvoke.SystemMetric.SM_SHUTTINGDOWN) == 0)
+                {
+                    e.Cancel = true;
+                    HideSettings();
+                }
+
+            }
+        }
+
+        private void timerGrabForegroundWindow_Tick(object sender, EventArgs e)
+        {
+            //Grab some windows
+            IntPtr hWnd = PInvoke.GetForegroundWindow();
+            IEnumerable<Window> window = from Window w in windows where w.Handle == hWnd select w;
+            if (window.Count() < 1)
+            {
+                Window win = new Window(hWnd);
+                windows.Add(win);
+            }
+        }
+
+        private void mnuSwitchDesktop_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SystemTrayMenu_Opening(object sender, CancelEventArgs e)
+        {
+            CreateDesktopMenu();
+        }
+
+        private void btnBrowseWallpaper_Click(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            GetFileDialogResult(btn.Tag.ToString());
+        }
+
+        private void mnuPinnedApps_Opening(object sender, CancelEventArgs e)
+        {
+            if (lstPinnedApps.SelectedIndex == -1)
+            {
+                mnuUnpin.Enabled = false;
+            }
+            else
+            {
+                mnuUnpin.Enabled = true;
+            }
+        }
+
+        private void mnuUnpin_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                VirtualDesktop.UnpinApplication(lstPinnedApps.Text);
+                PinnedApps.Remove(lstPinnedApps.Text);
+                SetPinnedAppListBox();
+            }
+            catch (Exception ex)
+            {
+
+            }
+
+        }
+
+        #endregion
+
         private void SetPinnedAppListBox()
         {
             lstPinnedApps.Items.Clear();
@@ -670,7 +810,7 @@ namespace zVirtualDesktop
             }
         }
 
-        public int GetDesktopNumber(Guid Guid)
+        private int GetDesktopNumber(Guid Guid)
         {
             try
             {
@@ -1044,7 +1184,7 @@ namespace zVirtualDesktop
             }
         }
 
-        public void GoToDesktop(int desktopNumber)
+        private void GoToDesktop(int desktopNumber)
         {
             try
             {                
@@ -1089,63 +1229,7 @@ namespace zVirtualDesktop
 
         }
 
-        private void DesktopGo(object sender, EventArgs e)
-        {
-            Hotkey hotkey = (Hotkey)sender;            
-            GoToDesktop(hotkey.ID);
-        }
-
-        private void DesktopMove(object sender, EventArgs e)
-        {
-            Hotkey hotkey = (Hotkey)sender;
-            IntPtr hWnd = PInvoke.GetForegroundWindow();
-            IEnumerable<Window> window = from Window w in windows where w.Handle == hWnd select w;
-            if (window.Count() < 1)
-            {
-                Window win = new Window(hWnd);
-                windows.Add(win);
-                win.MoveToDesktop(hotkey.ID);
-            }else
-            {
-                foreach (Window win in window)
-                {
-                    win.MoveToDesktop(hotkey.ID);
-                }
-            }
-
-            //MoveToDesktop(hotkey.ID);
-        }
-
-        private void mnuExit_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                ExitClicked = true;
-                this.Close();
-
-            }
-            catch (Exception ex)
-            {
-            }
-
-        }
-
-        private void mnuSettings_Click(object sender, EventArgs e)
-        {
-            ShowSettings();
-        }
-
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            HideSettings();
-        }
-
-        private void btnApply_Click(object sender, EventArgs e)
-        {
-            SaveSettings();
-            HideSettings();
-            GC.Collect();
-        }
+        #region "Settings"
 
         public void ShowSettings()
         {
@@ -1177,53 +1261,6 @@ namespace zVirtualDesktop
                     ex.Message + Environment.NewLine + 
                     ex.Source + "::" + ex.TargetSite.Name);
             }
-        }
-
-
-
-        private void lblGithub_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            System.Diagnostics.Process.Start("https://github.com/mzomparelli/zVirtualDesktop");
-        }
-
-        private void mnuGithub_Click(object sender, EventArgs e)
-        {
-            System.Diagnostics.Process.Start("https://github.com/mzomparelli/zVirtualDesktop");
-        }
-
-        private void frmMain_Closing(object sender, CancelEventArgs e)
-        {
-            if (!ExitClicked)
-            {
-                if (PInvoke.GetSystemMetrics(PInvoke.SystemMetric.SM_SHUTTINGDOWN) == 0)
-                {
-                    e.Cancel = true;
-                    HideSettings();
-                }
-               
-            }
-        }
-
-        private void timerGrabForegroundWindow_Tick(object sender, EventArgs e)
-        {
-            //Grab some windows
-            IntPtr hWnd = PInvoke.GetForegroundWindow();
-            IEnumerable<Window> window = from Window w in windows where w.Handle == hWnd select w;
-            if (window.Count() < 1)
-            {
-                Window win = new Window(hWnd);
-                windows.Add(win);
-            }
-        }
-
-        private void mnuSwitchDesktop_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void SystemTrayMenu_Opening(object sender, CancelEventArgs e)
-        {
-            CreateDesktopMenu();
         }
 
         private void LoadSettings()
@@ -1279,11 +1316,11 @@ namespace zVirtualDesktop
                 WallpaperStyles.Add(cmbWallpaperStyle7.Text);
                 WallpaperStyles.Add(cmbWallpaperStyle8.Text);
                 WallpaperStyles.Add(cmbWallpaperStyle9.Text);
-                
+
             }
             catch (Exception ex)
             {
-                
+
             }
         }
 
@@ -1310,7 +1347,7 @@ namespace zVirtualDesktop
                 bf.Serialize(stream, settings.ToString());
                 stream.Close();
                 stream.Dispose();
-               
+
 
                 WallpaperStyles.Clear();
                 WallpaperStyles.Add(cmbWallpaperStyleDefault.Text);
@@ -1332,8 +1369,10 @@ namespace zVirtualDesktop
             {
 
             }
-            
+
         }
+
+        #endregion
 
         private void GetFileDialogResult(string desktop)
         {
@@ -1385,35 +1424,5 @@ namespace zVirtualDesktop
             dlg.Dispose();
         }
 
-        private void btnBrowseWallpaper_Click(object sender, EventArgs e)
-        {
-            Button btn = (Button)sender;
-            GetFileDialogResult(btn.Tag.ToString());
-        }
-
-        private void mnuPinnedApps_Opening(object sender, CancelEventArgs e)
-        {
-            if(lstPinnedApps.SelectedIndex == -1)
-            {
-                mnuUnpin.Enabled = false;
-            }else
-            {
-                mnuUnpin.Enabled = true;
-            }
-        }
-
-        private void mnuUnpin_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                VirtualDesktop.UnpinApplication(lstPinnedApps.Text);
-                PinnedApps.Remove(lstPinnedApps.Text);
-                SetPinnedAppListBox();
-            }catch (Exception ex)
-            {
-
-            }
-            
-        }
     }
 }

@@ -39,7 +39,7 @@ namespace zVirtualDesktop
             }
         }
 
-        public string Name
+        public string ApplicationName
         {
             get
             {
@@ -245,6 +245,8 @@ namespace zVirtualDesktop
             GoToDesktop(DesktopNumber);
         }
 
+        #region "pInvoke & Private"
+
         private void GoToDesktop(int desktopNumber)
         {
             try
@@ -412,6 +414,7 @@ namespace zVirtualDesktop
         [DllImport("kernel32.dll")]
         private static extern bool CloseHandle(IntPtr handle);
 
+        #endregion
 
 
     }
