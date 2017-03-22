@@ -4,14 +4,23 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using WindowsDesktop;
 
 namespace zVirtualDesktop
 {
     public class Window
     {
-        private IntPtr _hWnd;
 
-        public IntPtr hWnd
+        public Window(IntPtr hWnd)
+        {
+            this.hWnd = hWnd;
+        }
+
+
+        private IntPtr hWnd;
+
+        public IntPtr Handle
         {
             get
             {
@@ -19,7 +28,7 @@ namespace zVirtualDesktop
             }
             set
             {
-                _hWnd = value;
+                hWnd = value;
             }
         }
 
@@ -38,17 +47,287 @@ namespace zVirtualDesktop
             }
         }
 
-        public uint ProcessID
+        public int DesktopNumber
         {
             get
             {
-                return GetProcessID();
+                try
+                {
+                    return GetDesktopNumber(VirtualDesktop.FromHwnd(hWnd).Id);
+                }catch
+                {
+                    return 0;
+                }
+                
             }
         }
 
-        public Window(IntPtr hWnd)
+        public string AppID
         {
-            this.hWnd = hWnd;
+            get
+            {
+                try
+                {
+                    return ApplicationHelper.GetAppId(hWnd);
+                }catch
+                {
+                    return "";
+                }
+            }
+        }
+
+        public bool IsPinnedWindow
+        {
+            get
+            {
+                try
+                {
+                    return VirtualDesktop.IsPinnedWindow(hWnd);
+                }catch
+                {
+                    return false;
+                }
+                
+            }
+        }
+
+        public bool IsPinnedApplication
+        {
+            get
+            {
+                try
+                {
+                    return VirtualDesktop.IsPinnedApplication(AppID);
+                }
+                catch
+                {
+                    return false;
+                }
+
+            }
+        }
+
+        public System.Diagnostics.Process Process
+        {
+            get
+            {
+                try
+                {
+                    return System.Diagnostics.Process.GetProcessById((int)GetProcessID());
+                }catch(Exception ex)
+                {
+                    return null;
+                }
+                
+            }
+        }
+
+        public void Unpin()
+        {
+            try
+            {
+                VirtualDesktop.UnpinWindow(hWnd);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occured unpinning the specified window. See additional details below." + Environment.NewLine + Environment.NewLine +
+                    ex.Message + Environment.NewLine +
+                    ex.Source + "::" + ex.TargetSite.Name);
+            }
+        } 
+
+        public void UnpinApplication()
+        {
+            try
+            {
+                VirtualDesktop.UnpinApplication(AppID);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occured unpinning the specified application. See additional details below." + Environment.NewLine + Environment.NewLine +
+                    ex.Message + Environment.NewLine +
+                    ex.Source + "::" + ex.TargetSite.Name);
+            }
+        }
+
+        public void Pin()
+        {
+            try
+            {
+                VirtualDesktop.PinWindow(hWnd);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occured pinning the specified window. See additional details below." + Environment.NewLine + Environment.NewLine +
+                    ex.Message + Environment.NewLine +
+                    ex.Source + "::" + ex.TargetSite.Name);
+            }
+        }
+
+        public void PinApplication()
+        {
+            try
+            {
+                VirtualDesktop.PinApplication(AppID);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occured pinning the specified application. See additional details below." + Environment.NewLine + Environment.NewLine +
+                    ex.Message + Environment.NewLine +
+                    ex.Source + "::" + ex.TargetSite.Name);
+            }
+        }
+
+        public void MoveToDesktop(int desktopNumber)
+        {
+            try
+            {
+                //Create addtional desktops if necessary
+                VirtualDesktop[] Desktops = VirtualDesktop.GetDesktops();
+                if (Desktops.Count() < desktopNumber)
+                {
+                    int diff = Math.Abs(Desktops.Count() - desktopNumber);
+                    for (int x = 1; x <= diff; x++)
+                    {
+                        VirtualDesktop.Create();
+                    }
+                }             
+
+                VirtualDesktop current = VirtualDesktop.Current;
+
+                int i = GetDesktopNumber(current.Id);
+                if (i == desktopNumber)
+                {
+                    return;
+                }
+                else
+                {
+                    int diff = Math.Abs(i - desktopNumber);
+                    if (i < desktopNumber)
+                    {
+                        for (int z = 1; z <= diff; z++)
+                        {
+                            current = current.GetRight();
+                        }
+                    }
+                    else
+                    {
+                        for (int z = 1; z <= diff; z++)
+                        {
+                            current = current.GetLeft();
+                        }
+                    }
+                    VirtualDesktopHelper.MoveToDesktop(hWnd, current);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occured moving the specified window. See additional details below." + Environment.NewLine + Environment.NewLine +
+                    ex.Message + Environment.NewLine +
+                    ex.Source + "::" + ex.TargetSite.Name);
+            }
+
+
+        }
+
+        public void MoveToDesktop(int desktopNumber, bool follow)
+        {
+            MoveToDesktop(desktopNumber);
+            if(follow)
+            {
+                GoToDesktop(desktopNumber);
+            }
+        }
+
+        private void GoToDesktop(int desktopNumber)
+        {
+            try
+            {
+                VirtualDesktop current = VirtualDesktop.Current;
+                int i = GetDesktopNumber(current.Id);
+                if (i == desktopNumber)
+                {
+                    return;
+                }
+                else
+                {
+                    int diff = Math.Abs(i - desktopNumber);
+                    if (i < desktopNumber)
+                    {
+                        for (int z = 1; z <= diff; z++)
+                        {
+                            current = current.GetRight();
+                        }
+                    }
+                    else
+                    {
+                        for (int z = 1; z <= diff; z++)
+                        {
+                            current = current.GetLeft();
+                        }
+                    }
+
+                    current.Switch();
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occured navigating to the specified desktop. See additional details below." + Environment.NewLine + Environment.NewLine +
+                    ex.Message + Environment.NewLine +
+                    ex.Source + "::" + ex.TargetSite.Name);
+            }
+
+
+
+
+        }
+
+        private void GoToDesktop()
+        {
+            try
+            {
+                VirtualDesktop current = VirtualDesktop.Current;
+                int i = GetDesktopNumber(current.Id);
+                if (i == DesktopNumber)
+                {
+                    return;
+                }
+                else
+                {
+                    int diff = Math.Abs(i - DesktopNumber);
+                    if (i < DesktopNumber)
+                    {
+                        for (int z = 1; z <= diff; z++)
+                        {
+                            current = current.GetRight();
+                        }
+                    }
+                    else
+                    {
+                        for (int z = 1; z <= diff; z++)
+                        {
+                            current = current.GetLeft();
+                        }
+                    }
+
+                    current.Switch();
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occured navigating to the specified desktop. See additional details below." + Environment.NewLine + Environment.NewLine +
+                    ex.Message + Environment.NewLine +
+                    ex.Source + "::" + ex.TargetSite.Name);
+            }
+
+
+
+
         }
 
 
@@ -103,6 +382,31 @@ namespace zVirtualDesktop
                 return 0;
             }
             
+        }
+
+
+        private int GetDesktopNumber(Guid Guid)
+        {
+            try
+            {
+                VirtualDesktop[] Desktops = VirtualDesktop.GetDesktops();
+                for (int i = 0; i <= Desktops.Count() - 1; i++)
+                {
+                    if (Desktops[i].Id == Guid)
+                    {
+                        return i + 1;
+                    }
+                }
+                return 1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occured identifying the desktop number. See additional details below." + Environment.NewLine + Environment.NewLine +
+                    ex.Message + Environment.NewLine +
+                    ex.Source + "::" + ex.TargetSite.Name);
+                return 1;
+            }
+
         }
 
 

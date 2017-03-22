@@ -19,7 +19,9 @@ namespace zVirtualDesktop
         public IsolatedStorageFile storage = IsolatedStorageFile.GetUserStoreForAssembly();
 
         private List<string> WallpaperStyles = new List<string>();
-        private List<string> PinnedApps = new List<string>();
+        public List<string> PinnedApps = new List<string>();
+
+        public List<Window> windows = new List<Window>();
 
 
         public Hotkey keyGoTo01 = new Hotkey(1);
@@ -54,7 +56,10 @@ namespace zVirtualDesktop
         public frmMain()
         {
             InitializeComponent();
-
+            foreach(VirtualDesktop d in VirtualDesktop.GetDesktops())
+            {
+                d.Remove();
+            }
             //Wire up some events
             this.Closing += frmMain_Closing;
             this.Load += frmMain_Load;
@@ -65,6 +70,7 @@ namespace zVirtualDesktop
             lblGithub.LinkClicked += lblGithub_LinkClicked;
             mnuGithub.Click += mnuGithub_Click;
             VirtualDesktop.CurrentChanged += VirtualDesktop_CurrentChanged;
+            VirtualDesktop.ApplicationViewChanged += VirtualDesktop_ApplicationViewChanged;
             btnBrowseWallpaper1.Click += btnBrowseWallpaper_Click;
             btnBrowseWallpaper2.Click += btnBrowseWallpaper_Click;
             btnBrowseWallpaper3.Click += btnBrowseWallpaper_Click;
@@ -82,6 +88,11 @@ namespace zVirtualDesktop
             //tGetProgs.Start();
 
 
+        }
+
+        private void VirtualDesktop_ApplicationViewChanged(object sender, EventArgs e)
+        {
+            //throw new NotImplementedException();
         }
 
         private void VirtualDesktop_CurrentChanged(object sender, VirtualDesktopChangedEventArgs e)
@@ -570,15 +581,33 @@ namespace zVirtualDesktop
         {
             try
             {
-                IntPtr window = PInvoke.GetForegroundWindow();
-                if (VirtualDesktop.IsPinnedWindow(window))
+                Hotkey hotkey = (Hotkey)sender;
+                IntPtr hWnd = PInvoke.GetForegroundWindow();
+                Window win = null;
+                IEnumerable<Window> window = from Window w in windows where w.Handle == hWnd select w;
+                if (window.Count() < 1)
                 {
-                    VirtualDesktop.UnpinWindow(window);
+                    win = new Window(hWnd);
+                    windows.Add(win);
                 }
                 else
                 {
-                    VirtualDesktop.PinWindow(window);
+                    foreach (Window foundWin in window)
+                    {
+                        win = foundWin;
+                    }
                 }
+
+                if (win.IsPinnedWindow)
+                {
+                    win.Unpin();
+                }
+                else
+                {
+                    win.Pin();
+                }
+
+                SetPinnedAppListBox();
             }
             catch (Exception ex)
             {
@@ -593,18 +622,32 @@ namespace zVirtualDesktop
         {
             try
             {
-                IntPtr window = PInvoke.GetForegroundWindow();
-                string appID = ApplicationHelper.GetAppId(window);
-                
-                if (VirtualDesktop.IsPinnedApplication(appID))
+                Hotkey hotkey = (Hotkey)sender;
+                IntPtr hWnd = PInvoke.GetForegroundWindow();
+                Window win = null;
+                IEnumerable<Window> window = from Window w in windows where w.Handle == hWnd select w;
+                if (window.Count() < 1)
                 {
-                    VirtualDesktop.UnpinApplication(appID);
-                    PinnedApps.Remove(appID);
+                    win = new Window(hWnd);
+                    windows.Add(win);
                 }
                 else
                 {
-                    VirtualDesktop.PinApplication(appID);
-                    PinnedApps.Add(appID);
+                    foreach (Window foundWin in window)
+                    {
+                        win = foundWin;
+                    }
+                }
+
+                if (win.IsPinnedApplication)
+                {
+                    win.UnpinApplication();
+                    PinnedApps.Remove(win.AppID);
+                }
+                else
+                {
+                    win.PinApplication();
+                    PinnedApps.Add(win.AppID);
                 }
 
                 SetPinnedAppListBox();
@@ -1090,14 +1133,29 @@ namespace zVirtualDesktop
 
         private void DesktopGo(object sender, EventArgs e)
         {
-            Hotkey hotkey = (Hotkey)sender;
+            Hotkey hotkey = (Hotkey)sender;            
             GoToDesktop(hotkey.ID);
         }
 
         private void DesktopMove(object sender, EventArgs e)
         {
             Hotkey hotkey = (Hotkey)sender;
-            MoveToDesktop(hotkey.ID);
+            IntPtr hWnd = PInvoke.GetForegroundWindow();
+            IEnumerable<Window> window = from Window w in windows where w.Handle == hWnd select w;
+            if (window.Count() < 1)
+            {
+                Window win = new Window(hWnd);
+                windows.Add(win);
+                win.MoveToDesktop(hotkey.ID);
+            }else
+            {
+                foreach (Window win in window)
+                {
+                    win.MoveToDesktop(hotkey.ID);
+                }
+            }
+
+            //MoveToDesktop(hotkey.ID);
         }
 
         private void mnuExit_Click(object sender, EventArgs e)
