@@ -18,7 +18,8 @@ namespace zVirtualDesktop
 
         public IsolatedStorageFile storage = IsolatedStorageFile.GetUserStoreForAssembly();
 
-        
+        private List<string> WallpaperStyles = new List<string>();
+
         
 
         public Hotkey keyGoTo01 = new Hotkey(1);
@@ -655,6 +656,232 @@ namespace zVirtualDesktop
 
         }
 
+        private Wallpaper.Style GetWallpaperStyle(string desktop)
+        {
+            switch (desktop)
+            {
+                case "1":
+                    if(WallpaperStyles[1] == "")
+                    {
+                        return Wallpaper.Style.Centered;
+                    }else
+                    {
+                        switch(WallpaperStyles[1])
+                        {
+                            case "Centered":
+                                return Wallpaper.Style.Centered;
+                            case "Streched":
+                                return Wallpaper.Style.Stretched;
+                            case "Tiled":
+                                return Wallpaper.Style.Tiled;
+                            default:
+                                return Wallpaper.Style.Centered;
+                        }
+                    }
+                    break;
+                case "2":
+                    if (WallpaperStyles[2] == "")
+                    {
+                        return Wallpaper.Style.Centered;
+                    }
+                    else
+                    {
+                        switch (WallpaperStyles[2])
+                        {
+                            case "Centered":
+                                return Wallpaper.Style.Centered;
+                            case "Streched":
+                                return Wallpaper.Style.Stretched;
+                            case "Tiled":
+                                return Wallpaper.Style.Tiled;
+                            default:
+                                return Wallpaper.Style.Centered;
+                        }
+                    }
+                    break;
+                case "3":
+                    if (WallpaperStyles[3] == "")
+                    {
+                        return Wallpaper.Style.Centered;
+                    }
+                    else
+                    {
+                        switch (WallpaperStyles[3])
+                        {
+                            case "Centered":
+                                return Wallpaper.Style.Centered;
+                            case "Streched":
+                                return Wallpaper.Style.Stretched;
+                            case "Tiled":
+                                return Wallpaper.Style.Tiled;
+                            default:
+                                return Wallpaper.Style.Centered;
+                        }
+                    }
+                    break;
+                case "4":
+                    if (WallpaperStyles[4] == "")
+                    {
+                        return Wallpaper.Style.Centered;
+                    }
+                    else
+                    {
+                        switch (WallpaperStyles[4])
+                        {
+                            case "Centered":
+                                return Wallpaper.Style.Centered;
+                            case "Streched":
+                                return Wallpaper.Style.Stretched;
+                            case "Tiled":
+                                return Wallpaper.Style.Tiled;
+                            default:
+                                return Wallpaper.Style.Centered;
+                        }
+                    }
+                    break;
+                case "5":
+                    if (WallpaperStyles[5] == "")
+                    {
+                        return Wallpaper.Style.Centered;
+                    }
+                    else
+                    {
+                        switch (WallpaperStyles[5])
+                        {
+                            case "Centered":
+                                return Wallpaper.Style.Centered;
+                            case "Streched":
+                                return Wallpaper.Style.Stretched;
+                            case "Tiled":
+                                return Wallpaper.Style.Tiled;
+                            default:
+                                return Wallpaper.Style.Centered;
+                        }
+                    }
+                    break;
+                case "6":
+                    if (WallpaperStyles[6] == "")
+                    {
+                        return Wallpaper.Style.Centered;
+                    }
+                    else
+                    {
+                        switch (WallpaperStyles[6])
+                        {
+                            case "Centered":
+                                return Wallpaper.Style.Centered;
+                            case "Streched":
+                                return Wallpaper.Style.Stretched;
+                            case "Tiled":
+                                return Wallpaper.Style.Tiled;
+                            default:
+                                return Wallpaper.Style.Centered;
+                        }
+                    }
+                    break;
+                case "7":
+                    if (WallpaperStyles[7] == "")
+                    {
+                        return Wallpaper.Style.Centered;
+                    }
+                    else
+                    {
+                        switch (WallpaperStyles[7])
+                        {
+                            case "Centered":
+                                return Wallpaper.Style.Centered;
+                            case "Streched":
+                                return Wallpaper.Style.Stretched;
+                            case "Tiled":
+                                return Wallpaper.Style.Tiled;
+                            default:
+                                return Wallpaper.Style.Centered;
+                        }
+                    }
+                    break;
+                case "8":
+                    if (WallpaperStyles[8] == "")
+                    {
+                        return Wallpaper.Style.Centered;
+                    }
+                    else
+                    {
+                        switch (WallpaperStyles[8])
+                        {
+                            case "Centered":
+                                return Wallpaper.Style.Centered;
+                            case "Streched":
+                                return Wallpaper.Style.Stretched;
+                            case "Tiled":
+                                return Wallpaper.Style.Tiled;
+                            default:
+                                return Wallpaper.Style.Centered;
+                        }
+                    }
+                    break;
+                case "9":
+                    if (WallpaperStyles[9] == "")
+                    {
+                        return Wallpaper.Style.Centered;
+                    }
+                    else
+                    {
+                        switch (WallpaperStyles[9])
+                        {
+                            case "Centered":
+                                return Wallpaper.Style.Centered;
+                            case "Streched":
+                                return Wallpaper.Style.Stretched;
+                            case "Tiled":
+                                return Wallpaper.Style.Tiled;
+                            default:
+                                return Wallpaper.Style.Centered;
+                        }
+                    }
+                    break;
+                case "default":
+                    if (WallpaperStyles[0] == "")
+                    {
+                        return Wallpaper.Style.Centered;
+                    }
+                    else
+                    {
+                        switch (WallpaperStyles[0])
+                        {
+                            case "Centered":
+                                return Wallpaper.Style.Centered;
+                            case "Streched":
+                                return Wallpaper.Style.Stretched;
+                            case "Tiled":
+                                return Wallpaper.Style.Tiled;
+                            default:
+                                return Wallpaper.Style.Centered;
+                        }
+                    }
+                    break;
+                default:
+                    if (WallpaperStyles[0] == "")
+                    {
+                        return Wallpaper.Style.Centered;
+                    }
+                    else
+                    {
+                        switch (WallpaperStyles[0])
+                        {
+                            case "Centered":
+                                return Wallpaper.Style.Centered;
+                            case "Streched":
+                                return Wallpaper.Style.Stretched;
+                            case "Tiled":
+                                return Wallpaper.Style.Tiled;
+                            default:
+                                return Wallpaper.Style.Centered;
+                        }
+                    }
+                    break;
+            }
+        }
+
         private void SetWallpaper()
         {
             VirtualDesktop current = VirtualDesktop.Current;
@@ -664,115 +891,115 @@ namespace zVirtualDesktop
                 case 1:
                     if (txtWallpaper1.Text != "" && System.IO.File.Exists(txtWallpaper1.Text))
                     {
-                        Wallpaper.Set(new System.Uri(txtWallpaper1.Text), Wallpaper.Style.Stretched);
+                        Wallpaper.Set(new System.Uri(txtWallpaper1.Text), GetWallpaperStyle("1"));
                     }else {
                         if (txtDefaultWallpaper.Text != "" && System.IO.File.Exists(txtDefaultWallpaper.Text))
                         {
-                            Wallpaper.Set(new System.Uri(txtDefaultWallpaper.Text), Wallpaper.Style.Stretched);
+                            Wallpaper.Set(new System.Uri(txtDefaultWallpaper.Text), GetWallpaperStyle("default"));
                         }
                     }
                     break;
                 case 2:
                     if (txtWallpaper2.Text != "" && System.IO.File.Exists(txtWallpaper2.Text))
                     {
-                        Wallpaper.Set(new System.Uri(txtWallpaper2.Text), Wallpaper.Style.Stretched);
+                        Wallpaper.Set(new System.Uri(txtWallpaper2.Text), GetWallpaperStyle("2"));
                     }
                     else
                     {
                         if (txtDefaultWallpaper.Text != "" && System.IO.File.Exists(txtDefaultWallpaper.Text))
                         {
-                            Wallpaper.Set(new System.Uri(txtDefaultWallpaper.Text), Wallpaper.Style.Stretched);
+                            Wallpaper.Set(new System.Uri(txtDefaultWallpaper.Text), GetWallpaperStyle("default"));
                         }
                     }
                     break;
                 case 3:
                     if (txtWallpaper3.Text != "" && System.IO.File.Exists(txtWallpaper3.Text))
                     {
-                        Wallpaper.Set(new System.Uri(txtWallpaper3.Text), Wallpaper.Style.Stretched);
+                        Wallpaper.Set(new System.Uri(txtWallpaper3.Text), GetWallpaperStyle("3"));
                     }
                     else
                     {
                         if (txtDefaultWallpaper.Text != "" && System.IO.File.Exists(txtDefaultWallpaper.Text))
                         {
-                            Wallpaper.Set(new System.Uri(txtDefaultWallpaper.Text), Wallpaper.Style.Stretched);
+                            Wallpaper.Set(new System.Uri(txtDefaultWallpaper.Text), GetWallpaperStyle("default"));
                         }
                     }
                     break;
                 case 4:
                     if (txtWallpaper4.Text != "" && System.IO.File.Exists(txtWallpaper4.Text))
                     {
-                        Wallpaper.Set(new System.Uri(txtWallpaper4.Text), Wallpaper.Style.Stretched);
+                        Wallpaper.Set(new System.Uri(txtWallpaper4.Text), GetWallpaperStyle("4"));
                     }
                     else
                     {
                         if (txtDefaultWallpaper.Text != "" && System.IO.File.Exists(txtDefaultWallpaper.Text))
                         {
-                            Wallpaper.Set(new System.Uri(txtDefaultWallpaper.Text), Wallpaper.Style.Stretched);
+                            Wallpaper.Set(new System.Uri(txtDefaultWallpaper.Text), GetWallpaperStyle("default"));
                         }
                     }
                     break;
                 case 5:
                     if (txtWallpaper5.Text != "" && System.IO.File.Exists(txtWallpaper5.Text))
                     {
-                        Wallpaper.Set(new System.Uri(txtWallpaper5.Text), Wallpaper.Style.Stretched);
+                        Wallpaper.Set(new System.Uri(txtWallpaper5.Text), GetWallpaperStyle("5"));
                     }
                     else
                     {
                         if (txtDefaultWallpaper.Text != "" && System.IO.File.Exists(txtDefaultWallpaper.Text))
                         {
-                            Wallpaper.Set(new System.Uri(txtDefaultWallpaper.Text), Wallpaper.Style.Stretched);
+                            Wallpaper.Set(new System.Uri(txtDefaultWallpaper.Text), GetWallpaperStyle("default"));
                         }
                     }
                     break;
                 case 6:
                     if (txtWallpaper6.Text != "" && System.IO.File.Exists(txtWallpaper6.Text))
                     {
-                        Wallpaper.Set(new System.Uri(txtWallpaper6.Text), Wallpaper.Style.Stretched);
+                        Wallpaper.Set(new System.Uri(txtWallpaper6.Text), GetWallpaperStyle("6"));
                     }
                     else
                     {
                         if (txtDefaultWallpaper.Text != "" && System.IO.File.Exists(txtDefaultWallpaper.Text))
                         {
-                            Wallpaper.Set(new System.Uri(txtDefaultWallpaper.Text), Wallpaper.Style.Stretched);
+                            Wallpaper.Set(new System.Uri(txtDefaultWallpaper.Text), GetWallpaperStyle("default"));
                         }
                     }
                     break;
                 case 7:
                     if (txtWallpaper7.Text != "" && System.IO.File.Exists(txtWallpaper7.Text))
                     {
-                        Wallpaper.Set(new System.Uri(txtWallpaper7.Text), Wallpaper.Style.Stretched);
+                        Wallpaper.Set(new System.Uri(txtWallpaper7.Text), GetWallpaperStyle("7"));
                     }
                     else
                     {
                         if (txtDefaultWallpaper.Text != "" && System.IO.File.Exists(txtDefaultWallpaper.Text))
                         {
-                            Wallpaper.Set(new System.Uri(txtDefaultWallpaper.Text), Wallpaper.Style.Stretched);
+                            Wallpaper.Set(new System.Uri(txtDefaultWallpaper.Text), GetWallpaperStyle("default"));
                         }
                     }
                     break;
                 case 8:
                     if (txtWallpaper8.Text != "" && System.IO.File.Exists(txtWallpaper8.Text))
                     {
-                        Wallpaper.Set(new System.Uri(txtWallpaper8.Text), Wallpaper.Style.Stretched);
+                        Wallpaper.Set(new System.Uri(txtWallpaper8.Text), GetWallpaperStyle("8"));
                     }
                     else
                     {
                         if (txtDefaultWallpaper.Text != "" && System.IO.File.Exists(txtDefaultWallpaper.Text))
                         {
-                            Wallpaper.Set(new System.Uri(txtDefaultWallpaper.Text), Wallpaper.Style.Stretched);
+                            Wallpaper.Set(new System.Uri(txtDefaultWallpaper.Text), GetWallpaperStyle("default"));
                         }
                     }
                     break;
                 case 9:
                     if (txtWallpaper9.Text != "" && System.IO.File.Exists(txtWallpaper9.Text))
                     {
-                        Wallpaper.Set(new System.Uri(txtWallpaper9.Text), Wallpaper.Style.Stretched);
+                        Wallpaper.Set(new System.Uri(txtWallpaper9.Text), GetWallpaperStyle("9"));
                     }
                     else
                     {
                         if (txtDefaultWallpaper.Text != "" && System.IO.File.Exists(txtDefaultWallpaper.Text))
                         {
-                            Wallpaper.Set(new System.Uri(txtDefaultWallpaper.Text), Wallpaper.Style.Stretched);
+                            Wallpaper.Set(new System.Uri(txtDefaultWallpaper.Text), GetWallpaperStyle("default"));
                         }
                     }
                     break;
@@ -1007,7 +1234,32 @@ namespace zVirtualDesktop
                 txtWallpaper9.Text = indivdualSettings[9].Split(';')[1];
                 txtDefaultWallpaper.Text = indivdualSettings[10].Split(';')[1];
 
+                cmbWallpaperStyle1.Text = indivdualSettings[1].Split(';')[2];
+                cmbWallpaperStyle2.Text = indivdualSettings[2].Split(';')[2];
+                cmbWallpaperStyle3.Text = indivdualSettings[3].Split(';')[2];
+                cmbWallpaperStyle4.Text = indivdualSettings[4].Split(';')[2];
+                cmbWallpaperStyle5.Text = indivdualSettings[5].Split(';')[2];
+                cmbWallpaperStyle6.Text = indivdualSettings[6].Split(';')[2];
+                cmbWallpaperStyle7.Text = indivdualSettings[7].Split(';')[2];
+                cmbWallpaperStyle8.Text = indivdualSettings[8].Split(';')[2];
+                cmbWallpaperStyle9.Text = indivdualSettings[9].Split(';')[2];
+                cmbWallpaperStyleDefault.Text = indivdualSettings[10].Split(';')[2];
+
+
                 stream.Close();
+
+                WallpaperStyles.Clear();
+                WallpaperStyles.Add(cmbWallpaperStyleDefault.Text);
+                WallpaperStyles.Add(cmbWallpaperStyle1.Text);
+                WallpaperStyles.Add(cmbWallpaperStyle2.Text);
+                WallpaperStyles.Add(cmbWallpaperStyle3.Text);
+                WallpaperStyles.Add(cmbWallpaperStyle4.Text);
+                WallpaperStyles.Add(cmbWallpaperStyle5.Text);
+                WallpaperStyles.Add(cmbWallpaperStyle6.Text);
+                WallpaperStyles.Add(cmbWallpaperStyle7.Text);
+                WallpaperStyles.Add(cmbWallpaperStyle8.Text);
+                WallpaperStyles.Add(cmbWallpaperStyle9.Text);
+                
             }
             catch (Exception ex)
             {
@@ -1022,21 +1274,33 @@ namespace zVirtualDesktop
                 StringBuilder settings = new StringBuilder();
                 settings.Append("IconTheme;" + cmbIcons.Text);
                 //Get the URI for each desktop
-                settings.Append("~DesktopWallpaper1;" + txtWallpaper1.Text);
-                settings.Append("~DesktopWallpaper2;" + txtWallpaper2.Text);
-                settings.Append("~DesktopWallpaper3;" + txtWallpaper3.Text);
-                settings.Append("~DesktopWallpaper4;" + txtWallpaper4.Text);
-                settings.Append("~DesktopWallpaper5;" + txtWallpaper5.Text);
-                settings.Append("~DesktopWallpaper6;" + txtWallpaper6.Text);
-                settings.Append("~DesktopWallpaper7;" + txtWallpaper7.Text);
-                settings.Append("~DesktopWallpaper8;" + txtWallpaper8.Text);
-                settings.Append("~DesktopWallpaper9;" + txtWallpaper9.Text);
-                settings.Append("~DefaultWallpaper;" + txtDefaultWallpaper.Text);
+                settings.Append("~DesktopWallpaper1;" + txtWallpaper1.Text + ";" + cmbWallpaperStyle1.Text);
+                settings.Append("~DesktopWallpaper2;" + txtWallpaper2.Text + ";" + cmbWallpaperStyle3.Text);
+                settings.Append("~DesktopWallpaper3;" + txtWallpaper3.Text + ";" + cmbWallpaperStyle3.Text);
+                settings.Append("~DesktopWallpaper4;" + txtWallpaper4.Text + ";" + cmbWallpaperStyle4.Text);
+                settings.Append("~DesktopWallpaper5;" + txtWallpaper5.Text + ";" + cmbWallpaperStyle5.Text);
+                settings.Append("~DesktopWallpaper6;" + txtWallpaper6.Text + ";" + cmbWallpaperStyle6.Text);
+                settings.Append("~DesktopWallpaper7;" + txtWallpaper7.Text + ";" + cmbWallpaperStyle7.Text);
+                settings.Append("~DesktopWallpaper8;" + txtWallpaper8.Text + ";" + cmbWallpaperStyle8.Text);
+                settings.Append("~DesktopWallpaper9;" + txtWallpaper9.Text + ";" + cmbWallpaperStyle9.Text);
+                settings.Append("~DefaultWallpaper;" + txtDefaultWallpaper.Text + ";" + cmbWallpaperStyleDefault.Text);
 
                 System.IO.Stream stream = new IsolatedStorageFileStream("zVirtualDesktop.bin", System.IO.FileMode.OpenOrCreate, storage);
                 System.Runtime.Serialization.Formatters.Binary.BinaryFormatter bf = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
                 bf.Serialize(stream, settings.ToString());
                 stream.Close();
+
+                WallpaperStyles.Clear();
+                WallpaperStyles.Add(cmbWallpaperStyleDefault.Text);
+                WallpaperStyles.Add(cmbWallpaperStyle1.Text);
+                WallpaperStyles.Add(cmbWallpaperStyle2.Text);
+                WallpaperStyles.Add(cmbWallpaperStyle3.Text);
+                WallpaperStyles.Add(cmbWallpaperStyle4.Text);
+                WallpaperStyles.Add(cmbWallpaperStyle5.Text);
+                WallpaperStyles.Add(cmbWallpaperStyle6.Text);
+                WallpaperStyles.Add(cmbWallpaperStyle7.Text);
+                WallpaperStyles.Add(cmbWallpaperStyle8.Text);
+                WallpaperStyles.Add(cmbWallpaperStyle9.Text);
 
                 SetSystemTrayIcon();
                 SetWallpaper();
