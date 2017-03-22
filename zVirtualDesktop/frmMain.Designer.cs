@@ -87,6 +87,9 @@
             System.Windows.Forms.ListViewItem listViewItem38 = new System.Windows.Forms.ListViewItem(new string[] {
             "Pin/Unpin Window",
             "WIN+ALT+Z"}, -1);
+            System.Windows.Forms.ListViewItem listViewItem39 = new System.Windows.Forms.ListViewItem(new string[] {
+            "Pin/Unpin Application",
+            "WIN+ALT+A"}, -1);
             this.lblGithub = new System.Windows.Forms.LinkLabel();
             this.SystemTray = new System.Windows.Forms.NotifyIcon(this.components);
             this.SystemTrayMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -238,7 +241,8 @@
             listViewItem35,
             listViewItem36,
             listViewItem37,
-            listViewItem38});
+            listViewItem38,
+            listViewItem39});
             this.ListView1.Location = new System.Drawing.Point(2, 0);
             this.ListView1.Name = "ListView1";
             this.ListView1.Size = new System.Drawing.Size(506, 433);

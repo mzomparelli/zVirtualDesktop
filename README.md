@@ -10,18 +10,22 @@ __Hotkeys:__
 __Navigate Desktops:__  
 <kbd>WIN</kbd>+<kbd>ALT</kbd>+<kbd>Numpad</kbd>
 
-__Move Windows:__  
+Move Windows:  
 <kbd>WIN</kbd>+<kbd>CTRL</kbd>+<kbd>Numpad</kbd>
 
-__Pin/Unpin Windows:__  
+Pin/Unpin Windows:  
 <kbd>WIN</kbd>+<kbd>ALT</kbd>+<kbd>Z</kbd>
+
+Pin/Unpin Applications:  
+<kbd>WIN</kbd>+<kbd>ALT</kbd>+<kbd>A</kbd>
 
 __System Tray Icon:__  
 Choose from several sets of icons on the settings window.  
 The icons indicate which desktop you are viewing.
 
 __Wallpapers:__  
-Set a different wallpaper for each desktop.
+Set a different wallpaper for each desktop.  
+Specify the style for each (Center, Stretch, or Tile).
 
 
 __Upcoming Features:__  

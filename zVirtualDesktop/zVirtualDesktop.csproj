@@ -92,6 +92,7 @@
     <Compile Include="VirtualDesktopDestroyEventArgs.cs" />
     <Compile Include="VirtualDesktopHelper.cs" />
     <Compile Include="Wallpaper.cs" />
+    <Compile Include="Window.cs" />
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
