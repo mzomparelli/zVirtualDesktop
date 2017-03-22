@@ -19,8 +19,8 @@ namespace zVirtualDesktop
         public IsolatedStorageFile storage = IsolatedStorageFile.GetUserStoreForAssembly();
 
         private List<string> WallpaperStyles = new List<string>();
+        private List<string> PinnedApps = new List<string>();
 
-        
 
         public Hotkey keyGoTo01 = new Hotkey(1);
         public Hotkey keyGoTo02 = new Hotkey(2);
@@ -593,35 +593,21 @@ namespace zVirtualDesktop
         {
             try
             {
-                //IntPtr window = Globals.GetForegroundWindow();
-                //System.Diagnostics.Process p = System.Diagnostics.Process.GetProcessById((int)Globals.GetProcessID());
-                //IntPtr hWnd = p.MainWindowHandle;
-                //int nRet;
-                //// Pre-allocate 256 characters, since this is the maximum class name length.
-                //StringBuilder ClassName = new StringBuilder(256);
-                ////Get the window class name
-                //nRet = Globals.GetClassName(window, ClassName, ClassName.Capacity);
-                //if (nRet != 0)
-                //{
-                //    MessageBox.Show(ClassName.ToString());
-                //}
-                //else
-                //{
-                    
-                //}
-
+                IntPtr window = PInvoke.GetForegroundWindow();
+                string appID = ApplicationHelper.GetAppId(window);
                 
-                MessageBox.Show(PInvoke.GetTopWindowName());
-                return;
-                
-                if (VirtualDesktop.IsPinnedApplication(PInvoke.GetTopWindowName()))
+                if (VirtualDesktop.IsPinnedApplication(appID))
                 {
-                    VirtualDesktop.PinApplication(PInvoke.GetTopWindowName());
+                    VirtualDesktop.UnpinApplication(appID);
+                    PinnedApps.Remove(appID);
                 }
                 else
                 {
-                    VirtualDesktop.PinApplication(PInvoke.GetTopWindowName());
+                    VirtualDesktop.PinApplication(appID);
+                    PinnedApps.Add(appID);
                 }
+
+                SetPinnedAppListBox();
             }
             catch (Exception ex)
             {
@@ -630,6 +616,15 @@ namespace zVirtualDesktop
                     ex.Source + "::" + ex.TargetSite.Name);
             }
 
+        }
+
+        private void SetPinnedAppListBox()
+        {
+            lstPinnedApps.Items.Clear();
+            foreach (string appID in PinnedApps)
+            {
+                lstPinnedApps.Items.Add(appID);
+            }
         }
 
         public int GetDesktopNumber(Guid Guid)
@@ -1373,5 +1368,29 @@ namespace zVirtualDesktop
             GetFileDialogResult(btn.Tag.ToString());
         }
 
+        private void mnuPinnedApps_Opening(object sender, CancelEventArgs e)
+        {
+            if(lstPinnedApps.SelectedIndex == -1)
+            {
+                mnuUnpin.Enabled = false;
+            }else
+            {
+                mnuUnpin.Enabled = true;
+            }
+        }
+
+        private void mnuUnpin_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                VirtualDesktop.UnpinApplication(lstPinnedApps.Text);
+                PinnedApps.Remove(lstPinnedApps.Text);
+                SetPinnedAppListBox();
+            }catch (Exception ex)
+            {
+
+            }
+            
+        }
     }
 }

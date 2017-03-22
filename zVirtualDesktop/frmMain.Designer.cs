@@ -149,12 +149,15 @@
             this.cmbWallpaperStyle8 = new System.Windows.Forms.ComboBox();
             this.cmbWallpaperStyle9 = new System.Windows.Forms.ComboBox();
             this.cmbWallpaperStyleDefault = new System.Windows.Forms.ComboBox();
+            this.mnuPinnedApps = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.mnuUnpin = new System.Windows.Forms.ToolStripMenuItem();
             this.SystemTrayMenu.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPinnedApps.SuspendLayout();
+            this.mnuPinnedApps.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblGithub
@@ -688,6 +691,7 @@
             // 
             // lstPinnedApps
             // 
+            this.lstPinnedApps.ContextMenuStrip = this.mnuPinnedApps;
             this.lstPinnedApps.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lstPinnedApps.FormattingEnabled = true;
             this.lstPinnedApps.ItemHeight = 20;
@@ -846,6 +850,22 @@
             this.cmbWallpaperStyleDefault.TabIndex = 39;
             this.cmbWallpaperStyleDefault.Tag = "default";
             // 
+            // mnuPinnedApps
+            // 
+            this.mnuPinnedApps.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.mnuPinnedApps.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuUnpin});
+            this.mnuPinnedApps.Name = "mnuPinnedApps";
+            this.mnuPinnedApps.Size = new System.Drawing.Size(212, 67);
+            this.mnuPinnedApps.Opening += new System.ComponentModel.CancelEventHandler(this.mnuPinnedApps_Opening);
+            // 
+            // mnuUnpin
+            // 
+            this.mnuUnpin.Name = "mnuUnpin";
+            this.mnuUnpin.Size = new System.Drawing.Size(211, 30);
+            this.mnuUnpin.Text = "Unpin";
+            this.mnuUnpin.Click += new System.EventHandler(this.mnuUnpin_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -867,6 +887,7 @@
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPinnedApps.ResumeLayout(false);
+            this.mnuPinnedApps.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -936,6 +957,8 @@
         private System.Windows.Forms.ComboBox cmbWallpaperStyle4;
         private System.Windows.Forms.ComboBox cmbWallpaperStyle3;
         private System.Windows.Forms.ComboBox cmbWallpaperStyle2;
+        private System.Windows.Forms.ContextMenuStrip mnuPinnedApps;
+        private System.Windows.Forms.ToolStripMenuItem mnuUnpin;
     }
 }
 
