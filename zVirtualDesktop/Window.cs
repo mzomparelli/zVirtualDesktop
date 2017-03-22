@@ -240,6 +240,11 @@ namespace zVirtualDesktop
             }
         }
 
+        public void GoToDesktop()
+        {
+            GoToDesktop(DesktopNumber);
+        }
+
         private void GoToDesktop(int desktopNumber)
         {
             try
@@ -284,52 +289,6 @@ namespace zVirtualDesktop
 
 
         }
-
-        private void GoToDesktop()
-        {
-            try
-            {
-                VirtualDesktop current = VirtualDesktop.Current;
-                int i = GetDesktopNumber(current.Id);
-                if (i == DesktopNumber)
-                {
-                    return;
-                }
-                else
-                {
-                    int diff = Math.Abs(i - DesktopNumber);
-                    if (i < DesktopNumber)
-                    {
-                        for (int z = 1; z <= diff; z++)
-                        {
-                            current = current.GetRight();
-                        }
-                    }
-                    else
-                    {
-                        for (int z = 1; z <= diff; z++)
-                        {
-                            current = current.GetLeft();
-                        }
-                    }
-
-                    current.Switch();
-
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("An error occured navigating to the specified desktop. See additional details below." + Environment.NewLine + Environment.NewLine +
-                    ex.Message + Environment.NewLine +
-                    ex.Source + "::" + ex.TargetSite.Name);
-            }
-
-
-
-
-        }
-
 
         private string GetWindowText()
         {
@@ -384,7 +343,6 @@ namespace zVirtualDesktop
             
         }
 
-
         private int GetDesktopNumber(Guid Guid)
         {
             try
@@ -408,7 +366,6 @@ namespace zVirtualDesktop
             }
 
         }
-
 
         [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
         private static extern int GetWindowText(IntPtr hWnd, StringBuilder text, int count);

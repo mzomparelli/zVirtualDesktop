@@ -56,10 +56,10 @@ namespace zVirtualDesktop
         public frmMain()
         {
             InitializeComponent();
-            foreach(VirtualDesktop d in VirtualDesktop.GetDesktops())
-            {
-                d.Remove();
-            }
+            //foreach(VirtualDesktop d in VirtualDesktop.GetDesktops())
+            //{
+            //    d.Remove();
+            //}
             //Wire up some events
             this.Closing += frmMain_Closing;
             this.Load += frmMain_Load;
@@ -1089,48 +1089,6 @@ namespace zVirtualDesktop
 
         }
 
-        public void MoveToDesktop(int desktopNumber)
-        {
-            try
-            {
-                VirtualDesktop current = VirtualDesktop.Current;
-
-                int i = GetDesktopNumber(current.Id);
-                if (i == desktopNumber)
-                {
-                    return;
-                }
-                else
-                {
-                    int diff = Math.Abs(i - desktopNumber);
-                    if (i < desktopNumber)
-                    {
-                        for (int z = 1; z <= diff; z++)
-                        {
-                            current = current.GetRight();
-                        }
-                    }
-                    else
-                    {
-                        for (int z = 1; z <= diff; z++)
-                        {
-                            current = current.GetLeft();
-                        }
-                    }
-                    VirtualDesktopHelper.MoveToDesktop(PInvoke.GetForegroundWindow(), current);
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("An error occured moving the specified window. See additional details below." + Environment.NewLine + Environment.NewLine + 
-                    ex.Message + Environment.NewLine + 
-                    ex.Source + "::" + ex.TargetSite.Name);
-            }
-
-
-        }
-
         private void DesktopGo(object sender, EventArgs e)
         {
             Hotkey hotkey = (Hotkey)sender;            
@@ -1246,9 +1204,16 @@ namespace zVirtualDesktop
             }
         }
 
-        private void timerSystemTray_Tick(object sender, EventArgs e)
+        private void timerGrabForegroundWindow_Tick(object sender, EventArgs e)
         {
-            SetSystemTrayIcon();
+            //Grab some windows
+            IntPtr hWnd = PInvoke.GetForegroundWindow();
+            IEnumerable<Window> window = from Window w in windows where w.Handle == hWnd select w;
+            if (window.Count() < 1)
+            {
+                Window win = new Window(hWnd);
+                windows.Add(win);
+            }
         }
 
         private void mnuSwitchDesktop_Click(object sender, EventArgs e)
