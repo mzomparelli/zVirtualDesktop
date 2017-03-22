@@ -24,12 +24,18 @@ public sealed class Wallpaper
 
     public static void Set(Uri uri, Style style)
     {
-        System.IO.Stream s = new System.Net.WebClient().OpenRead(uri.ToString());
+        int tries = 0;
+        TryAgain:
+
+        if (System.IO.File.Exists(uri.OriginalString) == false)
+        {
+            return;
+        }
+        System.IO.Stream s = new System.Net.WebClient().OpenRead(uri.OriginalString);
 
         System.Drawing.Image img = System.Drawing.Image.FromStream(s);
         string tempPath = Path.Combine(Path.GetTempPath(), "wallpaper.bmp");
-        int tries = 0;
-        TryAgain:
+       
         try
         {
             tries++;
@@ -44,11 +50,17 @@ public sealed class Wallpaper
             }
             else
             {
-                MessageBox.Show("An error occured setting the backgrounf for the specified desktop. See additional details below." + Environment.NewLine + Environment.NewLine +
+                MessageBox.Show("An error occured setting the background for the specified desktop. See additional details below." + Environment.NewLine + Environment.NewLine +
                     ex.Message + Environment.NewLine +
-                    ex.Source + "::" + ex.TargetSite.Name);
+                    ex.Source + "::" + ex.TargetSite.Name + Environment.NewLine +
+                    tempPath);
             }
             
+        }finally
+        {
+            s.Dispose();
+            img.Dispose();
+
         }
         
 

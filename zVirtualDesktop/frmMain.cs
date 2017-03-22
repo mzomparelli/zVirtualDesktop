@@ -85,10 +85,10 @@ namespace zVirtualDesktop
         }
 
         private void VirtualDesktop_CurrentChanged(object sender, VirtualDesktopChangedEventArgs e)
-        {
-            
+        {            
             SetSystemTrayIcon();
             SetWallpaper();
+            GC.Collect();
         }
 
         private static void GetProgs()
@@ -1035,7 +1035,7 @@ namespace zVirtualDesktop
                     }
 
                     current.Switch();
-                    
+                   
                 }
 
             }
@@ -1133,6 +1133,7 @@ namespace zVirtualDesktop
         {
             SaveSettings();
             HideSettings();
+            GC.Collect();
         }
 
         public void ShowSettings()
@@ -1247,6 +1248,7 @@ namespace zVirtualDesktop
 
 
                 stream.Close();
+                stream.Dispose();
 
                 WallpaperStyles.Clear();
                 WallpaperStyles.Add(cmbWallpaperStyleDefault.Text);
@@ -1289,6 +1291,8 @@ namespace zVirtualDesktop
                 System.Runtime.Serialization.Formatters.Binary.BinaryFormatter bf = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
                 bf.Serialize(stream, settings.ToString());
                 stream.Close();
+                stream.Dispose();
+               
 
                 WallpaperStyles.Clear();
                 WallpaperStyles.Add(cmbWallpaperStyleDefault.Text);
@@ -1359,6 +1363,8 @@ namespace zVirtualDesktop
             {
                 //do nothing
             }
+
+            dlg.Dispose();
         }
 
         private void btnBrowseWallpaper_Click(object sender, EventArgs e)
