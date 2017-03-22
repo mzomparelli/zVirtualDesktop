@@ -1277,7 +1277,7 @@ namespace zVirtualDesktop
                 settings.Append("IconTheme;" + cmbIcons.Text);
                 //Get the URI for each desktop
                 settings.Append("~DesktopWallpaper1;" + txtWallpaper1.Text + ";" + cmbWallpaperStyle1.Text);
-                settings.Append("~DesktopWallpaper2;" + txtWallpaper2.Text + ";" + cmbWallpaperStyle3.Text);
+                settings.Append("~DesktopWallpaper2;" + txtWallpaper2.Text + ";" + cmbWallpaperStyle2.Text);
                 settings.Append("~DesktopWallpaper3;" + txtWallpaper3.Text + ";" + cmbWallpaperStyle3.Text);
                 settings.Append("~DesktopWallpaper4;" + txtWallpaper4.Text + ";" + cmbWallpaperStyle4.Text);
                 settings.Append("~DesktopWallpaper5;" + txtWallpaper5.Text + ";" + cmbWallpaperStyle5.Text);
