@@ -30,64 +30,64 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-            System.Windows.Forms.ListViewItem listViewItem20 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "Navigate to Desktop 1",
             "WIN+ALT+Numpad1"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem21 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
             "Navigate to Desktop 2",
             "WIN+ALT+Numpad2"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem22 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
             "Navigate to Desktop 3",
             "WIN+ALT+Numpad3"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem23 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
             "Navigate to Desktop 4",
             "WIN+ALT+Numpad4"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem24 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new string[] {
             "Navigate to Desktop 5",
             "WIN+ALT+Numpad5"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem25 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem(new string[] {
             "Navigate to Desktop 6",
             "WIN+ALT+Numpad6"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem26 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem(new string[] {
             "Navigate to Desktop 7",
             "WIN+ALT+Numpad7"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem27 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem(new string[] {
             "Navigate to Desktop 8",
             "WIN+ALT+Numpad8"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem28 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem(new string[] {
             "Navigate to Desktop 9",
             "WIN+ALT+Numpad9"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem29 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem(new string[] {
             "Move to Desktop 1",
             "WIN+CTRL+Numpad1"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem30 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem(new string[] {
             "Move to Desktop 2",
             "WIN+CTRL+Numpad2"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem31 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem(new string[] {
             "Move to Desktop 3",
             "WIN+CTRL+Numpad3"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem32 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem13 = new System.Windows.Forms.ListViewItem(new string[] {
             "Move to Desktop 4",
             "WIN+CTRL+Numpad4"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem33 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem14 = new System.Windows.Forms.ListViewItem(new string[] {
             "Move to Desktop 5",
             "WIN+CTRL+Numpad5"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem34 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem15 = new System.Windows.Forms.ListViewItem(new string[] {
             "Move to Desktop 6",
             "WIN+CTRL+Numpad6"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem35 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem16 = new System.Windows.Forms.ListViewItem(new string[] {
             "Move to Desktop 7",
             "WIN+CTRL+Numpad7"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem36 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem17 = new System.Windows.Forms.ListViewItem(new string[] {
             "Move to Desktop 8",
             "WIN+CTRL+Numpad8"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem37 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem18 = new System.Windows.Forms.ListViewItem(new string[] {
             "Move to Desktop 9",
             "WIN+CTRL+Numpad9"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem38 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem19 = new System.Windows.Forms.ListViewItem(new string[] {
             "Pin/Unpin Window",
             "WIN+ALT+Z"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem39 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem20 = new System.Windows.Forms.ListViewItem(new string[] {
             "Pin/Unpin Application",
             "WIN+ALT+A"}, -1);
             this.lblGithub = new System.Windows.Forms.LinkLabel();
@@ -106,9 +106,19 @@
             this.Button4 = new System.Windows.Forms.Button();
             this.Button3 = new System.Windows.Forms.Button();
             this.cmbIcons = new System.Windows.Forms.ComboBox();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabs = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.cmbWallpaperStyleDefault = new System.Windows.Forms.ComboBox();
+            this.cmbWallpaperStyle9 = new System.Windows.Forms.ComboBox();
+            this.cmbWallpaperStyle8 = new System.Windows.Forms.ComboBox();
+            this.cmbWallpaperStyle7 = new System.Windows.Forms.ComboBox();
+            this.cmbWallpaperStyle6 = new System.Windows.Forms.ComboBox();
+            this.cmbWallpaperStyle5 = new System.Windows.Forms.ComboBox();
+            this.cmbWallpaperStyle4 = new System.Windows.Forms.ComboBox();
+            this.cmbWallpaperStyle3 = new System.Windows.Forms.ComboBox();
+            this.cmbWallpaperStyle2 = new System.Windows.Forms.ComboBox();
+            this.cmbWallpaperStyle1 = new System.Windows.Forms.ComboBox();
             this.btnBrowseDefaultWalpaper = new System.Windows.Forms.Button();
             this.txtDefaultWallpaper = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -142,25 +152,18 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPinnedApps = new System.Windows.Forms.TabPage();
             this.lstPinnedApps = new System.Windows.Forms.ListBox();
-            this.cmbWallpaperStyle1 = new System.Windows.Forms.ComboBox();
-            this.cmbWallpaperStyle2 = new System.Windows.Forms.ComboBox();
-            this.cmbWallpaperStyle3 = new System.Windows.Forms.ComboBox();
-            this.cmbWallpaperStyle4 = new System.Windows.Forms.ComboBox();
-            this.cmbWallpaperStyle5 = new System.Windows.Forms.ComboBox();
-            this.cmbWallpaperStyle6 = new System.Windows.Forms.ComboBox();
-            this.cmbWallpaperStyle7 = new System.Windows.Forms.ComboBox();
-            this.cmbWallpaperStyle8 = new System.Windows.Forms.ComboBox();
-            this.cmbWallpaperStyle9 = new System.Windows.Forms.ComboBox();
-            this.cmbWallpaperStyleDefault = new System.Windows.Forms.ComboBox();
             this.mnuPinnedApps = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.mnuUnpin = new System.Windows.Forms.ToolStripMenuItem();
+            this.tabPinnedWindows = new System.Windows.Forms.TabPage();
+            this.lstPinnedWindows = new System.Windows.Forms.ListBox();
             this.SystemTrayMenu.SuspendLayout();
-            this.tabControl1.SuspendLayout();
+            this.tabs.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPinnedApps.SuspendLayout();
             this.mnuPinnedApps.SuspendLayout();
+            this.tabPinnedWindows.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblGithub
@@ -189,32 +192,32 @@
             this.mnuSettings,
             this.mnuExit});
             this.SystemTrayMenu.Name = "SystemTrayMenu";
-            this.SystemTrayMenu.Size = new System.Drawing.Size(281, 124);
+            this.SystemTrayMenu.Size = new System.Drawing.Size(268, 124);
             this.SystemTrayMenu.Opening += new System.ComponentModel.CancelEventHandler(this.SystemTrayMenu_Opening);
             // 
             // mnuGithub
             // 
             this.mnuGithub.Name = "mnuGithub";
-            this.mnuGithub.Size = new System.Drawing.Size(280, 30);
+            this.mnuGithub.Size = new System.Drawing.Size(267, 30);
             this.mnuGithub.Text = "Github zVirtualDesktop";
             // 
             // mnuSwitchDesktop
             // 
             this.mnuSwitchDesktop.Name = "mnuSwitchDesktop";
-            this.mnuSwitchDesktop.Size = new System.Drawing.Size(280, 30);
+            this.mnuSwitchDesktop.Size = new System.Drawing.Size(267, 30);
             this.mnuSwitchDesktop.Text = "Switch Desktop";
             this.mnuSwitchDesktop.Click += new System.EventHandler(this.mnuSwitchDesktop_Click);
             // 
             // mnuSettings
             // 
             this.mnuSettings.Name = "mnuSettings";
-            this.mnuSettings.Size = new System.Drawing.Size(280, 30);
+            this.mnuSettings.Size = new System.Drawing.Size(267, 30);
             this.mnuSettings.Text = "Settings";
             // 
             // mnuExit
             // 
             this.mnuExit.Name = "mnuExit";
-            this.mnuExit.Size = new System.Drawing.Size(280, 30);
+            this.mnuExit.Size = new System.Drawing.Size(267, 30);
             this.mnuExit.Text = "Exit";
             // 
             // ListView1
@@ -223,29 +226,29 @@
             this.colTask,
             this.colHotKey});
             this.ListView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem20,
-            listViewItem21,
-            listViewItem22,
-            listViewItem23,
-            listViewItem24,
-            listViewItem25,
-            listViewItem26,
-            listViewItem27,
-            listViewItem28,
-            listViewItem29,
-            listViewItem30,
-            listViewItem31,
-            listViewItem32,
-            listViewItem33,
-            listViewItem34,
-            listViewItem35,
-            listViewItem36,
-            listViewItem37,
-            listViewItem38,
-            listViewItem39});
+            listViewItem1,
+            listViewItem2,
+            listViewItem3,
+            listViewItem4,
+            listViewItem5,
+            listViewItem6,
+            listViewItem7,
+            listViewItem8,
+            listViewItem9,
+            listViewItem10,
+            listViewItem11,
+            listViewItem12,
+            listViewItem13,
+            listViewItem14,
+            listViewItem15,
+            listViewItem16,
+            listViewItem17,
+            listViewItem18,
+            listViewItem19,
+            listViewItem20});
             this.ListView1.Location = new System.Drawing.Point(2, 0);
             this.ListView1.Name = "ListView1";
-            this.ListView1.Size = new System.Drawing.Size(506, 433);
+            this.ListView1.Size = new System.Drawing.Size(622, 433);
             this.ListView1.TabIndex = 11;
             this.ListView1.UseCompatibleStateImageBehavior = false;
             this.ListView1.View = System.Windows.Forms.View.Details;
@@ -253,16 +256,16 @@
             // colTask
             // 
             this.colTask.Text = "Task";
-            this.colTask.Width = 131;
+            this.colTask.Width = 251;
             // 
             // colHotKey
             // 
             this.colHotKey.Text = "Hotkey";
-            this.colHotKey.Width = 152;
+            this.colHotKey.Width = 247;
             // 
             // btnApply
             // 
-            this.btnApply.Location = new System.Drawing.Point(446, 575);
+            this.btnApply.Location = new System.Drawing.Point(557, 575);
             this.btnApply.Name = "btnApply";
             this.btnApply.Size = new System.Drawing.Size(75, 32);
             this.btnApply.TabIndex = 10;
@@ -271,7 +274,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(364, 575);
+            this.btnCancel.Location = new System.Drawing.Point(475, 575);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 32);
             this.btnCancel.TabIndex = 9;
@@ -281,7 +284,7 @@
             // Button5
             // 
             this.Button5.Enabled = false;
-            this.Button5.Location = new System.Drawing.Point(350, 442);
+            this.Button5.Location = new System.Drawing.Point(96, 448);
             this.Button5.Name = "Button5";
             this.Button5.Size = new System.Drawing.Size(75, 32);
             this.Button5.TabIndex = 14;
@@ -291,7 +294,7 @@
             // Button4
             // 
             this.Button4.Enabled = false;
-            this.Button4.Location = new System.Drawing.Point(268, 442);
+            this.Button4.Location = new System.Drawing.Point(14, 448);
             this.Button4.Name = "Button4";
             this.Button4.Size = new System.Drawing.Size(75, 32);
             this.Button4.TabIndex = 13;
@@ -301,7 +304,7 @@
             // Button3
             // 
             this.Button3.Enabled = false;
-            this.Button3.Location = new System.Drawing.Point(430, 442);
+            this.Button3.Location = new System.Drawing.Point(176, 448);
             this.Button3.Name = "Button3";
             this.Button3.Size = new System.Drawing.Size(75, 32);
             this.Button3.TabIndex = 12;
@@ -319,23 +322,24 @@
             "Green",
             "Red Orb",
             "White Box"});
-            this.cmbIcons.Location = new System.Drawing.Point(14, 6);
+            this.cmbIcons.Location = new System.Drawing.Point(6, 6);
             this.cmbIcons.Name = "cmbIcons";
-            this.cmbIcons.Size = new System.Drawing.Size(490, 28);
+            this.cmbIcons.Size = new System.Drawing.Size(612, 28);
             this.cmbIcons.Sorted = true;
             this.cmbIcons.TabIndex = 0;
             // 
-            // tabControl1
+            // tabs
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPinnedApps);
-            this.tabControl1.Location = new System.Drawing.Point(6, 40);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(526, 529);
-            this.tabControl1.TabIndex = 17;
+            this.tabs.Controls.Add(this.tabPage1);
+            this.tabs.Controls.Add(this.tabPage2);
+            this.tabs.Controls.Add(this.tabPage3);
+            this.tabs.Controls.Add(this.tabPinnedApps);
+            this.tabs.Controls.Add(this.tabPinnedWindows);
+            this.tabs.Location = new System.Drawing.Point(6, 40);
+            this.tabs.Name = "tabs";
+            this.tabs.SelectedIndex = 0;
+            this.tabs.Size = new System.Drawing.Size(632, 529);
+            this.tabs.TabIndex = 17;
             // 
             // tabPage1
             // 
@@ -346,7 +350,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(518, 496);
+            this.tabPage1.Size = new System.Drawing.Size(624, 496);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Hotkeys";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -396,14 +400,164 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(518, 496);
+            this.tabPage2.Size = new System.Drawing.Size(624, 496);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Wallpaper";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // cmbWallpaperStyleDefault
+            // 
+            this.cmbWallpaperStyleDefault.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbWallpaperStyleDefault.FormattingEnabled = true;
+            this.cmbWallpaperStyleDefault.Items.AddRange(new object[] {
+            "Centered",
+            "Streched",
+            "Tiled"});
+            this.cmbWallpaperStyleDefault.Location = new System.Drawing.Point(516, 345);
+            this.cmbWallpaperStyleDefault.Name = "cmbWallpaperStyleDefault";
+            this.cmbWallpaperStyleDefault.Size = new System.Drawing.Size(102, 28);
+            this.cmbWallpaperStyleDefault.Sorted = true;
+            this.cmbWallpaperStyleDefault.TabIndex = 39;
+            this.cmbWallpaperStyleDefault.Tag = "default";
+            // 
+            // cmbWallpaperStyle9
+            // 
+            this.cmbWallpaperStyle9.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbWallpaperStyle9.FormattingEnabled = true;
+            this.cmbWallpaperStyle9.Items.AddRange(new object[] {
+            "Centered",
+            "Streched",
+            "Tiled"});
+            this.cmbWallpaperStyle9.Location = new System.Drawing.Point(516, 308);
+            this.cmbWallpaperStyle9.Name = "cmbWallpaperStyle9";
+            this.cmbWallpaperStyle9.Size = new System.Drawing.Size(102, 28);
+            this.cmbWallpaperStyle9.Sorted = true;
+            this.cmbWallpaperStyle9.TabIndex = 38;
+            this.cmbWallpaperStyle9.Tag = "9";
+            // 
+            // cmbWallpaperStyle8
+            // 
+            this.cmbWallpaperStyle8.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbWallpaperStyle8.FormattingEnabled = true;
+            this.cmbWallpaperStyle8.Items.AddRange(new object[] {
+            "Centered",
+            "Streched",
+            "Tiled"});
+            this.cmbWallpaperStyle8.Location = new System.Drawing.Point(516, 271);
+            this.cmbWallpaperStyle8.Name = "cmbWallpaperStyle8";
+            this.cmbWallpaperStyle8.Size = new System.Drawing.Size(102, 28);
+            this.cmbWallpaperStyle8.Sorted = true;
+            this.cmbWallpaperStyle8.TabIndex = 37;
+            this.cmbWallpaperStyle8.Tag = "8";
+            // 
+            // cmbWallpaperStyle7
+            // 
+            this.cmbWallpaperStyle7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbWallpaperStyle7.FormattingEnabled = true;
+            this.cmbWallpaperStyle7.Items.AddRange(new object[] {
+            "Centered",
+            "Streched",
+            "Tiled"});
+            this.cmbWallpaperStyle7.Location = new System.Drawing.Point(516, 234);
+            this.cmbWallpaperStyle7.Name = "cmbWallpaperStyle7";
+            this.cmbWallpaperStyle7.Size = new System.Drawing.Size(102, 28);
+            this.cmbWallpaperStyle7.Sorted = true;
+            this.cmbWallpaperStyle7.TabIndex = 36;
+            this.cmbWallpaperStyle7.Tag = "7";
+            // 
+            // cmbWallpaperStyle6
+            // 
+            this.cmbWallpaperStyle6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbWallpaperStyle6.FormattingEnabled = true;
+            this.cmbWallpaperStyle6.Items.AddRange(new object[] {
+            "Centered",
+            "Streched",
+            "Tiled"});
+            this.cmbWallpaperStyle6.Location = new System.Drawing.Point(516, 197);
+            this.cmbWallpaperStyle6.Name = "cmbWallpaperStyle6";
+            this.cmbWallpaperStyle6.Size = new System.Drawing.Size(102, 28);
+            this.cmbWallpaperStyle6.Sorted = true;
+            this.cmbWallpaperStyle6.TabIndex = 35;
+            this.cmbWallpaperStyle6.Tag = "6";
+            // 
+            // cmbWallpaperStyle5
+            // 
+            this.cmbWallpaperStyle5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbWallpaperStyle5.FormattingEnabled = true;
+            this.cmbWallpaperStyle5.Items.AddRange(new object[] {
+            "Centered",
+            "Streched",
+            "Tiled"});
+            this.cmbWallpaperStyle5.Location = new System.Drawing.Point(516, 160);
+            this.cmbWallpaperStyle5.Name = "cmbWallpaperStyle5";
+            this.cmbWallpaperStyle5.Size = new System.Drawing.Size(102, 28);
+            this.cmbWallpaperStyle5.Sorted = true;
+            this.cmbWallpaperStyle5.TabIndex = 34;
+            this.cmbWallpaperStyle5.Tag = "5";
+            // 
+            // cmbWallpaperStyle4
+            // 
+            this.cmbWallpaperStyle4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbWallpaperStyle4.FormattingEnabled = true;
+            this.cmbWallpaperStyle4.Items.AddRange(new object[] {
+            "Centered",
+            "Streched",
+            "Tiled"});
+            this.cmbWallpaperStyle4.Location = new System.Drawing.Point(516, 123);
+            this.cmbWallpaperStyle4.Name = "cmbWallpaperStyle4";
+            this.cmbWallpaperStyle4.Size = new System.Drawing.Size(102, 28);
+            this.cmbWallpaperStyle4.Sorted = true;
+            this.cmbWallpaperStyle4.TabIndex = 33;
+            this.cmbWallpaperStyle4.Tag = "4";
+            // 
+            // cmbWallpaperStyle3
+            // 
+            this.cmbWallpaperStyle3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbWallpaperStyle3.FormattingEnabled = true;
+            this.cmbWallpaperStyle3.Items.AddRange(new object[] {
+            "Centered",
+            "Streched",
+            "Tiled"});
+            this.cmbWallpaperStyle3.Location = new System.Drawing.Point(516, 86);
+            this.cmbWallpaperStyle3.Name = "cmbWallpaperStyle3";
+            this.cmbWallpaperStyle3.Size = new System.Drawing.Size(102, 28);
+            this.cmbWallpaperStyle3.Sorted = true;
+            this.cmbWallpaperStyle3.TabIndex = 32;
+            this.cmbWallpaperStyle3.Tag = "3";
+            // 
+            // cmbWallpaperStyle2
+            // 
+            this.cmbWallpaperStyle2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbWallpaperStyle2.FormattingEnabled = true;
+            this.cmbWallpaperStyle2.Items.AddRange(new object[] {
+            "Centered",
+            "Streched",
+            "Tiled"});
+            this.cmbWallpaperStyle2.Location = new System.Drawing.Point(516, 49);
+            this.cmbWallpaperStyle2.Name = "cmbWallpaperStyle2";
+            this.cmbWallpaperStyle2.Size = new System.Drawing.Size(102, 28);
+            this.cmbWallpaperStyle2.Sorted = true;
+            this.cmbWallpaperStyle2.TabIndex = 31;
+            this.cmbWallpaperStyle2.Tag = "2";
+            // 
+            // cmbWallpaperStyle1
+            // 
+            this.cmbWallpaperStyle1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbWallpaperStyle1.FormattingEnabled = true;
+            this.cmbWallpaperStyle1.Items.AddRange(new object[] {
+            "Centered",
+            "Streched",
+            "Tiled"});
+            this.cmbWallpaperStyle1.Location = new System.Drawing.Point(516, 12);
+            this.cmbWallpaperStyle1.Name = "cmbWallpaperStyle1";
+            this.cmbWallpaperStyle1.Size = new System.Drawing.Size(102, 28);
+            this.cmbWallpaperStyle1.Sorted = true;
+            this.cmbWallpaperStyle1.TabIndex = 30;
+            this.cmbWallpaperStyle1.Tag = "1";
+            // 
             // btnBrowseDefaultWalpaper
             // 
-            this.btnBrowseDefaultWalpaper.Location = new System.Drawing.Point(337, 344);
+            this.btnBrowseDefaultWalpaper.Location = new System.Drawing.Point(436, 344);
             this.btnBrowseDefaultWalpaper.Name = "btnBrowseDefaultWalpaper";
             this.btnBrowseDefaultWalpaper.Size = new System.Drawing.Size(75, 31);
             this.btnBrowseDefaultWalpaper.TabIndex = 29;
@@ -415,7 +569,7 @@
             // 
             this.txtDefaultWallpaper.Location = new System.Drawing.Point(108, 346);
             this.txtDefaultWallpaper.Name = "txtDefaultWallpaper";
-            this.txtDefaultWallpaper.Size = new System.Drawing.Size(227, 26);
+            this.txtDefaultWallpaper.Size = new System.Drawing.Size(322, 26);
             this.txtDefaultWallpaper.TabIndex = 28;
             this.txtDefaultWallpaper.Tag = "default";
             // 
@@ -430,7 +584,7 @@
             // 
             // btnBrowseWallpaper9
             // 
-            this.btnBrowseWallpaper9.Location = new System.Drawing.Point(337, 307);
+            this.btnBrowseWallpaper9.Location = new System.Drawing.Point(436, 307);
             this.btnBrowseWallpaper9.Name = "btnBrowseWallpaper9";
             this.btnBrowseWallpaper9.Size = new System.Drawing.Size(75, 31);
             this.btnBrowseWallpaper9.TabIndex = 26;
@@ -442,7 +596,7 @@
             // 
             this.txtWallpaper9.Location = new System.Drawing.Point(108, 309);
             this.txtWallpaper9.Name = "txtWallpaper9";
-            this.txtWallpaper9.Size = new System.Drawing.Size(227, 26);
+            this.txtWallpaper9.Size = new System.Drawing.Size(322, 26);
             this.txtWallpaper9.TabIndex = 25;
             this.txtWallpaper9.Tag = "9";
             // 
@@ -457,7 +611,7 @@
             // 
             // btnBrowseWallpaper8
             // 
-            this.btnBrowseWallpaper8.Location = new System.Drawing.Point(337, 270);
+            this.btnBrowseWallpaper8.Location = new System.Drawing.Point(436, 270);
             this.btnBrowseWallpaper8.Name = "btnBrowseWallpaper8";
             this.btnBrowseWallpaper8.Size = new System.Drawing.Size(75, 31);
             this.btnBrowseWallpaper8.TabIndex = 23;
@@ -469,7 +623,7 @@
             // 
             this.txtWallpaper8.Location = new System.Drawing.Point(108, 272);
             this.txtWallpaper8.Name = "txtWallpaper8";
-            this.txtWallpaper8.Size = new System.Drawing.Size(227, 26);
+            this.txtWallpaper8.Size = new System.Drawing.Size(322, 26);
             this.txtWallpaper8.TabIndex = 22;
             this.txtWallpaper8.Tag = "8";
             // 
@@ -484,7 +638,7 @@
             // 
             // btnBrowseWallpaper7
             // 
-            this.btnBrowseWallpaper7.Location = new System.Drawing.Point(337, 233);
+            this.btnBrowseWallpaper7.Location = new System.Drawing.Point(436, 233);
             this.btnBrowseWallpaper7.Name = "btnBrowseWallpaper7";
             this.btnBrowseWallpaper7.Size = new System.Drawing.Size(75, 31);
             this.btnBrowseWallpaper7.TabIndex = 20;
@@ -496,7 +650,7 @@
             // 
             this.txtWallpaper7.Location = new System.Drawing.Point(108, 235);
             this.txtWallpaper7.Name = "txtWallpaper7";
-            this.txtWallpaper7.Size = new System.Drawing.Size(227, 26);
+            this.txtWallpaper7.Size = new System.Drawing.Size(322, 26);
             this.txtWallpaper7.TabIndex = 19;
             this.txtWallpaper7.Tag = "7";
             // 
@@ -511,7 +665,7 @@
             // 
             // btnBrowseWallpaper6
             // 
-            this.btnBrowseWallpaper6.Location = new System.Drawing.Point(337, 196);
+            this.btnBrowseWallpaper6.Location = new System.Drawing.Point(436, 196);
             this.btnBrowseWallpaper6.Name = "btnBrowseWallpaper6";
             this.btnBrowseWallpaper6.Size = new System.Drawing.Size(75, 31);
             this.btnBrowseWallpaper6.TabIndex = 17;
@@ -523,7 +677,7 @@
             // 
             this.txtWallpaper6.Location = new System.Drawing.Point(108, 198);
             this.txtWallpaper6.Name = "txtWallpaper6";
-            this.txtWallpaper6.Size = new System.Drawing.Size(227, 26);
+            this.txtWallpaper6.Size = new System.Drawing.Size(322, 26);
             this.txtWallpaper6.TabIndex = 16;
             this.txtWallpaper6.Tag = "6";
             // 
@@ -538,7 +692,7 @@
             // 
             // btnBrowseWallpaper5
             // 
-            this.btnBrowseWallpaper5.Location = new System.Drawing.Point(337, 159);
+            this.btnBrowseWallpaper5.Location = new System.Drawing.Point(436, 159);
             this.btnBrowseWallpaper5.Name = "btnBrowseWallpaper5";
             this.btnBrowseWallpaper5.Size = new System.Drawing.Size(75, 31);
             this.btnBrowseWallpaper5.TabIndex = 14;
@@ -550,7 +704,7 @@
             // 
             this.txtWallpaper5.Location = new System.Drawing.Point(108, 161);
             this.txtWallpaper5.Name = "txtWallpaper5";
-            this.txtWallpaper5.Size = new System.Drawing.Size(227, 26);
+            this.txtWallpaper5.Size = new System.Drawing.Size(322, 26);
             this.txtWallpaper5.TabIndex = 13;
             this.txtWallpaper5.Tag = "5";
             // 
@@ -565,7 +719,7 @@
             // 
             // btnBrowseWallpaper4
             // 
-            this.btnBrowseWallpaper4.Location = new System.Drawing.Point(337, 122);
+            this.btnBrowseWallpaper4.Location = new System.Drawing.Point(436, 122);
             this.btnBrowseWallpaper4.Name = "btnBrowseWallpaper4";
             this.btnBrowseWallpaper4.Size = new System.Drawing.Size(75, 31);
             this.btnBrowseWallpaper4.TabIndex = 11;
@@ -577,7 +731,7 @@
             // 
             this.txtWallpaper4.Location = new System.Drawing.Point(108, 124);
             this.txtWallpaper4.Name = "txtWallpaper4";
-            this.txtWallpaper4.Size = new System.Drawing.Size(227, 26);
+            this.txtWallpaper4.Size = new System.Drawing.Size(322, 26);
             this.txtWallpaper4.TabIndex = 10;
             this.txtWallpaper4.Tag = "4";
             // 
@@ -592,7 +746,7 @@
             // 
             // btnBrowseWallpaper3
             // 
-            this.btnBrowseWallpaper3.Location = new System.Drawing.Point(337, 85);
+            this.btnBrowseWallpaper3.Location = new System.Drawing.Point(436, 85);
             this.btnBrowseWallpaper3.Name = "btnBrowseWallpaper3";
             this.btnBrowseWallpaper3.Size = new System.Drawing.Size(75, 31);
             this.btnBrowseWallpaper3.TabIndex = 8;
@@ -604,7 +758,7 @@
             // 
             this.txtWallpaper3.Location = new System.Drawing.Point(108, 87);
             this.txtWallpaper3.Name = "txtWallpaper3";
-            this.txtWallpaper3.Size = new System.Drawing.Size(227, 26);
+            this.txtWallpaper3.Size = new System.Drawing.Size(322, 26);
             this.txtWallpaper3.TabIndex = 7;
             this.txtWallpaper3.Tag = "3";
             // 
@@ -619,7 +773,7 @@
             // 
             // btnBrowseWallpaper2
             // 
-            this.btnBrowseWallpaper2.Location = new System.Drawing.Point(337, 48);
+            this.btnBrowseWallpaper2.Location = new System.Drawing.Point(436, 48);
             this.btnBrowseWallpaper2.Name = "btnBrowseWallpaper2";
             this.btnBrowseWallpaper2.Size = new System.Drawing.Size(75, 31);
             this.btnBrowseWallpaper2.TabIndex = 5;
@@ -631,7 +785,7 @@
             // 
             this.txtWallpaper2.Location = new System.Drawing.Point(108, 50);
             this.txtWallpaper2.Name = "txtWallpaper2";
-            this.txtWallpaper2.Size = new System.Drawing.Size(227, 26);
+            this.txtWallpaper2.Size = new System.Drawing.Size(322, 26);
             this.txtWallpaper2.TabIndex = 4;
             this.txtWallpaper2.Tag = "2";
             // 
@@ -646,7 +800,7 @@
             // 
             // btnBrowseWallpaper1
             // 
-            this.btnBrowseWallpaper1.Location = new System.Drawing.Point(337, 11);
+            this.btnBrowseWallpaper1.Location = new System.Drawing.Point(436, 11);
             this.btnBrowseWallpaper1.Name = "btnBrowseWallpaper1";
             this.btnBrowseWallpaper1.Size = new System.Drawing.Size(75, 31);
             this.btnBrowseWallpaper1.TabIndex = 2;
@@ -658,7 +812,7 @@
             // 
             this.txtWallpaper1.Location = new System.Drawing.Point(108, 13);
             this.txtWallpaper1.Name = "txtWallpaper1";
-            this.txtWallpaper1.Size = new System.Drawing.Size(227, 26);
+            this.txtWallpaper1.Size = new System.Drawing.Size(322, 26);
             this.txtWallpaper1.TabIndex = 1;
             this.txtWallpaper1.Tag = "1";
             // 
@@ -677,7 +831,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 29);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(518, 496);
+            this.tabPage3.Size = new System.Drawing.Size(624, 496);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "System Tray Icons";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -688,7 +842,7 @@
             this.tabPinnedApps.Location = new System.Drawing.Point(4, 29);
             this.tabPinnedApps.Name = "tabPinnedApps";
             this.tabPinnedApps.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPinnedApps.Size = new System.Drawing.Size(518, 496);
+            this.tabPinnedApps.Size = new System.Drawing.Size(624, 496);
             this.tabPinnedApps.TabIndex = 3;
             this.tabPinnedApps.Text = "Pinned Applications";
             this.tabPinnedApps.UseVisualStyleBackColor = true;
@@ -698,161 +852,12 @@
             this.lstPinnedApps.ContextMenuStrip = this.mnuPinnedApps;
             this.lstPinnedApps.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lstPinnedApps.FormattingEnabled = true;
+            this.lstPinnedApps.HorizontalScrollbar = true;
             this.lstPinnedApps.ItemHeight = 20;
             this.lstPinnedApps.Location = new System.Drawing.Point(3, 3);
             this.lstPinnedApps.Name = "lstPinnedApps";
-            this.lstPinnedApps.Size = new System.Drawing.Size(512, 490);
+            this.lstPinnedApps.Size = new System.Drawing.Size(618, 490);
             this.lstPinnedApps.TabIndex = 0;
-            // 
-            // cmbWallpaperStyle1
-            // 
-            this.cmbWallpaperStyle1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbWallpaperStyle1.FormattingEnabled = true;
-            this.cmbWallpaperStyle1.Items.AddRange(new object[] {
-            "Centered",
-            "Streched",
-            "Tiled"});
-            this.cmbWallpaperStyle1.Location = new System.Drawing.Point(418, 12);
-            this.cmbWallpaperStyle1.Name = "cmbWallpaperStyle1";
-            this.cmbWallpaperStyle1.Size = new System.Drawing.Size(91, 28);
-            this.cmbWallpaperStyle1.Sorted = true;
-            this.cmbWallpaperStyle1.TabIndex = 30;
-            this.cmbWallpaperStyle1.Tag = "1";
-            // 
-            // cmbWallpaperStyle2
-            // 
-            this.cmbWallpaperStyle2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbWallpaperStyle2.FormattingEnabled = true;
-            this.cmbWallpaperStyle2.Items.AddRange(new object[] {
-            "Centered",
-            "Streched",
-            "Tiled"});
-            this.cmbWallpaperStyle2.Location = new System.Drawing.Point(418, 49);
-            this.cmbWallpaperStyle2.Name = "cmbWallpaperStyle2";
-            this.cmbWallpaperStyle2.Size = new System.Drawing.Size(91, 28);
-            this.cmbWallpaperStyle2.Sorted = true;
-            this.cmbWallpaperStyle2.TabIndex = 31;
-            this.cmbWallpaperStyle2.Tag = "2";
-            // 
-            // cmbWallpaperStyle3
-            // 
-            this.cmbWallpaperStyle3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbWallpaperStyle3.FormattingEnabled = true;
-            this.cmbWallpaperStyle3.Items.AddRange(new object[] {
-            "Centered",
-            "Streched",
-            "Tiled"});
-            this.cmbWallpaperStyle3.Location = new System.Drawing.Point(418, 86);
-            this.cmbWallpaperStyle3.Name = "cmbWallpaperStyle3";
-            this.cmbWallpaperStyle3.Size = new System.Drawing.Size(91, 28);
-            this.cmbWallpaperStyle3.Sorted = true;
-            this.cmbWallpaperStyle3.TabIndex = 32;
-            this.cmbWallpaperStyle3.Tag = "3";
-            // 
-            // cmbWallpaperStyle4
-            // 
-            this.cmbWallpaperStyle4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbWallpaperStyle4.FormattingEnabled = true;
-            this.cmbWallpaperStyle4.Items.AddRange(new object[] {
-            "Centered",
-            "Streched",
-            "Tiled"});
-            this.cmbWallpaperStyle4.Location = new System.Drawing.Point(418, 123);
-            this.cmbWallpaperStyle4.Name = "cmbWallpaperStyle4";
-            this.cmbWallpaperStyle4.Size = new System.Drawing.Size(91, 28);
-            this.cmbWallpaperStyle4.Sorted = true;
-            this.cmbWallpaperStyle4.TabIndex = 33;
-            this.cmbWallpaperStyle4.Tag = "4";
-            // 
-            // cmbWallpaperStyle5
-            // 
-            this.cmbWallpaperStyle5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbWallpaperStyle5.FormattingEnabled = true;
-            this.cmbWallpaperStyle5.Items.AddRange(new object[] {
-            "Centered",
-            "Streched",
-            "Tiled"});
-            this.cmbWallpaperStyle5.Location = new System.Drawing.Point(418, 160);
-            this.cmbWallpaperStyle5.Name = "cmbWallpaperStyle5";
-            this.cmbWallpaperStyle5.Size = new System.Drawing.Size(91, 28);
-            this.cmbWallpaperStyle5.Sorted = true;
-            this.cmbWallpaperStyle5.TabIndex = 34;
-            this.cmbWallpaperStyle5.Tag = "5";
-            // 
-            // cmbWallpaperStyle6
-            // 
-            this.cmbWallpaperStyle6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbWallpaperStyle6.FormattingEnabled = true;
-            this.cmbWallpaperStyle6.Items.AddRange(new object[] {
-            "Centered",
-            "Streched",
-            "Tiled"});
-            this.cmbWallpaperStyle6.Location = new System.Drawing.Point(418, 197);
-            this.cmbWallpaperStyle6.Name = "cmbWallpaperStyle6";
-            this.cmbWallpaperStyle6.Size = new System.Drawing.Size(91, 28);
-            this.cmbWallpaperStyle6.Sorted = true;
-            this.cmbWallpaperStyle6.TabIndex = 35;
-            this.cmbWallpaperStyle6.Tag = "6";
-            // 
-            // cmbWallpaperStyle7
-            // 
-            this.cmbWallpaperStyle7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbWallpaperStyle7.FormattingEnabled = true;
-            this.cmbWallpaperStyle7.Items.AddRange(new object[] {
-            "Centered",
-            "Streched",
-            "Tiled"});
-            this.cmbWallpaperStyle7.Location = new System.Drawing.Point(418, 234);
-            this.cmbWallpaperStyle7.Name = "cmbWallpaperStyle7";
-            this.cmbWallpaperStyle7.Size = new System.Drawing.Size(91, 28);
-            this.cmbWallpaperStyle7.Sorted = true;
-            this.cmbWallpaperStyle7.TabIndex = 36;
-            this.cmbWallpaperStyle7.Tag = "7";
-            // 
-            // cmbWallpaperStyle8
-            // 
-            this.cmbWallpaperStyle8.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbWallpaperStyle8.FormattingEnabled = true;
-            this.cmbWallpaperStyle8.Items.AddRange(new object[] {
-            "Centered",
-            "Streched",
-            "Tiled"});
-            this.cmbWallpaperStyle8.Location = new System.Drawing.Point(418, 271);
-            this.cmbWallpaperStyle8.Name = "cmbWallpaperStyle8";
-            this.cmbWallpaperStyle8.Size = new System.Drawing.Size(91, 28);
-            this.cmbWallpaperStyle8.Sorted = true;
-            this.cmbWallpaperStyle8.TabIndex = 37;
-            this.cmbWallpaperStyle8.Tag = "8";
-            // 
-            // cmbWallpaperStyle9
-            // 
-            this.cmbWallpaperStyle9.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbWallpaperStyle9.FormattingEnabled = true;
-            this.cmbWallpaperStyle9.Items.AddRange(new object[] {
-            "Centered",
-            "Streched",
-            "Tiled"});
-            this.cmbWallpaperStyle9.Location = new System.Drawing.Point(418, 308);
-            this.cmbWallpaperStyle9.Name = "cmbWallpaperStyle9";
-            this.cmbWallpaperStyle9.Size = new System.Drawing.Size(91, 28);
-            this.cmbWallpaperStyle9.Sorted = true;
-            this.cmbWallpaperStyle9.TabIndex = 38;
-            this.cmbWallpaperStyle9.Tag = "9";
-            // 
-            // cmbWallpaperStyleDefault
-            // 
-            this.cmbWallpaperStyleDefault.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbWallpaperStyleDefault.FormattingEnabled = true;
-            this.cmbWallpaperStyleDefault.Items.AddRange(new object[] {
-            "Centered",
-            "Streched",
-            "Tiled"});
-            this.cmbWallpaperStyleDefault.Location = new System.Drawing.Point(418, 345);
-            this.cmbWallpaperStyleDefault.Name = "cmbWallpaperStyleDefault";
-            this.cmbWallpaperStyleDefault.Size = new System.Drawing.Size(91, 28);
-            this.cmbWallpaperStyleDefault.Sorted = true;
-            this.cmbWallpaperStyleDefault.TabIndex = 39;
-            this.cmbWallpaperStyleDefault.Tag = "default";
             // 
             // mnuPinnedApps
             // 
@@ -860,23 +865,46 @@
             this.mnuPinnedApps.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuUnpin});
             this.mnuPinnedApps.Name = "mnuPinnedApps";
-            this.mnuPinnedApps.Size = new System.Drawing.Size(212, 67);
+            this.mnuPinnedApps.Size = new System.Drawing.Size(132, 34);
             this.mnuPinnedApps.Opening += new System.ComponentModel.CancelEventHandler(this.mnuPinnedApps_Opening);
             // 
             // mnuUnpin
             // 
             this.mnuUnpin.Name = "mnuUnpin";
-            this.mnuUnpin.Size = new System.Drawing.Size(211, 30);
+            this.mnuUnpin.Size = new System.Drawing.Size(131, 30);
             this.mnuUnpin.Text = "Unpin";
             this.mnuUnpin.Click += new System.EventHandler(this.mnuUnpin_Click);
+            // 
+            // tabPinnedWindows
+            // 
+            this.tabPinnedWindows.Controls.Add(this.lstPinnedWindows);
+            this.tabPinnedWindows.Location = new System.Drawing.Point(4, 29);
+            this.tabPinnedWindows.Name = "tabPinnedWindows";
+            this.tabPinnedWindows.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPinnedWindows.Size = new System.Drawing.Size(624, 496);
+            this.tabPinnedWindows.TabIndex = 4;
+            this.tabPinnedWindows.Text = "Pinned Windows";
+            this.tabPinnedWindows.UseVisualStyleBackColor = true;
+            // 
+            // lstPinnedWindows
+            // 
+            this.lstPinnedWindows.ContextMenuStrip = this.mnuPinnedApps;
+            this.lstPinnedWindows.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lstPinnedWindows.FormattingEnabled = true;
+            this.lstPinnedWindows.HorizontalScrollbar = true;
+            this.lstPinnedWindows.ItemHeight = 20;
+            this.lstPinnedWindows.Location = new System.Drawing.Point(3, 3);
+            this.lstPinnedWindows.Name = "lstPinnedWindows";
+            this.lstPinnedWindows.Size = new System.Drawing.Size(618, 490);
+            this.lstPinnedWindows.TabIndex = 1;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(532, 618);
+            this.ClientSize = new System.Drawing.Size(642, 618);
             this.Controls.Add(this.lblGithub);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.tabs);
             this.Controls.Add(this.btnApply);
             this.Controls.Add(this.btnCancel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -885,13 +913,14 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "zVirtualDesktop Settings";
             this.SystemTrayMenu.ResumeLayout(false);
-            this.tabControl1.ResumeLayout(false);
+            this.tabs.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPinnedApps.ResumeLayout(false);
             this.mnuPinnedApps.ResumeLayout(false);
+            this.tabPinnedWindows.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -915,7 +944,7 @@
         internal System.Windows.Forms.Button Button3;
         private System.Windows.Forms.ToolStripMenuItem mnuSwitchDesktop;
         private System.Windows.Forms.ComboBox cmbIcons;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl tabs;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Button btnBrowseWallpaper9;
@@ -963,6 +992,8 @@
         private System.Windows.Forms.ComboBox cmbWallpaperStyle2;
         private System.Windows.Forms.ContextMenuStrip mnuPinnedApps;
         private System.Windows.Forms.ToolStripMenuItem mnuUnpin;
+        private System.Windows.Forms.TabPage tabPinnedWindows;
+        private System.Windows.Forms.ListBox lstPinnedWindows;
     }
 }
 
