@@ -65,8 +65,6 @@ namespace zVirtualDesktop
             this.Load += frmMain_Load;
             mnuExit.Click += mnuExit_Click;
             mnuSettings.Click += mnuSettings_Click;
-            btnCancel.Click += btnCancel_Click;
-            btnApply.Click += btnApply_Click;
             lblGithub.LinkClicked += lblGithub_LinkClicked;
             mnuGithub.Click += mnuGithub_Click;
             VirtualDesktop.CurrentChanged += VirtualDesktop_CurrentChanged;
@@ -696,6 +694,11 @@ namespace zVirtualDesktop
         private void btnApply_Click(object sender, EventArgs e)
         {
             SaveSettings();
+        }
+
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+            SaveSettings();
             HideSettings();
             GC.Collect();
         }
@@ -1214,6 +1217,7 @@ namespace zVirtualDesktop
         {
             try
             {
+                LoadSettings();
                 this.Opacity = 100;
                 this.TopMost = true;
                 this.ShowInTaskbar = true;
@@ -1402,6 +1406,5 @@ namespace zVirtualDesktop
 
             dlg.Dispose();
         }
-
     }
 }
