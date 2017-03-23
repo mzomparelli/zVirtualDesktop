@@ -12,6 +12,24 @@ namespace zVirtualDesktop
     public class Window
     {
 
+        #region "Static Instances"
+
+        //Create a new instance from the current foreground window
+        public static Window ForegroundWindow()
+        {
+            try
+            {
+                Window win = new Window(GetForegroundWindow());
+                return win;
+            }catch
+            {
+                return null;
+            }
+            
+        }
+
+        #endregion
+
         public Window(IntPtr hWnd)
         {
             this.hWnd = hWnd;
@@ -368,6 +386,15 @@ namespace zVirtualDesktop
             }
 
         }
+
+        [DllImport("user32.dll", SetLastError = true, CharSet = CharSet.Auto)]
+        public static extern IntPtr FindWindow(string lpClassName, string lpWindowName);
+
+        [DllImport("user32.dll", SetLastError = true, CharSet = CharSet.Auto)]
+        public static extern IntPtr FindWindowEx(IntPtr parentHandle, IntPtr childAfter, string lclassName, string windowTitle);
+
+        [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+        private static extern IntPtr GetForegroundWindow();
 
         [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
         private static extern int GetWindowText(IntPtr hWnd, StringBuilder text, int count);

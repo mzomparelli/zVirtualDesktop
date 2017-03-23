@@ -580,20 +580,13 @@ namespace zVirtualDesktop
             try
             {
                 Hotkey hotkey = (Hotkey)sender;
-                IntPtr hWnd = PInvoke.GetForegroundWindow();
-                Window win = null;
-                IEnumerable<Window> window = from Window w in windows where w.Handle == hWnd select w;
+                Window win = Window.ForegroundWindow();
+                IEnumerable<Window> window = from Window w in windows
+                                             where w.Handle == win.Handle
+                                             select w;
                 if (window.Count() < 1)
                 {
-                    win = new Window(hWnd);
                     windows.Add(win);
-                }
-                else
-                {
-                    foreach (Window foundWin in window)
-                    {
-                        win = foundWin;
-                    }
                 }
 
                 if (win.IsPinnedWindow)
@@ -621,20 +614,13 @@ namespace zVirtualDesktop
             try
             {
                 Hotkey hotkey = (Hotkey)sender;
-                IntPtr hWnd = PInvoke.GetForegroundWindow();
-                Window win = null;
-                IEnumerable<Window> window = from Window w in windows where w.Handle == hWnd select w;
+                Window win = Window.ForegroundWindow();
+                IEnumerable<Window> window = from Window w in windows
+                                             where w.Handle == win.Handle
+                                             select w;
                 if (window.Count() < 1)
                 {
-                    win = new Window(hWnd);
                     windows.Add(win);
-                }
-                else
-                {
-                    foreach (Window foundWin in window)
-                    {
-                        win = foundWin;
-                    }
                 }
 
                 if (win.IsPinnedApplication)
@@ -668,20 +654,14 @@ namespace zVirtualDesktop
         private void DesktopMove(object sender, EventArgs e)
         {
 
-            IntPtr hWnd = PInvoke.GetForegroundWindow();
-            Window win = null;
-            IEnumerable<Window> window = from Window w in windows where w.Handle == hWnd select w;
+            Window win = Window.ForegroundWindow();
+            IEnumerable<Window> window = from Window w in windows
+                                         where w.Handle == win.Handle
+                                         select w;
             if (window.Count() < 1)
-            {
-                win = new Window(hWnd);
+            { 
+                //win = new Window(hWnd);
                 windows.Add(win);
-            }
-            else
-            {
-                foreach (Window foundWin in window)
-                {
-                    win = foundWin;
-                }
             }
 
             Hotkey hotkey = (Hotkey)sender;
