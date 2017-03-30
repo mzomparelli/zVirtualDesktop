@@ -538,6 +538,7 @@ namespace zVirtualDesktop
                 this.ShowInTaskbar = false;
                 RegisterHotKeys();
                 LoadSettings();
+                SetSystemTrayIcon();
                 //Make sure there are at least 9 desktops.
                 int diff = Math.Abs(Desktops.Count() - 9);
                 for (int i = 1; i <= diff; i += 1)
@@ -1405,6 +1406,13 @@ namespace zVirtualDesktop
             }
 
             dlg.Dispose();
+        }
+
+        private void btnAddHotkey_Click(object sender, EventArgs e)
+        {
+            frmHotKey f = new frmHotKey();
+            f.ShowDialog(this);
+
         }
     }
 }
