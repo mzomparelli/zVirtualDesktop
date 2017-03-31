@@ -84,6 +84,33 @@
             System.Windows.Forms.ListViewItem listViewItem38 = new System.Windows.Forms.ListViewItem(new string[] {
             "Move to Desktop 9",
             "WIN+CTRL+Numpad9"}, -1);
+            System.Windows.Forms.ListViewItem listViewItem41 = new System.Windows.Forms.ListViewItem(new string[] {
+            "Move to Desktop & Follow 1",
+            "WIN+CTRL+ALT+Numpad1"}, -1);
+            System.Windows.Forms.ListViewItem listViewItem42 = new System.Windows.Forms.ListViewItem(new string[] {
+            "Move to Desktop & Follow 2",
+            "WIN+CTRL+ALT+Numpad2"}, -1);
+            System.Windows.Forms.ListViewItem listViewItem43 = new System.Windows.Forms.ListViewItem(new string[] {
+            "Move to Desktop & Follow 3",
+            "WIN+CTRL+ALT+Numpad3"}, -1);
+            System.Windows.Forms.ListViewItem listViewItem44 = new System.Windows.Forms.ListViewItem(new string[] {
+            "Move to Desktop & Follow 4",
+            "WIN+CTRL+ALT+Numpad4"}, -1);
+            System.Windows.Forms.ListViewItem listViewItem45 = new System.Windows.Forms.ListViewItem(new string[] {
+            "Move to Desktop & Follow 5",
+            "WIN+CTRL+ALT+Numpad5"}, -1);
+            System.Windows.Forms.ListViewItem listViewItem46 = new System.Windows.Forms.ListViewItem(new string[] {
+            "Move to Desktop & Follow 6",
+            "WIN+CTRL+ALT+Numpad6"}, -1);
+            System.Windows.Forms.ListViewItem listViewItem47 = new System.Windows.Forms.ListViewItem(new string[] {
+            "Move to Desktop & Follow 7",
+            "WIN+CTRL+ALT+Numpad7"}, -1);
+            System.Windows.Forms.ListViewItem listViewItem48 = new System.Windows.Forms.ListViewItem(new string[] {
+            "Move to Desktop & Follow 8",
+            "WIN+CTRL+ALT+Numpad8"}, -1);
+            System.Windows.Forms.ListViewItem listViewItem49 = new System.Windows.Forms.ListViewItem(new string[] {
+            "Move to Desktop & Follow 9",
+            "WIN+CTRL+ALT+Numpad9"}, -1);
             System.Windows.Forms.ListViewItem listViewItem39 = new System.Windows.Forms.ListViewItem(new string[] {
             "Pin/Unpin Window",
             "WIN+ALT+Z"}, -1);
@@ -246,6 +273,15 @@
             listViewItem36,
             listViewItem37,
             listViewItem38,
+            listViewItem41,
+            listViewItem42,
+            listViewItem43,
+            listViewItem44,
+            listViewItem45,
+            listViewItem46,
+            listViewItem47,
+            listViewItem48,
+            listViewItem49,
             listViewItem39,
             listViewItem40});
             this.ListView1.Location = new System.Drawing.Point(1, 0);
