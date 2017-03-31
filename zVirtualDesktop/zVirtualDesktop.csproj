@@ -56,6 +56,12 @@
   <ItemGroup>
     <Compile Include="ApplicationHelper.cs" />
     <Compile Include="COMProgram.cs" />
+    <Compile Include="frmHotKey.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHotKey.Designer.cs">
+      <DependentUpon>frmHotKey.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,9 @@
     <Compile Include="VirtualDesktopHelper.cs" />
     <Compile Include="Wallpaper.cs" />
     <Compile Include="Window.cs" />
+    <EmbeddedResource Include="frmHotKey.resx">
+      <DependentUpon>frmHotKey.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>

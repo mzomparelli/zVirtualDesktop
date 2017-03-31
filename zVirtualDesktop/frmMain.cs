@@ -32,8 +32,8 @@ namespace zVirtualDesktop
         public Hotkey keyGoTo06 = new Hotkey(6);
         public Hotkey keyGoTo07 = new Hotkey(7);
         public Hotkey keyGoTo08 = new Hotkey(8);
-
         public Hotkey keyGoTo09 = new Hotkey(9);
+
         public Hotkey keyMoveTo01 = new Hotkey(1);
         public Hotkey keyMoveTo02 = new Hotkey(2);
         public Hotkey keyMoveTo03 = new Hotkey(3);
@@ -42,8 +42,17 @@ namespace zVirtualDesktop
         public Hotkey keyMoveTo06 = new Hotkey(6);
         public Hotkey keyMoveTo07 = new Hotkey(7);
         public Hotkey keyMoveTo08 = new Hotkey(8);
-
         public Hotkey keyMoveTo09 = new Hotkey(9);
+
+        public Hotkey keyMoveFollowTo01 = new Hotkey(1);
+        public Hotkey keyMoveFollowTo02 = new Hotkey(2);
+        public Hotkey keyMoveFollowTo03 = new Hotkey(3);
+        public Hotkey keyMoveFollowTo04 = new Hotkey(4);
+        public Hotkey keyMoveFollowTo05 = new Hotkey(5);
+        public Hotkey keyMoveFollowTo06 = new Hotkey(6);
+        public Hotkey keyMoveFollowTo07 = new Hotkey(7);
+        public Hotkey keyMoveFollowTo08 = new Hotkey(8);
+        public Hotkey keyMoveFollowTo09 = new Hotkey(9);
 
         public Hotkey keyPinWindow = new Hotkey(99);
         public Hotkey keyPinApp = new Hotkey(99);
@@ -520,6 +529,34 @@ namespace zVirtualDesktop
             keyMoveTo09.Register(Keys.NumPad9, false, true, false, true);
 
 
+            keyMoveFollowTo01.HotkeyActivated += DesktopMoveFollow;
+            keyMoveFollowTo01.Register(Keys.NumPad1, true, true, false, true);
+
+            keyMoveFollowTo02.HotkeyActivated += DesktopMoveFollow;
+            keyMoveFollowTo02.Register(Keys.NumPad2, true, true, false, true);
+
+            keyMoveFollowTo03.HotkeyActivated += DesktopMoveFollow;
+            keyMoveFollowTo03.Register(Keys.NumPad3, true, true, false, true);
+
+            keyMoveFollowTo04.HotkeyActivated += DesktopMoveFollow;
+            keyMoveFollowTo04.Register(Keys.NumPad4, true, true, false, true);
+
+            keyMoveFollowTo05.HotkeyActivated += DesktopMoveFollow;
+            keyMoveFollowTo05.Register(Keys.NumPad5, true, true, false, true);
+
+            keyMoveFollowTo06.HotkeyActivated += DesktopMoveFollow;
+            keyMoveFollowTo06.Register(Keys.NumPad6, true, true, false, true);
+
+            keyMoveFollowTo07.HotkeyActivated += DesktopMoveFollow;
+            keyMoveFollowTo07.Register(Keys.NumPad7, true, true, false, true);
+
+            keyMoveFollowTo08.HotkeyActivated += DesktopMoveFollow;
+            keyMoveFollowTo08.Register(Keys.NumPad8, true, true, false, true);
+
+            keyMoveFollowTo09.HotkeyActivated += DesktopMoveFollow;
+            keyMoveFollowTo09.Register(Keys.NumPad9, true, true, false, true);
+
+
             keyPinWindow.HotkeyActivated += PinWindow;
             keyPinWindow.Register(Keys.Z, true, false, false, true);
 
@@ -538,6 +575,7 @@ namespace zVirtualDesktop
                 this.ShowInTaskbar = false;
                 RegisterHotKeys();
                 LoadSettings();
+                SetSystemTrayIcon();
                 //Make sure there are at least 9 desktops.
                 int diff = Math.Abs(Desktops.Count() - 9);
                 for (int i = 1; i <= diff; i += 1)
@@ -664,6 +702,24 @@ namespace zVirtualDesktop
 
             Hotkey hotkey = (Hotkey)sender;
             win.MoveToDesktop(hotkey.ID);
+            //MoveToDesktop(hotkey.ID);
+        }
+
+        private void DesktopMoveFollow(object sender, EventArgs e)
+        {
+
+            Window win = Window.ForegroundWindow();
+            IEnumerable<Window> window = from Window w in windows
+                                         where w.Handle == win.Handle
+                                         select w;
+            if (window.Count() < 1)
+            {
+                //win = new Window(hWnd);
+                windows.Add(win);
+            }
+
+            Hotkey hotkey = (Hotkey)sender;
+            win.MoveToDesktop(hotkey.ID, true);
             //MoveToDesktop(hotkey.ID);
         }
 
@@ -1405,6 +1461,13 @@ namespace zVirtualDesktop
             }
 
             dlg.Dispose();
+        }
+
+        private void btnAddHotkey_Click(object sender, EventArgs e)
+        {
+            frmHotKey f = new frmHotKey();
+            f.ShowDialog(this);
+
         }
     }
 }
