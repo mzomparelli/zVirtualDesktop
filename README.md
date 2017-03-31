@@ -8,15 +8,15 @@ __Features:__
 __Hotkeys:__
 
 __Navigate Desktops:__  
-<kbd>WIN</kbd>+<kbd>CTRL</kbd>+<kbd>Numpad</kbd>
+<kbd>WIN</kbd>+<kbd>CTRL</kbd>+<kbd>Numpad</kbd>  
 <kbd>WIN</kbd>+<kbd>CTRL</kbd>+<kbd>LEFT</kbd> or <kbd>RIGHT</kbd> - this is Windows Default
 
 Move Windows:  
-<kbd>WIN</kbd>+<kbd>ALT</kbd>+<kbd>Numpad</kbd>
+<kbd>WIN</kbd>+<kbd>ALT</kbd>+<kbd>Numpad</kbd>  
 <kbd>WIN</kbd>+<kbd>ALT</kbd>+<kbd>LEFT</kbd> or <kbd>RIGHT</kbd>
 
 Move Window & Follow:  
-<kbd>WIN</kbd>+<kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Numpad</kbd>
+<kbd>WIN</kbd>+<kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Numpad</kbd>  
 <kbd>WIN</kbd>+<kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>LEFT</kbd> or <kbd>RIGHT</kbd>
 
 Pin/Unpin Windows:  
