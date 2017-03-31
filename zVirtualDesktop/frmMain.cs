@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO.IsolatedStorage;
 using System.Linq;
@@ -451,6 +452,30 @@ namespace zVirtualDesktop
         }
 
 #endregion
+
+        private List<Window> GetAllWindows()
+        {
+            Process[] procs = Process.GetProcesses();
+            IntPtr hWnd;
+            List<Window> wins = new List<Window>();
+
+            foreach (Process proc in procs)
+            {
+                if ((hWnd = proc.MainWindowHandle) != IntPtr.Zero)
+                {
+                    Window win = new Window(hWnd);
+                    IEnumerable<Window> window = from Window w in wins
+                                                 where w.Handle == win.Handle
+                                                 select w;
+                    if (window.Count() < 1)
+                    {
+                        wins.Add(win);
+                    }
+                }
+            }
+
+            return wins;
+        }
 
         private void CreateDesktopMenu()
         {
