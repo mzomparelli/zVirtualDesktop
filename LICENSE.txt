@@ -1,3 +1,5 @@
+zVirtualDesktop
+
 Copyright (c) 2017 Michael Zomparelli.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -23,6 +25,10 @@ SOFTWARE.
 ===================================================================================
 
 
+
+Wrapper for API to Virtual Desktop on Windows 10
+https://github.com/Grabacr07/VirtualDesktop
+
 Copyright (c) 2015 Manato KAMEYA
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -42,3 +48,7 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+
+
+===================================================================================
