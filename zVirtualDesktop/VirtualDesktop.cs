@@ -1,4 +1,9 @@
-﻿using System;
+﻿//Wrapper for API to Virtual Desktop on Windows 10
+//https://github.com/Grabacr07/VirtualDesktop
+//Copyright(c) 2015 Manato KAMEYA
+
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
