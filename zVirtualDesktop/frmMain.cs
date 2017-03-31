@@ -54,6 +54,11 @@ namespace zVirtualDesktop
         public Hotkey keyMoveFollowTo08 = new Hotkey(8);
         public Hotkey keyMoveFollowTo09 = new Hotkey(9);
 
+        public Hotkey keyMoveNext = new Hotkey(6);
+        public Hotkey keyMoveNextFollow = new Hotkey(7);
+        public Hotkey keyMovePrevious = new Hotkey(8);
+        public Hotkey keyMovePreviousFollow = new Hotkey(9);
+
         public Hotkey keyPinWindow = new Hotkey(99);
         public Hotkey keyPinApp = new Hotkey(99);
 
@@ -474,59 +479,59 @@ namespace zVirtualDesktop
         public void RegisterHotKeys()
         {
             keyGoTo01.HotkeyActivated += DesktopGo;
-            keyGoTo01.Register(Keys.NumPad1, true, false, false, true);
+            keyGoTo01.Register(Keys.NumPad1, false, true, false, true);
 
             keyGoTo02.HotkeyActivated += DesktopGo;
-            keyGoTo02.Register(Keys.NumPad2, true, false, false, true);
+            keyGoTo02.Register(Keys.NumPad2, false, true, false, true);
 
             keyGoTo03.HotkeyActivated += DesktopGo;
-            keyGoTo03.Register(Keys.NumPad3, true, false, false, true);
+            keyGoTo03.Register(Keys.NumPad3, false, true, false, true);
 
             keyGoTo04.HotkeyActivated += DesktopGo;
-            keyGoTo04.Register(Keys.NumPad4, true, false, false, true);
+            keyGoTo04.Register(Keys.NumPad4, false, true, false, true);
 
             keyGoTo05.HotkeyActivated += DesktopGo;
-            keyGoTo05.Register(Keys.NumPad5, true, false, false, true);
+            keyGoTo05.Register(Keys.NumPad5, false, true, false, true);
 
             keyGoTo06.HotkeyActivated += DesktopGo;
-            keyGoTo06.Register(Keys.NumPad6, true, false, false, true);
+            keyGoTo06.Register(Keys.NumPad6, false, true, false, true);
 
             keyGoTo07.HotkeyActivated += DesktopGo;
-            keyGoTo07.Register(Keys.NumPad7, true, false, false, true);
+            keyGoTo07.Register(Keys.NumPad7, false, true, false, true);
 
             keyGoTo08.HotkeyActivated += DesktopGo;
-            keyGoTo08.Register(Keys.NumPad8, true, false, false, true);
+            keyGoTo08.Register(Keys.NumPad8, false, true, false, true);
 
             keyGoTo09.HotkeyActivated += DesktopGo;
-            keyGoTo09.Register(Keys.NumPad9, true, false, false, true);
+            keyGoTo09.Register(Keys.NumPad9, false, true, false, true);
 
 
             keyMoveTo01.HotkeyActivated += DesktopMove;
-            keyMoveTo01.Register(Keys.NumPad1, false, true, false, true);
+            keyMoveTo01.Register(Keys.NumPad1, true, false, false, true);
 
             keyMoveTo02.HotkeyActivated += DesktopMove;
-            keyMoveTo02.Register(Keys.NumPad2, false, true, false, true);
+            keyMoveTo02.Register(Keys.NumPad2, true, false, false, true);
 
             keyMoveTo03.HotkeyActivated += DesktopMove;
-            keyMoveTo03.Register(Keys.NumPad3, false, true, false, true);
+            keyMoveTo03.Register(Keys.NumPad3, true, false, false, true);
 
             keyMoveTo04.HotkeyActivated += DesktopMove;
-            keyMoveTo04.Register(Keys.NumPad4, false, true, false, true);
+            keyMoveTo04.Register(Keys.NumPad4, true, false, false, true);
 
             keyMoveTo05.HotkeyActivated += DesktopMove;
-            keyMoveTo05.Register(Keys.NumPad5, false, true, false, true);
+            keyMoveTo05.Register(Keys.NumPad5, true, false, false, true);
 
             keyMoveTo06.HotkeyActivated += DesktopMove;
-            keyMoveTo06.Register(Keys.NumPad6, false, true, false, true);
+            keyMoveTo06.Register(Keys.NumPad6, true, false, false, true);
 
             keyMoveTo07.HotkeyActivated += DesktopMove;
-            keyMoveTo07.Register(Keys.NumPad7, false, true, false, true);
+            keyMoveTo07.Register(Keys.NumPad7, true, false, false, true);
 
             keyMoveTo08.HotkeyActivated += DesktopMove;
-            keyMoveTo08.Register(Keys.NumPad8, false, true, false, true);
+            keyMoveTo08.Register(Keys.NumPad8, true, false, false, true);
 
             keyMoveTo09.HotkeyActivated += DesktopMove;
-            keyMoveTo09.Register(Keys.NumPad9, false, true, false, true);
+            keyMoveTo09.Register(Keys.NumPad9, true, false, false, true);
 
 
             keyMoveFollowTo01.HotkeyActivated += DesktopMoveFollow;
@@ -555,6 +560,18 @@ namespace zVirtualDesktop
 
             keyMoveFollowTo09.HotkeyActivated += DesktopMoveFollow;
             keyMoveFollowTo09.Register(Keys.NumPad9, true, true, false, true);
+
+            keyMoveNext.HotkeyActivated += DesktopMoveNext;
+            keyMoveNext.Register(Keys.Right, true, false, false, true);
+
+            keyMoveNextFollow.HotkeyActivated += DesktopMoveNextFollow;
+            keyMoveNextFollow.Register(Keys.Right, true, true, false, true);
+
+            keyMovePrevious.HotkeyActivated += DesktopMovePrevious;
+            keyMovePrevious.Register(Keys.Left, true, false, false, true);
+
+            keyMovePreviousFollow.HotkeyActivated += DesktopMovePreviousFollow;
+            keyMovePreviousFollow.Register(Keys.Left, true, true, false, true);
 
 
             keyPinWindow.HotkeyActivated += PinWindow;
@@ -720,6 +737,78 @@ namespace zVirtualDesktop
 
             Hotkey hotkey = (Hotkey)sender;
             win.MoveToDesktop(hotkey.ID, true);
+            //MoveToDesktop(hotkey.ID);
+        }
+
+        private void DesktopMoveNextFollow(object sender, EventArgs e)
+        {
+
+            Window win = Window.ForegroundWindow();
+            IEnumerable<Window> window = from Window w in windows
+                                         where w.Handle == win.Handle
+                                         select w;
+            if (window.Count() < 1)
+            {
+                //win = new Window(hWnd);
+                windows.Add(win);
+            }
+
+            Hotkey hotkey = (Hotkey)sender;
+            win.MoveToNextDesktop(true);
+            //MoveToDesktop(hotkey.ID);
+        }
+
+        private void DesktopMoveNext(object sender, EventArgs e)
+        {
+
+            Window win = Window.ForegroundWindow();
+            IEnumerable<Window> window = from Window w in windows
+                                         where w.Handle == win.Handle
+                                         select w;
+            if (window.Count() < 1)
+            {
+                //win = new Window(hWnd);
+                windows.Add(win);
+            }
+
+            Hotkey hotkey = (Hotkey)sender;
+            win.MoveToNextDesktop();
+            //MoveToDesktop(hotkey.ID);
+        }
+
+        private void DesktopMovePreviousFollow(object sender, EventArgs e)
+        {
+
+            Window win = Window.ForegroundWindow();
+            IEnumerable<Window> window = from Window w in windows
+                                         where w.Handle == win.Handle
+                                         select w;
+            if (window.Count() < 1)
+            {
+                //win = new Window(hWnd);
+                windows.Add(win);
+            }
+
+            Hotkey hotkey = (Hotkey)sender;
+            win.MoveToPreviousDesktop(true);
+            //MoveToDesktop(hotkey.ID);
+        }
+
+        private void DesktopMovePrevious(object sender, EventArgs e)
+        {
+
+            Window win = Window.ForegroundWindow();
+            IEnumerable<Window> window = from Window w in windows
+                                         where w.Handle == win.Handle
+                                         select w;
+            if (window.Count() < 1)
+            {
+                //win = new Window(hWnd);
+                windows.Add(win);
+            }
+
+            Hotkey hotkey = (Hotkey)sender;
+            win.MoveToPreviousDesktop();
             //MoveToDesktop(hotkey.ID);
         }
 

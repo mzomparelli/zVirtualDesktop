@@ -196,6 +196,32 @@ namespace zVirtualDesktop
             }
         }
 
+        public void MoveToPreviousDesktop()
+        {
+            if(this.DesktopNumber > 1)
+            {
+                MoveToDesktop(this.DesktopNumber - 1);
+            }
+        }
+
+        public void MoveToPreviousDesktop(bool follow)
+        {
+            if (this.DesktopNumber > 1)
+            {
+                MoveToDesktop(this.DesktopNumber - 1, follow);
+            }
+        }
+
+        public void MoveToNextDesktop()
+        {
+            MoveToDesktop(this.DesktopNumber + 1);
+        }
+
+        public void MoveToNextDesktop(bool follow)
+        {
+            MoveToDesktop(this.DesktopNumber + 1, follow);
+        }
+
         public void MoveToDesktop(int desktopNumber)
         {
             try

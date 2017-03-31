@@ -32,58 +32,58 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             System.Windows.Forms.ListViewItem listViewItem21 = new System.Windows.Forms.ListViewItem(new string[] {
             "Navigate to Desktop 1",
-            "WIN+ALT+Numpad1"}, -1);
+            "WIN+CTRL+Numpad1"}, -1);
             System.Windows.Forms.ListViewItem listViewItem22 = new System.Windows.Forms.ListViewItem(new string[] {
             "Navigate to Desktop 2",
-            "WIN+ALT+Numpad2"}, -1);
+            "WIN+CTRL+Numpad2"}, -1);
             System.Windows.Forms.ListViewItem listViewItem23 = new System.Windows.Forms.ListViewItem(new string[] {
             "Navigate to Desktop 3",
-            "WIN+ALT+Numpad3"}, -1);
+            "WIN+CTRL+Numpad3"}, -1);
             System.Windows.Forms.ListViewItem listViewItem24 = new System.Windows.Forms.ListViewItem(new string[] {
             "Navigate to Desktop 4",
-            "WIN+ALT+Numpad4"}, -1);
+            "WIN+CTRL+Numpad4"}, -1);
             System.Windows.Forms.ListViewItem listViewItem25 = new System.Windows.Forms.ListViewItem(new string[] {
             "Navigate to Desktop 5",
-            "WIN+ALT+Numpad5"}, -1);
+            "WIN+CTRL+Numpad5"}, -1);
             System.Windows.Forms.ListViewItem listViewItem26 = new System.Windows.Forms.ListViewItem(new string[] {
             "Navigate to Desktop 6",
-            "WIN+ALT+Numpad6"}, -1);
+            "WIN+CTRL+Numpad6"}, -1);
             System.Windows.Forms.ListViewItem listViewItem27 = new System.Windows.Forms.ListViewItem(new string[] {
             "Navigate to Desktop 7",
-            "WIN+ALT+Numpad7"}, -1);
+            "WIN+CTRL+Numpad7"}, -1);
             System.Windows.Forms.ListViewItem listViewItem28 = new System.Windows.Forms.ListViewItem(new string[] {
             "Navigate to Desktop 8",
-            "WIN+ALT+Numpad8"}, -1);
+            "WIN+CTRL+Numpad8"}, -1);
             System.Windows.Forms.ListViewItem listViewItem29 = new System.Windows.Forms.ListViewItem(new string[] {
             "Navigate to Desktop 9",
-            "WIN+ALT+Numpad9"}, -1);
+            "WIN+CTRL+Numpad9"}, -1);
             System.Windows.Forms.ListViewItem listViewItem30 = new System.Windows.Forms.ListViewItem(new string[] {
             "Move to Desktop 1",
-            "WIN+CTRL+Numpad1"}, -1);
+            "WIN+ALT+Numpad1"}, -1);
             System.Windows.Forms.ListViewItem listViewItem31 = new System.Windows.Forms.ListViewItem(new string[] {
             "Move to Desktop 2",
-            "WIN+CTRL+Numpad2"}, -1);
+            "WIN+ALT+Numpad2"}, -1);
             System.Windows.Forms.ListViewItem listViewItem32 = new System.Windows.Forms.ListViewItem(new string[] {
             "Move to Desktop 3",
-            "WIN+CTRL+Numpad3"}, -1);
+            "WIN+ALT+Numpad3"}, -1);
             System.Windows.Forms.ListViewItem listViewItem33 = new System.Windows.Forms.ListViewItem(new string[] {
             "Move to Desktop 4",
-            "WIN+CTRL+Numpad4"}, -1);
+            "WIN+ALT+Numpad4"}, -1);
             System.Windows.Forms.ListViewItem listViewItem34 = new System.Windows.Forms.ListViewItem(new string[] {
             "Move to Desktop 5",
-            "WIN+CTRL+Numpad5"}, -1);
+            "WIN+ALT+Numpad5"}, -1);
             System.Windows.Forms.ListViewItem listViewItem35 = new System.Windows.Forms.ListViewItem(new string[] {
             "Move to Desktop 6",
-            "WIN+CTRL+Numpad6"}, -1);
+            "WIN+ALT+Numpad6"}, -1);
             System.Windows.Forms.ListViewItem listViewItem36 = new System.Windows.Forms.ListViewItem(new string[] {
             "Move to Desktop 7",
-            "WIN+CTRL+Numpad7"}, -1);
+            "WIN+ALT+Numpad7"}, -1);
             System.Windows.Forms.ListViewItem listViewItem37 = new System.Windows.Forms.ListViewItem(new string[] {
             "Move to Desktop 8",
-            "WIN+CTRL+Numpad8"}, -1);
+            "WIN+ALT+Numpad8"}, -1);
             System.Windows.Forms.ListViewItem listViewItem38 = new System.Windows.Forms.ListViewItem(new string[] {
             "Move to Desktop 9",
-            "WIN+CTRL+Numpad9"}, -1);
+            "WIN+ALT+Numpad9"}, -1);
             System.Windows.Forms.ListViewItem listViewItem41 = new System.Windows.Forms.ListViewItem(new string[] {
             "Move to Desktop & Follow 1",
             "WIN+CTRL+ALT+Numpad1"}, -1);
