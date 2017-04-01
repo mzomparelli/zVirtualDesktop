@@ -16,6 +16,7 @@ namespace zVirtualDesktop
 {
     public partial class frmMain : Form
     {
+        private const string version = "v1.0.4";
 
         public IsolatedStorageFile storage = IsolatedStorageFile.GetUserStoreForAssembly();
 
@@ -94,6 +95,9 @@ namespace zVirtualDesktop
             btnBrowseWallpaper8.Click += btnBrowseWallpaper_Click;
             btnBrowseWallpaper9.Click += btnBrowseWallpaper_Click;
             btnBrowseDefaultWalpaper.Click += btnBrowseWallpaper_Click;
+
+            lblVersion.Text = version;
+            SystemTray.Text = "zVirtualDesktop " + version;
 
             //Create a new thread to retrieve the ProgID and Executables on this machine.
             //This is used so that the app is able to pin an application
@@ -835,6 +839,23 @@ namespace zVirtualDesktop
             Hotkey hotkey = (Hotkey)sender;
             win.MoveToPreviousDesktop();
             //MoveToDesktop(hotkey.ID);
+        }
+
+        private void mnuGatherWindows_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Coming Soon!");
+            //try
+            //{
+            //    List<Window> wins = GetAllWindows();
+            //    foreach (Window win in wins)
+            //    {
+            //        win.MoveToDesktop(GetDesktopNumber(VirtualDesktop.Current.Id));
+            //    }
+            //}catch(Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
+
         }
 
         private void mnuExit_Click(object sender, EventArgs e)
@@ -1583,5 +1604,7 @@ namespace zVirtualDesktop
             f.ShowDialog(this);
 
         }
+
+        
     }
 }
