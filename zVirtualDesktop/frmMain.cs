@@ -1865,6 +1865,8 @@ namespace zVirtualDesktop
                     hotkeys[i].hk.Unregister();
                     hotkeys[i].hk.Dispose();
                     hotkeys.RemoveAt(i);
+                    SaveSettings();
+                    lstHotkeys.Items.RemoveAt(i);
 
                 }
             }catch
