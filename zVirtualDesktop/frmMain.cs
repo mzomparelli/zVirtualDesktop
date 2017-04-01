@@ -16,7 +16,7 @@ namespace zVirtualDesktop
 {
     public partial class frmMain : Form
     {
-        private const string version = "v1.0.5";
+        private const string version = "v1.0.6";
 
         public IsolatedStorageFile storage = IsolatedStorageFile.GetUserStoreForAssembly();
 

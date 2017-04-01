@@ -10,6 +10,8 @@ __Features:__
 
 __Hotkeys:__
 
+These are the default hotkeys. You can configure these any way you'd like.
+
 __Navigate Desktops:__  
 <kbd>WIN</kbd>+<kbd>CTRL</kbd>+<kbd>Numpad</kbd>  
 <kbd>WIN</kbd>+<kbd>CTRL</kbd>+<kbd>LEFT</kbd> or <kbd>RIGHT</kbd> - this is Windows Default
@@ -36,9 +38,6 @@ __Wallpapers:__
 Set a different wallpaper for each desktop.  
 Specify the style for each (Center, Stretch, or Tile).
 
-
-__Upcoming Features:__  
-*Configurable Hotkeys - It's really easy to change in code, but I'm working on allowing this on the settings window.
 
 
 ![](https://github.com/mzomparelli/zVirtualDesktop/blob/master/Screenshot.png?raw=true)
