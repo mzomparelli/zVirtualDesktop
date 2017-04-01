@@ -55,10 +55,10 @@ namespace zVirtualDesktop
         public Hotkey keyMoveFollowTo08 = new Hotkey(8);
         public Hotkey keyMoveFollowTo09 = new Hotkey(9);
 
-        public Hotkey keyMoveNext = new Hotkey(6);
-        public Hotkey keyMoveNextFollow = new Hotkey(7);
-        public Hotkey keyMovePrevious = new Hotkey(8);
-        public Hotkey keyMovePreviousFollow = new Hotkey(9);
+        public Hotkey keyMoveNext = new Hotkey(99);
+        public Hotkey keyMoveNextFollow = new Hotkey(99);
+        public Hotkey keyMovePrevious = new Hotkey(99);
+        public Hotkey keyMovePreviousFollow = new Hotkey(99);
 
         public Hotkey keyPinWindow = new Hotkey(99);
         public Hotkey keyPinApp = new Hotkey(99);

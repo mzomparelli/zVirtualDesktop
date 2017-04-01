@@ -9,38 +9,54 @@ namespace WindowsDesktop
 	{
 		public static bool IsPinnedWindow(IntPtr hWnd)
 		{
-			VirtualDesktopHelper.ThrowIfNotSupported();
+            if (hWnd != IntPtr.Zero)
+            {
+                VirtualDesktopHelper.ThrowIfNotSupported();
 
-			return ComObjects.VirtualDesktopPinnedApps.IsViewPinned(hWnd.GetApplicationView());
+                return ComObjects.VirtualDesktopPinnedApps.IsViewPinned(hWnd.GetApplicationView());
+            }
+            else
+            {
+                return false;
+            }
+			
 		}
 
 		public static void PinWindow(IntPtr hWnd)
 		{
-			VirtualDesktopHelper.ThrowIfNotSupported();
+            if (hWnd != IntPtr.Zero)
+            {
+                VirtualDesktopHelper.ThrowIfNotSupported();
 
-			var view = hWnd.GetApplicationView();
+                var view = hWnd.GetApplicationView();
 
-			if (!ComObjects.VirtualDesktopPinnedApps.IsViewPinned(view))
-			{
-				ComObjects.VirtualDesktopPinnedApps.PinView(view);
-			}
+                if (!ComObjects.VirtualDesktopPinnedApps.IsViewPinned(view))
+                {
+                    ComObjects.VirtualDesktopPinnedApps.PinView(view);
+                }
+            }
+            
 		}
 
 		public static void UnpinWindow(IntPtr hWnd)
 		{
-			VirtualDesktopHelper.ThrowIfNotSupported();
+            if (hWnd != IntPtr.Zero)
+            {
+                VirtualDesktopHelper.ThrowIfNotSupported();
 
-			var view = hWnd.GetApplicationView();
+                var view = hWnd.GetApplicationView();
 
-			if (ComObjects.VirtualDesktopPinnedApps.IsViewPinned(view))
-			{
-				ComObjects.VirtualDesktopPinnedApps.UnpinView(view);
-			}
+                if (ComObjects.VirtualDesktopPinnedApps.IsViewPinned(view))
+                {
+                    ComObjects.VirtualDesktopPinnedApps.UnpinView(view);
+                }
+            }
+            
 		}
 
 		public static bool IsPinnedApplication(string appId)
 		{
-			VirtualDesktopHelper.ThrowIfNotSupported();
+            VirtualDesktopHelper.ThrowIfNotSupported();
 
 			return ComObjects.VirtualDesktopPinnedApps.IsAppIdPinned(appId);
 		}

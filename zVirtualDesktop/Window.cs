@@ -80,6 +80,41 @@ namespace zVirtualDesktop
             }
         }
 
+        public bool IsDesktop
+        {
+            get
+            {
+                try
+                {
+                    const int maxChars = 256;
+                    StringBuilder className = new StringBuilder(maxChars);
+                    if (GetClassName(this.hWnd, className, maxChars) > 0)
+                    {
+                        string cName = className.ToString();
+                        if (cName == "Progman" || cName == "WorkerW")
+                        {
+                            return true;
+                        }
+                        else
+                        {
+                            return false;
+                        }
+                    }
+                    else
+                    {
+                        return false;
+                    }
+
+
+                }
+                catch
+                {
+                    return false;
+                }
+
+            }
+        }
+
         public string AppID
         {
             get
@@ -100,7 +135,14 @@ namespace zVirtualDesktop
             {
                 try
                 {
-                    return VirtualDesktop.IsPinnedWindow(hWnd);
+                    if(hWnd != IntPtr.Zero)
+                    {
+                        return VirtualDesktop.IsPinnedWindow(hWnd);
+                    }else
+                    {
+                        return false;
+                    }
+                    
                 }catch
                 {
                     return false;
@@ -115,7 +157,14 @@ namespace zVirtualDesktop
             {
                 try
                 {
-                    return VirtualDesktop.IsPinnedApplication(AppID);
+                    if (hWnd != IntPtr.Zero)
+                    {
+                        return VirtualDesktop.IsPinnedApplication(AppID);
+                    }
+                    else
+                    {
+                        return false;
+                    }                    
                 }
                 catch
                 {
