@@ -16,7 +16,7 @@ namespace zVirtualDesktop
 {
     public partial class frmMain : Form
     {
-        private const string version = "v1.0.4";
+        private const string version = "v1.0.5";
 
         public IsolatedStorageFile storage = IsolatedStorageFile.GetUserStoreForAssembly();
 
@@ -1385,6 +1385,10 @@ namespace zVirtualDesktop
                         }
                     }
 
+                    //Right beofre switching the desktop, set the active window as the taskbar
+                    //This prevents windows from flashing in the taskbar when switching desktops
+                    Window w = Window.Taskbar();
+                    w.SetAsForegroundWindow();
                     current.Switch();
                    
                 }

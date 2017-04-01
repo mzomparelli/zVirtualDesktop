@@ -28,6 +28,22 @@ namespace zVirtualDesktop
             
         }
 
+        //Create a new instance from the taskbar window
+        public static Window Taskbar()
+        {
+            try
+            {
+                IntPtr hWnd = FindWindow("Shell_TrayWnd", null);
+                Window win = new Window(hWnd);
+                return win;
+            }
+            catch
+            {
+                return null;
+            }
+
+        }
+
         #endregion
 
         public Window(IntPtr hWnd)
@@ -112,6 +128,18 @@ namespace zVirtualDesktop
                     return false;
                 }
 
+            }
+        }
+
+        public bool SetAsForegroundWindow()
+        {
+            try
+            {
+                return SetForegroundWindow(this.hWnd);
+            }
+            catch
+            {
+                return false;
             }
         }
 
@@ -328,7 +356,7 @@ namespace zVirtualDesktop
         {
             MoveToDesktop(desktopNumber);
             if(follow)
-            {
+            {                
                 GoToDesktop(desktopNumber);
             }
         }
@@ -368,6 +396,10 @@ namespace zVirtualDesktop
                         }
                     }
 
+                    //Right beofre switching the desktop, set the active window as the taskbar
+                    //This prevents windows from flashing in the taskbar when switching desktops
+                    Window w = Window.Taskbar();
+                    w.SetAsForegroundWindow();
                     current.Switch();
 
                 }
@@ -470,6 +502,9 @@ namespace zVirtualDesktop
 
         [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
         private static extern IntPtr GetForegroundWindow();
+
+        [DllImport("user32.dll")]
+        private static extern bool SetForegroundWindow(IntPtr hWnd);
 
         [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
         private static extern int GetWindowText(IntPtr hWnd, StringBuilder text, int count);
