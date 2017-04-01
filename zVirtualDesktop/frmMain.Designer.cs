@@ -30,124 +30,126 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
-            System.Windows.Forms.ListViewItem listViewItem36 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
             "Navigate to Desktop 1",
             "WIN+CTRL+Numpad1"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem37 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
             "Navigate to Desktop 2",
             "WIN+CTRL+Numpad2"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem38 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
             "Navigate to Desktop 3",
             "WIN+CTRL+Numpad3"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem39 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
             "Navigate to Desktop 4",
             "WIN+CTRL+Numpad4"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem40 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new string[] {
             "Navigate to Desktop 5",
             "WIN+CTRL+Numpad5"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem41 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem(new string[] {
             "Navigate to Desktop 6",
             "WIN+CTRL+Numpad6"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem42 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem(new string[] {
             "Navigate to Desktop 7",
             "WIN+CTRL+Numpad7"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem43 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem(new string[] {
             "Navigate to Desktop 8",
             "WIN+CTRL+Numpad8"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem44 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem(new string[] {
             "Navigate to Desktop 9",
             "WIN+CTRL+Numpad9"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem45 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem(new string[] {
             "Move to Desktop 1",
             "WIN+ALT+Numpad1"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem46 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem(new string[] {
             "Move to Desktop 2",
             "WIN+ALT+Numpad2"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem47 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem(new string[] {
             "Move to Desktop 3",
             "WIN+ALT+Numpad3"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem48 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem13 = new System.Windows.Forms.ListViewItem(new string[] {
             "Move to Desktop 4",
             "WIN+ALT+Numpad4"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem49 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem14 = new System.Windows.Forms.ListViewItem(new string[] {
             "Move to Desktop 5",
             "WIN+ALT+Numpad5"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem50 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem15 = new System.Windows.Forms.ListViewItem(new string[] {
             "Move to Desktop 6",
             "WIN+ALT+Numpad6"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem51 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem16 = new System.Windows.Forms.ListViewItem(new string[] {
             "Move to Desktop 7",
             "WIN+ALT+Numpad7"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem52 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem17 = new System.Windows.Forms.ListViewItem(new string[] {
             "Move to Desktop 8",
             "WIN+ALT+Numpad8"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem53 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem18 = new System.Windows.Forms.ListViewItem(new string[] {
             "Move to Desktop 9",
             "WIN+ALT+Numpad9"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem54 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem19 = new System.Windows.Forms.ListViewItem(new string[] {
             "Move to Desktop 1 & Follow",
             "WIN+CTRL+ALT+Numpad1"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem55 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem20 = new System.Windows.Forms.ListViewItem(new string[] {
             "Move to Desktop 2 & Follow",
             "WIN+CTRL+ALT+Numpad2"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem56 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem21 = new System.Windows.Forms.ListViewItem(new string[] {
             "Move to Desktop 3 & Follow",
             "WIN+CTRL+ALT+Numpad3"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem57 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem22 = new System.Windows.Forms.ListViewItem(new string[] {
             "Move to Desktop 4 & Follow",
             "WIN+CTRL+ALT+Numpad4"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem58 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem23 = new System.Windows.Forms.ListViewItem(new string[] {
             "Move to Desktop 5 & Follow",
             "WIN+CTRL+ALT+Numpad5"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem59 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem24 = new System.Windows.Forms.ListViewItem(new string[] {
             "Move to Desktop 6 & Follow",
             "WIN+CTRL+ALT+Numpad6"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem60 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem25 = new System.Windows.Forms.ListViewItem(new string[] {
             "Move to Desktop 7 & Follow",
             "WIN+CTRL+ALT+Numpad7"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem61 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem26 = new System.Windows.Forms.ListViewItem(new string[] {
             "Move to Desktop 8 & Follow",
             "WIN+CTRL+ALT+Numpad8"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem62 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem27 = new System.Windows.Forms.ListViewItem(new string[] {
             "Move to Desktop 9 & Follow",
             "WIN+CTRL+ALT+Numpad9"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem63 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem28 = new System.Windows.Forms.ListViewItem(new string[] {
             "Move to Next Desktop & Follow",
             "WIN+CTRL+ALT+RightArrow"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem64 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem29 = new System.Windows.Forms.ListViewItem(new string[] {
             "Move to Previous Desktop & Follow",
             "WIN+CTRL+ALT+LeftArrow"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem65 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem30 = new System.Windows.Forms.ListViewItem(new string[] {
             "Move to Next Desktop",
             "WIN+ALT+RightArrow"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem66 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem31 = new System.Windows.Forms.ListViewItem(new string[] {
             "Move to Previous Desktop",
             "WIN+ALT+LeftArrow"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem67 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem32 = new System.Windows.Forms.ListViewItem(new string[] {
             "Navigate to Next Desktop",
             "WIN+CTRL+RightArrow"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem68 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem33 = new System.Windows.Forms.ListViewItem(new string[] {
             "Navigate to Previous Desktop",
             "WIN+CTRL+LeftArrow"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem69 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem34 = new System.Windows.Forms.ListViewItem(new string[] {
             "Pin/Unpin Window",
             "WIN+ALT+Z"}, -1);
-            System.Windows.Forms.ListViewItem listViewItem70 = new System.Windows.Forms.ListViewItem(new string[] {
+            System.Windows.Forms.ListViewItem listViewItem35 = new System.Windows.Forms.ListViewItem(new string[] {
             "Pin/Unpin Application",
             "WIN+ALT+A"}, -1);
             this.lblGithub = new System.Windows.Forms.LinkLabel();
             this.SystemTray = new System.Windows.Forms.NotifyIcon(this.components);
             this.SystemTrayMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.mnuGithub = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.mnuSwitchDesktop = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuGatherWindows = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.mnuSettings = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuExit = new System.Windows.Forms.ToolStripMenuItem();
-            this.ListView1 = new System.Windows.Forms.ListView();
+            this.lstHotkeys = new System.Windows.Forms.ListView();
             this.colTask = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colHotKey = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnApply = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.btnEditHotkey = new System.Windows.Forms.Button();
             this.btnAddHotkey = new System.Windows.Forms.Button();
             this.btnDeleteHotkey = new System.Windows.Forms.Button();
             this.cmbIcons = new System.Windows.Forms.ComboBox();
@@ -202,9 +204,6 @@
             this.tabPinnedWindows = new System.Windows.Forms.TabPage();
             this.lstPinnedWindows = new System.Windows.Forms.ListBox();
             this.btnOK = new System.Windows.Forms.Button();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.mnuGatherWindows = new System.Windows.Forms.ToolStripMenuItem();
             this.lblVersion = new System.Windows.Forms.Label();
             this.SystemTrayMenu.SuspendLayout();
             this.tabs.SuspendLayout();
@@ -254,12 +253,29 @@
             this.mnuGithub.Size = new System.Drawing.Size(284, 30);
             this.mnuGithub.Text = "GitHub zVirtualDesktop";
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(281, 6);
+            // 
             // mnuSwitchDesktop
             // 
             this.mnuSwitchDesktop.Name = "mnuSwitchDesktop";
             this.mnuSwitchDesktop.Size = new System.Drawing.Size(284, 30);
             this.mnuSwitchDesktop.Text = "Switch Desktop";
             this.mnuSwitchDesktop.Click += new System.EventHandler(this.mnuSwitchDesktop_Click);
+            // 
+            // mnuGatherWindows
+            // 
+            this.mnuGatherWindows.Name = "mnuGatherWindows";
+            this.mnuGatherWindows.Size = new System.Drawing.Size(284, 30);
+            this.mnuGatherWindows.Text = "Bring All Windows Here";
+            this.mnuGatherWindows.Click += new System.EventHandler(this.mnuGatherWindows_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(281, 6);
             // 
             // mnuSettings
             // 
@@ -273,53 +289,53 @@
             this.mnuExit.Size = new System.Drawing.Size(284, 30);
             this.mnuExit.Text = "Exit";
             // 
-            // ListView1
+            // lstHotkeys
             // 
-            this.ListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lstHotkeys.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.colTask,
             this.colHotKey});
-            this.ListView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem36,
-            listViewItem37,
-            listViewItem38,
-            listViewItem39,
-            listViewItem40,
-            listViewItem41,
-            listViewItem42,
-            listViewItem43,
-            listViewItem44,
-            listViewItem45,
-            listViewItem46,
-            listViewItem47,
-            listViewItem48,
-            listViewItem49,
-            listViewItem50,
-            listViewItem51,
-            listViewItem52,
-            listViewItem53,
-            listViewItem54,
-            listViewItem55,
-            listViewItem56,
-            listViewItem57,
-            listViewItem58,
-            listViewItem59,
-            listViewItem60,
-            listViewItem61,
-            listViewItem62,
-            listViewItem63,
-            listViewItem64,
-            listViewItem65,
-            listViewItem66,
-            listViewItem67,
-            listViewItem68,
-            listViewItem69,
-            listViewItem70});
-            this.ListView1.Location = new System.Drawing.Point(2, 0);
-            this.ListView1.Name = "ListView1";
-            this.ListView1.Size = new System.Drawing.Size(622, 433);
-            this.ListView1.TabIndex = 11;
-            this.ListView1.UseCompatibleStateImageBehavior = false;
-            this.ListView1.View = System.Windows.Forms.View.Details;
+            this.lstHotkeys.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem1,
+            listViewItem2,
+            listViewItem3,
+            listViewItem4,
+            listViewItem5,
+            listViewItem6,
+            listViewItem7,
+            listViewItem8,
+            listViewItem9,
+            listViewItem10,
+            listViewItem11,
+            listViewItem12,
+            listViewItem13,
+            listViewItem14,
+            listViewItem15,
+            listViewItem16,
+            listViewItem17,
+            listViewItem18,
+            listViewItem19,
+            listViewItem20,
+            listViewItem21,
+            listViewItem22,
+            listViewItem23,
+            listViewItem24,
+            listViewItem25,
+            listViewItem26,
+            listViewItem27,
+            listViewItem28,
+            listViewItem29,
+            listViewItem30,
+            listViewItem31,
+            listViewItem32,
+            listViewItem33,
+            listViewItem34,
+            listViewItem35});
+            this.lstHotkeys.Location = new System.Drawing.Point(2, 0);
+            this.lstHotkeys.Name = "lstHotkeys";
+            this.lstHotkeys.Size = new System.Drawing.Size(622, 433);
+            this.lstHotkeys.TabIndex = 11;
+            this.lstHotkeys.UseCompatibleStateImageBehavior = false;
+            this.lstHotkeys.View = System.Windows.Forms.View.Details;
             // 
             // colTask
             // 
@@ -351,15 +367,6 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // btnEditHotkey
-            // 
-            this.btnEditHotkey.Location = new System.Drawing.Point(96, 448);
-            this.btnEditHotkey.Name = "btnEditHotkey";
-            this.btnEditHotkey.Size = new System.Drawing.Size(75, 32);
-            this.btnEditHotkey.TabIndex = 14;
-            this.btnEditHotkey.Text = "Edit";
-            this.btnEditHotkey.UseVisualStyleBackColor = true;
-            // 
             // btnAddHotkey
             // 
             this.btnAddHotkey.Location = new System.Drawing.Point(14, 448);
@@ -372,12 +379,13 @@
             // 
             // btnDeleteHotkey
             // 
-            this.btnDeleteHotkey.Location = new System.Drawing.Point(176, 448);
+            this.btnDeleteHotkey.Location = new System.Drawing.Point(95, 448);
             this.btnDeleteHotkey.Name = "btnDeleteHotkey";
             this.btnDeleteHotkey.Size = new System.Drawing.Size(75, 32);
             this.btnDeleteHotkey.TabIndex = 12;
             this.btnDeleteHotkey.Text = "Delete";
             this.btnDeleteHotkey.UseVisualStyleBackColor = true;
+            this.btnDeleteHotkey.Click += new System.EventHandler(this.btnDeleteHotkey_Click);
             // 
             // cmbIcons
             // 
@@ -411,10 +419,9 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.ListView1);
+            this.tabPage1.Controls.Add(this.lstHotkeys);
             this.tabPage1.Controls.Add(this.btnAddHotkey);
             this.tabPage1.Controls.Add(this.btnDeleteHotkey);
-            this.tabPage1.Controls.Add(this.btnEditHotkey);
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -976,31 +983,14 @@
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(281, 6);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(281, 6);
-            // 
-            // mnuGatherWindows
-            // 
-            this.mnuGatherWindows.Name = "mnuGatherWindows";
-            this.mnuGatherWindows.Size = new System.Drawing.Size(284, 30);
-            this.mnuGatherWindows.Text = "Bring All Windows Here";
-            this.mnuGatherWindows.Click += new System.EventHandler(this.mnuGatherWindows_Click);
-            // 
             // lblVersion
             // 
             this.lblVersion.AutoSize = true;
             this.lblVersion.Location = new System.Drawing.Point(12, 581);
             this.lblVersion.Name = "lblVersion";
-            this.lblVersion.Size = new System.Drawing.Size(51, 20);
+            this.lblVersion.Size = new System.Drawing.Size(150, 20);
             this.lblVersion.TabIndex = 19;
-            this.lblVersion.Text = "v1.0.5";
+            this.lblVersion.Text = "Version Placeholder";
             // 
             // frmMain
             // 
@@ -1040,12 +1030,11 @@
         internal System.Windows.Forms.ToolStripMenuItem mnuGithub;
         internal System.Windows.Forms.ToolStripMenuItem mnuSettings;
         internal System.Windows.Forms.ToolStripMenuItem mnuExit;
-        internal System.Windows.Forms.ListView ListView1;
+        internal System.Windows.Forms.ListView lstHotkeys;
         internal System.Windows.Forms.ColumnHeader colTask;
         internal System.Windows.Forms.ColumnHeader colHotKey;
         internal System.Windows.Forms.Button btnApply;
         internal System.Windows.Forms.Button btnCancel;
-        internal System.Windows.Forms.Button btnEditHotkey;
         internal System.Windows.Forms.Button btnAddHotkey;
         internal System.Windows.Forms.Button btnDeleteHotkey;
         private System.Windows.Forms.ToolStripMenuItem mnuSwitchDesktop;

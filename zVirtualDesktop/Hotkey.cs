@@ -15,7 +15,7 @@ using System.Windows.Forms;
 public class Hotkey : IDisposable
 {
 
-    private bool _IsRegistered;
+    private bool _IsRegistered = false;
 
     private HotkeyWindow _Window;
 
@@ -23,27 +23,306 @@ public class Hotkey : IDisposable
 
 
     public int _ID;
-    public int ID;
-    public Hotkey(int ID)
+    public string ID;
+    public Hotkey(string ID)
     {
         this.ID = ID;
         System.Threading.Interlocked.Increment(ref _ID);
     }
 
-
+    public string DesktopNumber()
+    {
+        return ID;
+    }
 
 
     public event HotkeyActivatedEventHandler HotkeyActivated;
     public delegate void HotkeyActivatedEventHandler(object sender, System.EventArgs e);
 
-
-
-    public void Register(System.Windows.Forms.Keys key, bool alt, bool ctrl, bool shift, bool win)
+    private bool _modifierALT = false;
+    public bool modifierALT
     {
-        if ((this.IsRegistered))
+        get
+        {
+            return _modifierALT;
+        }
+    }
+
+    private bool _modifierCTRL = false;
+    public bool modifierCTRL
+    {
+        get
+        {
+            return _modifierCTRL;
+        }
+    }
+
+    private bool _modifierSHIFT = false;
+    public bool modifierSHIFT
+    {
+        get
+        {
+            return _modifierSHIFT;
+        }
+    }
+
+    private bool _modifierWIN = false;
+    public bool modifierWIN
+    {
+        get
+        {
+            return _modifierWIN;
+        }
+    }
+
+    private string _key = "";
+    public string Key
+    {
+        get
+        {
+            return _key;
+        }
+    }
+
+    public string HotKeyString()
+    {
+        string keys__1 = "";
+
+        if (_modifierALT)
+        {
+            if (string.IsNullOrEmpty(keys__1))
+            {
+                keys__1 = keys__1 + "ALT";
+            }
+            else
+            {
+                keys__1 = keys__1 + "+ALT";
+            }
+        }
+
+        if (_modifierCTRL)
+        {
+            if (string.IsNullOrEmpty(keys__1))
+            {
+                keys__1 = keys__1 + "CTRL";
+            }
+            else
+            {
+                keys__1 = keys__1 + "+CTRL";
+            }
+        }
+
+        if (_modifierSHIFT)
+        {
+            if (string.IsNullOrEmpty(keys__1))
+            {
+                keys__1 = keys__1 + "SHIFT";
+            }
+            else
+            {
+                keys__1 = keys__1 + "+SHIFT";
+            }
+        }
+
+        if (_modifierWIN)
+        {
+            if (string.IsNullOrEmpty(keys__1))
+            {
+                keys__1 = keys__1 + "WIN";
+            }
+            else
+            {
+                keys__1 = keys__1 + "+WIN";
+            }
+        }
+
+        keys__1 = keys__1 + "+" + _key;
+
+        return keys__1;
+
+        //switch (_key)
+        //{
+        //    case Keys.A:
+        //        keys__1 = keys__1 + "+A";
+        //        break;
+        //    case Keys.B:
+        //        keys__1 = keys__1 + "+B";
+        //        break;
+        //    case Keys.C:
+        //        keys__1 = keys__1 + "+C";
+        //        break;
+        //    case Keys.D:
+        //        keys__1 = keys__1 + "+D";
+        //        break;
+        //    case Keys.E:
+        //        keys__1 = keys__1 + "+E";
+        //        break;
+        //    case Keys.F:
+        //        keys__1 = keys__1 + "+F";
+        //        break;
+        //    case Keys.G:
+        //        keys__1 = keys__1 + "+G";
+        //        break;
+        //    case Keys.H:
+        //        keys__1 = keys__1 + "+H";
+        //        break;
+        //    case Keys.I:
+        //        keys__1 = keys__1 + "+I";
+        //        break;
+        //    case Keys.J:
+        //        keys__1 = keys__1 + "+J";
+        //        break;
+        //    case Keys.K:
+        //        keys__1 = keys__1 + "+K";
+        //        break;
+        //    case Keys.L:
+        //        keys__1 = keys__1 + "+L";
+        //        break;
+        //    case Keys.M:
+        //        keys__1 = keys__1 + "+M";
+        //        break;
+        //    case Keys.N:
+        //        keys__1 = keys__1 + "+N";
+        //        break;
+        //    case Keys.O:
+        //        keys__1 = keys__1 + "+O";
+        //        break;
+        //    case Keys.P:
+        //        keys__1 = keys__1 + "+P";
+        //        break;
+        //    case Keys.Q:
+        //        keys__1 = keys__1 + "+Q";
+        //        break;
+        //    case Keys.R:
+        //        keys__1 = keys__1 + "+R";
+        //        break;
+        //    case Keys.S:
+        //        keys__1 = keys__1 + "+S";
+        //        break;
+        //    case Keys.T:
+        //        keys__1 = keys__1 + "+T";
+        //        break;
+        //    case Keys.U:
+        //        keys__1 = keys__1 + "+U";
+        //        break;
+        //    case Keys.V:
+        //        keys__1 = keys__1 + "+V";
+        //        break;
+        //    case Keys.W:
+        //        keys__1 = keys__1 + "+W";
+        //        break;
+        //    case Keys.X:
+        //        keys__1 = keys__1 + "+X";
+        //        break;
+        //    case Keys.Y:
+        //        keys__1 = keys__1 + "+Y";
+        //        break;
+        //    case Keys.Z:
+        //        keys__1 = keys__1 + "+Z";
+        //        break;
+        //    case Keys.D0:
+        //        keys__1 = keys__1 + "+0";
+        //        break;
+        //    case Keys.D1:
+        //        keys__1 = keys__1 + "+1";
+        //        break;
+        //    case Keys.D2:
+        //        keys__1 = keys__1 + "+2";
+        //        break;
+        //    case Keys.D3:
+        //        keys__1 = keys__1 + "+3";
+        //        break;
+        //    case Keys.D4:
+        //        keys__1 = keys__1 + "+4";
+        //        break;
+        //    case Keys.D5:
+        //        keys__1 = keys__1 + "+5";
+        //        break;
+        //    case Keys.D6:
+        //        keys__1 = keys__1 + "+6";
+        //        break;
+        //    case Keys.D7:
+        //        keys__1 = keys__1 + "+7";
+        //        break;
+        //    case Keys.D8:
+        //        keys__1 = keys__1 + "+8";
+        //        break;
+        //    case Keys.D9:
+        //        keys__1 = keys__1 + "+9";
+        //        break;
+        //    case Keys.NumPad0:
+        //        keys__1 = keys__1 + "+Numpad0";
+        //        break;
+        //    case Keys.NumPad1:
+        //        keys__1 = keys__1 + "+Numpad1";
+        //        break;
+        //    case Keys.NumPad2:
+        //        keys__1 = keys__1 + "+Numpad2";
+        //        break;
+        //    case Keys.NumPad3:
+        //        keys__1 = keys__1 + "+Numpad3";
+        //        break;
+        //    case Keys.NumPad4:
+        //        keys__1 = keys__1 + "+Numpad4";
+        //        break;
+        //    case Keys.NumPad5:
+        //        keys__1 = keys__1 + "+Numpad5";
+        //        break;
+        //    case Keys.NumPad6:
+        //        keys__1 = keys__1 + "+Numpad6";
+        //        break;
+        //    case Keys.NumPad7:
+        //        keys__1 = keys__1 + "+Numpad7";
+        //        break;
+        //    case Keys.NumPad8:
+        //        keys__1 = keys__1 + "+Numpad8";
+        //        break;
+        //    case Keys.NumPad9:
+        //        keys__1 = keys__1 + "+Numpad9";
+        //        break;
+        //    case Keys.Decimal:
+        //        keys__1 = keys__1 + "+. (Decimal)";
+        //        break;
+        //    case Keys.Divide:
+        //        keys__1 = keys__1 + "+/ (Divide)";
+        //        break;
+        //    case Keys.Down:
+        //        keys__1 = keys__1 + "+Down Arrow";
+        //        break;
+        //    case Keys.Up:
+        //        keys__1 = keys__1 + "+Up Arrow";
+        //        break;
+        //    case Keys.Left:
+        //        keys__1 = keys__1 + "+Left Arrow";
+        //        break;
+        //    case Keys.Right:
+        //        keys__1 = keys__1 + "+Right Arrow";
+        //        break;
+        //    case Keys.Multiply:
+        //        keys__1 = keys__1 + "+* (Multiply)";
+        //        break;
+        //    case Keys.Subtract:
+        //        keys__1 = keys__1 + "+- (Subtract)";
+        //        break;
+        //    case Keys.Add:
+        //        keys__1 = keys__1 + "++ (Add)";
+        //        break;
+        //}
+    }
+
+    public bool Register(System.Windows.Forms.Keys key, bool alt, bool ctrl, bool shift, bool win)
+    {
+        if (this.IsRegistered)
         {
             this.Unregister();
         }
+
+        _modifierALT = alt;
+        _modifierCTRL = ctrl;
+        _modifierSHIFT = shift;
+        _modifierWIN = win;
+        _key = key.ToString();
+
 
         //Dim keyAlt As Keys = (key And Keys.Alt)
         //Dim keyControl As Keys = (key And Keys.Control)
@@ -78,238 +357,15 @@ public class Hotkey : IDisposable
 
         if (NativeMethods.RegisterHotKey(this._Window.Handle, _ID, Modifiers, keyValue) == 0)
         {
-            string keys__1 = "";
-            if (alt)
-            {
-                keys__1 = "CTRL+ALT+";
-            }
-            else
-            {
-                keys__1 = "CTRL+";
-            }
-
-            if (alt)
-            {
-                if (string.IsNullOrEmpty(keys__1))
-                {
-                    keys__1 = keys__1 + "ALT";
-                }
-                else
-                {
-                    keys__1 = keys__1 + "+ALT";
-                }
-            }
-
-            if (ctrl)
-            {
-                if (string.IsNullOrEmpty(keys__1))
-                {
-                    keys__1 = keys__1 + "CTRL";
-                }
-                else
-                {
-                    keys__1 = keys__1 + "+CTRL";
-                }
-            }
-
-            if (shift)
-            {
-                if (string.IsNullOrEmpty(keys__1))
-                {
-                    keys__1 = keys__1 + "SHIFT";
-                }
-                else
-                {
-                    keys__1 = keys__1 + "+SHIFT";
-                }
-            }
-
-            if (win)
-            {
-                if (string.IsNullOrEmpty(keys__1))
-                {
-                    keys__1 = keys__1 + "WIN";
-                }
-                else
-                {
-                    keys__1 = keys__1 + "+WIN";
-                }
-            }
-
-            switch (key)
-            {
-                case Keys.A:
-                    keys__1 = keys__1 + "+A";
-                    break;
-                case Keys.B:
-                    keys__1 = keys__1 + "+B";
-                    break;
-                case Keys.C:
-                    keys__1 = keys__1 + "+C";
-                    break;
-                case Keys.D:
-                    keys__1 = keys__1 + "+D";
-                    break;
-                case Keys.E:
-                    keys__1 = keys__1 + "+E";
-                    break;
-                case Keys.F:
-                    keys__1 = keys__1 + "+F";
-                    break;
-                case Keys.G:
-                    keys__1 = keys__1 + "+G";
-                    break;
-                case Keys.H:
-                    keys__1 = keys__1 + "+H";
-                   break;
-                case Keys.I:
-                    keys__1 = keys__1 + "+I";
-                    break;
-                case Keys.J:
-                    keys__1 = keys__1 + "+J";
-                    break;
-                case Keys.K:
-                    keys__1 = keys__1 + "+K";
-                    break;
-                case Keys.L:
-                    keys__1 = keys__1 + "+L";
-                    break;
-                case Keys.M:
-                    keys__1 = keys__1 + "+M";
-                    break;
-                case Keys.N:
-                    keys__1 = keys__1 + "+N";
-                    break;
-                case Keys.O:
-                    keys__1 = keys__1 + "+O";
-                    break;
-                case Keys.P:
-                    keys__1 = keys__1 + "+P";
-                    break;
-                case Keys.Q:
-                    keys__1 = keys__1 + "+Q";
-                    break;
-                case Keys.R:
-                    keys__1 = keys__1 + "+R";
-                    break;
-                case Keys.S:
-                    keys__1 = keys__1 + "+S";
-                    break;
-                case Keys.T:
-                    keys__1 = keys__1 + "+T";
-                    break;
-                case Keys.U:
-                    keys__1 = keys__1 + "+U";
-                    break;
-                case Keys.V:
-                    keys__1 = keys__1 + "+V";
-                    break;
-                case Keys.W:
-                    keys__1 = keys__1 + "+W";
-                    break;
-                case Keys.X:
-                    keys__1 = keys__1 + "+X";
-                    break;
-                case Keys.Y:
-                    keys__1 = keys__1 + "+Y";
-                    break;
-                case Keys.Z:
-                    keys__1 = keys__1 + "+Z";
-                    break;
-                case Keys.D0:
-                    keys__1 = keys__1 + "+0";
-                    break;
-                case Keys.D1:
-                    keys__1 = keys__1 + "+1";
-                    break;
-                case Keys.D2:
-                    keys__1 = keys__1 + "+2";
-                    break;
-                case Keys.D3:
-                    keys__1 = keys__1 + "+3";
-                    break;
-                case Keys.D4:
-                    keys__1 = keys__1 + "+4";
-                    break;
-                case Keys.D5:
-                    keys__1 = keys__1 + "+5";
-                    break;
-                case Keys.D6:
-                    keys__1 = keys__1 + "+6";
-                    break;
-                case Keys.D7:
-                    keys__1 = keys__1 + "+7";
-                    break;
-                case Keys.D8:
-                    keys__1 = keys__1 + "+8";
-                    break;
-                case Keys.D9:
-                    keys__1 = keys__1 + "+9";
-                    break;
-                case Keys.NumPad0:
-                    keys__1 = keys__1 + "+Numpad0";
-                    break;
-                case Keys.NumPad1:
-                    keys__1 = keys__1 + "+Numpad1";
-                    break;
-                case Keys.NumPad2:
-                    keys__1 = keys__1 + "+Numpad2";
-                    break;
-                case Keys.NumPad3:
-                    keys__1 = keys__1 + "+Numpad3";
-                    break;
-                case Keys.NumPad4:
-                    keys__1 = keys__1 + "+Numpad4";
-                    break;
-                case Keys.NumPad5:
-                    keys__1 = keys__1 + "+Numpad5";
-                    break;
-                case Keys.NumPad6:
-                    keys__1 = keys__1 + "+Numpad6";
-                    break;
-                case Keys.NumPad7:
-                    keys__1 = keys__1 + "+Numpad7";
-                    break;
-                case Keys.NumPad8:
-                    keys__1 = keys__1 + "+Numpad8";
-                    break;
-                case Keys.NumPad9:
-                    keys__1 = keys__1 + "+Numpad9";
-                    break;
-                case Keys.Decimal:
-                    keys__1 = keys__1 + "+. (Decimal)";
-                    break;
-                case Keys.Divide:
-                    keys__1 = keys__1 + "+/ (Divide)";
-                    break;
-                case Keys.Down:
-                    keys__1 = keys__1 + "+Down Arrow";
-                    break;
-                case Keys.Up:
-                    keys__1 = keys__1 + "+Up Arrow";
-                    break;
-                case Keys.Left:
-                    keys__1 = keys__1 + "+Left Arrow";
-                    break;
-                case Keys.Right:
-                    keys__1 = keys__1 + "+Right Arrow";
-                    break;
-                case Keys.Multiply:
-                    keys__1 = keys__1 + "+* (Multiply)";
-                    break;
-                case Keys.Subtract:
-                    keys__1 = keys__1 + "+- (Subtract)";
-                    break;
-                case Keys.Add:
-                    keys__1 = keys__1 + "++ (Add)";
-                    break;
-            }
-            MessageBox.Show(keys__1 + Convert.ToString(" hotkey is already registered. The application will now shut down."));
+            MessageBox.Show(HotKeyString() + Convert.ToString(" hotkey is already registered."));
+            return false;
             //Environment.[Exit](0)
         }
         else
         {
-            this._IsRegistered = true;
+            _IsRegistered = true;
+            return true;
+            
         }
         //Me._IsRegistered = Not (NativeMethods.RegisterHotKey(Me._Window.Handle, _ID, modValue, keyValue) = 0)
     }

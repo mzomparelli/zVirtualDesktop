@@ -30,19 +30,24 @@
         {
             this.lblHotkeyType = new System.Windows.Forms.Label();
             this.cmbHotkeyType = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbDesktopNumber = new System.Windows.Forms.ComboBox();
             this.lblDesktopNumber = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtHotkey = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.chkALT = new System.Windows.Forms.CheckBox();
+            this.chkCTRL = new System.Windows.Forms.CheckBox();
+            this.chkSHIFT = new System.Windows.Forms.CheckBox();
+            this.chkWIN = new System.Windows.Forms.CheckBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbKey = new System.Windows.Forms.ComboBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblHotkeyType
             // 
-            this.lblHotkeyType.Location = new System.Drawing.Point(28, 25);
+            this.lblHotkeyType.Location = new System.Drawing.Point(42, 38);
+            this.lblHotkeyType.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHotkeyType.Name = "lblHotkeyType";
-            this.lblHotkeyType.Size = new System.Drawing.Size(100, 23);
+            this.lblHotkeyType.Size = new System.Drawing.Size(150, 35);
             this.lblHotkeyType.TabIndex = 0;
             this.lblHotkeyType.Text = "Hotkey Type:";
             this.lblHotkeyType.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -54,18 +59,22 @@
             this.cmbHotkeyType.Items.AddRange(new object[] {
             "Navigate to Desktop",
             "Move Window to Desktop",
+            "Move Window to Desktop & Follow",
             "Pin/Unpin Window",
             "Pin/Unpin Application"});
-            this.cmbHotkeyType.Location = new System.Drawing.Point(134, 27);
+            this.cmbHotkeyType.Location = new System.Drawing.Point(201, 42);
+            this.cmbHotkeyType.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbHotkeyType.Name = "cmbHotkeyType";
-            this.cmbHotkeyType.Size = new System.Drawing.Size(218, 21);
+            this.cmbHotkeyType.Size = new System.Drawing.Size(325, 28);
             this.cmbHotkeyType.TabIndex = 1;
             // 
-            // comboBox1
+            // cmbDesktopNumber
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cmbDesktopNumber.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDesktopNumber.FormattingEnabled = true;
+            this.cmbDesktopNumber.Items.AddRange(new object[] {
+            "Next",
+            "Previous",
             "1",
             "2",
             "3",
@@ -75,75 +84,117 @@
             "7",
             "8",
             "9"});
-            this.comboBox1.Location = new System.Drawing.Point(134, 54);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(39, 21);
-            this.comboBox1.TabIndex = 2;
+            this.cmbDesktopNumber.Location = new System.Drawing.Point(201, 83);
+            this.cmbDesktopNumber.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmbDesktopNumber.Name = "cmbDesktopNumber";
+            this.cmbDesktopNumber.Size = new System.Drawing.Size(96, 28);
+            this.cmbDesktopNumber.TabIndex = 2;
             // 
             // lblDesktopNumber
             // 
-            this.lblDesktopNumber.Location = new System.Drawing.Point(28, 52);
+            this.lblDesktopNumber.Location = new System.Drawing.Point(42, 80);
+            this.lblDesktopNumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDesktopNumber.Name = "lblDesktopNumber";
-            this.lblDesktopNumber.Size = new System.Drawing.Size(100, 23);
+            this.lblDesktopNumber.Size = new System.Drawing.Size(150, 35);
             this.lblDesktopNumber.TabIndex = 3;
             this.lblDesktopNumber.Text = "Desktop Number:";
             this.lblDesktopNumber.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(28, 81);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 23);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Hotkey:";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // txtHotkey
-            // 
-            this.txtHotkey.Location = new System.Drawing.Point(134, 81);
-            this.txtHotkey.Name = "txtHotkey";
-            this.txtHotkey.Size = new System.Drawing.Size(256, 20);
-            this.txtHotkey.TabIndex = 5;
-            this.txtHotkey.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtHotkey_KeyDown);
-            this.txtHotkey.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHotkey_KeyPress);
-            // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(400, 137);
+            this.btnSave.Location = new System.Drawing.Point(604, 282);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.Size = new System.Drawing.Size(112, 35);
             this.btnSave.TabIndex = 6;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // button1
+            // chkALT
             // 
-            this.button1.Location = new System.Drawing.Point(394, 80);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Reset";
-            this.button1.UseVisualStyleBackColor = true;
+            this.chkALT.AutoSize = true;
+            this.chkALT.Location = new System.Drawing.Point(32, 39);
+            this.chkALT.Name = "chkALT";
+            this.chkALT.Size = new System.Drawing.Size(64, 24);
+            this.chkALT.TabIndex = 8;
+            this.chkALT.Text = "ALT";
+            this.chkALT.UseVisualStyleBackColor = true;
+            // 
+            // chkCTRL
+            // 
+            this.chkCTRL.AutoSize = true;
+            this.chkCTRL.Location = new System.Drawing.Point(32, 69);
+            this.chkCTRL.Name = "chkCTRL";
+            this.chkCTRL.Size = new System.Drawing.Size(76, 24);
+            this.chkCTRL.TabIndex = 9;
+            this.chkCTRL.Text = "CTRL";
+            this.chkCTRL.UseVisualStyleBackColor = true;
+            // 
+            // chkSHIFT
+            // 
+            this.chkSHIFT.AutoSize = true;
+            this.chkSHIFT.Location = new System.Drawing.Point(32, 99);
+            this.chkSHIFT.Name = "chkSHIFT";
+            this.chkSHIFT.Size = new System.Drawing.Size(82, 24);
+            this.chkSHIFT.TabIndex = 10;
+            this.chkSHIFT.Text = "SHIFT";
+            this.chkSHIFT.UseVisualStyleBackColor = true;
+            // 
+            // chkWIN
+            // 
+            this.chkWIN.AutoSize = true;
+            this.chkWIN.Location = new System.Drawing.Point(32, 129);
+            this.chkWIN.Name = "chkWIN";
+            this.chkWIN.Size = new System.Drawing.Size(66, 24);
+            this.chkWIN.TabIndex = 11;
+            this.chkWIN.Text = "WIN";
+            this.chkWIN.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.cmbKey);
+            this.groupBox1.Controls.Add(this.chkALT);
+            this.groupBox1.Controls.Add(this.chkWIN);
+            this.groupBox1.Controls.Add(this.chkCTRL);
+            this.groupBox1.Controls.Add(this.chkSHIFT);
+            this.groupBox1.Location = new System.Drawing.Point(201, 134);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(345, 183);
+            this.groupBox1.TabIndex = 12;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Hotkey";
+            // 
+            // cmbKey
+            // 
+            this.cmbKey.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbKey.FormattingEnabled = true;
+            this.cmbKey.Location = new System.Drawing.Point(146, 39);
+            this.cmbKey.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmbKey.Name = "cmbKey";
+            this.cmbKey.Size = new System.Drawing.Size(192, 28);
+            this.cmbKey.TabIndex = 12;
             // 
             // frmHotKey
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(486, 174);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(729, 331);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.txtHotkey);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblDesktopNumber);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbDesktopNumber);
             this.Controls.Add(this.cmbHotkeyType);
             this.Controls.Add(this.lblHotkeyType);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.Name = "frmHotKey";
-            this.Text = "frmHotKey";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Hotkey";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -151,11 +202,14 @@
 
         private System.Windows.Forms.Label lblHotkeyType;
         private System.Windows.Forms.ComboBox cmbHotkeyType;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbDesktopNumber;
         private System.Windows.Forms.Label lblDesktopNumber;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtHotkey;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckBox chkALT;
+        private System.Windows.Forms.CheckBox chkCTRL;
+        private System.Windows.Forms.CheckBox chkSHIFT;
+        private System.Windows.Forms.CheckBox chkWIN;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ComboBox cmbKey;
     }
 }
