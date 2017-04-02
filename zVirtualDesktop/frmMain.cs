@@ -1878,7 +1878,8 @@ namespace zVirtualDesktop
                     lstHotkeys.Items.RemoveAt(i);
 
                 }
-            }catch
+            }
+            catch (Exception ex)
             {
                 Log.LogEvent("Exception", "", "", "frmMain", ex);
             }
