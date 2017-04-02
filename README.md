@@ -1,7 +1,7 @@
 # zVirtualDesktop
 
 [![Download](https://github.com/mzomparelli/zVirtualDesktop/blob/master/download.png?raw=true)](https://github.com/mzomparelli/zVirtualDesktop/blob/master/zVirtualDesktop/bin/Release/zVirtualDesktop.zip?raw=true)
-[![Donate](https://github.com/mzomparelli/zVirtualDesktop/blob/master/Donate.png?raw=true)](https://www.paypal.me/MichaelZomparelli/)
+[![Donate](https://github.com/mzomparelli/zVirtualDesktop/blob/master/Donate1.png?raw=true)](https://www.paypal.me/MichaelZomparelli/)
 
 Windows 10 Virtual Desktop Hotkeys and System Tray Icon
 
