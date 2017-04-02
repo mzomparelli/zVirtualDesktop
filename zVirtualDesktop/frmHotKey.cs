@@ -45,7 +45,7 @@ namespace zVirtualDesktop
                 switch (cmbHotkeyType.Text)
                 {
                     case "Navigate to Desktop":
-                        hk.HotkeyActivated += Program.MainForm.DesktopGo;
+                        hk.HotkeyActivated += VirtualDestopFunctions.DesktopGo;
                         break;
                     case "Move Window to Desktop":
                         switch (cmbDesktopNumber.Text)
@@ -59,13 +59,13 @@ namespace zVirtualDesktop
                             case "7":
                             case "8":
                             case "9":
-                                hk.HotkeyActivated += Program.MainForm.DesktopMove;
+                                hk.HotkeyActivated += VirtualDestopFunctions.DesktopMove;
                                 break;
                             case "Next":
-                                hk.HotkeyActivated += Program.MainForm.DesktopMoveNext;
+                                hk.HotkeyActivated += VirtualDestopFunctions.DesktopMoveNext;
                                 break;
                             case "Previous":
-                                hk.HotkeyActivated += Program.MainForm.DesktopMovePrevious;
+                                hk.HotkeyActivated += VirtualDestopFunctions.DesktopMovePrevious;
                                 break;
                             default:
                                 break;
@@ -83,23 +83,23 @@ namespace zVirtualDesktop
                             case "7":
                             case "8":
                             case "9":
-                                hk.HotkeyActivated += Program.MainForm.DesktopMoveFollow;
+                                hk.HotkeyActivated += VirtualDestopFunctions.DesktopMoveFollow;
                                 break;
                             case "Next":
-                                hk.HotkeyActivated += Program.MainForm.DesktopMoveNextFollow;
+                                hk.HotkeyActivated += VirtualDestopFunctions.DesktopMoveNextFollow;
                                 break;
                             case "Previous":
-                                hk.HotkeyActivated += Program.MainForm.DesktopMovePreviousFollow;
+                                hk.HotkeyActivated += VirtualDestopFunctions.DesktopMovePreviousFollow;
                                 break;
                             default:
                                 break;
                         }
                         break;
                     case "Pin/Unpin Window":
-                        hk.HotkeyActivated += Program.MainForm.PinWindow;
+                        hk.HotkeyActivated += VirtualDestopFunctions.PinWindow;
                         break;
                     case "Pin/Unpin Application":
-                        hk.HotkeyActivated += Program.MainForm.PinApp;
+                        hk.HotkeyActivated += VirtualDestopFunctions.PinApp;
                         break;
                     default:
                         break;
