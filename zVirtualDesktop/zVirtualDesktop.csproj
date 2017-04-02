@@ -38,6 +38,9 @@
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icons\MAINICON.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="PresentationCore" />
     <Reference Include="System" />
@@ -184,6 +187,7 @@
     <None Include="Icons\number-ten.ico" />
     <None Include="Icons\number-three.ico" />
     <None Include="Icons\number-two.ico" />
+    <None Include="Icons\MAINICON.ico" />
     <Content Include="Icons\number_0_blue.ico" />
     <Content Include="Icons\number_0_green.ico" />
     <Content Include="Icons\number_1_blue.ico" />

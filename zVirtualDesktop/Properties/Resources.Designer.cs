@@ -183,6 +183,16 @@ namespace zVirtualDesktop.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
+        internal static System.Drawing.Icon MAINICON {
+            get {
+                object obj = ResourceManager.GetObject("MAINICON", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
         internal static System.Drawing.Icon number_0_blue {
             get {
                 object obj = ResourceManager.GetObject("number_0_blue", resourceCulture);
