@@ -3,6 +3,8 @@
 [![Download](https://github.com/mzomparelli/zVirtualDesktop/blob/master/download.png?raw=true)](https://github.com/mzomparelli/zVirtualDesktop/blob/master/zVirtualDesktop/bin/Release/zVirtualDesktop.zip?raw=true)
 [![Donate](https://github.com/mzomparelli/zVirtualDesktop/blob/master/Donate1.png?raw=true)](https://www.paypal.me/MichaelZomparelli/)
 
+Using the download button here gets you the most recent pre-release build
+
 Windows 10 Virtual Desktop Hotkeys and System Tray Icon
 
 No external libraries. Simply download the single .EXE and add to your startup folder.
@@ -45,4 +47,4 @@ Specify the style for each (Center, Stretch, or Tile).
 
 [![Download](https://github.com/mzomparelli/zVirtualDesktop/blob/master/download.png?raw=true)](https://github.com/mzomparelli/zVirtualDesktop/blob/master/zVirtualDesktop/bin/Release/zVirtualDesktop.zip?raw=true)
 
-Using the download buttons here gets you the most recent build even if the build hasn't been released.
+Using the download button here gets you the most recent pre-release build
