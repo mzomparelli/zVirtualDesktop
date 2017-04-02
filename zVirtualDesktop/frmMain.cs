@@ -16,7 +16,7 @@ namespace zVirtualDesktop
 {
     public partial class frmMain : Form
     {
-        private const string version = "v1.0.6";
+        
 
         public IsolatedStorageFile storage = IsolatedStorageFile.GetUserStoreForAssembly();
 
@@ -63,8 +63,8 @@ namespace zVirtualDesktop
             btnBrowseWallpaper9.Click += btnBrowseWallpaper_Click;
             btnBrowseDefaultWalpaper.Click += btnBrowseWallpaper_Click;
 
-            lblVersion.Text = version;
-            SystemTray.Text = "zVirtualDesktop " + version;
+            lblVersion.Text = Program.version;
+            SystemTray.Text = "zVirtualDesktop " + Program.version;
 
             //Create a new thread to retrieve the ProgID and Executables on this machine.
             //This is used so that the app is able to pin an application

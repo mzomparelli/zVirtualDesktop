@@ -21,7 +21,7 @@ namespace zVirtualDesktop
         }
 
         public static frmMain MainForm;
-       
+        public const string version = "v1.0.6";
 
     }
 }

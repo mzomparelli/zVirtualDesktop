@@ -25,7 +25,7 @@ namespace zVirtualDesktop
             {
                 string computerInfo = "Operating System: " + System.Environment.OSVersion;
 
-                AddEventToDatabase("zVirtualDesktop", "", DateTime.Now, eventName, eventDetails, additionalDetails, moduleName, e, 1, SystemInformation.UserName,
+                AddEventToDatabase("zVirtualDesktop", Program.version, DateTime.Now, eventName, eventDetails, additionalDetails, moduleName, e, 1, SystemInformation.UserName,
                 SystemInformation.ComputerName, computerInfo);
                 
 
