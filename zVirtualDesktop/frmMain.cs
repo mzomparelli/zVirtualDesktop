@@ -15,22 +15,8 @@ using WindowsDesktop;
 namespace zVirtualDesktop
 {
     public partial class frmMain : Form
-    {
+    { 
         
-
-        public IsolatedStorageFile storage = IsolatedStorageFile.GetUserStoreForAssembly();
-
-        private List<string> WallpaperStyles = new List<string>();
-        public List<string> PinnedApps = new List<string>();
-
-        public List<Window> windows = new List<Window>();
-        public List<HotkeyItem> hotkeys = new List<HotkeyItem>();
-
-
-
-
-
-        VirtualDesktop[] Desktops = VirtualDesktop.GetDesktops();
 
         private bool ExitClicked = false;
         private Timer timerSystemTray = new Timer();
@@ -125,6 +111,9 @@ namespace zVirtualDesktop
                 case "Black Box":
                     SystemTrayBlackBox();
                     break;
+                case "Round":
+                    SystemTrayRound();
+                    break;
             }
         }
 
@@ -133,7 +122,7 @@ namespace zVirtualDesktop
             try
             {
                 VirtualDesktop current = VirtualDesktop.Current;
-                int i = GetDesktopNumber(current.Id);
+                int i = VirtualDestopFunctions.GetDesktopNumber(current.Id);
                 switch (i)
                 {
                     case 1:
@@ -183,7 +172,7 @@ namespace zVirtualDesktop
             try
             {
                 VirtualDesktop current = VirtualDesktop.Current;
-                int i = GetDesktopNumber(current.Id);
+                int i = VirtualDestopFunctions.GetDesktopNumber(current.Id);
                 switch (i)
                 {
                     case 1:
@@ -233,7 +222,7 @@ namespace zVirtualDesktop
             try
             {
                 VirtualDesktop current = VirtualDesktop.Current;
-                int i = GetDesktopNumber(current.Id);
+                int i = VirtualDestopFunctions.GetDesktopNumber(current.Id);
                 switch (i)
                 {
                     case 1:
@@ -283,7 +272,7 @@ namespace zVirtualDesktop
             try
             {
                 VirtualDesktop current = VirtualDesktop.Current;
-                int i = GetDesktopNumber(current.Id);
+                int i = VirtualDestopFunctions.GetDesktopNumber(current.Id);
                 switch (i)
                 {
                     case 1:
@@ -333,7 +322,7 @@ namespace zVirtualDesktop
             try
             {
                 VirtualDesktop current = VirtualDesktop.Current;
-                int i = GetDesktopNumber(current.Id);
+                int i = VirtualDestopFunctions.GetDesktopNumber(current.Id);
                 switch (i)
                 {
                     case 1:
@@ -383,7 +372,7 @@ namespace zVirtualDesktop
             try
             {
                 VirtualDesktop current = VirtualDesktop.Current;
-                int i = GetDesktopNumber(current.Id);
+                int i = VirtualDestopFunctions.GetDesktopNumber(current.Id);
                 switch (i)
                 {
                     case 1:
@@ -428,6 +417,56 @@ namespace zVirtualDesktop
             }
         }
 
+        private void SystemTrayRound()
+        {
+            try
+            {
+                VirtualDesktop current = VirtualDesktop.Current;
+                int i = VirtualDestopFunctions.GetDesktopNumber(current.Id);
+                switch (i)
+                {
+                    case 1:
+                        SystemTray.Icon = Properties.Resources.number_one;
+                        break;
+                    case 2:
+                        SystemTray.Icon = Properties.Resources.number_two;
+                        break;
+                    case 3:
+                        SystemTray.Icon = Properties.Resources.number_three;
+                        break;
+                    case 4:
+                        SystemTray.Icon = Properties.Resources.number_four;
+                        break;
+                    case 5:
+                        SystemTray.Icon = Properties.Resources.number_five;
+                        break;
+                    case 6:
+                        SystemTray.Icon = Properties.Resources.number_six;
+                        break;
+                    case 7:
+                        SystemTray.Icon = Properties.Resources.number_seven;
+                        break;
+                    case 8:
+                        SystemTray.Icon = Properties.Resources.number_eight;
+                        break;
+                    case 9:
+                        SystemTray.Icon = Properties.Resources.number_nine;
+                        break;
+                }
+
+                SystemTray.Visible = true;
+
+            }
+            catch (Exception ex)
+            {
+                SystemTray.Icon = Properties.Resources.number_1_green;
+                MessageBox.Show("An error occured setting the system tray icon. See additional details below." + Environment.NewLine + Environment.NewLine +
+                    ex.Message + Environment.NewLine +
+                    ex.Source + "::" + ex.TargetSite.Name);
+                Log.LogEvent("Exception", "", "", "frmMain", ex);
+            }
+        }
+
         #endregion
 
         private List<Window> GetAllWindows()
@@ -456,17 +495,17 @@ namespace zVirtualDesktop
 
         private void CreateDesktopMenu()
         {
-            Desktops = VirtualDesktop.GetDesktops();
+            Program.Desktops = VirtualDesktop.GetDesktops();
             mnuSwitchDesktop.DropDownItems.Clear();
 
 
-            for (int i = 0; i < Desktops.Count(); i++)
+            for (int i = 0; i < Program.Desktops.Count(); i++)
             {
                 ToolStripMenuItem mnu = new ToolStripMenuItem();
                 mnu.Text = "Desktop " + (i + 1).ToString();
                 mnu.Tag = i + 1;
                 mnu.Click += DesktopMenu_Click;
-                if (GetDesktopNumber(VirtualDesktop.Current.Id) == i + 1)
+                if (VirtualDestopFunctions.GetDesktopNumber(VirtualDesktop.Current.Id) == i + 1)
                 {
                     mnu.CheckState = CheckState.Checked;
                 } else
@@ -489,7 +528,7 @@ namespace zVirtualDesktop
                 LoadSettings();
                 SetSystemTrayIcon();
                 //Make sure there are at least 9 desktops.
-                int diff = Math.Abs(Desktops.Count() - 9);
+                int diff = Math.Abs(Program.Desktops.Count() - 9);
                 for (int i = 1; i <= diff; i += 1)
                 {
                     VirtualDesktop.Create();
@@ -521,199 +560,7 @@ namespace zVirtualDesktop
         private void DesktopMenu_Click(object sender, EventArgs e)
         {
             ToolStripMenuItem mnu = (ToolStripMenuItem)sender;
-            GoToDesktop((int)mnu.Tag);
-        }
-
-        public void PinWindow(object sender, EventArgs e)
-        {
-            try
-            {
-                Hotkey hotkey = (Hotkey)sender;
-                Window win = Window.ForegroundWindow();
-                IEnumerable<Window> window = from Window w in windows
-                                             where w.Handle == win.Handle
-                                             select w;
-                if (window.Count() < 1)
-                {
-                    windows.Add(win);
-                }
-
-                if (win.IsPinnedWindow)
-                {
-                    win.Unpin();
-                }
-                else
-                {
-                    win.Pin();
-                }
-
-                SetPinnedAppListBox();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("An error occured pinning or unpinning the specified window. See additional details below." + Environment.NewLine + Environment.NewLine +
-                    ex.Message + Environment.NewLine +
-                    ex.Source + "::" + ex.TargetSite.Name);
-                Log.LogEvent("Exception", "", "", "frmMain", ex);
-            }
-
-        }
-
-        public void PinApp(object sender, EventArgs e)
-        {
-            try
-            {
-                Hotkey hotkey = (Hotkey)sender;
-                Window win = Window.ForegroundWindow();
-                IEnumerable<Window> window = from Window w in windows
-                                             where w.Handle == win.Handle
-                                             select w;
-                if (window.Count() < 1)
-                {
-                    windows.Add(win);
-                }
-
-                if (win.IsPinnedApplication)
-                {
-                    win.UnpinApplication();
-                    PinnedApps.Remove(win.AppID);
-                }
-                else
-                {
-                    win.PinApplication();
-                    PinnedApps.Add(win.AppID);
-                }
-
-                SetPinnedAppListBox();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("An error occured pinning or unpinning the specified application. See additional details below." + Environment.NewLine + Environment.NewLine +
-                    ex.Message + Environment.NewLine +
-                    ex.Source + "::" + ex.TargetSite.Name);
-                Log.LogEvent("Exception", "", "", "frmMain", ex);
-            }
-
-        }
-
-        public void DesktopGo(object sender, EventArgs e)
-        {
-            Hotkey hotkey = (Hotkey)sender;
-            int hotkeyID;
-            int.TryParse(hotkey.ID, out hotkeyID);
-            GoToDesktop(hotkeyID);
-        }
-
-        public void DesktopMove(object sender, EventArgs e)
-        {
-
-            Window win = Window.ForegroundWindow();
-            IEnumerable<Window> window = from Window w in windows
-                                         where w.Handle == win.Handle
-                                         select w;
-            if (window.Count() < 1)
-            {
-                //win = new Window(hWnd);
-                windows.Add(win);
-            }
-
-            Hotkey hotkey = (Hotkey)sender;
-            int hotkeyID;
-            int.TryParse(hotkey.ID, out hotkeyID);
-            win.MoveToDesktop(hotkeyID);
-            //MoveToDesktop(hotkey.ID);
-        }
-
-        public void DesktopMoveFollow(object sender, EventArgs e)
-        {
-
-            Window win = Window.ForegroundWindow();
-            IEnumerable<Window> window = from Window w in windows
-                                         where w.Handle == win.Handle
-                                         select w;
-            if (window.Count() < 1)
-            {
-                //win = new Window(hWnd);
-                windows.Add(win);
-            }
-
-            Hotkey hotkey = (Hotkey)sender;
-            int hotkeyID;
-            int.TryParse(hotkey.ID, out hotkeyID);
-            win.MoveToDesktop(hotkeyID, true);
-            //MoveToDesktop(hotkey.ID);
-        }
-
-        public void DesktopMoveNextFollow(object sender, EventArgs e)
-        {
-
-            Window win = Window.ForegroundWindow();
-            IEnumerable<Window> window = from Window w in windows
-                                         where w.Handle == win.Handle
-                                         select w;
-            if (window.Count() < 1)
-            {
-                //win = new Window(hWnd);
-                windows.Add(win);
-            }
-
-            Hotkey hotkey = (Hotkey)sender;
-            win.MoveToNextDesktop(true);
-            //MoveToDesktop(hotkey.ID);
-        }
-
-        public void DesktopMoveNext(object sender, EventArgs e)
-        {
-
-            Window win = Window.ForegroundWindow();
-            IEnumerable<Window> window = from Window w in windows
-                                         where w.Handle == win.Handle
-                                         select w;
-            if (window.Count() < 1)
-            {
-                //win = new Window(hWnd);
-                windows.Add(win);
-            }
-
-            Hotkey hotkey = (Hotkey)sender;
-            win.MoveToNextDesktop();
-            //MoveToDesktop(hotkey.ID);
-        }
-
-        public void DesktopMovePreviousFollow(object sender, EventArgs e)
-        {
-
-            Window win = Window.ForegroundWindow();
-            IEnumerable<Window> window = from Window w in windows
-                                         where w.Handle == win.Handle
-                                         select w;
-            if (window.Count() < 1)
-            {
-                //win = new Window(hWnd);
-                windows.Add(win);
-            }
-
-            Hotkey hotkey = (Hotkey)sender;
-            win.MoveToPreviousDesktop(true);
-            //MoveToDesktop(hotkey.ID);
-        }
-
-        public void DesktopMovePrevious(object sender, EventArgs e)
-        {
-
-            Window win = Window.ForegroundWindow();
-            IEnumerable<Window> window = from Window w in windows
-                                         where w.Handle == win.Handle
-                                         select w;
-            if (window.Count() < 1)
-            {
-                //win = new Window(hWnd);
-                windows.Add(win);
-            }
-
-            Hotkey hotkey = (Hotkey)sender;
-            win.MoveToPreviousDesktop();
-            //MoveToDesktop(hotkey.ID);
+            VirtualDestopFunctions.GoToDesktop((int)mnu.Tag);
         }
 
         private void mnuGatherWindows_Click(object sender, EventArgs e)
@@ -797,11 +644,11 @@ namespace zVirtualDesktop
         {
             //Grab some windows
             IntPtr hWnd = PInvoke.GetForegroundWindow();
-            IEnumerable<Window> window = from Window w in windows where w.Handle == hWnd select w;
+            IEnumerable<Window> window = from Window w in Program.windows where w.Handle == hWnd select w;
             if (window.Count() < 1)
             {
                 Window win = new Window(hWnd);
-                windows.Add(win);
+                Program.windows.Add(win);
             }
         }
 
@@ -838,7 +685,7 @@ namespace zVirtualDesktop
             try
             {
                 VirtualDesktop.UnpinApplication(lstPinnedApps.Text);
-                PinnedApps.Remove(lstPinnedApps.Text);
+                Program.PinnedApps.Remove(lstPinnedApps.Text);
                 SetPinnedAppListBox();
             }
             catch (Exception ex)
@@ -850,52 +697,27 @@ namespace zVirtualDesktop
 
         #endregion
 
-        private void SetPinnedAppListBox()
+        public void SetPinnedAppListBox()
         {
             lstPinnedApps.Items.Clear();
-            foreach (string appID in PinnedApps)
+            foreach (string appID in Program.PinnedApps)
             {
                 lstPinnedApps.Items.Add(appID);
             }
         }
 
-        private int GetDesktopNumber(Guid Guid)
-        {
-            try
-            {
-                Desktops = VirtualDesktop.GetDesktops();
-                for (int i = 0; i <= Desktops.Count() - 1; i++)
-                {
-                    if (Desktops[i].Id == Guid)
-                    {
-                        return i + 1;
-                    }
-                }
-                return 1;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("An error occured identifying the desktop number. See additional details below." + Environment.NewLine + Environment.NewLine +
-                    ex.Message + Environment.NewLine +
-                    ex.Source + "::" + ex.TargetSite.Name);
-                Log.LogEvent("Exception", "", "", "frmMain", ex);
-                return 1;
-
-            }
-
-        }
 
         private Wallpaper.Style GetWallpaperStyle(string desktop)
         {
             switch (desktop)
             {
                 case "1":
-                    if (WallpaperStyles[1] == "")
+                    if (Program.WallpaperStyles[1] == "")
                     {
                         return Wallpaper.Style.Centered;
                     } else
                     {
-                        switch (WallpaperStyles[1])
+                        switch (Program.WallpaperStyles[1])
                         {
                             case "Centered":
                                 return Wallpaper.Style.Centered;
@@ -909,13 +731,13 @@ namespace zVirtualDesktop
                     }
                     break;
                 case "2":
-                    if (WallpaperStyles[2] == "")
+                    if (Program.WallpaperStyles[2] == "")
                     {
                         return Wallpaper.Style.Centered;
                     }
                     else
                     {
-                        switch (WallpaperStyles[2])
+                        switch (Program.WallpaperStyles[2])
                         {
                             case "Centered":
                                 return Wallpaper.Style.Centered;
@@ -929,13 +751,13 @@ namespace zVirtualDesktop
                     }
                     break;
                 case "3":
-                    if (WallpaperStyles[3] == "")
+                    if (Program.WallpaperStyles[3] == "")
                     {
                         return Wallpaper.Style.Centered;
                     }
                     else
                     {
-                        switch (WallpaperStyles[3])
+                        switch (Program.WallpaperStyles[3])
                         {
                             case "Centered":
                                 return Wallpaper.Style.Centered;
@@ -949,13 +771,13 @@ namespace zVirtualDesktop
                     }
                     break;
                 case "4":
-                    if (WallpaperStyles[4] == "")
+                    if (Program.WallpaperStyles[4] == "")
                     {
                         return Wallpaper.Style.Centered;
                     }
                     else
                     {
-                        switch (WallpaperStyles[4])
+                        switch (Program.WallpaperStyles[4])
                         {
                             case "Centered":
                                 return Wallpaper.Style.Centered;
@@ -969,13 +791,13 @@ namespace zVirtualDesktop
                     }
                     break;
                 case "5":
-                    if (WallpaperStyles[5] == "")
+                    if (Program.WallpaperStyles[5] == "")
                     {
                         return Wallpaper.Style.Centered;
                     }
                     else
                     {
-                        switch (WallpaperStyles[5])
+                        switch (Program.WallpaperStyles[5])
                         {
                             case "Centered":
                                 return Wallpaper.Style.Centered;
@@ -989,13 +811,13 @@ namespace zVirtualDesktop
                     }
                     break;
                 case "6":
-                    if (WallpaperStyles[6] == "")
+                    if (Program.WallpaperStyles[6] == "")
                     {
                         return Wallpaper.Style.Centered;
                     }
                     else
                     {
-                        switch (WallpaperStyles[6])
+                        switch (Program.WallpaperStyles[6])
                         {
                             case "Centered":
                                 return Wallpaper.Style.Centered;
@@ -1009,13 +831,13 @@ namespace zVirtualDesktop
                     }
                     break;
                 case "7":
-                    if (WallpaperStyles[7] == "")
+                    if (Program.WallpaperStyles[7] == "")
                     {
                         return Wallpaper.Style.Centered;
                     }
                     else
                     {
-                        switch (WallpaperStyles[7])
+                        switch (Program.WallpaperStyles[7])
                         {
                             case "Centered":
                                 return Wallpaper.Style.Centered;
@@ -1029,13 +851,13 @@ namespace zVirtualDesktop
                     }
                     break;
                 case "8":
-                    if (WallpaperStyles[8] == "")
+                    if (Program.WallpaperStyles[8] == "")
                     {
                         return Wallpaper.Style.Centered;
                     }
                     else
                     {
-                        switch (WallpaperStyles[8])
+                        switch (Program.WallpaperStyles[8])
                         {
                             case "Centered":
                                 return Wallpaper.Style.Centered;
@@ -1049,13 +871,13 @@ namespace zVirtualDesktop
                     }
                     break;
                 case "9":
-                    if (WallpaperStyles[9] == "")
+                    if (Program.WallpaperStyles[9] == "")
                     {
                         return Wallpaper.Style.Centered;
                     }
                     else
                     {
-                        switch (WallpaperStyles[9])
+                        switch (Program.WallpaperStyles[9])
                         {
                             case "Centered":
                                 return Wallpaper.Style.Centered;
@@ -1069,13 +891,13 @@ namespace zVirtualDesktop
                     }
                     break;
                 case "default":
-                    if (WallpaperStyles[0] == "")
+                    if (Program.WallpaperStyles[0] == "")
                     {
                         return Wallpaper.Style.Centered;
                     }
                     else
                     {
-                        switch (WallpaperStyles[0])
+                        switch (Program.WallpaperStyles[0])
                         {
                             case "Centered":
                                 return Wallpaper.Style.Centered;
@@ -1089,13 +911,13 @@ namespace zVirtualDesktop
                     }
                     break;
                 default:
-                    if (WallpaperStyles[0] == "")
+                    if (Program.WallpaperStyles[0] == "")
                     {
                         return Wallpaper.Style.Centered;
                     }
                     else
                     {
-                        switch (WallpaperStyles[0])
+                        switch (Program.WallpaperStyles[0])
                         {
                             case "Centered":
                                 return Wallpaper.Style.Centered;
@@ -1114,7 +936,7 @@ namespace zVirtualDesktop
         private void SetWallpaper()
         {
             VirtualDesktop current = VirtualDesktop.Current;
-            int i = GetDesktopNumber(current.Id);
+            int i = VirtualDestopFunctions.GetDesktopNumber(current.Id);
             switch (i)
             {
                 case 1:
@@ -1234,57 +1056,7 @@ namespace zVirtualDesktop
                     break;
             }
         }
-
-        private void GoToDesktop(int desktopNumber)
-        {
-            try
-            {
-                VirtualDesktop current = VirtualDesktop.Current;
-                int i = GetDesktopNumber(current.Id);
-                if (i == desktopNumber)
-                {
-                    return;
-                }
-                else
-                {
-                    int diff = Math.Abs(i - desktopNumber);
-                    if (i < desktopNumber)
-                    {
-                        for (int z = 1; z <= diff; z++)
-                        {
-                            current = current.GetRight();
-                        }
-                    }
-                    else
-                    {
-                        for (int z = 1; z <= diff; z++)
-                        {
-                            current = current.GetLeft();
-                        }
-                    }
-
-                    //Right beofre switching the desktop, set the active window as the taskbar
-                    //This prevents windows from flashing in the taskbar when switching desktops
-                    Window w = Window.Taskbar();
-                    w.SetAsForegroundWindow();
-                    current.Switch();
-
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("An error occured navigating to the specified desktop. See additional details below." + Environment.NewLine + Environment.NewLine +
-                    ex.Message + Environment.NewLine +
-                    ex.Source + "::" + ex.TargetSite.Name);
-                Log.LogEvent("Exception", "", "", "frmMain", ex);
-            }
-
-
-
-
-        }
-
+        
         #region "Settings"
 
         private void CreateDefaultHotkeys()
@@ -1365,113 +1137,113 @@ namespace zVirtualDesktop
             HotkeyItem hkiPinWindow = new HotkeyItem("Pin/Unpin Window", keyPinWindow);
             HotkeyItem hkiPinApp = new HotkeyItem("Pin/Unpin Application", keyPinApp);
 
-            hotkeys.AddRange(new HotkeyItem[] {
+            Program.hotkeys.AddRange(new HotkeyItem[] {
                              hkiGoTo01, hkiGoTo02, hkiGoTo03, hkiGoTo04, hkiGoTo05, hkiGoTo06, hkiGoTo07, hkiGoTo08, hkiGoTo09,
                              hkiMoveTo01, hkiMoveTo02, hkiMoveTo03, hkiMoveTo04, hkiMoveTo05, hkiMoveTo06, hkiMoveTo07, hkiMoveTo08, hkiMoveTo09,
                              hkiMoveFollowTo01, hkiMoveFollowTo02, hkiMoveFollowTo03, hkiMoveFollowTo04, hkiMoveFollowTo05, hkiMoveFollowTo06, hkiMoveFollowTo07, hkiMoveFollowTo08, hkiMoveFollowTo09,
                              hkiMoveNext, hkiMoveNextFollow, hkiMovePrevious, hkiMovePreviousFollow,
                              hkiPinWindow, hkiPinApp });
 
-            keyGoTo01.HotkeyActivated += DesktopGo;
+            keyGoTo01.HotkeyActivated += VirtualDestopFunctions.DesktopGo;
             keyGoTo01.Register(Keys.NumPad1, false, true, false, true);
 
-            keyGoTo02.HotkeyActivated += DesktopGo;
+            keyGoTo02.HotkeyActivated += VirtualDestopFunctions.DesktopGo;
             keyGoTo02.Register(Keys.NumPad2, false, true, false, true);
 
-            keyGoTo03.HotkeyActivated += DesktopGo;
+            keyGoTo03.HotkeyActivated += VirtualDestopFunctions.DesktopGo;
             keyGoTo03.Register(Keys.NumPad3, false, true, false, true);
 
-            keyGoTo04.HotkeyActivated += DesktopGo;
+            keyGoTo04.HotkeyActivated += VirtualDestopFunctions.DesktopGo;
             keyGoTo04.Register(Keys.NumPad4, false, true, false, true);
 
-            keyGoTo05.HotkeyActivated += DesktopGo;
+            keyGoTo05.HotkeyActivated += VirtualDestopFunctions.DesktopGo;
             keyGoTo05.Register(Keys.NumPad5, false, true, false, true);
 
-            keyGoTo06.HotkeyActivated += DesktopGo;
+            keyGoTo06.HotkeyActivated += VirtualDestopFunctions.DesktopGo;
             keyGoTo06.Register(Keys.NumPad6, false, true, false, true);
 
-            keyGoTo07.HotkeyActivated += DesktopGo;
+            keyGoTo07.HotkeyActivated += VirtualDestopFunctions.DesktopGo;
             keyGoTo07.Register(Keys.NumPad7, false, true, false, true);
 
-            keyGoTo08.HotkeyActivated += DesktopGo;
+            keyGoTo08.HotkeyActivated += VirtualDestopFunctions.DesktopGo;
             keyGoTo08.Register(Keys.NumPad8, false, true, false, true);
 
-            keyGoTo09.HotkeyActivated += DesktopGo;
+            keyGoTo09.HotkeyActivated += VirtualDestopFunctions.DesktopGo;
             keyGoTo09.Register(Keys.NumPad9, false, true, false, true);
 
 
-            keyMoveTo01.HotkeyActivated += DesktopMove;
+            keyMoveTo01.HotkeyActivated += VirtualDestopFunctions.DesktopMove;
             keyMoveTo01.Register(Keys.NumPad1, true, false, false, true);
 
-            keyMoveTo02.HotkeyActivated += DesktopMove;
+            keyMoveTo02.HotkeyActivated += VirtualDestopFunctions.DesktopMove;
             keyMoveTo02.Register(Keys.NumPad2, true, false, false, true);
 
-            keyMoveTo03.HotkeyActivated += DesktopMove;
+            keyMoveTo03.HotkeyActivated += VirtualDestopFunctions.DesktopMove;
             keyMoveTo03.Register(Keys.NumPad3, true, false, false, true);
 
-            keyMoveTo04.HotkeyActivated += DesktopMove;
+            keyMoveTo04.HotkeyActivated += VirtualDestopFunctions.DesktopMove;
             keyMoveTo04.Register(Keys.NumPad4, true, false, false, true);
 
-            keyMoveTo05.HotkeyActivated += DesktopMove;
+            keyMoveTo05.HotkeyActivated += VirtualDestopFunctions.DesktopMove;
             keyMoveTo05.Register(Keys.NumPad5, true, false, false, true);
 
-            keyMoveTo06.HotkeyActivated += DesktopMove;
+            keyMoveTo06.HotkeyActivated += VirtualDestopFunctions.DesktopMove;
             keyMoveTo06.Register(Keys.NumPad6, true, false, false, true);
 
-            keyMoveTo07.HotkeyActivated += DesktopMove;
+            keyMoveTo07.HotkeyActivated += VirtualDestopFunctions.DesktopMove;
             keyMoveTo07.Register(Keys.NumPad7, true, false, false, true);
 
-            keyMoveTo08.HotkeyActivated += DesktopMove;
+            keyMoveTo08.HotkeyActivated += VirtualDestopFunctions.DesktopMove;
             keyMoveTo08.Register(Keys.NumPad8, true, false, false, true);
 
-            keyMoveTo09.HotkeyActivated += DesktopMove;
+            keyMoveTo09.HotkeyActivated += VirtualDestopFunctions.DesktopMove;
             keyMoveTo09.Register(Keys.NumPad9, true, false, false, true);
 
 
-            keyMoveFollowTo01.HotkeyActivated += DesktopMoveFollow;
+            keyMoveFollowTo01.HotkeyActivated += VirtualDestopFunctions.DesktopMoveFollow;
             keyMoveFollowTo01.Register(Keys.NumPad1, true, true, false, true);
 
-            keyMoveFollowTo02.HotkeyActivated += DesktopMoveFollow;
+            keyMoveFollowTo02.HotkeyActivated += VirtualDestopFunctions.DesktopMoveFollow;
             keyMoveFollowTo02.Register(Keys.NumPad2, true, true, false, true);
 
-            keyMoveFollowTo03.HotkeyActivated += DesktopMoveFollow;
+            keyMoveFollowTo03.HotkeyActivated += VirtualDestopFunctions.DesktopMoveFollow;
             keyMoveFollowTo03.Register(Keys.NumPad3, true, true, false, true);
 
-            keyMoveFollowTo04.HotkeyActivated += DesktopMoveFollow;
+            keyMoveFollowTo04.HotkeyActivated += VirtualDestopFunctions.DesktopMoveFollow;
             keyMoveFollowTo04.Register(Keys.NumPad4, true, true, false, true);
 
-            keyMoveFollowTo05.HotkeyActivated += DesktopMoveFollow;
+            keyMoveFollowTo05.HotkeyActivated += VirtualDestopFunctions.DesktopMoveFollow;
             keyMoveFollowTo05.Register(Keys.NumPad5, true, true, false, true);
 
-            keyMoveFollowTo06.HotkeyActivated += DesktopMoveFollow;
+            keyMoveFollowTo06.HotkeyActivated += VirtualDestopFunctions.DesktopMoveFollow;
             keyMoveFollowTo06.Register(Keys.NumPad6, true, true, false, true);
 
-            keyMoveFollowTo07.HotkeyActivated += DesktopMoveFollow;
+            keyMoveFollowTo07.HotkeyActivated += VirtualDestopFunctions.DesktopMoveFollow;
             keyMoveFollowTo07.Register(Keys.NumPad7, true, true, false, true);
 
-            keyMoveFollowTo08.HotkeyActivated += DesktopMoveFollow;
+            keyMoveFollowTo08.HotkeyActivated += VirtualDestopFunctions.DesktopMoveFollow;
             keyMoveFollowTo08.Register(Keys.NumPad8, true, true, false, true);
 
-            keyMoveFollowTo09.HotkeyActivated += DesktopMoveFollow;
+            keyMoveFollowTo09.HotkeyActivated += VirtualDestopFunctions.DesktopMoveFollow;
             keyMoveFollowTo09.Register(Keys.NumPad9, true, true, false, true);
 
-            keyMoveNext.HotkeyActivated += DesktopMoveNext;
+            keyMoveNext.HotkeyActivated += VirtualDestopFunctions.DesktopMoveNext;
             keyMoveNext.Register(Keys.Right, true, false, false, true);
 
-            keyMoveNextFollow.HotkeyActivated += DesktopMoveNextFollow;
+            keyMoveNextFollow.HotkeyActivated += VirtualDestopFunctions.DesktopMoveNextFollow;
             keyMoveNextFollow.Register(Keys.Right, true, true, false, true);
 
-            keyMovePrevious.HotkeyActivated += DesktopMovePrevious;
+            keyMovePrevious.HotkeyActivated += VirtualDestopFunctions.DesktopMovePrevious;
             keyMovePrevious.Register(Keys.Left, true, false, false, true);
 
-            keyMovePreviousFollow.HotkeyActivated += DesktopMovePreviousFollow;
+            keyMovePreviousFollow.HotkeyActivated += VirtualDestopFunctions.DesktopMovePreviousFollow;
             keyMovePreviousFollow.Register(Keys.Left, true, true, false, true);
 
 
-            keyPinWindow.HotkeyActivated += PinWindow;
+            keyPinWindow.HotkeyActivated += VirtualDestopFunctions.PinWindow;
             keyPinWindow.Register(Keys.Z, true, false, false, true);
 
-            keyPinApp.HotkeyActivated += PinApp;
+            keyPinApp.HotkeyActivated += VirtualDestopFunctions.PinApp;
             keyPinApp.Register(Keys.A, true, false, false, true);
 
 
@@ -1498,7 +1270,7 @@ namespace zVirtualDesktop
         public void UpdateHotkeyTab()
         {
             lstHotkeys.Items.Clear();
-            foreach (HotkeyItem hki in hotkeys)
+            foreach (HotkeyItem hki in Program.hotkeys)
             {
                 string text = "";
                 string hotkey = hki.hk.HotKeyString();
@@ -1595,14 +1367,14 @@ namespace zVirtualDesktop
         {
             try
             {
-                if (storage.FileExists("zVirtualDesktop.bin") == false)
+                if (Program.storage.FileExists("zVirtualDesktop.bin") == false)
                 {
                     cmbIcons.Text = "Green";
                     CreateDefaultHotkeys();
                     SaveSettings();
                 }
               
-                System.IO.Stream stream = new IsolatedStorageFileStream("zVirtualDesktop.bin", System.IO.FileMode.Open, storage);
+                System.IO.Stream stream = new IsolatedStorageFileStream("zVirtualDesktop.bin", System.IO.FileMode.Open, Program.storage);
                 System.Runtime.Serialization.Formatters.Binary.BinaryFormatter bf = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
                 object oo = bf.Deserialize(stream);
                 string settings = (string)oo;
@@ -1636,12 +1408,12 @@ namespace zVirtualDesktop
                 cmbWallpaperStyleDefault.Text = indivdualSettings[10].Split(';')[2];
 
                 //unregister all current hotkeys and remove from the list
-                foreach (HotkeyItem hki in Program.MainForm.hotkeys)
+                foreach (HotkeyItem hki in Program.hotkeys)
                 {
                     hki.hk.Unregister();
                     hki.hk.Dispose();
                 }
-                hotkeys.Clear();
+                Program.hotkeys.Clear();
 
                 //hotkeys
                 for (int i = 11; i < indivdualSettings.Length; i++)
@@ -1660,12 +1432,12 @@ namespace zVirtualDesktop
 
 
                     HotkeyItem hki = new HotkeyItem(type, hk);
-                    Program.MainForm.hotkeys.Add(hki);
+                    Program.hotkeys.Add(hki);
 
                     switch (type)
                     {
                         case "Navigate to Desktop":
-                            hk.HotkeyActivated += DesktopGo;
+                            hk.HotkeyActivated += VirtualDestopFunctions.DesktopGo;
                             break;
                         case "Move Window to Desktop":
                             switch (desktopNumber)
@@ -1679,13 +1451,13 @@ namespace zVirtualDesktop
                                 case "7":
                                 case "8":
                                 case "9":
-                                    hk.HotkeyActivated += DesktopMove;
+                                    hk.HotkeyActivated += VirtualDestopFunctions.DesktopMove;
                                     break;
                                 case "Next":
-                                    hk.HotkeyActivated += DesktopMoveNext;
+                                    hk.HotkeyActivated += VirtualDestopFunctions.DesktopMoveNext;
                                     break;
                                 case "Previous":
-                                    hk.HotkeyActivated += DesktopMovePrevious;
+                                    hk.HotkeyActivated += VirtualDestopFunctions.DesktopMovePrevious;
                                     break;
                                 default:
                                     break;
@@ -1703,23 +1475,23 @@ namespace zVirtualDesktop
                                 case "7":
                                 case "8":
                                 case "9":
-                                    hk.HotkeyActivated += DesktopMoveFollow;
+                                    hk.HotkeyActivated += VirtualDestopFunctions.DesktopMoveFollow;
                                     break;
                                 case "Next":
-                                    hk.HotkeyActivated += DesktopMoveNextFollow;
+                                    hk.HotkeyActivated += VirtualDestopFunctions.DesktopMoveNextFollow;
                                     break;
                                 case "Previous":
-                                    hk.HotkeyActivated += DesktopMovePreviousFollow;
+                                    hk.HotkeyActivated += VirtualDestopFunctions.DesktopMovePreviousFollow;
                                     break;
                                 default:
                                     break;
                             }
                             break;
                         case "Pin/Unpin Window":
-                            hk.HotkeyActivated += PinWindow;
+                            hk.HotkeyActivated += VirtualDestopFunctions.PinWindow;
                             break;
                         case "Pin/Unpin Application":
-                            hk.HotkeyActivated += PinApp;
+                            hk.HotkeyActivated += VirtualDestopFunctions.PinApp;
                             break;
                         default:
                             break;
@@ -1730,17 +1502,17 @@ namespace zVirtualDesktop
                 stream.Close();
                 stream.Dispose();
 
-                WallpaperStyles.Clear();
-                WallpaperStyles.Add(cmbWallpaperStyleDefault.Text);
-                WallpaperStyles.Add(cmbWallpaperStyle1.Text);
-                WallpaperStyles.Add(cmbWallpaperStyle2.Text);
-                WallpaperStyles.Add(cmbWallpaperStyle3.Text);
-                WallpaperStyles.Add(cmbWallpaperStyle4.Text);
-                WallpaperStyles.Add(cmbWallpaperStyle5.Text);
-                WallpaperStyles.Add(cmbWallpaperStyle6.Text);
-                WallpaperStyles.Add(cmbWallpaperStyle7.Text);
-                WallpaperStyles.Add(cmbWallpaperStyle8.Text);
-                WallpaperStyles.Add(cmbWallpaperStyle9.Text);
+                Program.WallpaperStyles.Clear();
+                Program.WallpaperStyles.Add(cmbWallpaperStyleDefault.Text);
+                Program.WallpaperStyles.Add(cmbWallpaperStyle1.Text);
+                Program.WallpaperStyles.Add(cmbWallpaperStyle2.Text);
+                Program.WallpaperStyles.Add(cmbWallpaperStyle3.Text);
+                Program.WallpaperStyles.Add(cmbWallpaperStyle4.Text);
+                Program.WallpaperStyles.Add(cmbWallpaperStyle5.Text);
+                Program.WallpaperStyles.Add(cmbWallpaperStyle6.Text);
+                Program.WallpaperStyles.Add(cmbWallpaperStyle7.Text);
+                Program.WallpaperStyles.Add(cmbWallpaperStyle8.Text);
+                Program.WallpaperStyles.Add(cmbWallpaperStyle9.Text);
 
                 UpdateHotkeyTab();
                
@@ -1770,29 +1542,29 @@ namespace zVirtualDesktop
                 settings.Append("~DesktopWallpaper9;" + txtWallpaper9.Text + ";" + cmbWallpaperStyle9.Text);
                 settings.Append("~DefaultWallpaper;" + txtDefaultWallpaper.Text + ";" + cmbWallpaperStyleDefault.Text);
 
-                foreach(HotkeyItem hki in Program.MainForm.hotkeys)
+                foreach(HotkeyItem hki in Program.hotkeys)
                 {
                     settings.Append("~" + hki.Type + ";" + hki.DesktopNumber() + ";" + hki.ALT().ToString() + ";" + hki.CTRL().ToString() + ";" + hki.SHIFT().ToString() + ";" + hki.WIN().ToString() + ";" + hki.KEY());
                 }
 
-                System.IO.Stream stream = new IsolatedStorageFileStream("zVirtualDesktop.bin", System.IO.FileMode.OpenOrCreate, storage);
+                System.IO.Stream stream = new IsolatedStorageFileStream("zVirtualDesktop.bin", System.IO.FileMode.OpenOrCreate, Program.storage);
                 System.Runtime.Serialization.Formatters.Binary.BinaryFormatter bf = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
                 bf.Serialize(stream, settings.ToString());
                 stream.Close();
                 stream.Dispose();
 
 
-                WallpaperStyles.Clear();
-                WallpaperStyles.Add(cmbWallpaperStyleDefault.Text);
-                WallpaperStyles.Add(cmbWallpaperStyle1.Text);
-                WallpaperStyles.Add(cmbWallpaperStyle2.Text);
-                WallpaperStyles.Add(cmbWallpaperStyle3.Text);
-                WallpaperStyles.Add(cmbWallpaperStyle4.Text);
-                WallpaperStyles.Add(cmbWallpaperStyle5.Text);
-                WallpaperStyles.Add(cmbWallpaperStyle6.Text);
-                WallpaperStyles.Add(cmbWallpaperStyle7.Text);
-                WallpaperStyles.Add(cmbWallpaperStyle8.Text);
-                WallpaperStyles.Add(cmbWallpaperStyle9.Text);
+                Program.WallpaperStyles.Clear();
+                Program.WallpaperStyles.Add(cmbWallpaperStyleDefault.Text);
+                Program.WallpaperStyles.Add(cmbWallpaperStyle1.Text);
+                Program.WallpaperStyles.Add(cmbWallpaperStyle2.Text);
+                Program.WallpaperStyles.Add(cmbWallpaperStyle3.Text);
+                Program.WallpaperStyles.Add(cmbWallpaperStyle4.Text);
+                Program.WallpaperStyles.Add(cmbWallpaperStyle5.Text);
+                Program.WallpaperStyles.Add(cmbWallpaperStyle6.Text);
+                Program.WallpaperStyles.Add(cmbWallpaperStyle7.Text);
+                Program.WallpaperStyles.Add(cmbWallpaperStyle8.Text);
+                Program.WallpaperStyles.Add(cmbWallpaperStyle9.Text);
 
                 SetSystemTrayIcon();
                 SetWallpaper();
@@ -1871,9 +1643,9 @@ namespace zVirtualDesktop
                 int i = lstHotkeys.SelectedIndices[0];
                 if (i > -1)
                 {
-                    hotkeys[i].hk.Unregister();
-                    hotkeys[i].hk.Dispose();
-                    hotkeys.RemoveAt(i);
+                    Program.hotkeys[i].hk.Unregister();
+                    Program.hotkeys[i].hk.Dispose();
+                    Program.hotkeys.RemoveAt(i);
                     SaveSettings();
                     lstHotkeys.Items.RemoveAt(i);
 

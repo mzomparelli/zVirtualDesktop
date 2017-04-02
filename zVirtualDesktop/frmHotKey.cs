@@ -40,7 +40,7 @@ namespace zVirtualDesktop
             KeysConverter kc = new KeysConverter();
             if (hk.Register((Keys)kc.ConvertFromString(cmbKey.Text), chkALT.Checked, chkCTRL.Checked, chkSHIFT.Checked, chkWIN.Checked) == true)
             {
-                Program.MainForm.hotkeys.Add(hki);
+                Program.hotkeys.Add(hki);
 
                 switch (cmbHotkeyType.Text)
                 {

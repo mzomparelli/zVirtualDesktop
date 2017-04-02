@@ -105,6 +105,7 @@
     <Compile Include="VirtualDesktopChangedEventArgs.cs" />
     <Compile Include="VirtualDesktopDestroyEventArgs.cs" />
     <Compile Include="VirtualDesktopHelper.cs" />
+    <Compile Include="VirtualDestopFunctions.cs" />
     <Compile Include="Wallpaper.cs" />
     <Compile Include="Window.cs" />
     <EmbeddedResource Include="frmHotKey.resx">

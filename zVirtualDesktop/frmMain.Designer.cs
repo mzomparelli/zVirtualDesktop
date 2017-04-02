@@ -397,6 +397,7 @@
             "Digital Clock",
             "Green",
             "Red Orb",
+            "Round",
             "White Box"});
             this.cmbIcons.Location = new System.Drawing.Point(6, 6);
             this.cmbIcons.Name = "cmbIcons";
