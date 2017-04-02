@@ -127,10 +127,6 @@
     <None Include="app.manifest">
       <SubType>Designer</SubType>
     </None>
-    <None Include="bin\Debug\zVirtualDesktop.exe.config" />
-    <None Include="bin\Release\zVirtualDesktop.exe.config" />
-    <None Include="bin\Release\zVirtualDesktop.vshost.exe.config" />
-    <None Include="bin\Release\zVirtualDesktop.vshost.exe.manifest" />
     <None Include="bin\Release\zVirtualDesktop.zip" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -166,11 +162,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bin\Debug\zVirtualDesktop.exe" />
-    <Content Include="bin\Debug\zVirtualDesktop.pdb" />
-    <Content Include="bin\Release\zVirtualDesktop.exe" />
-    <Content Include="bin\Release\zVirtualDesktop.pdb" />
-    <Content Include="bin\Release\zVirtualDesktop.vshost.exe" />
     <Content Include="Icons\10.ico" />
     <Content Include="Icons\11.ico" />
     <Content Include="Icons\12.ico" />
@@ -278,6 +269,9 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\Zomp\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
