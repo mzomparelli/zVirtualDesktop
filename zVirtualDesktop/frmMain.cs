@@ -42,6 +42,7 @@ namespace zVirtualDesktop
             //{
             //    d.Remove();
             //}
+            Log.LogEvent("Program Started", "", "", "", null);
             //Wire up some events
             this.Closing += frmMain_Closing;
             this.Load += frmMain_Load;
@@ -173,6 +174,7 @@ namespace zVirtualDesktop
                 MessageBox.Show("An error occured setting the system tray icon. See additional details below." + Environment.NewLine + Environment.NewLine +
                     ex.Message + Environment.NewLine +
                     ex.Source + "::" + ex.TargetSite.Name);
+                Log.LogEvent("Exception", "", "", "frmMain", ex);
             }
         }
 
@@ -222,6 +224,7 @@ namespace zVirtualDesktop
                 MessageBox.Show("An error occured setting the system tray icon. See additional details below." + Environment.NewLine + Environment.NewLine +
                     ex.Message + Environment.NewLine +
                     ex.Source + "::" + ex.TargetSite.Name);
+                Log.LogEvent("Exception", "", "", "frmMain", ex);
             }
         }
 
@@ -271,6 +274,7 @@ namespace zVirtualDesktop
                 MessageBox.Show("An error occured setting the system tray icon. See additional details below." + Environment.NewLine + Environment.NewLine +
                     ex.Message + Environment.NewLine +
                     ex.Source + "::" + ex.TargetSite.Name);
+                Log.LogEvent("Exception", "", "", "frmMain", ex);
             }
         }
 
@@ -320,6 +324,7 @@ namespace zVirtualDesktop
                 MessageBox.Show("An error occured setting the system tray icon. See additional details below." + Environment.NewLine + Environment.NewLine +
                     ex.Message + Environment.NewLine +
                     ex.Source + "::" + ex.TargetSite.Name);
+                Log.LogEvent("Exception", "", "", "frmMain", ex);
             }
         }
 
@@ -369,6 +374,7 @@ namespace zVirtualDesktop
                 MessageBox.Show("An error occured setting the system tray icon. See additional details below." + Environment.NewLine + Environment.NewLine +
                     ex.Message + Environment.NewLine +
                     ex.Source + "::" + ex.TargetSite.Name);
+                Log.LogEvent("Exception", "", "", "frmMain", ex);
             }
         }
 
@@ -418,6 +424,7 @@ namespace zVirtualDesktop
                 MessageBox.Show("An error occured setting the system tray icon. See additional details below." + Environment.NewLine + Environment.NewLine +
                     ex.Message + Environment.NewLine +
                     ex.Source + "::" + ex.TargetSite.Name);
+                Log.LogEvent("Exception", "", "", "frmMain", ex);
             }
         }
 
@@ -471,12 +478,6 @@ namespace zVirtualDesktop
             }
         }
 
-        public void RegisterHotKeys()
-        {
-            
-
-        }
-
         #region "Event Handlers"
 
         private void frmMain_Load(object sender, EventArgs e)
@@ -485,7 +486,6 @@ namespace zVirtualDesktop
             {
                 this.Opacity = 0;
                 this.ShowInTaskbar = false;
-                RegisterHotKeys();
                 LoadSettings();
                 SetSystemTrayIcon();
                 //Make sure there are at least 9 desktops.
@@ -501,6 +501,7 @@ namespace zVirtualDesktop
             }
             catch (Exception ex)
             {
+                Log.LogEvent("Exception", "", "", "frmMain", ex);
             }
 
         }
@@ -553,6 +554,7 @@ namespace zVirtualDesktop
                 MessageBox.Show("An error occured pinning or unpinning the specified window. See additional details below." + Environment.NewLine + Environment.NewLine +
                     ex.Message + Environment.NewLine +
                     ex.Source + "::" + ex.TargetSite.Name);
+                Log.LogEvent("Exception", "", "", "frmMain", ex);
             }
 
         }
@@ -589,6 +591,7 @@ namespace zVirtualDesktop
                 MessageBox.Show("An error occured pinning or unpinning the specified application. See additional details below." + Environment.NewLine + Environment.NewLine +
                     ex.Message + Environment.NewLine +
                     ex.Source + "::" + ex.TargetSite.Name);
+                Log.LogEvent("Exception", "", "", "frmMain", ex);
             }
 
         }
@@ -740,6 +743,7 @@ namespace zVirtualDesktop
             }
             catch (Exception ex)
             {
+                Log.LogEvent("Exception", "", "", "frmMain", ex);
             }
 
         }
@@ -839,7 +843,7 @@ namespace zVirtualDesktop
             }
             catch (Exception ex)
             {
-
+                Log.LogEvent("Exception", "", "", "frmMain", ex);
             }
 
         }
@@ -874,7 +878,9 @@ namespace zVirtualDesktop
                 MessageBox.Show("An error occured identifying the desktop number. See additional details below." + Environment.NewLine + Environment.NewLine +
                     ex.Message + Environment.NewLine +
                     ex.Source + "::" + ex.TargetSite.Name);
+                Log.LogEvent("Exception", "", "", "frmMain", ex);
                 return 1;
+
             }
 
         }
@@ -1271,6 +1277,7 @@ namespace zVirtualDesktop
                 MessageBox.Show("An error occured navigating to the specified desktop. See additional details below." + Environment.NewLine + Environment.NewLine +
                     ex.Message + Environment.NewLine +
                     ex.Source + "::" + ex.TargetSite.Name);
+                Log.LogEvent("Exception", "", "", "frmMain", ex);
             }
 
 
@@ -1484,6 +1491,7 @@ namespace zVirtualDesktop
                 MessageBox.Show("An error occured showing the settings window. See additional details below." + Environment.NewLine + Environment.NewLine + 
                     ex.Message + Environment.NewLine + 
                     ex.Source + "::" + ex.TargetSite.Name);
+                Log.LogEvent("Exception", "", "", "frmMain", ex);
             }
         }
 
@@ -1579,6 +1587,7 @@ namespace zVirtualDesktop
                 MessageBox.Show("An error occured hiding the settings window. See additional details below." + Environment.NewLine + Environment.NewLine + 
                     ex.Message + Environment.NewLine + 
                     ex.Source + "::" + ex.TargetSite.Name);
+                Log.LogEvent("Exception", "", "", "frmMain", ex);
             }
         }
 
@@ -1739,7 +1748,7 @@ namespace zVirtualDesktop
             }
             catch (Exception ex)
             {
-
+                Log.LogEvent("Exception", "", "", "frmMain", ex);
             }
         }
 
@@ -1791,7 +1800,7 @@ namespace zVirtualDesktop
             }
             catch (Exception ex)
             {
-
+                Log.LogEvent("Exception", "", "", "frmMain", ex);
             }
 
         }
@@ -1871,7 +1880,7 @@ namespace zVirtualDesktop
                 }
             }catch
             {
-
+                Log.LogEvent("Exception", "", "", "frmMain", ex);
             }
             
         }

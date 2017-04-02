@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ZompWebService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WSHttpBinding_IService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false" />
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic256 />
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict />
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="https://zomp.co/z/ZompWebService.svc?xsd=xsd5" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="https://zomp.co/z/ZompWebService.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="https://zomp.co/z/ZompWebService.svc?xsd=xsd1" namespace="http://schemas.datacontract.org/2004/07/zomp.co_WebService" />
+      <xsd:import schemaLocation="https://zomp.co/z/ZompWebService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="https://zomp.co/z/ZompWebService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Net.Mail" />
+      <xsd:import schemaLocation="https://zomp.co/z/ZompWebService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.Net.Mime" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService_UploadFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:UploadFile" />
+  </wsdl:message>
+  <wsdl:message name="IService_UploadFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UploadFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetNextEmailCommand_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNextEmailCommand" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetNextEmailCommand_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNextEmailCommandResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddEventToDatabase_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddEventToDatabase" />
+  </wsdl:message>
+  <wsdl:message name="IService_AddEventToDatabase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddEventToDatabaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_SendEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendEmail" />
+  </wsdl:message>
+  <wsdl:message name="IService_SendEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendEmailResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService">
+    <wsdl:operation name="UploadFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/UploadFile" message="tns:IService_UploadFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/UploadFileResponse" message="tns:IService_UploadFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNextEmailCommand">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetNextEmailCommand" message="tns:IService_GetNextEmailCommand_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetNextEmailCommandResponse" message="tns:IService_GetNextEmailCommand_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddEventToDatabase">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/AddEventToDatabase" message="tns:IService_AddEventToDatabase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/AddEventToDatabaseResponse" message="tns:IService_AddEventToDatabase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/SendEmail" message="tns:IService_SendEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/SendEmailResponse" message="tns:IService_SendEmail_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSHttpBinding_IService" type="tns:IService">
+    <wsp:PolicyReference URI="#WSHttpBinding_IService_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UploadFile">
+      <soap12:operation soapAction="http://tempuri.org/IService/UploadFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNextEmailCommand">
+      <soap12:operation soapAction="http://tempuri.org/IService/GetNextEmailCommand" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddEventToDatabase">
+      <soap12:operation soapAction="http://tempuri.org/IService/AddEventToDatabase" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendEmail">
+      <soap12:operation soapAction="http://tempuri.org/IService/SendEmail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ZompWebService">
+    <wsdl:port name="WSHttpBinding_IService" binding="tns:WSHttpBinding_IService">
+      <soap12:address location="https://zomp.co/z/ZompWebService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>https://zomp.co/z/ZompWebService.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

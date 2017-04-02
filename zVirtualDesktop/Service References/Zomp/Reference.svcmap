@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a1798e96-3933-47ed-a097-bc78bc8068ea" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://zomp.co/z/ZompWebService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ZompWebService.disco" MetadataType="Disco" ID="59a8122f-9155-4387-baa2-1be79403fa20" SourceId="1" SourceUrl="https://zomp.co/z/ZompWebService.svc?disco" />
+    <MetadataFile FileName="ZompWebService.xsd" MetadataType="Schema" ID="e6bcfd05-7f40-4ba0-be5c-bf949fbc99f0" SourceId="1" SourceUrl="https://zomp.co/z/ZompWebService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ZompWebService1.xsd" MetadataType="Schema" ID="ebfade0a-e94f-4f5b-a9f7-ab80269d0a64" SourceId="1" SourceUrl="https://zomp.co/z/ZompWebService.svc?xsd=xsd3" />
+    <MetadataFile FileName="ZompWebService2.xsd" MetadataType="Schema" ID="548dea61-22c5-4f4f-9d56-d92bac726642" SourceId="1" SourceUrl="https://zomp.co/z/ZompWebService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ZompWebService3.xsd" MetadataType="Schema" ID="c8f74a54-e2ac-4145-bc54-e45301eec65e" SourceId="1" SourceUrl="https://zomp.co/z/ZompWebService.svc?xsd=xsd5" />
+    <MetadataFile FileName="ZompWebService4.xsd" MetadataType="Schema" ID="25220854-01f6-439d-80d2-a449558d5e24" SourceId="1" SourceUrl="https://zomp.co/z/ZompWebService.svc?xsd=xsd4" />
+    <MetadataFile FileName="ZompWebService5.xsd" MetadataType="Schema" ID="7d937403-d6a4-4b70-bb12-20333c1e7c06" SourceId="1" SourceUrl="https://zomp.co/z/ZompWebService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ZompWebService.wsdl" MetadataType="Wsdl" ID="d0c7176b-233a-4377-b2c1-fc704bf3503d" SourceId="1" SourceUrl="https://zomp.co/z/ZompWebService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/zomp.co_WebService" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/zomp.co_WebService" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://zomp.co/z/ZompWebService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="https://zomp.co/z/ZompWebService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Net.Mail" />
+  <xs:complexType name="EventData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AdditionalDetails" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ApplicationName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ApplicationVersion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CallingMethod" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ComputerInfo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ComputerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EventDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EventDetails" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EventName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Exception" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModuleName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EventData" nillable="true" type="tns:EventData" />
+  <xs:complexType name="EmailData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AttachmentID" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="BCC" nillable="true" type="q1:ArrayOfstring" />
+      <xs:element minOccurs="0" name="Body" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="CC" nillable="true" type="q2:ArrayOfstring" />
+      <xs:element minOccurs="0" name="FromEmail" nillable="true" type="xs:string" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/System.Net.Mail" minOccurs="0" name="LinkedResources1" nillable="true" type="q3:ArrayOfLinkedResource" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Subject" nillable="true" type="xs:string" />
+      <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ToEmail" nillable="true" type="q4:ArrayOfstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EmailData" nillable="true" type="tns:EmailData" />
+  <xs:complexType name="AdvancedMail">
+    <xs:sequence>
+      <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Attachments" nillable="true" type="q5:ArrayOfstring" />
+      <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="BCCAddresses" nillable="true" type="q6:ArrayOfstring" />
+      <xs:element minOccurs="0" name="Body" nillable="true" type="xs:string" />
+      <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="CCAddresses" nillable="true" type="q7:ArrayOfstring" />
+      <xs:element minOccurs="0" name="From" nillable="true" type="xs:string" />
+      <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/System.Net.Mail" minOccurs="0" name="LinkedResources" nillable="true" type="q8:ArrayOfLinkedResource" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SMTPPort" type="xs:int" />
+      <xs:element minOccurs="0" name="SMTPServer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Subject" nillable="true" type="xs:string" />
+      <xs:element xmlns:q9="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ToAddresses" nillable="true" type="q9:ArrayOfstring" />
+      <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AdvancedMail" nillable="true" type="tns:AdvancedMail" />
+</xs:schema>

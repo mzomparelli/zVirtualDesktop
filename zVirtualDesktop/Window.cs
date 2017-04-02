@@ -88,8 +88,9 @@ namespace zVirtualDesktop
                 try
                 {
                     return GetDesktopNumber(VirtualDesktop.FromHwnd(hWnd).Id);
-                }catch
+                }catch(Exception ex)
                 {
+                    Log.LogEvent("Exception", "", "", "Window", ex);
                     return 0;
                 }
                 
@@ -123,8 +124,9 @@ namespace zVirtualDesktop
 
 
                 }
-                catch
+                catch (Exception ex)
                 {
+                    Log.LogEvent("Exception", "", "", "Window", ex);
                     return false;
                 }
 
@@ -137,8 +139,9 @@ namespace zVirtualDesktop
             {
                 return SetForegroundWindow(this.hWnd);
             }
-            catch
+            catch (Exception ex)
             {
+                Log.LogEvent("Exception", "", "", "Window", ex);
                 return false;
             }
         }
@@ -150,8 +153,10 @@ namespace zVirtualDesktop
                 try
                 {
                     return ApplicationHelper.GetAppId(hWnd);
-                }catch
+                }
+                catch (Exception ex)
                 {
+                    Log.LogEvent("Exception", "", "", "Window", ex);
                     return "";
                 }
             }
@@ -171,8 +176,10 @@ namespace zVirtualDesktop
                         return false;
                     }
                     
-                }catch
+                }
+                catch (Exception ex)
                 {
+                    Log.LogEvent("Exception", "", "", "Window", ex);
                     return false;
                 }
                 
@@ -194,8 +201,9 @@ namespace zVirtualDesktop
                         return false;
                     }                    
                 }
-                catch
+                catch (Exception ex)
                 {
+                    Log.LogEvent("Exception", "", "", "Window", ex);
                     return false;
                 }
 
@@ -211,6 +219,7 @@ namespace zVirtualDesktop
                     return System.Diagnostics.Process.GetProcessById((int)GetProcessID());
                 }catch(Exception ex)
                 {
+                    Log.LogEvent("Exception", "", "", "Window", ex);
                     return null;
                 }
                 
@@ -228,6 +237,7 @@ namespace zVirtualDesktop
                 MessageBox.Show("An error occured unpinning the specified window. See additional details below." + Environment.NewLine + Environment.NewLine +
                     ex.Message + Environment.NewLine +
                     ex.Source + "::" + ex.TargetSite.Name);
+                Log.LogEvent("Exception", "", "", "Window", ex);
             }
         } 
 
@@ -242,6 +252,8 @@ namespace zVirtualDesktop
                 MessageBox.Show("An error occured unpinning the specified application. See additional details below." + Environment.NewLine + Environment.NewLine +
                     ex.Message + Environment.NewLine +
                     ex.Source + "::" + ex.TargetSite.Name);
+                Log.LogEvent("Exception", "", "", "Window", ex);
+
             }
         }
 
@@ -256,6 +268,7 @@ namespace zVirtualDesktop
                 MessageBox.Show("An error occured pinning the specified window. See additional details below." + Environment.NewLine + Environment.NewLine +
                     ex.Message + Environment.NewLine +
                     ex.Source + "::" + ex.TargetSite.Name);
+                Log.LogEvent("Exception", "", "", "Window", ex);
             }
         }
 
@@ -270,6 +283,7 @@ namespace zVirtualDesktop
                 MessageBox.Show("An error occured pinning the specified application. See additional details below." + Environment.NewLine + Environment.NewLine +
                     ex.Message + Environment.NewLine +
                     ex.Source + "::" + ex.TargetSite.Name);
+                Log.LogEvent("Exception", "", "", "Window", ex);
             }
         }
 
@@ -348,6 +362,7 @@ namespace zVirtualDesktop
                 MessageBox.Show("An error occured moving the specified window. See additional details below." + Environment.NewLine + Environment.NewLine +
                     ex.Message + Environment.NewLine +
                     ex.Source + "::" + ex.TargetSite.Name);
+                Log.LogEvent("Exception", "", "", "Window", ex);
             }
 
 
@@ -397,11 +412,12 @@ namespace zVirtualDesktop
                         }
                     }
 
-                    //Right beofre switching the desktop, set the active window as the taskbar
+                    //Right before switching the desktop, set the active window as the taskbar
                     //This prevents windows from flashing in the taskbar when switching desktops
                     Window w = Window.Taskbar();
                     w.SetAsForegroundWindow();
                     current.Switch();
+                    //give focus to the window we followed
                     this.SetAsForegroundWindow();
 
                 }
@@ -412,6 +428,7 @@ namespace zVirtualDesktop
                 MessageBox.Show("An error occured navigating to the specified desktop. See additional details below." + Environment.NewLine + Environment.NewLine +
                     ex.Message + Environment.NewLine +
                     ex.Source + "::" + ex.TargetSite.Name);
+                Log.LogEvent("Exception", "", "", "Window", ex);
             }
 
 
@@ -429,6 +446,7 @@ namespace zVirtualDesktop
                 return text.ToString();
             }catch (Exception ex)
             {
+                Log.LogEvent("Exception", "", "", "Window", ex);
                 return "";
             }
             
@@ -453,6 +471,7 @@ namespace zVirtualDesktop
             }
             catch (Exception ex)
             {
+                Log.LogEvent("Exception", "", "", "Window", ex);
                 return "";
             }
             
@@ -467,6 +486,7 @@ namespace zVirtualDesktop
                 return lpdwProcessId;
             }catch (Exception ex)
             {
+                Log.LogEvent("Exception", "", "", "Window", ex);
                 return 0;
             }
             
@@ -491,6 +511,7 @@ namespace zVirtualDesktop
                 MessageBox.Show("An error occured identifying the desktop number. See additional details below." + Environment.NewLine + Environment.NewLine +
                     ex.Message + Environment.NewLine +
                     ex.Source + "::" + ex.TargetSite.Name);
+                Log.LogEvent("Exception", "", "", "Window", ex);
                 return 1;
             }
 
