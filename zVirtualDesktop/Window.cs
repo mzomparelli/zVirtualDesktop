@@ -339,6 +339,7 @@ namespace zVirtualDesktop
                         }
                     }
                     VirtualDesktopHelper.MoveToDesktop(hWnd, current);
+
                 }
 
             }
@@ -401,6 +402,7 @@ namespace zVirtualDesktop
                     Window w = Window.Taskbar();
                     w.SetAsForegroundWindow();
                     current.Switch();
+                    this.SetAsForegroundWindow();
 
                 }
 
