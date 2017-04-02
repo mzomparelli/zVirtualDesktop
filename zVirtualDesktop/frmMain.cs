@@ -1819,6 +1819,31 @@ namespace zVirtualDesktop
             }
             
         }
+
+        private void mnuBuyBeer_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.paypal.me/MichaelZomparelli/5");
+        }
+
+        private void mnuBuyLunch_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.paypal.me/MichaelZomparelli/10");
+        }
+
+        private void mnuBuyDinner_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.paypal.me/MichaelZomparelli/25");
+        }
+
+        private void mnuBuyLamborghini_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.paypal.me/MichaelZomparelli/200000");
+        }
+
+        private void mnuBuyOtherAmount_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://www.paypal.me/MichaelZomparelli/");
+        }
     }
 }
 

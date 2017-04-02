@@ -138,6 +138,13 @@
             this.lblGithub = new System.Windows.Forms.LinkLabel();
             this.SystemTray = new System.Windows.Forms.NotifyIcon(this.components);
             this.SystemTrayMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.donateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuBuyBeer = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuBuyLunch = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuBuyDinner = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuBuyLamborghini = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuBuyOtherAmount = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.mnuGithub = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.mnuSwitchDesktop = new System.Windows.Forms.ToolStripMenuItem();
@@ -236,6 +243,8 @@
             // 
             this.SystemTrayMenu.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.SystemTrayMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.donateToolStripMenuItem,
+            this.toolStripSeparator3,
             this.mnuGithub,
             this.toolStripSeparator1,
             this.mnuSwitchDesktop,
@@ -244,8 +253,60 @@
             this.mnuSettings,
             this.mnuExit});
             this.SystemTrayMenu.Name = "SystemTrayMenu";
-            this.SystemTrayMenu.Size = new System.Drawing.Size(285, 166);
+            this.SystemTrayMenu.Size = new System.Drawing.Size(285, 202);
             this.SystemTrayMenu.Opening += new System.ComponentModel.CancelEventHandler(this.SystemTrayMenu_Opening);
+            // 
+            // donateToolStripMenuItem
+            // 
+            this.donateToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuBuyBeer,
+            this.mnuBuyLunch,
+            this.mnuBuyDinner,
+            this.mnuBuyLamborghini,
+            this.mnuBuyOtherAmount});
+            this.donateToolStripMenuItem.Name = "donateToolStripMenuItem";
+            this.donateToolStripMenuItem.Size = new System.Drawing.Size(284, 30);
+            this.donateToolStripMenuItem.Text = "Donate";
+            // 
+            // mnuBuyBeer
+            // 
+            this.mnuBuyBeer.Name = "mnuBuyBeer";
+            this.mnuBuyBeer.Size = new System.Drawing.Size(364, 30);
+            this.mnuBuyBeer.Text = "Buy me a beer ($5)";
+            this.mnuBuyBeer.Click += new System.EventHandler(this.mnuBuyBeer_Click);
+            // 
+            // mnuBuyLunch
+            // 
+            this.mnuBuyLunch.Name = "mnuBuyLunch";
+            this.mnuBuyLunch.Size = new System.Drawing.Size(364, 30);
+            this.mnuBuyLunch.Text = "Buy me lunch ($10)";
+            this.mnuBuyLunch.Click += new System.EventHandler(this.mnuBuyLunch_Click);
+            // 
+            // mnuBuyDinner
+            // 
+            this.mnuBuyDinner.Name = "mnuBuyDinner";
+            this.mnuBuyDinner.Size = new System.Drawing.Size(364, 30);
+            this.mnuBuyDinner.Text = "Buy me dinner ($25)";
+            this.mnuBuyDinner.Click += new System.EventHandler(this.mnuBuyDinner_Click);
+            // 
+            // mnuBuyLamborghini
+            // 
+            this.mnuBuyLamborghini.Name = "mnuBuyLamborghini";
+            this.mnuBuyLamborghini.Size = new System.Drawing.Size(364, 30);
+            this.mnuBuyLamborghini.Text = "Buy me a Lamborghini ($200,000)";
+            this.mnuBuyLamborghini.Click += new System.EventHandler(this.mnuBuyLamborghini_Click);
+            // 
+            // mnuBuyOtherAmount
+            // 
+            this.mnuBuyOtherAmount.Name = "mnuBuyOtherAmount";
+            this.mnuBuyOtherAmount.Size = new System.Drawing.Size(364, 30);
+            this.mnuBuyOtherAmount.Text = "Donate Another Amount";
+            this.mnuBuyOtherAmount.Click += new System.EventHandler(this.mnuBuyOtherAmount_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(281, 6);
             // 
             // mnuGithub
             // 
@@ -1095,6 +1156,13 @@
         private System.Windows.Forms.ToolStripMenuItem mnuGatherWindows;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.Label lblVersion;
+        private System.Windows.Forms.ToolStripMenuItem donateToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mnuBuyBeer;
+        private System.Windows.Forms.ToolStripMenuItem mnuBuyLunch;
+        private System.Windows.Forms.ToolStripMenuItem mnuBuyDinner;
+        private System.Windows.Forms.ToolStripMenuItem mnuBuyLamborghini;
+        private System.Windows.Forms.ToolStripMenuItem mnuBuyOtherAmount;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
     }
 }
 
