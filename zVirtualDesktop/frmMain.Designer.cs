@@ -459,6 +459,7 @@
             "Green",
             "Red Orb",
             "Round",
+            "White Border",
             "White Box"});
             this.cmbIcons.Location = new System.Drawing.Point(6, 6);
             this.cmbIcons.Name = "cmbIcons";

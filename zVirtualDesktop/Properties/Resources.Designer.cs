@@ -693,6 +693,106 @@ namespace zVirtualDesktop.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
+        internal static System.Drawing.Icon White_Border_Box_0 {
+            get {
+                object obj = ResourceManager.GetObject("White_Border_Box_0", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon White_Border_Box_1 {
+            get {
+                object obj = ResourceManager.GetObject("White_Border_Box_1", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon White_Border_Box_2 {
+            get {
+                object obj = ResourceManager.GetObject("White_Border_Box_2", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon White_Border_Box_3 {
+            get {
+                object obj = ResourceManager.GetObject("White_Border_Box_3", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon White_Border_Box_4 {
+            get {
+                object obj = ResourceManager.GetObject("White_Border_Box_4", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon White_Border_Box_5 {
+            get {
+                object obj = ResourceManager.GetObject("White_Border_Box_5", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon White_Border_Box_6 {
+            get {
+                object obj = ResourceManager.GetObject("White_Border_Box_6", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon White_Border_Box_7 {
+            get {
+                object obj = ResourceManager.GetObject("White_Border_Box_7", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon White_Border_Box_8 {
+            get {
+                object obj = ResourceManager.GetObject("White_Border_Box_8", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
+        internal static System.Drawing.Icon White_Border_Box_9 {
+            get {
+                object obj = ResourceManager.GetObject("White_Border_Box_9", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        /// </summary>
         internal static System.Drawing.Icon Windows_8_Numbers_0 {
             get {
                 object obj = ResourceManager.GetObject("Windows_8_Numbers_0", resourceCulture);

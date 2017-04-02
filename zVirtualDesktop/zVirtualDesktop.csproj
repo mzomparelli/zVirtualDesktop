@@ -266,6 +266,16 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Icons\White_Border_Box_0.ico" />
+    <None Include="Icons\White_Border_Box_1.ico" />
+    <None Include="Icons\White_Border_Box_2.ico" />
+    <None Include="Icons\White_Border_Box_3.ico" />
+    <None Include="Icons\White_Border_Box_4.ico" />
+    <None Include="Icons\White_Border_Box_5.ico" />
+    <None Include="Icons\White_Border_Box_6.ico" />
+    <None Include="Icons\White_Border_Box_7.ico" />
+    <None Include="Icons\White_Border_Box_8.ico" />
+    <None Include="Icons\White_Border_Box_9.ico" />
     <Content Include="VirtualDesktop.csproj" />
   </ItemGroup>
   <ItemGroup>
