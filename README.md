@@ -1,5 +1,11 @@
 # zVirtualDesktop
 
+Requires the lastest Windows 10 Updates:  
+Version 1607 (OS Build 14393.953)  
+
+If the app doesn't work for you then get your Windows updates.
+
+
 [![Download](https://github.com/mzomparelli/zVirtualDesktop/blob/master/download.png?raw=true)](https://github.com/mzomparelli/zVirtualDesktop/blob/master/zVirtualDesktop/bin/Release/zVirtualDesktop.zip?raw=true)
 [![Donate](https://github.com/mzomparelli/zVirtualDesktop/blob/master/Donate1.png?raw=true)](https://www.paypal.me/MichaelZomparelli/)
 
