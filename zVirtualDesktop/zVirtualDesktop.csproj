@@ -218,6 +218,15 @@
     <None Include="Icons\Red-Orb-Alphabet-Number-7.ico" />
     <None Include="Icons\Red-Orb-Alphabet-Number-8.ico" />
     <None Include="Icons\Red-Orb-Alphabet-Number-9.ico" />
+    <None Include="Icons\NumPad1_1.ico" />
+    <None Include="Icons\NumPad1_2.ico" />
+    <None Include="Icons\NumPad1_3.ico" />
+    <None Include="Icons\NumPad1_4.ico" />
+    <None Include="Icons\NumPad1_5.ico" />
+    <None Include="Icons\NumPad1_6.ico" />
+    <None Include="Icons\NumPad1_7.ico" />
+    <None Include="Icons\NumPad1_8.ico" />
+    <None Include="Icons\NumPad1_9.ico" />
     <Content Include="Icons\st_0.ico" />
     <Content Include="Icons\st_1.ico" />
     <Content Include="Icons\st_2.ico" />
