@@ -671,7 +671,11 @@ namespace zVirtualDesktop
 
         private void mnuGatherWindows_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Coming Soon!");
+            DialogResult result = MessageBox.Show("Issue #10 - Coming Soon! - Would you like to browse to the issue page now?", "Go to Issue Page?", MessageBoxButtons.YesNo);
+            if(result == DialogResult.Yes)
+            {
+                System.Diagnostics.Process.Start("https://github.com/mzomparelli/zVirtualDesktop/issues/10");
+            }
             //try
             //{
             //    List<Window> wins = GetAllWindows();
