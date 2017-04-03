@@ -253,7 +253,7 @@
             this.mnuSettings,
             this.mnuExit});
             this.SystemTrayMenu.Name = "SystemTrayMenu";
-            this.SystemTrayMenu.Size = new System.Drawing.Size(285, 202);
+            this.SystemTrayMenu.Size = new System.Drawing.Size(285, 235);
             this.SystemTrayMenu.Opening += new System.ComponentModel.CancelEventHandler(this.SystemTrayMenu_Opening);
             // 
             // donateToolStripMenuItem
@@ -266,10 +266,11 @@
             this.mnuBuyOtherAmount});
             this.donateToolStripMenuItem.Name = "donateToolStripMenuItem";
             this.donateToolStripMenuItem.Size = new System.Drawing.Size(284, 30);
-            this.donateToolStripMenuItem.Text = "Donate";
+            this.donateToolStripMenuItem.Text = "Donate :)";
             // 
             // mnuBuyBeer
             // 
+            this.mnuBuyBeer.Image = ((System.Drawing.Image)(resources.GetObject("mnuBuyBeer.Image")));
             this.mnuBuyBeer.Name = "mnuBuyBeer";
             this.mnuBuyBeer.Size = new System.Drawing.Size(364, 30);
             this.mnuBuyBeer.Text = "Buy me a beer ($5)";
@@ -277,6 +278,7 @@
             // 
             // mnuBuyLunch
             // 
+            this.mnuBuyLunch.Image = ((System.Drawing.Image)(resources.GetObject("mnuBuyLunch.Image")));
             this.mnuBuyLunch.Name = "mnuBuyLunch";
             this.mnuBuyLunch.Size = new System.Drawing.Size(364, 30);
             this.mnuBuyLunch.Text = "Buy me lunch ($10)";
@@ -284,6 +286,7 @@
             // 
             // mnuBuyDinner
             // 
+            this.mnuBuyDinner.Image = ((System.Drawing.Image)(resources.GetObject("mnuBuyDinner.Image")));
             this.mnuBuyDinner.Name = "mnuBuyDinner";
             this.mnuBuyDinner.Size = new System.Drawing.Size(364, 30);
             this.mnuBuyDinner.Text = "Buy me dinner ($25)";
@@ -291,6 +294,7 @@
             // 
             // mnuBuyLamborghini
             // 
+            this.mnuBuyLamborghini.Image = ((System.Drawing.Image)(resources.GetObject("mnuBuyLamborghini.Image")));
             this.mnuBuyLamborghini.Name = "mnuBuyLamborghini";
             this.mnuBuyLamborghini.Size = new System.Drawing.Size(364, 30);
             this.mnuBuyLamborghini.Text = "Buy me a Lamborghini ($200,000)";
@@ -298,6 +302,7 @@
             // 
             // mnuBuyOtherAmount
             // 
+            this.mnuBuyOtherAmount.Image = ((System.Drawing.Image)(resources.GetObject("mnuBuyOtherAmount.Image")));
             this.mnuBuyOtherAmount.Name = "mnuBuyOtherAmount";
             this.mnuBuyOtherAmount.Size = new System.Drawing.Size(364, 30);
             this.mnuBuyOtherAmount.Text = "Donate Another Amount";
