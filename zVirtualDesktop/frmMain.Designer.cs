@@ -458,6 +458,7 @@
             this.cmbIcons.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbIcons.FormattingEnabled = true;
             this.cmbIcons.Items.AddRange(new object[] {
+            "3 Desktops",
             "Black Box",
             "Blue",
             "Digital - Green",

@@ -176,6 +176,10 @@
     <Content Include="Icons\18.ico" />
     <Content Include="Icons\19.ico" />
     <Content Include="Icons\20.ico" />
+    <None Include="Icons\3Desktops_1.ico" />
+    <None Include="Icons\3Desktops_2.ico" />
+    <None Include="Icons\3Desktops_3.ico" />
+    <None Include="Icons\3Desktops_4.ico" />
     <Content Include="Icons\check.ico" />
     <None Include="Icons\number-eight.ico" />
     <None Include="Icons\number-five.ico" />

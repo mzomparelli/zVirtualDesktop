@@ -126,6 +126,9 @@ namespace zVirtualDesktop
                 case "Grid - White":
                     SystemTrayGridWhite();
                     break;
+                case "3 Desktops":
+                    SystemTray3Desktops();
+                    break;
             }
         }
 
@@ -163,6 +166,56 @@ namespace zVirtualDesktop
                         break;
                     case 9:
                         SystemTray.Icon = Properties.Resources.Windows_8_Numbers_9_Black;
+                        break;
+                }
+
+                SystemTray.Visible = true;
+
+            }
+            catch (Exception ex)
+            {
+                SystemTray.Icon = Properties.Resources.Windows_8_Numbers_1_Black;
+                MessageBox.Show("An error occured setting the system tray icon. See additional details below." + Environment.NewLine + Environment.NewLine +
+                    ex.Message + Environment.NewLine +
+                    ex.Source + "::" + ex.TargetSite.Name);
+                Log.LogEvent("Exception", "", "", "frmMain", ex);
+            }
+        }
+
+        private void SystemTray3Desktops()
+        {
+            try
+            {
+                VirtualDesktop current = VirtualDesktop.Current;
+                int i = VirtualDestopFunctions.GetDesktopNumber(current.Id);
+                switch (i)
+                {
+                    case 1:
+                        SystemTray.Icon = Properties.Resources._3Desktops_1;
+                        break;
+                    case 2:
+                        SystemTray.Icon = Properties.Resources._3Desktops_2;
+                        break;
+                    case 3:
+                        SystemTray.Icon = Properties.Resources._3Desktops_3;
+                        break;
+                    case 4:
+                        SystemTray.Icon = Properties.Resources._3Desktops_4;
+                        break;
+                    case 5:
+                        SystemTray.Icon = Properties.Resources._3Desktops_4;
+                        break;
+                    case 6:
+                        SystemTray.Icon = Properties.Resources._3Desktops_4;
+                        break;
+                    case 7:
+                        SystemTray.Icon = Properties.Resources._3Desktops_4;
+                        break;
+                    case 8:
+                        SystemTray.Icon = Properties.Resources._3Desktops_4;
+                        break;
+                    case 9:
+                        SystemTray.Icon = Properties.Resources._3Desktops_4;
                         break;
                 }
 
