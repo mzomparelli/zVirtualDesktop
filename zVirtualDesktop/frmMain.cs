@@ -99,8 +99,11 @@ namespace zVirtualDesktop
                 case "Blue":
                     SystemTrayBlue();
                     break;
-                case "Digital Clock":
-                    SystemTrayDigitalClock();
+                case "Digital - Green":
+                    SystemTrayDigitalGreen();
+                    break;
+                case "Digital - White":
+                    SystemTrayDigitalWhite();
                     break;
                 case "Red Orb":
                     SystemTrayRedOrb();
@@ -320,7 +323,7 @@ namespace zVirtualDesktop
             }
         }
 
-        private void SystemTrayDigitalClock()
+        private void SystemTrayDigitalGreen()
         {
             try
             {
@@ -354,6 +357,56 @@ namespace zVirtualDesktop
                         break;
                     case 9:
                         SystemTray.Icon = Properties.Resources.st_9;
+                        break;
+                }
+
+                SystemTray.Visible = true;
+
+            }
+            catch (Exception ex)
+            {
+                SystemTray.Icon = Properties.Resources.st_1;
+                MessageBox.Show("An error occured setting the system tray icon. See additional details below." + Environment.NewLine + Environment.NewLine +
+                    ex.Message + Environment.NewLine +
+                    ex.Source + "::" + ex.TargetSite.Name);
+                Log.LogEvent("Exception", "", "", "frmMain", ex);
+            }
+        }
+
+        private void SystemTrayDigitalWhite()
+        {
+            try
+            {
+                VirtualDesktop current = VirtualDesktop.Current;
+                int i = VirtualDestopFunctions.GetDesktopNumber(current.Id);
+                switch (i)
+                {
+                    case 1:
+                        SystemTray.Icon = Properties.Resources.white_digital_1;
+                        break;
+                    case 2:
+                        SystemTray.Icon = Properties.Resources.white_digital_2;
+                        break;
+                    case 3:
+                        SystemTray.Icon = Properties.Resources.white_digital_3;
+                        break;
+                    case 4:
+                        SystemTray.Icon = Properties.Resources.white_digital_4;
+                        break;
+                    case 5:
+                        SystemTray.Icon = Properties.Resources.white_digital_5;
+                        break;
+                    case 6:
+                        SystemTray.Icon = Properties.Resources.white_digital_6;
+                        break;
+                    case 7:
+                        SystemTray.Icon = Properties.Resources.white_digital_7;
+                        break;
+                    case 8:
+                        SystemTray.Icon = Properties.Resources.white_digital_8;
+                        break;
+                    case 9:
+                        SystemTray.Icon = Properties.Resources.white_digital_9;
                         break;
                 }
 

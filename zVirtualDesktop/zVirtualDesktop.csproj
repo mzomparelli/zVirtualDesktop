@@ -276,6 +276,16 @@
     <None Include="Icons\White_Border_Box_7.ico" />
     <None Include="Icons\White_Border_Box_8.ico" />
     <None Include="Icons\White_Border_Box_9.ico" />
+    <None Include="Icons\white_digital_0.ico" />
+    <None Include="Icons\white_digital_1.ico" />
+    <None Include="Icons\white_digital_2.ico" />
+    <None Include="Icons\white_digital_3.ico" />
+    <None Include="Icons\white_digital_4.ico" />
+    <None Include="Icons\white_digital_5.ico" />
+    <None Include="Icons\white_digital_6.ico" />
+    <None Include="Icons\white_digital_7.ico" />
+    <None Include="Icons\white_digital_8.ico" />
+    <None Include="Icons\white_digital_9.ico" />
     <Content Include="VirtualDesktop.csproj" />
   </ItemGroup>
   <ItemGroup>

@@ -455,7 +455,8 @@
             this.cmbIcons.Items.AddRange(new object[] {
             "Black Box",
             "Blue",
-            "Digital Clock",
+            "Digital - Green",
+            "Digital - White",
             "Green",
             "Red Orb",
             "Round",
