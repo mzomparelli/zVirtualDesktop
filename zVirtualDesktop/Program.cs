@@ -23,7 +23,7 @@ namespace zVirtualDesktop
         }
 
         public static frmMain MainForm;
-        public const string version = "1.0.9";
+        public const string version = "1.0.9p";
 
         public static IsolatedStorageFile storage = IsolatedStorageFile.GetUserStoreForAssembly();
         public static List<string> WallpaperStyles = new List<string>();
