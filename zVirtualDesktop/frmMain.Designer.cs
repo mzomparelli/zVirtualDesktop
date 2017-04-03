@@ -463,6 +463,7 @@
             "Digital - Green",
             "Digital - White",
             "Green",
+            "Grid - White",
             "Numpad - White",
             "Red Orb",
             "Round",

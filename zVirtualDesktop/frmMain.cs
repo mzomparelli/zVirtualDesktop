@@ -123,6 +123,9 @@ namespace zVirtualDesktop
                 case "Numpad - White":
                     SystemTrayNumpadWhite();
                     break;
+                case "Grid - White":
+                    SystemTrayGridWhite();
+                    break;
             }
         }
 
@@ -160,6 +163,56 @@ namespace zVirtualDesktop
                         break;
                     case 9:
                         SystemTray.Icon = Properties.Resources.Windows_8_Numbers_9_Black;
+                        break;
+                }
+
+                SystemTray.Visible = true;
+
+            }
+            catch (Exception ex)
+            {
+                SystemTray.Icon = Properties.Resources.Windows_8_Numbers_1_Black;
+                MessageBox.Show("An error occured setting the system tray icon. See additional details below." + Environment.NewLine + Environment.NewLine +
+                    ex.Message + Environment.NewLine +
+                    ex.Source + "::" + ex.TargetSite.Name);
+                Log.LogEvent("Exception", "", "", "frmMain", ex);
+            }
+        }
+
+        private void SystemTrayGridWhite()
+        {
+            try
+            {
+                VirtualDesktop current = VirtualDesktop.Current;
+                int i = VirtualDestopFunctions.GetDesktopNumber(current.Id);
+                switch (i)
+                {
+                    case 1:
+                        SystemTray.Icon = Properties.Resources.NumPad1_7;
+                        break;
+                    case 2:
+                        SystemTray.Icon = Properties.Resources.NumPad1_8;
+                        break;
+                    case 3:
+                        SystemTray.Icon = Properties.Resources.NumPad1_9;
+                        break;
+                    case 4:
+                        SystemTray.Icon = Properties.Resources.NumPad1_4;
+                        break;
+                    case 5:
+                        SystemTray.Icon = Properties.Resources.NumPad1_5;
+                        break;
+                    case 6:
+                        SystemTray.Icon = Properties.Resources.NumPad1_6;
+                        break;
+                    case 7:
+                        SystemTray.Icon = Properties.Resources.NumPad1_1;
+                        break;
+                    case 8:
+                        SystemTray.Icon = Properties.Resources.NumPad1_2;
+                        break;
+                    case 9:
+                        SystemTray.Icon = Properties.Resources.NumPad1_3;
                         break;
                 }
 
