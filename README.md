@@ -41,13 +41,19 @@ Pin/Unpin Windows:
 Pin/Unpin Applications:  
 <kbd>WIN</kbd>+<kbd>ALT</kbd>+<kbd>A</kbd>
 
+__What is the difference between pin app and pin window?__  
+An easy way to imagine this is if you use `pin window` on a chrome browser window, 
+only that window will be visible on all desktops. Any other chrome windows would 
+stay on a single desktop. If you were to `pin application` on a chrome window then 
+all chrome windows would show up on all desktops. This includes new chrome windows.
+
 __System Tray Icon:__  
 Choose from several sets of icons on the settings window.  
 The icons indicate which desktop you are viewing.  
 ![](https://github.com/mzomparelli/zVirtualDesktop/blob/master/Icons.png?raw=true)
 
 Make your own icons and attach them to an issue then I will add them to the program.  
-Download the current icons alter ones you like. I ask that you come up with a name for your icon theme.  
+Download the current icons and alter ones you like. I ask that you come up with a name for your icon theme.  
 ![Icons.zip](https://github.com/mzomparelli/zVirtualDesktop/blob/master/zVirtualDesktop/Icons.zip?raw=true)
 
 __Wallpapers:__  
