@@ -46,6 +46,10 @@ Choose from several sets of icons on the settings window.
 The icons indicate which desktop you are viewing.  
 ![](https://github.com/mzomparelli/zVirtualDesktop/blob/master/Icons.png?raw=true)
 
+Make your own icons and attach them to an issue then I will add them to the program.  
+Download the current icons alter ones you like. I ask that you come up with a name for your icon theme.  
+![Icons.zip](https://github.com/mzomparelli/zVirtualDesktop/blob/master/zVirtualDesktop/Icons.zip?raw=true)
+
 __Wallpapers:__  
 Set a different wallpaper for each desktop.  
 Specify the style for each (Center, Stretch, or Tile).
