@@ -2143,6 +2143,7 @@ namespace zVirtualDesktop
         private void lblEasterEgg_Click(object sender, EventArgs e)
         {
             picMax.Visible = true;
+            Log.LogEvent("Easter Egg Found", "", "", "frmMain", null);
         }
     }
 }
