@@ -3,7 +3,8 @@
 I'm currently running this app perfectly on version:  
 Version 1607 (OS Build 14393.953)  
 
-If the app doesn't work for you then I would first try getting Windows Updates and if that doesn't work then please open a issue with your version.  
+If the app doesn't work for you then I would first try getting Windows Updates and if that doesn't work then please open an issue with your version.
+
 To find your version simply press <kbd>WIN</kbd>+<kbd>R</kbd> then type WinVer into the box and hit enter.
 
 
