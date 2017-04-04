@@ -60,6 +60,8 @@ __Wallpapers:__
 Set a different wallpaper for each desktop.  
 Specify the style for each (Center, Stretch, or Tile).
 
+`Left-Click` the system tray icon to bring up the default Task View overlay.
+
 
 
 ![](https://github.com/mzomparelli/zVirtualDesktop/blob/master/Screenshot.png?raw=true)
