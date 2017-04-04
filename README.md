@@ -43,7 +43,8 @@ Pin/Unpin Applications:
 
 __System Tray Icon:__  
 Choose from several sets of icons on the settings window.  
-The icons indicate which desktop you are viewing.
+The icons indicate which desktop you are viewing.  
+![](https://github.com/mzomparelli/zVirtualDesktop/blob/master/Icons.png?raw=true)
 
 __Wallpapers:__  
 Set a different wallpaper for each desktop.  
@@ -54,5 +55,6 @@ Specify the style for each (Center, Stretch, or Tile).
 ![](https://github.com/mzomparelli/zVirtualDesktop/blob/master/Screenshot.png?raw=true)
 
 [![Download](https://github.com/mzomparelli/zVirtualDesktop/blob/master/download.png?raw=true)](https://github.com/mzomparelli/zVirtualDesktop/blob/master/zVirtualDesktop/bin/Release/zVirtualDesktop.zip?raw=true)
+[![Donate](https://github.com/mzomparelli/zVirtualDesktop/blob/master/Donate1.png?raw=true)](https://www.paypal.me/MichaelZomparelli/)
 
 Using the download button here gets you the most recent pre-release build
