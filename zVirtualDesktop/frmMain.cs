@@ -794,12 +794,12 @@ namespace zVirtualDesktop
                 this.ShowInTaskbar = false;
                 LoadSettings();
                 SetSystemTrayIcon();
-                //Make sure there are at least 9 desktops.
-                int diff = Math.Abs(Program.Desktops.Count() - 9);
-                for (int i = 1; i <= diff; i += 1)
-                {
-                    VirtualDesktop.Create();
-                }
+                ////Make sure there are at least 9 desktops.
+                //int diff = Math.Abs(Program.Desktops.Count() - 9);
+                //for (int i = 1; i <= diff; i += 1)
+                //{
+                //    VirtualDesktop.Create();
+                //}
                 timerSystemTray.Tick += timerGrabForegroundWindow_Tick;
                 timerSystemTray.Interval = 500;
                 timerSystemTray.Start();

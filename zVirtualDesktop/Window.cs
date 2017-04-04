@@ -289,7 +289,11 @@ namespace zVirtualDesktop
 
         public void MoveToPreviousDesktop()
         {
-            if(this.DesktopNumber > 1)
+            if (this.DesktopNumber == 1)
+            {
+                MoveToDesktop(VirtualDesktop.GetDesktops().Count());
+            }
+            else
             {
                 MoveToDesktop(this.DesktopNumber - 1);
             }
@@ -297,20 +301,27 @@ namespace zVirtualDesktop
 
         public void MoveToPreviousDesktop(bool follow)
         {
-            if (this.DesktopNumber > 1)
-            {
-                MoveToDesktop(this.DesktopNumber - 1, follow);
-            }
+            MoveToPreviousDesktop();
+            this.GoToDesktop();
         }
 
         public void MoveToNextDesktop()
         {
-            MoveToDesktop(this.DesktopNumber + 1);
+            if (this.DesktopNumber == VirtualDesktop.GetDesktops().Count())
+            {
+                MoveToDesktop(1);
+            }
+            else
+            {
+                MoveToDesktop(this.DesktopNumber + 1);
+            }
+            
         }
 
         public void MoveToNextDesktop(bool follow)
         {
-            MoveToDesktop(this.DesktopNumber + 1, follow);
+            MoveToNextDesktop();
+            this.GoToDesktop();
         }
 
         public void MoveToDesktop(int desktopNumber)
