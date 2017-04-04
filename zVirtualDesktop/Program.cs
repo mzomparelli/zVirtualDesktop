@@ -32,6 +32,8 @@ namespace zVirtualDesktop
         public static List<HotkeyItem> hotkeys = new List<HotkeyItem>();
         public static VirtualDesktop[] Desktops = VirtualDesktop.GetDesktops();
 
+        public static string IconTheme = "White Box";
+
         
     }
 }

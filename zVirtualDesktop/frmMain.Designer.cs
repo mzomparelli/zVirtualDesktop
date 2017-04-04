@@ -464,12 +464,14 @@
             this.cmbIcons.FormattingEnabled = true;
             this.cmbIcons.Items.AddRange(new object[] {
             "3 Desktops",
+            "Agency - White",
             "Black Box",
             "Blue",
             "Digital - Green",
             "Digital - White",
             "Green",
             "Grid - White",
+            "Narrow - White",
             "Numpad - White",
             "Red Orb",
             "Round",
@@ -1101,7 +1103,7 @@
             this.Controls.Add(this.tabs);
             this.Controls.Add(this.btnApply);
             this.Controls.Add(this.btnCancel);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmMain";

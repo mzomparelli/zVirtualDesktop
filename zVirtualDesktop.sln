@@ -7,6 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "zVirtualDesktop", "zVirtual
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2F9A6D54-48E3-4ACB-BB68-699C91B4373B}"
 	ProjectSection(SolutionItems) = preProject
+		zVirtualDesktop\Icons.zip = zVirtualDesktop\Icons.zip
 		LICENSE.txt = LICENSE.txt
 		README.md = README.md
 	EndProjectSection

@@ -93,7 +93,7 @@ namespace zVirtualDesktop
         public void SetSystemTrayIcon()
         {
 
-            switch (cmbIcons.Text)
+            switch (Program.IconTheme)
             {
                 case "Green":
                     SystemTrayGreen();
@@ -131,6 +131,112 @@ namespace zVirtualDesktop
                 case "3 Desktops":
                     SystemTray3Desktops();
                     break;
+                case "Narrow - White":
+                    SystemTrayNarrowWhite();
+                    break;
+                case "Agency - White":
+                    SystemTrayAgencyWhite();
+                    break;
+            }
+        }
+
+        private void SystemTrayAgencyWhite()
+        {
+            try
+            {
+                VirtualDesktop current = VirtualDesktop.Current;
+                int i = VirtualDestopFunctions.GetDesktopNumber(current.Id);
+                switch (i)
+                {
+                    case 1:
+                        SystemTray.Icon = Properties.Resources.Agency_1;
+                        break;
+                    case 2:
+                        SystemTray.Icon = Properties.Resources.Agency_2;
+                        break;
+                    case 3:
+                        SystemTray.Icon = Properties.Resources.Agency_3;
+                        break;
+                    case 4:
+                        SystemTray.Icon = Properties.Resources.Agency_4;
+                        break;
+                    case 5:
+                        SystemTray.Icon = Properties.Resources.Agency_5;
+                        break;
+                    case 6:
+                        SystemTray.Icon = Properties.Resources.Agency_6;
+                        break;
+                    case 7:
+                        SystemTray.Icon = Properties.Resources.Agency_7;
+                        break;
+                    case 8:
+                        SystemTray.Icon = Properties.Resources.Agency_8;
+                        break;
+                    case 9:
+                        SystemTray.Icon = Properties.Resources.Agency_9;
+                        break;
+                }
+
+                SystemTray.Visible = true;
+
+            }
+            catch (Exception ex)
+            {
+                SystemTray.Icon = Properties.Resources.Windows_8_Numbers_1_Black;
+                MessageBox.Show("An error occured setting the system tray icon. See additional details below." + Environment.NewLine + Environment.NewLine +
+                    ex.Message + Environment.NewLine +
+                    ex.Source + "::" + ex.TargetSite.Name);
+                Log.LogEvent("Exception", "", "", "frmMain", ex);
+            }
+        }
+
+        private void SystemTrayNarrowWhite()
+        {
+            try
+            {
+                VirtualDesktop current = VirtualDesktop.Current;
+                int i = VirtualDestopFunctions.GetDesktopNumber(current.Id);
+                switch (i)
+                {
+                    case 1:
+                        SystemTray.Icon = Properties.Resources.Narrow_1;
+                        break;
+                    case 2:
+                        SystemTray.Icon = Properties.Resources.Narrow_2;
+                        break;
+                    case 3:
+                        SystemTray.Icon = Properties.Resources.Narrow_3;
+                        break;
+                    case 4:
+                        SystemTray.Icon = Properties.Resources.Narrow_4;
+                        break;
+                    case 5:
+                        SystemTray.Icon = Properties.Resources.Narrow_5;
+                        break;
+                    case 6:
+                        SystemTray.Icon = Properties.Resources.Narrow_6;
+                        break;
+                    case 7:
+                        SystemTray.Icon = Properties.Resources.Narrow_7;
+                        break;
+                    case 8:
+                        SystemTray.Icon = Properties.Resources.Narrow_8;
+                        break;
+                    case 9:
+                        SystemTray.Icon = Properties.Resources.Narrow_9;
+                        break;
+                }
+
+                SystemTray.Visible = true;
+
+            }
+            catch (Exception ex)
+            {
+                SystemTray.Icon = Properties.Resources.Windows_8_Numbers_1_Black;
+                MessageBox.Show("An error occured setting the system tray icon. See additional details below." + Environment.NewLine + Environment.NewLine +
+                    ex.Message + Environment.NewLine +
+                    ex.Source + "::" + ex.TargetSite.Name);
+                Log.LogEvent("Exception", "", "", "frmMain", ex);
             }
         }
 
@@ -1688,6 +1794,7 @@ namespace zVirtualDesktop
             {
                 LoadSettings();
                 this.Opacity = 100;
+                this.Visible = true;
                 this.TopMost = true;
                 this.ShowInTaskbar = true;
             }
@@ -1784,6 +1891,7 @@ namespace zVirtualDesktop
             try
             {
                 this.Opacity = 0;
+                this.Visible = false;
                 this.TopMost = false;
                 this.ShowInTaskbar = false;
             }
@@ -1817,6 +1925,7 @@ namespace zVirtualDesktop
 
 
                 cmbIcons.Text = indivdualSettings[0].Split(';')[1];
+                Program.IconTheme = cmbIcons.Text;
 
                 //wallpaper image location
                 txtWallpaper1.Text = indivdualSettings[1].Split(';')[1];
@@ -1964,6 +2073,7 @@ namespace zVirtualDesktop
             try
             {
                 Log.LogEvent("Settings Saved", "Icon Theme", cmbIcons.Text, "frmMain", null);
+                Program.IconTheme = cmbIcons.Text;
                 StringBuilder settings = new StringBuilder();
                 settings.Append("IconTheme;" + cmbIcons.Text);
                 //Get the URI for each desktop
