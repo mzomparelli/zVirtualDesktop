@@ -212,6 +212,8 @@
             this.lstPinnedWindows = new System.Windows.Forms.ListBox();
             this.btnOK = new System.Windows.Forms.Button();
             this.lblVersion = new System.Windows.Forms.Label();
+            this.picMax = new System.Windows.Forms.PictureBox();
+            this.lblEasterEgg = new System.Windows.Forms.Label();
             this.SystemTrayMenu.SuspendLayout();
             this.tabs.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -220,6 +222,7 @@
             this.tabPinnedApps.SuspendLayout();
             this.mnuPinnedApps.SuspendLayout();
             this.tabPinnedWindows.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picMax)).BeginInit();
             this.SuspendLayout();
             // 
             // lblGithub
@@ -974,6 +977,8 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.lblEasterEgg);
+            this.tabPage3.Controls.Add(this.picMax);
             this.tabPage3.Controls.Add(this.cmbIcons);
             this.tabPage3.Location = new System.Drawing.Point(4, 29);
             this.tabPage3.Name = "tabPage3";
@@ -1064,6 +1069,25 @@
             this.lblVersion.TabIndex = 19;
             this.lblVersion.Text = "Version Placeholder";
             // 
+            // picMax
+            // 
+            this.picMax.Image = global::zVirtualDesktop.Properties.Resources.Max;
+            this.picMax.Location = new System.Drawing.Point(108, 86);
+            this.picMax.Name = "picMax";
+            this.picMax.Size = new System.Drawing.Size(399, 353);
+            this.picMax.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.picMax.TabIndex = 1;
+            this.picMax.TabStop = false;
+            this.picMax.Visible = false;
+            // 
+            // lblEasterEgg
+            // 
+            this.lblEasterEgg.Location = new System.Drawing.Point(575, 118);
+            this.lblEasterEgg.Name = "lblEasterEgg";
+            this.lblEasterEgg.Size = new System.Drawing.Size(30, 23);
+            this.lblEasterEgg.TabIndex = 2;
+            this.lblEasterEgg.Click += new System.EventHandler(this.lblEasterEgg_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -1089,6 +1113,7 @@
             this.tabPinnedApps.ResumeLayout(false);
             this.mnuPinnedApps.ResumeLayout(false);
             this.tabPinnedWindows.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picMax)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1173,6 +1198,8 @@
         private System.Windows.Forms.ToolStripMenuItem mnuBuyLamborghini;
         private System.Windows.Forms.ToolStripMenuItem mnuBuyOtherAmount;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.Label lblEasterEgg;
+        private System.Windows.Forms.PictureBox picMax;
     }
 }
 

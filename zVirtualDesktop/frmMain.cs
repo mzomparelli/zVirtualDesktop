@@ -2139,6 +2139,11 @@ namespace zVirtualDesktop
         {
             System.Diagnostics.Process.Start("https://www.paypal.me/MichaelZomparelli/");
         }
+
+        private void lblEasterEgg_Click(object sender, EventArgs e)
+        {
+            picMax.Visible = true;
+        }
     }
 }
 
