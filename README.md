@@ -50,6 +50,7 @@ all chrome windows would show up on all desktops. This includes new chrome windo
 __System Tray Icon:__  
 Choose from several sets of icons on the settings window.  
 The icons indicate which desktop you are viewing.  
+`Left-Click` the system tray icon to bring up the default Task View overlay.  
 ![](https://github.com/mzomparelli/zVirtualDesktop/blob/master/Icons.png?raw=true)
 
 Make your own icons and attach them to an issue then I will add them to the program.  
@@ -59,8 +60,6 @@ Download the current icons and alter ones you like. I ask that you come up with 
 __Wallpapers:__  
 Set a different wallpaper for each desktop.  
 Specify the style for each (Center, Stretch, or Tile).
-
-`Left-Click` the system tray icon to bring up the default Task View overlay.
 
 
 
