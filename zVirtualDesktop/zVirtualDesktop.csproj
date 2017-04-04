@@ -59,8 +59,8 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApplicationHelper.cs" />
-    <Compile Include="COMProgram.cs" />
+    <Compile Include="VirtualDesktop\ApplicationHelper.cs" />
+    <Compile Include="VirtualDesktop\COMProgram.cs" />
     <Compile Include="frmHotKey.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,14 +101,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="VirtualDesktop.cs" />
-    <Compile Include="VirtualDesktop.static.cs" />
-    <Compile Include="VirtualDesktop.static.notification.cs" />
-    <Compile Include="VirtualDesktop.static.pin.cs" />
-    <Compile Include="VirtualDesktopChangedEventArgs.cs" />
-    <Compile Include="VirtualDesktopDestroyEventArgs.cs" />
-    <Compile Include="VirtualDesktopHelper.cs" />
-    <Compile Include="VirtualDestopFunctions.cs" />
+    <Compile Include="VirtualDesktop\VirtualDesktop.cs" />
+    <Compile Include="VirtualDesktop\VirtualDesktop.static.cs" />
+    <Compile Include="VirtualDesktop\VirtualDesktop.static.notification.cs" />
+    <Compile Include="VirtualDesktop\VirtualDesktop.static.pin.cs" />
+    <Compile Include="VirtualDesktop\VirtualDesktopChangedEventArgs.cs" />
+    <Compile Include="VirtualDesktop\VirtualDesktopDestroyEventArgs.cs" />
+    <Compile Include="VirtualDesktop\VirtualDesktopHelper.cs" />
+    <Compile Include="VirtualDesktop\VirtualDestopFunctions.cs" />
     <Compile Include="Wallpaper.cs" />
     <Compile Include="Window.cs" />
     <Compile Include="WindowsInput\IInputDeviceStateAdaptor.cs" />
@@ -182,7 +182,7 @@
     <None Include="Service References\Zomp\ZompWebService5.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="VirtualDesktop.nuspec" />
+    <None Include="VirtualDesktop\VirtualDesktop.nuspec" />
     <None Include="WindowsInput\WindowsInput.nuspec" />
     <None Include="WindowsInput\WindowsInput.snk" />
   </ItemGroup>
@@ -325,7 +325,6 @@
     <None Include="Icons\white_digital_7.ico" />
     <None Include="Icons\white_digital_8.ico" />
     <None Include="Icons\white_digital_9.ico" />
-    <Content Include="VirtualDesktop.csproj" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
