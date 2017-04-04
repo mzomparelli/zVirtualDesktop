@@ -2106,7 +2106,33 @@ namespace zVirtualDesktop
 
         private void mnuBuyLamborghini_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://www.paypal.me/MichaelZomparelli/200000");
+            DialogResult result = MessageBox.Show("OMG for real!?", ":D", MessageBoxButtons.YesNo);
+            if(result == DialogResult.Yes)
+            {
+                result = MessageBox.Show("You are so awesome! I swear I will post pics so you can see them. Do you want to see pics of me in the Lamborghini you're buying me?", ":D", MessageBoxButtons.YesNo);
+                if(result == DialogResult.Yes)
+                {
+                    result = MessageBox.Show("Ok, I will do it! Now get on over there and send that money! This is going to be awesome!", ":D", MessageBoxButtons.OKCancel);
+                    if (result == DialogResult.OK)
+                    {
+                        System.Diagnostics.Process.Start("https://www.paypal.me/MichaelZomparelli/200000");
+                    }
+                    else
+                    {
+                        result = MessageBox.Show("Oh well, I guess I should have known you were just messing with me.", "oh well", MessageBoxButtons.AbortRetryIgnore);
+                    }
+                }
+                else
+                {
+                    result = MessageBox.Show("That's ok, I'm sure others would love to see them..", "That's ok", MessageBoxButtons.OK);
+                    System.Diagnostics.Process.Start("https://www.paypal.me/MichaelZomparelli/200000");
+                }
+            }
+            else
+            {
+                result = MessageBox.Show("Oh well, I guess I should have known you were just messing with me.", "oh well", MessageBoxButtons.AbortRetryIgnore);
+            }
+            
         }
 
         private void mnuBuyOtherAmount_Click(object sender, EventArgs e)
