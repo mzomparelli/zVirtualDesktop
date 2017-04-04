@@ -856,6 +856,7 @@ namespace zVirtualDesktop
             try
             {
                 ExitClicked = true;
+                Log.LogEvent("App Exited", "", "", "frmMain", null);
                 this.Close();
 
                 Environment.Exit(0);
@@ -1962,6 +1963,7 @@ namespace zVirtualDesktop
         {
             try
             {
+                Log.LogEvent("Settings Saved", "Icon Theme", cmbIcons.Text, "frmMain", null);
                 StringBuilder settings = new StringBuilder();
                 settings.Append("IconTheme;" + cmbIcons.Text);
                 //Get the URI for each desktop
@@ -2094,21 +2096,25 @@ namespace zVirtualDesktop
 
         private void mnuBuyBeer_Click(object sender, EventArgs e)
         {
+            Log.LogEvent("Buy me a beer", "", "", "frmMain", null);
             System.Diagnostics.Process.Start("https://www.paypal.me/MichaelZomparelli/5");
         }
 
         private void mnuBuyLunch_Click(object sender, EventArgs e)
         {
+            Log.LogEvent("Buy me lunch", "", "", "frmMain", null);
             System.Diagnostics.Process.Start("https://www.paypal.me/MichaelZomparelli/10");
         }
 
         private void mnuBuyDinner_Click(object sender, EventArgs e)
         {
+            Log.LogEvent("Buy me dinner", "", "", "frmMain", null);
             System.Diagnostics.Process.Start("https://www.paypal.me/MichaelZomparelli/25");
         }
 
         private void mnuBuyLamborghini_Click(object sender, EventArgs e)
         {
+            Log.LogEvent("Buy me a Lamborghini", "", "", "frmMain", null);
             DialogResult result = MessageBox.Show("OMG for real!?", ":D", MessageBoxButtons.YesNo);
             if(result == DialogResult.Yes)
             {
@@ -2153,14 +2159,17 @@ namespace zVirtualDesktop
         {
             if (e.Button == MouseButtons.Left)
             {
-                var sim = new InputSimulator();
-                sim.Keyboard.ModifiedKeyStroke(VirtualKeyCode.LWIN, VirtualKeyCode.TAB);
-                sim = null;
+                try
+                {
+                    var sim = new InputSimulator();
+                    sim.Keyboard.ModifiedKeyStroke(VirtualKeyCode.LWIN, VirtualKeyCode.TAB);
+                    sim = null;
+                }
+                catch { }
+                
             }
             
         }
-
-     
     }
 }
 

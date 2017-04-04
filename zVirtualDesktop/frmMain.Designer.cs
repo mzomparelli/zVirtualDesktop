@@ -257,7 +257,7 @@
             this.mnuSettings,
             this.mnuExit});
             this.SystemTrayMenu.Name = "SystemTrayMenu";
-            this.SystemTrayMenu.Size = new System.Drawing.Size(285, 235);
+            this.SystemTrayMenu.Size = new System.Drawing.Size(285, 202);
             this.SystemTrayMenu.Opening += new System.ComponentModel.CancelEventHandler(this.SystemTrayMenu_Opening);
             // 
             // donateToolStripMenuItem
