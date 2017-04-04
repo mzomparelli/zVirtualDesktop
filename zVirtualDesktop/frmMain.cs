@@ -11,6 +11,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsDesktop;
+using WindowsInput;
+using WindowsInput.Native;
 
 namespace zVirtualDesktop
 {
@@ -856,6 +858,7 @@ namespace zVirtualDesktop
                 ExitClicked = true;
                 this.Close();
 
+                Environment.Exit(0);
             }
             catch (Exception ex)
             {
@@ -2145,6 +2148,19 @@ namespace zVirtualDesktop
             picMax.Visible = true;
             Log.LogEvent("Easter Egg Found", "", "", "frmMain", null);
         }
+
+        private void SystemTray_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                var sim = new InputSimulator();
+                sim.Keyboard.ModifiedKeyStroke(VirtualKeyCode.LWIN, VirtualKeyCode.TAB);
+                sim = null;
+            }
+            
+        }
+
+     
     }
 }
 

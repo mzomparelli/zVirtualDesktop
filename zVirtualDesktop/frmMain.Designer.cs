@@ -204,6 +204,8 @@
             this.txtWallpaper1 = new System.Windows.Forms.TextBox();
             this.lblWallpaper1 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.lblEasterEgg = new System.Windows.Forms.Label();
+            this.picMax = new System.Windows.Forms.PictureBox();
             this.tabPinnedApps = new System.Windows.Forms.TabPage();
             this.lstPinnedApps = new System.Windows.Forms.ListBox();
             this.mnuPinnedApps = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -212,17 +214,15 @@
             this.lstPinnedWindows = new System.Windows.Forms.ListBox();
             this.btnOK = new System.Windows.Forms.Button();
             this.lblVersion = new System.Windows.Forms.Label();
-            this.picMax = new System.Windows.Forms.PictureBox();
-            this.lblEasterEgg = new System.Windows.Forms.Label();
             this.SystemTrayMenu.SuspendLayout();
             this.tabs.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picMax)).BeginInit();
             this.tabPinnedApps.SuspendLayout();
             this.mnuPinnedApps.SuspendLayout();
             this.tabPinnedWindows.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picMax)).BeginInit();
             this.SuspendLayout();
             // 
             // lblGithub
@@ -241,6 +241,7 @@
             this.SystemTray.Icon = ((System.Drawing.Icon)(resources.GetObject("SystemTray.Icon")));
             this.SystemTray.Text = "zVirtualDesktop";
             this.SystemTray.Visible = true;
+            this.SystemTray.MouseClick += new System.Windows.Forms.MouseEventHandler(this.SystemTray_MouseClick);
             // 
             // SystemTrayMenu
             // 
@@ -256,7 +257,7 @@
             this.mnuSettings,
             this.mnuExit});
             this.SystemTrayMenu.Name = "SystemTrayMenu";
-            this.SystemTrayMenu.Size = new System.Drawing.Size(285, 202);
+            this.SystemTrayMenu.Size = new System.Drawing.Size(285, 235);
             this.SystemTrayMenu.Opening += new System.ComponentModel.CancelEventHandler(this.SystemTrayMenu_Opening);
             // 
             // donateToolStripMenuItem
@@ -318,6 +319,7 @@
             // 
             // mnuGithub
             // 
+            this.mnuGithub.Image = ((System.Drawing.Image)(resources.GetObject("mnuGithub.Image")));
             this.mnuGithub.Name = "mnuGithub";
             this.mnuGithub.Size = new System.Drawing.Size(284, 30);
             this.mnuGithub.Text = "GitHub zVirtualDesktop";
@@ -988,6 +990,25 @@
             this.tabPage3.Text = "System Tray Icons";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // lblEasterEgg
+            // 
+            this.lblEasterEgg.Location = new System.Drawing.Point(575, 118);
+            this.lblEasterEgg.Name = "lblEasterEgg";
+            this.lblEasterEgg.Size = new System.Drawing.Size(30, 23);
+            this.lblEasterEgg.TabIndex = 2;
+            this.lblEasterEgg.Click += new System.EventHandler(this.lblEasterEgg_Click);
+            // 
+            // picMax
+            // 
+            this.picMax.Image = global::zVirtualDesktop.Properties.Resources.Max;
+            this.picMax.Location = new System.Drawing.Point(108, 86);
+            this.picMax.Name = "picMax";
+            this.picMax.Size = new System.Drawing.Size(399, 353);
+            this.picMax.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.picMax.TabIndex = 1;
+            this.picMax.TabStop = false;
+            this.picMax.Visible = false;
+            // 
             // tabPinnedApps
             // 
             this.tabPinnedApps.Controls.Add(this.lstPinnedApps);
@@ -1069,25 +1090,6 @@
             this.lblVersion.TabIndex = 19;
             this.lblVersion.Text = "Version Placeholder";
             // 
-            // picMax
-            // 
-            this.picMax.Image = global::zVirtualDesktop.Properties.Resources.Max;
-            this.picMax.Location = new System.Drawing.Point(108, 86);
-            this.picMax.Name = "picMax";
-            this.picMax.Size = new System.Drawing.Size(399, 353);
-            this.picMax.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.picMax.TabIndex = 1;
-            this.picMax.TabStop = false;
-            this.picMax.Visible = false;
-            // 
-            // lblEasterEgg
-            // 
-            this.lblEasterEgg.Location = new System.Drawing.Point(575, 118);
-            this.lblEasterEgg.Name = "lblEasterEgg";
-            this.lblEasterEgg.Size = new System.Drawing.Size(30, 23);
-            this.lblEasterEgg.TabIndex = 2;
-            this.lblEasterEgg.Click += new System.EventHandler(this.lblEasterEgg_Click);
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -1099,7 +1101,8 @@
             this.Controls.Add(this.tabs);
             this.Controls.Add(this.btnApply);
             this.Controls.Add(this.btnCancel);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1110,10 +1113,10 @@
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picMax)).EndInit();
             this.tabPinnedApps.ResumeLayout(false);
             this.mnuPinnedApps.ResumeLayout(false);
             this.tabPinnedWindows.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picMax)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

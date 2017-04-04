@@ -111,6 +111,29 @@
     <Compile Include="VirtualDestopFunctions.cs" />
     <Compile Include="Wallpaper.cs" />
     <Compile Include="Window.cs" />
+    <Compile Include="WindowsInput\IInputDeviceStateAdaptor.cs" />
+    <Compile Include="WindowsInput\IInputMessageDispatcher.cs" />
+    <Compile Include="WindowsInput\IInputSimulator.cs" />
+    <Compile Include="WindowsInput\IKeyboardSimulator.cs" />
+    <Compile Include="WindowsInput\IMouseSimulator.cs" />
+    <Compile Include="WindowsInput\InputBuilder.cs" />
+    <Compile Include="WindowsInput\InputSimulator.cs" />
+    <Compile Include="WindowsInput\KeyboardSimulator.cs" />
+    <Compile Include="WindowsInput\MouseButton.cs" />
+    <Compile Include="WindowsInput\MouseSimulator.cs" />
+    <Compile Include="WindowsInput\NATIVE\HARDWAREINPUT.cs" />
+    <Compile Include="WindowsInput\NATIVE\INPUT.cs" />
+    <Compile Include="WindowsInput\NATIVE\InputType.cs" />
+    <Compile Include="WindowsInput\NATIVE\KEYBDINPUT.cs" />
+    <Compile Include="WindowsInput\NATIVE\KeyboardFlag.cs" />
+    <Compile Include="WindowsInput\NATIVE\MouseFlag.cs" />
+    <Compile Include="WindowsInput\NATIVE\MOUSEINPUT.cs" />
+    <Compile Include="WindowsInput\NATIVE\MOUSEKEYBDHARDWAREINPUT.cs" />
+    <Compile Include="WindowsInput\NATIVE\NativeMethods.cs" />
+    <Compile Include="WindowsInput\NATIVE\VirtualKeyCode.cs" />
+    <Compile Include="WindowsInput\NATIVE\XButton.cs" />
+    <Compile Include="WindowsInput\WindowsInputDeviceStateAdaptor.cs" />
+    <Compile Include="WindowsInput\WindowsInputMessageDispatcher.cs" />
     <EmbeddedResource Include="frmHotKey.resx">
       <DependentUpon>frmHotKey.cs</DependentUpon>
     </EmbeddedResource>
@@ -160,6 +183,8 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="VirtualDesktop.nuspec" />
+    <None Include="WindowsInput\WindowsInput.nuspec" />
+    <None Include="WindowsInput\WindowsInput.snk" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
