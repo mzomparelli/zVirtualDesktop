@@ -962,7 +962,6 @@ namespace zVirtualDesktop
             try
             {
                 ExitClicked = true;
-                Log.LogEvent("App Exited", "", "", "frmMain", null);
                 this.Close();
 
                 Environment.Exit(0);
@@ -1017,6 +1016,13 @@ namespace zVirtualDesktop
                 }
 
             }
+            Log.LogEvent("Program Exited", "Icon Theme: " + cmbIcons.Text +
+                            "\r\nPin Count: " + Program.PinCount +
+                            "\r\nMove Count: " + Program.MoveCount +
+                            "\r\nNavigateCount: " + Program.NavigateCount, "", "frmMain", null);
+            SystemTray.Visible = false;
+            System.Threading.Thread.Sleep(3000);
+
         }
 
         private void timerGrabForegroundWindow_Tick(object sender, EventArgs e)
@@ -2072,7 +2078,9 @@ namespace zVirtualDesktop
         {
             try
             {
-                Log.LogEvent("Settings Saved", "Icon Theme", cmbIcons.Text, "frmMain", null);
+
+               
+
                 Program.IconTheme = cmbIcons.Text;
                 StringBuilder settings = new StringBuilder();
                 settings.Append("IconTheme;" + cmbIcons.Text);

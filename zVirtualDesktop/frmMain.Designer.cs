@@ -1068,6 +1068,8 @@
             this.lstPinnedWindows.FormattingEnabled = true;
             this.lstPinnedWindows.HorizontalScrollbar = true;
             this.lstPinnedWindows.ItemHeight = 20;
+            this.lstPinnedWindows.Items.AddRange(new object[] {
+            "This feature is still in development"});
             this.lstPinnedWindows.Location = new System.Drawing.Point(3, 3);
             this.lstPinnedWindows.Name = "lstPinnedWindows";
             this.lstPinnedWindows.Size = new System.Drawing.Size(618, 490);

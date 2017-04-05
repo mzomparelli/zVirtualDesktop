@@ -262,6 +262,7 @@ namespace zVirtualDesktop
             try
             {
                 VirtualDesktop.PinWindow(hWnd);
+                Program.PinCount++;
             }
             catch (Exception ex)
             {
@@ -277,6 +278,7 @@ namespace zVirtualDesktop
             try
             {
                 VirtualDesktop.PinApplication(AppID);
+                Program.PinCount++;
             }
             catch (Exception ex)
             {
@@ -364,7 +366,7 @@ namespace zVirtualDesktop
                         }
                     }
                     VirtualDesktopHelper.MoveToDesktop(hWnd, current);
-
+                    Program.MoveCount++;
                 }
 
             }
@@ -439,7 +441,7 @@ namespace zVirtualDesktop
                     current.Switch();
                     //give focus to the window we followed
                     this.SetAsForegroundWindow();
-
+                    Program.NavigateCount++;
                 }
 
             }

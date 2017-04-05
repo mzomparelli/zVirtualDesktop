@@ -35,6 +35,7 @@ namespace zVirtualDesktop
                 }
 
                 Program.MainForm.SetPinnedAppListBox();
+           
             }
             catch (Exception ex)
             {
@@ -262,7 +263,7 @@ namespace zVirtualDesktop
                     Window w = Window.Taskbar();
                     w.SetAsForegroundWindow();
                     current.Switch();
-
+                    Program.NavigateCount++;
                 }
 
             }

@@ -34,6 +34,10 @@ namespace zVirtualDesktop
 
         public static string IconTheme = "White Box";
 
+        public static int PinCount = 0;
+        public static int MoveCount = 0;
+        public static int NavigateCount = 0;
+
         
     }
 }
