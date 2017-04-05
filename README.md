@@ -2,6 +2,9 @@
 Windows 10 Virtual Desktop Hotkeys and System Tray Icon  
 I'm no longer doing official GitHub releases so please use the download button to get the most recent version
 
+[![Download](https://github.com/mzomparelli/zVirtualDesktop/blob/master/download.png?raw=true)](https://github.com/mzomparelli/zVirtualDesktop/blob/master/zVirtualDesktop/bin/Release/zVirtualDesktop.zip?raw=true)
+[![Donate](https://github.com/mzomparelli/zVirtualDesktop/blob/master/Donate1.png?raw=true)](https://www.paypal.me/MichaelZomparelli/)
+
 __Supported Versions__  
 I'm currently running this app perfectly on version:  
 Version 1607 (OS Build 14393.953)  
@@ -10,9 +13,6 @@ If the app doesn't work for you then I would first try getting Windows Updates a
 
 To find your version simply press <kbd>WIN</kbd>+<kbd>R</kbd> then type WinVer into the box and hit enter.
 
-
-[![Download](https://github.com/mzomparelli/zVirtualDesktop/blob/master/download.png?raw=true)](https://github.com/mzomparelli/zVirtualDesktop/blob/master/zVirtualDesktop/bin/Release/zVirtualDesktop.zip?raw=true)
-[![Donate](https://github.com/mzomparelli/zVirtualDesktop/blob/master/Donate1.png?raw=true)](https://www.paypal.me/MichaelZomparelli/)
 
 __Features:__
 
