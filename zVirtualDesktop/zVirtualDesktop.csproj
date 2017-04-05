@@ -66,8 +66,8 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Internal\Hook\MouseHookEventArgs.cs" />
-    <Compile Include="VirtualDesktop\ApplicationHelper.cs" />
-    <Compile Include="VirtualDesktop\COMProgram.cs" />
+    <Compile Include="Internal\VirtualDesktop\ApplicationHelper.cs" />
+    <Compile Include="Internal\VirtualDesktop\COMProgram.cs" />
     <Compile Include="frmHotKey.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,21 +86,21 @@
     <Compile Include="Internal\Disposable.cs" />
     <Compile Include="Internal\RawWindow.cs" />
     <Compile Include="Internal\TransparentWindow.cs" />
-    <Compile Include="VirtualDesktop\Interop\CLSID.cs" />
-    <Compile Include="VirtualDesktop\Interop\ComObjects.cs" />
-    <Compile Include="VirtualDesktop\Interop\HResult.cs" />
-    <Compile Include="VirtualDesktop\Interop\IApplicationView.cs" />
-    <Compile Include="VirtualDesktop\Interop\IApplicationViewCollection.cs" />
-    <Compile Include="VirtualDesktop\Interop\IObjectArray.cs" />
-    <Compile Include="VirtualDesktop\Interop\IServiceProvider.cs" />
-    <Compile Include="VirtualDesktop\Interop\IVirtualDesktop.cs" />
-    <Compile Include="VirtualDesktop\Interop\IVirtualDesktopManager.cs" />
-    <Compile Include="VirtualDesktop\Interop\IVirtualDesktopManagerInternal.cs" />
-    <Compile Include="VirtualDesktop\Interop\IVirtualDesktopNotification.cs" />
-    <Compile Include="VirtualDesktop\Interop\IVirtualDesktopNotificationService.cs" />
-    <Compile Include="VirtualDesktop\Interop\IVirtualDesktopPinnedApps.cs" />
-    <Compile Include="VirtualDesktop\Interop\NativeMethods.cs" />
-    <Compile Include="VirtualDesktop\Interop\VirtualDesktopManagerInternal.cs" />
+    <Compile Include="Internal\VirtualDesktop\Interop\CLSID.cs" />
+    <Compile Include="Internal\VirtualDesktop\Interop\ComObjects.cs" />
+    <Compile Include="Internal\VirtualDesktop\Interop\HResult.cs" />
+    <Compile Include="Internal\VirtualDesktop\Interop\IApplicationView.cs" />
+    <Compile Include="Internal\VirtualDesktop\Interop\IApplicationViewCollection.cs" />
+    <Compile Include="Internal\VirtualDesktop\Interop\IObjectArray.cs" />
+    <Compile Include="Internal\VirtualDesktop\Interop\IServiceProvider.cs" />
+    <Compile Include="Internal\VirtualDesktop\Interop\IVirtualDesktop.cs" />
+    <Compile Include="Internal\VirtualDesktop\Interop\IVirtualDesktopManager.cs" />
+    <Compile Include="Internal\VirtualDesktop\Interop\IVirtualDesktopManagerInternal.cs" />
+    <Compile Include="Internal\VirtualDesktop\Interop\IVirtualDesktopNotification.cs" />
+    <Compile Include="Internal\VirtualDesktop\Interop\IVirtualDesktopNotificationService.cs" />
+    <Compile Include="Internal\VirtualDesktop\Interop\IVirtualDesktopPinnedApps.cs" />
+    <Compile Include="Internal\VirtualDesktop\Interop\NativeMethods.cs" />
+    <Compile Include="Internal\VirtualDesktop\Interop\VirtualDesktopManagerInternal.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\Zomp\Reference.cs">
@@ -108,39 +108,39 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="VirtualDesktop\VirtualDesktop.cs" />
-    <Compile Include="VirtualDesktop\VirtualDesktop.static.cs" />
-    <Compile Include="VirtualDesktop\VirtualDesktop.static.notification.cs" />
-    <Compile Include="VirtualDesktop\VirtualDesktop.static.pin.cs" />
-    <Compile Include="VirtualDesktop\VirtualDesktopChangedEventArgs.cs" />
-    <Compile Include="VirtualDesktop\VirtualDesktopDestroyEventArgs.cs" />
-    <Compile Include="VirtualDesktop\VirtualDesktopHelper.cs" />
-    <Compile Include="VirtualDesktop\VirtualDestopFunctions.cs" />
+    <Compile Include="Internal\VirtualDesktop\VirtualDesktop.cs" />
+    <Compile Include="Internal\VirtualDesktop\VirtualDesktop.static.cs" />
+    <Compile Include="Internal\VirtualDesktop\VirtualDesktop.static.notification.cs" />
+    <Compile Include="Internal\VirtualDesktop\VirtualDesktop.static.pin.cs" />
+    <Compile Include="Internal\VirtualDesktop\VirtualDesktopChangedEventArgs.cs" />
+    <Compile Include="Internal\VirtualDesktop\VirtualDesktopDestroyEventArgs.cs" />
+    <Compile Include="Internal\VirtualDesktop\VirtualDesktopHelper.cs" />
+    <Compile Include="Internal\VirtualDesktop\VirtualDestopFunctions.cs" />
     <Compile Include="Internal\Wallpaper.cs" />
     <Compile Include="Internal\Window.cs" />
-    <Compile Include="WindowsInput\IInputDeviceStateAdaptor.cs" />
-    <Compile Include="WindowsInput\IInputMessageDispatcher.cs" />
-    <Compile Include="WindowsInput\IInputSimulator.cs" />
-    <Compile Include="WindowsInput\IKeyboardSimulator.cs" />
-    <Compile Include="WindowsInput\IMouseSimulator.cs" />
-    <Compile Include="WindowsInput\InputBuilder.cs" />
-    <Compile Include="WindowsInput\InputSimulator.cs" />
-    <Compile Include="WindowsInput\KeyboardSimulator.cs" />
-    <Compile Include="WindowsInput\MouseButton.cs" />
-    <Compile Include="WindowsInput\MouseSimulator.cs" />
-    <Compile Include="WindowsInput\NATIVE\HARDWAREINPUT.cs" />
-    <Compile Include="WindowsInput\NATIVE\INPUT.cs" />
-    <Compile Include="WindowsInput\NATIVE\InputType.cs" />
-    <Compile Include="WindowsInput\NATIVE\KEYBDINPUT.cs" />
-    <Compile Include="WindowsInput\NATIVE\KeyboardFlag.cs" />
-    <Compile Include="WindowsInput\NATIVE\MouseFlag.cs" />
-    <Compile Include="WindowsInput\NATIVE\MOUSEINPUT.cs" />
-    <Compile Include="WindowsInput\NATIVE\MOUSEKEYBDHARDWAREINPUT.cs" />
-    <Compile Include="WindowsInput\NATIVE\NativeMethods.cs" />
-    <Compile Include="WindowsInput\NATIVE\VirtualKeyCode.cs" />
-    <Compile Include="WindowsInput\NATIVE\XButton.cs" />
-    <Compile Include="WindowsInput\WindowsInputDeviceStateAdaptor.cs" />
-    <Compile Include="WindowsInput\WindowsInputMessageDispatcher.cs" />
+    <Compile Include="Internal\WindowsInput\IInputDeviceStateAdaptor.cs" />
+    <Compile Include="Internal\WindowsInput\IInputMessageDispatcher.cs" />
+    <Compile Include="Internal\WindowsInput\IInputSimulator.cs" />
+    <Compile Include="Internal\WindowsInput\IKeyboardSimulator.cs" />
+    <Compile Include="Internal\WindowsInput\IMouseSimulator.cs" />
+    <Compile Include="Internal\WindowsInput\InputBuilder.cs" />
+    <Compile Include="Internal\WindowsInput\InputSimulator.cs" />
+    <Compile Include="Internal\WindowsInput\KeyboardSimulator.cs" />
+    <Compile Include="Internal\WindowsInput\MouseButton.cs" />
+    <Compile Include="Internal\WindowsInput\MouseSimulator.cs" />
+    <Compile Include="Internal\WindowsInput\NATIVE\HARDWAREINPUT.cs" />
+    <Compile Include="Internal\WindowsInput\NATIVE\INPUT.cs" />
+    <Compile Include="Internal\WindowsInput\NATIVE\InputType.cs" />
+    <Compile Include="Internal\WindowsInput\NATIVE\KEYBDINPUT.cs" />
+    <Compile Include="Internal\WindowsInput\NATIVE\KeyboardFlag.cs" />
+    <Compile Include="Internal\WindowsInput\NATIVE\MouseFlag.cs" />
+    <Compile Include="Internal\WindowsInput\NATIVE\MOUSEINPUT.cs" />
+    <Compile Include="Internal\WindowsInput\NATIVE\MOUSEKEYBDHARDWAREINPUT.cs" />
+    <Compile Include="Internal\WindowsInput\NATIVE\NativeMethods.cs" />
+    <Compile Include="Internal\WindowsInput\NATIVE\VirtualKeyCode.cs" />
+    <Compile Include="Internal\WindowsInput\NATIVE\XButton.cs" />
+    <Compile Include="Internal\WindowsInput\WindowsInputDeviceStateAdaptor.cs" />
+    <Compile Include="Internal\WindowsInput\WindowsInputMessageDispatcher.cs" />
     <EmbeddedResource Include="frmHotKey.resx">
       <DependentUpon>frmHotKey.cs</DependentUpon>
     </EmbeddedResource>
@@ -192,9 +192,9 @@
     <None Include="Service References\Zomp\ZompWebService5.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="VirtualDesktop\VirtualDesktop.nuspec" />
-    <None Include="WindowsInput\WindowsInput.nuspec" />
-    <None Include="WindowsInput\WindowsInput.snk" />
+    <None Include="Internal\VirtualDesktop\VirtualDesktop.nuspec" />
+    <None Include="Internal\WindowsInput\WindowsInput.nuspec" />
+    <None Include="Internal\WindowsInput\WindowsInput.snk" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
