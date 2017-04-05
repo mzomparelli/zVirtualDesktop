@@ -242,6 +242,7 @@
             this.SystemTray.Text = "zVirtualDesktop";
             this.SystemTray.Visible = true;
             this.SystemTray.MouseClick += new System.Windows.Forms.MouseEventHandler(this.SystemTray_MouseClick);
+            this.SystemTray.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.SystemTray_MouseDoubleClick);
             // 
             // SystemTrayMenu
             // 
@@ -334,7 +335,6 @@
             this.mnuSwitchDesktop.Name = "mnuSwitchDesktop";
             this.mnuSwitchDesktop.Size = new System.Drawing.Size(284, 30);
             this.mnuSwitchDesktop.Text = "Switch Desktop";
-            this.mnuSwitchDesktop.Click += new System.EventHandler(this.mnuSwitchDesktop_Click);
             // 
             // mnuGatherWindows
             // 

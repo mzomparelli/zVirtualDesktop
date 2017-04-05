@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO.IsolatedStorage;
 using System.Linq;
 using System.Threading.Tasks;
@@ -19,11 +20,11 @@ namespace zVirtualDesktop
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(MainForm = new frmMain());
-            
+
         }
 
         public static frmMain MainForm;
-        public const string version = "1.0.11";
+        public const string version = "1.0.12";
 
         public static IsolatedStorageFile storage = IsolatedStorageFile.GetUserStoreForAssembly();
         public static List<string> WallpaperStyles = new List<string>();
@@ -34,10 +35,37 @@ namespace zVirtualDesktop
 
         public static string IconTheme = "White Box";
 
+        //stats to log
         public static int PinCount = 0;
         public static int MoveCount = 0;
         public static int NavigateCount = 0;
 
-        
+
+
+        private static List<Window> GetAllWindows()
+        {
+            Process[] procs = Process.GetProcesses();
+            IntPtr hWnd;
+            List<Window> wins = new List<Window>();
+
+            foreach (Process proc in procs)
+            {
+                if ((hWnd = proc.MainWindowHandle) != IntPtr.Zero)
+                {
+                    Window win = new Window(hWnd);
+                    IEnumerable<Window> window = from Window w in wins
+                                                 where w.Handle == win.Handle
+                                                 select w;
+                    if (window.Count() < 1)
+                    {
+                        wins.Add(win);
+                    }
+                }
+            }
+
+            return wins;
+        }
+
+
     }
 }
