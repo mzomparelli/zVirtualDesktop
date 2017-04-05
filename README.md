@@ -1,5 +1,8 @@
-# zVirtualDesktop
+# zVirtualDesktop  
+Windows 10 Virtual Desktop Hotkeys and System Tray Icon  
+I'm no longer doing official GitHub releases so please use the download button to get the most recent version
 
+__Supported Versions__  
 I'm currently running this app perfectly on version:  
 Version 1607 (OS Build 14393.953)  
 
@@ -10,12 +13,6 @@ To find your version simply press <kbd>WIN</kbd>+<kbd>R</kbd> then type WinVer i
 
 [![Download](https://github.com/mzomparelli/zVirtualDesktop/blob/master/download.png?raw=true)](https://github.com/mzomparelli/zVirtualDesktop/blob/master/zVirtualDesktop/bin/Release/zVirtualDesktop.zip?raw=true)
 [![Donate](https://github.com/mzomparelli/zVirtualDesktop/blob/master/Donate1.png?raw=true)](https://www.paypal.me/MichaelZomparelli/)
-
-Using the download button here gets you the most recent pre-release build
-
-Windows 10 Virtual Desktop Hotkeys and System Tray Icon
-
-No external libraries. Simply download the single .EXE and add to your startup folder.
 
 __Features:__
 
@@ -68,4 +65,4 @@ Specify the style for each (Center, Stretch, or Tile).
 [![Download](https://github.com/mzomparelli/zVirtualDesktop/blob/master/download.png?raw=true)](https://github.com/mzomparelli/zVirtualDesktop/blob/master/zVirtualDesktop/bin/Release/zVirtualDesktop.zip?raw=true)
 [![Donate](https://github.com/mzomparelli/zVirtualDesktop/blob/master/Donate1.png?raw=true)](https://www.paypal.me/MichaelZomparelli/)
 
-Using the download button here gets you the most recent pre-release build
+
