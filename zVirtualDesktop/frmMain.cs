@@ -18,8 +18,6 @@ namespace zVirtualDesktop
 {
     public partial class frmMain : Form
     { 
-        
-
         private bool ExitClicked = false;
         private Timer timerSystemTray = new Timer();
 
@@ -86,9 +84,7 @@ namespace zVirtualDesktop
 
             //    regClsidKey.Close();
             //}
-        }
-
-       
+        }       
 
         #region "Event Handlers"
 
@@ -1035,11 +1031,9 @@ namespace zVirtualDesktop
 
         #endregion
 
-        #endregion
+        #endregion        
 
-        
-
-#region "Wallpaper"
+        #region "Wallpaper"
         private Wallpaper.Style GetWallpaperStyle(string desktop)
         {
             switch (desktop)
@@ -2084,8 +2078,6 @@ namespace zVirtualDesktop
 
         #endregion
 
-
-
         #region "Tabs"
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -2309,6 +2301,7 @@ namespace zVirtualDesktop
         private void lblEasterEgg_Click(object sender, EventArgs e)
         {
             picMax.Visible = true;
+            lblEasterEgg.Text = "X";
             Log.LogEvent("Easter Egg Found", "", "", "frmMain", null);
         }
 

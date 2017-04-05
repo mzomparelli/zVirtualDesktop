@@ -998,6 +998,7 @@
             this.lblEasterEgg.Name = "lblEasterEgg";
             this.lblEasterEgg.Size = new System.Drawing.Size(30, 23);
             this.lblEasterEgg.TabIndex = 2;
+            this.lblEasterEgg.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblEasterEgg.Click += new System.EventHandler(this.lblEasterEgg_Click);
             // 
             // picMax
