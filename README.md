@@ -51,7 +51,7 @@ The icons indicate which desktop you are viewing.
 ![](https://github.com/mzomparelli/zVirtualDesktop/blob/master/Icons.png?raw=true)
 
 Make your own icons and attach them to an issue then I will add them to the program.  
-[How to submit icons files](https://github.com/mzomparelli/zVirtualDesktop/issues/23)
+[How to submit icon files](https://github.com/mzomparelli/zVirtualDesktop/issues/23)
 
 Download the current icons and alter ones you like. I ask that you come up with a name for your icon theme.  
 [Icons.zip](https://github.com/mzomparelli/zVirtualDesktop/blob/master/zVirtualDesktop/Icons.zip?raw=true)
