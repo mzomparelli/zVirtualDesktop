@@ -44,9 +44,9 @@ public sealed class Wallpaper
         }
         catch (Exception ex)
         {
-            if (tries < 5)
+            if (tries < 40)
             {
-                System.Threading.Thread.Sleep(1000);
+                System.Threading.Thread.Sleep(100);
                 goto TryAgain;
             }
             else
