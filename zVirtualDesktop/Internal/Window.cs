@@ -90,8 +90,12 @@ namespace zVirtualDesktop
                     return GetDesktopNumber(VirtualDesktop.FromHwnd(hWnd).Id);
                 }catch(Exception ex)
                 {
-                    Log.LogEvent("Exception", "", "", "Window", ex);
-                    return 0;
+                    Log.LogEvent("Exception", 
+                                 "Handle: " + hWnd.ToString() + 
+                                 "\r\nCaption: " + this.Caption, 
+                                 "", 
+                                 "Window", ex);
+                    return 1;
                 }
                 
             }

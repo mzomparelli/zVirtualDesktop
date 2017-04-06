@@ -217,7 +217,7 @@ namespace zVirtualDesktop
                     IntPtr hWnd = window.Key;
                     string title = window.Value;
                     Window win = new Window(hWnd);
-                    if(win.DesktopNumber != VirtualDestopFunctions.GetCurrentDesktopNumber())
+                    if(win.DesktopNumber != VirtualDestopFunctions.GetCurrentDesktopNumber() && win.IsDesktop == false)
                     {
                         win.MoveToDesktop(VirtualDestopFunctions.GetCurrentDesktopNumber());
                     }
