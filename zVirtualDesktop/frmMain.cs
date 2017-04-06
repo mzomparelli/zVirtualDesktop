@@ -20,7 +20,7 @@ namespace zVirtualDesktop
     public partial class frmMain : Form
     { 
         private bool ExitClicked = false;
-        private Timer timerCheckVersion = new Timer();
+        public Timer timerCheckVersion = new Timer();
 
         public frmMain()
         {

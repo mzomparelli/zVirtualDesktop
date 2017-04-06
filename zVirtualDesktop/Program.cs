@@ -78,6 +78,7 @@ namespace zVirtualDesktop
 
         public static void CheckVersion()
         {
+            MainForm.timerCheckVersion.Enabled = false;
             string latestversion = GetCurrentVersion();
             if (latestversion != "" && latestversion != version)
             {
@@ -90,6 +91,7 @@ namespace zVirtualDesktop
                     Environment.Exit(0);
                 }
             }
+            MainForm.timerCheckVersion.Enabled = true;
         }
 
         public static string GetCurrentVersion()
