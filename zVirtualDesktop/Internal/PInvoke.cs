@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VB = Microsoft.VisualBasic;
 
 namespace zVirtualDesktop
 {
@@ -43,6 +44,9 @@ namespace zVirtualDesktop
         public static extern int ProgIDFromCLSID([In] ref Guid clsid,
         [MarshalAs(UnmanagedType.LPWStr)] out string lplpszProgID);
 
+        [DllImport("user32.dll", SetLastError = true)]
+        public static extern bool GetWindowRect(IntPtr hwnd, out RECT lpRect);
+
         public static string GetCurrentProcessAppId()
         {
             string appId = string.Empty;
@@ -50,6 +54,256 @@ namespace zVirtualDesktop
             return appId;
         }
 
+
+        /// <summary>
+        ///     The MoveWindow function changes the position and dimensions of the specified window. For a top-level window, the
+        ///     position and dimensions are relative to the upper-left corner of the screen. For a child window, they are relative
+        ///     to the upper-left corner of the parent window's client area.
+        ///     <para>
+        ///     Go to https://msdn.microsoft.com/en-us/library/windows/desktop/ms633534%28v=vs.85%29.aspx for more
+        ///     information
+        ///     </para>
+        /// </summary>
+        /// <param name="hWnd">C++ ( hWnd [in]. Type: HWND )<br /> Handle to the window.</param>
+        /// <param name="X">C++ ( X [in]. Type: int )<br />Specifies the new position of the left side of the window.</param>
+        /// <param name="Y">C++ ( Y [in]. Type: int )<br /> Specifies the new position of the top of the window.</param>
+        /// <param name="nWidth">C++ ( nWidth [in]. Type: int )<br />Specifies the new width of the window.</param>
+        /// <param name="nHeight">C++ ( nHeight [in]. Type: int )<br />Specifies the new height of the window.</param>
+        /// <param name="bRepaint">
+        ///     C++ ( bRepaint [in]. Type: bool )<br />Specifies whether the window is to be repainted. If this
+        ///     parameter is TRUE, the window receives a message. If the parameter is FALSE, no repainting of any kind occurs. This
+        ///     applies to the client area, the nonclient area (including the title bar and scroll bars), and any part of the
+        ///     parent window uncovered as a result of moving a child window.
+        /// </param>
+        /// <returns>
+        ///     If the function succeeds, the return value is nonzero.<br /> If the function fails, the return value is zero.
+        ///     <br />To get extended error information, call GetLastError.
+        /// </returns>
+        [DllImport("user32.dll", SetLastError = true)]
+        public static extern bool MoveWindow(IntPtr hWnd, int X, int Y, int nWidth, int nHeight, bool bRepaint);
+
+
+        [DllImport("user32.dll", SetLastError = false)]
+        public static extern IntPtr GetDesktopWindow();
+
+        /// <summary>
+        ///     Enumerates all top-level windows on the screen by passing the handle to each window, in turn, to an
+        ///     application-defined callback function. <see cref="EnumWindows" /> continues until the last top-level window is
+        ///     enumerated or the callback function returns FALSE.
+        ///     <para>
+        ///     Go to https://msdn.microsoft.com/en-us/library/windows/desktop/ms633497%28v=vs.85%29.aspx for more
+        ///     information
+        ///     </para>
+        /// </summary>
+        /// <param name="lpEnumFunc">
+        ///     C++ ( lpEnumFunc [in]. Type: WNDENUMPROC )<br />A pointer to an application-defined callback
+        ///     function. For more information, see
+        ///     <see cref="!:https://msdn.microsoft.com/en-us/library/windows/desktop/ms633498%28v=vs.85%29.aspx">EnumWindowsProc</see>
+        ///     .
+        /// </param>
+        /// <param name="lParam">
+        ///     C++ ( lParam [in]. Type: LPARAM )<br />An application-defined value to be passed to the callback
+        ///     function.
+        /// </param>
+        /// <returns>
+        ///     <c>true</c> if the return value is nonzero., <c>false</c> otherwise. If the function fails, the return value
+        ///     is zero.<br />To get extended error information, call GetLastError.<br />If <see cref="EnumWindowsProc" /> returns
+        ///     zero, the return value is also zero. In this case, the callback function should call SetLastError to obtain a
+        ///     meaningful error code to be returned to the caller of <see cref="EnumWindows" />.
+        /// </returns>
+        /// <remarks>
+        ///     The <see cref="EnumWindows" /> function does not enumerate child windows, with the exception of a few
+        ///     top-level windows owned by the system that have the WS_CHILD style.
+        ///     <para />
+        ///     This function is more reliable than calling the
+        ///     <see cref="!:https://msdn.microsoft.com/en-us/library/windows/desktop/ms633515%28v=vs.85%29.aspx">GetWindow</see>
+        ///     function in a loop. An application that calls the GetWindow function to perform this task risks being caught in an
+        ///     infinite loop or referencing a handle to a window that has been destroyed.<br />Note For Windows 8 and later,
+        ///     EnumWindows enumerates only top-level windows of desktop apps.
+        /// </remarks>
+        [DllImport("user32.dll")]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        public static extern bool EnumWindows(EnumWindowsProc lpEnumFunc, IntPtr lParam);
+
+        public delegate bool EnumWindowsProc(IntPtr hwnd, IntPtr lParam);
+
+        [DllImport("user32.dll")]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        public static extern bool EnumChildWindows(IntPtr hwndParent, EnumWindowsProc lpEnumFunc, IntPtr lParam);
+
+        [DllImport("user32.dll")]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        public static extern bool EnumThreadWindows(uint dwThreadId, EnumThreadDelegate lpfn, IntPtr lParam);
+
+        public delegate bool EnumThreadDelegate(IntPtr Hwnd, IntPtr lParam);
+
+        [DllImport("user32.dll", SetLastError = true)]
+        public static extern uint GetWindowThreadProcessId(IntPtr hWnd, out uint lpdwProcessId);
+
+        [DllImport("user32.dll", SetLastError = true, CharSet = CharSet.Auto)]
+        public static extern int GetClassName(IntPtr hWnd, StringBuilder lpClassName, int nMaxCount);
+
+
+
+        /// <summary>
+        ///     Copies the text of the specified window's title bar (if it has one) into a buffer. If the specified window is a
+        ///     control, the text of the control is copied. However, GetWindowText cannot retrieve the text of a control in another
+        ///     application.
+        ///     <para>
+        ///     Go to https://msdn.microsoft.com/en-us/library/windows/desktop/ms633520%28v=vs.85%29.aspx  for more
+        ///     information
+        ///     </para>
+        /// </summary>
+        /// <param name="hWnd">
+        ///     C++ ( hWnd [in]. Type: HWND )<br />A <see cref="IntPtr" /> handle to the window or control containing the text.
+        /// </param>
+        /// <param name="lpString">
+        ///     C++ ( lpString [out]. Type: LPTSTR )<br />The <see cref="StringBuilder" /> buffer that will receive the text. If
+        ///     the string is as long or longer than the buffer, the string is truncated and terminated with a null character.
+        /// </param>
+        /// <param name="nMaxCount">
+        ///     C++ ( nMaxCount [in]. Type: int )<br /> Should be equivalent to
+        ///     <see cref="StringBuilder.Length" /> after call returns. The <see cref="int" /> maximum number of characters to copy
+        ///     to the buffer, including the null character. If the text exceeds this limit, it is truncated.
+        /// </param>
+        /// <returns>
+        ///     If the function succeeds, the return value is the length, in characters, of the copied string, not including
+        ///     the terminating null character. If the window has no title bar or text, if the title bar is empty, or if the window
+        ///     or control handle is invalid, the return value is zero. To get extended error information, call GetLastError.<br />
+        ///     This function cannot retrieve the text of an edit control in another application.
+        /// </returns>
+        /// <remarks>
+        ///     If the target window is owned by the current process, GetWindowText causes a WM_GETTEXT message to be sent to the
+        ///     specified window or control. If the target window is owned by another process and has a caption, GetWindowText
+        ///     retrieves the window caption text. If the window does not have a caption, the return value is a null string. This
+        ///     behavior is by design. It allows applications to call GetWindowText without becoming unresponsive if the process
+        ///     that owns the target window is not responding. However, if the target window is not responding and it belongs to
+        ///     the calling application, GetWindowText will cause the calling application to become unresponsive. To retrieve the
+        ///     text of a control in another process, send a WM_GETTEXT message directly instead of calling GetWindowText.<br />For
+        ///     an example go to
+        ///     <see cref="!:https://msdn.microsoft.com/en-us/library/windows/desktop/ms644928%28v=vs.85%29.aspx#sending">
+        ///     Sending a
+        ///     Message.
+        ///     </see>
+        /// </remarks>
+        [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
+        static extern int GetWindowText(IntPtr hWnd, StringBuilder lpString, int nMaxCount);
+
+
+        [StructLayout(LayoutKind.Sequential)]
+        public struct RECT
+        {
+            public int Left, Top, Right, Bottom;
+
+            public RECT(int left, int top, int right, int bottom)
+            {
+                Left = left;
+                Top = top;
+                Right = right;
+                Bottom = bottom;
+            }
+
+            public RECT(System.Drawing.Rectangle r) : this(r.Left, r.Top, r.Right, r.Bottom) { }
+
+            public int X
+            {
+                get { return Left; }
+                set { Right -= (Left - value); Left = value; }
+            }
+
+            public int Y
+            {
+                get { return Top; }
+                set { Bottom -= (Top - value); Top = value; }
+            }
+
+            public int Height
+            {
+                get { return Bottom - Top; }
+                set { Bottom = value + Top; }
+            }
+
+            public int Width
+            {
+                get { return Right - Left; }
+                set { Right = value + Left; }
+            }
+
+            public System.Drawing.Point Location
+            {
+                get { return new System.Drawing.Point(Left, Top); }
+                set { X = value.X; Y = value.Y; }
+            }
+
+            public System.Drawing.Size Size
+            {
+                get { return new System.Drawing.Size(Width, Height); }
+                set { Width = value.Width; Height = value.Height; }
+            }
+
+            public static implicit operator System.Drawing.Rectangle(RECT r)
+            {
+                return new System.Drawing.Rectangle(r.Left, r.Top, r.Width, r.Height);
+            }
+
+            public static implicit operator RECT(System.Drawing.Rectangle r)
+            {
+                return new RECT(r);
+            }
+
+            public static bool operator ==(RECT r1, RECT r2)
+            {
+                return r1.Equals(r2);
+            }
+
+            public static bool operator !=(RECT r1, RECT r2)
+            {
+                return !r1.Equals(r2);
+            }
+
+            public bool Equals(RECT r)
+            {
+                return r.Left == Left && r.Top == Top && r.Right == Right && r.Bottom == Bottom;
+            }
+
+            public override bool Equals(object obj)
+            {
+                if (obj is RECT)
+                    return Equals((RECT)obj);
+                else if (obj is System.Drawing.Rectangle)
+                    return Equals(new RECT((System.Drawing.Rectangle)obj));
+                return false;
+            }
+
+            public override int GetHashCode()
+            {
+                return ((System.Drawing.Rectangle)this).GetHashCode();
+            }
+
+            public override string ToString()
+            {
+                return string.Format(System.Globalization.CultureInfo.CurrentCulture, "{{Left={0},Top={1},Right={2},Bottom={3}}}", Left, Top, Right, Bottom);
+            }
+        }
+
+
+
+        static string StripNulls(string s)
+        {
+
+            if(VB.Strings.InStr(s, ChrW(0)) > 0)
+            {
+                s = VB.Strings.Left(s, VB.Strings.InStr(s, ChrW(0)) - 1);
+            }
+            return s;
+        }
+
+
+
+        public static string ChrW(int code)
+        {
+            return new string((char)code, 1);
+        }
 
 
 

@@ -280,5 +280,17 @@ namespace zVirtualDesktop
 
         }
 
+        public static int GetCurrentDesktopNumber()
+        {
+            try
+            {
+                return GetDesktopNumber(VirtualDesktop.Current.Id);
+            }
+            catch
+            {
+                return 1;
+            }
+        }
+
     }
 }

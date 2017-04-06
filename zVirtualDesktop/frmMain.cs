@@ -13,6 +13,7 @@ using System.Windows.Forms;
 using WindowsDesktop;
 using WindowsInput;
 using WindowsInput.Native;
+using zVirtualDesktop.Internal;
 
 namespace zVirtualDesktop
 {
@@ -159,10 +160,7 @@ namespace zVirtualDesktop
             }
         }
 
-        private void SystemTrayMenu_Opening(object sender, CancelEventArgs e)
-        {
-            CreateDesktopMenu();
-        }
+
 
         #endregion
 
@@ -177,6 +175,7 @@ namespace zVirtualDesktop
                     var sim = new InputSimulator();
                     sim.Keyboard.ModifiedKeyStroke(VirtualKeyCode.LWIN, VirtualKeyCode.TAB);
                     sim = null;
+
                 }
                 catch { }
 
@@ -211,22 +210,23 @@ namespace zVirtualDesktop
 
         private void mnuGatherWindows_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Issue #10 - Coming Soon! - Would you like to browse to the issue page now?", "Go to Issue Page?", MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes)
+            try
             {
-                System.Diagnostics.Process.Start("https://github.com/mzomparelli/zVirtualDesktop/issues/10");
+                foreach (KeyValuePair<IntPtr, string> window in Windows.GetOpenWindows())
+                {
+                    IntPtr hWnd = window.Key;
+                    string title = window.Value;
+                    Window win = new Window(hWnd);
+                    if(win.DesktopNumber != VirtualDestopFunctions.GetCurrentDesktopNumber())
+                    {
+                        win.MoveToDesktop(VirtualDestopFunctions.GetCurrentDesktopNumber());
+                    }
+                }
             }
-            //try
-            //{
-            //    List<Window> wins = GetAllWindows();
-            //    foreach (Window win in wins)
-            //    {
-            //        win.MoveToDesktop(GetDesktopNumber(VirtualDesktop.Current.Id));
-            //    }
-            //}catch(Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message);
-            //}
+            catch (Exception ex)
+            {
+                //MessageBox.Show(ex.Message);
+            }
 
         }
 
@@ -250,6 +250,11 @@ namespace zVirtualDesktop
                 Log.LogEvent("Exception", "", "", "frmMain", ex);
             }
 
+        }
+
+        private void SystemTrayMenu_Opening(object sender, CancelEventArgs e)
+        {
+            CreateDesktopMenu();
         }
 
         private void CreateDesktopMenu()

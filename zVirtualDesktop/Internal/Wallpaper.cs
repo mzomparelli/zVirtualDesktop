@@ -3,6 +3,7 @@ using System;
 using System.IO;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using zVirtualDesktop;
 
 public sealed class Wallpaper
 {
@@ -50,10 +51,7 @@ public sealed class Wallpaper
             }
             else
             {
-                MessageBox.Show("An error occured setting the background for the specified desktop. See additional details below." + Environment.NewLine + Environment.NewLine +
-                    ex.Message + Environment.NewLine +
-                    ex.Source + "::" + ex.TargetSite.Name + Environment.NewLine +
-                    tempPath);
+                Log.LogEvent("Exception", "", "", "Wallpaper", ex);
             }
             
         }finally

@@ -346,6 +346,7 @@ namespace zVirtualDesktop
                 int i = GetDesktopNumber(current.Id);
                 if (i == desktopNumber)
                 {
+                    VirtualDesktopHelper.MoveToDesktop(hWnd, current);
                     return;
                 }
                 else
@@ -374,9 +375,7 @@ namespace zVirtualDesktop
             {
                 if (this.Caption != "")
                 {
-                    MessageBox.Show("An error occured moving the specified window. See additional details below." + Environment.NewLine + Environment.NewLine +
-                                        ex.Message + Environment.NewLine +
-                                        ex.Source + "::" + ex.TargetSite.Name);
+                    
                 }
                 
                 Log.LogEvent("Exception", "", 

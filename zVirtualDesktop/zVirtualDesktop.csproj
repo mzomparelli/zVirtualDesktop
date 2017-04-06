@@ -42,6 +42,7 @@
     <ApplicationIcon>Icons\MAINICON.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -66,6 +67,8 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Internal\Hook\MouseHookEventArgs.cs" />
+    <Compile Include="Internal\NativeMethods.cs" />
+    <Compile Include="Internal\TopLevelWindowUtils.cs" />
     <Compile Include="Internal\VirtualDesktop\ApplicationHelper.cs" />
     <Compile Include="Internal\VirtualDesktop\COMProgram.cs" />
     <Compile Include="frmHotKey.cs">
@@ -101,6 +104,9 @@
     <Compile Include="Internal\VirtualDesktop\Interop\IVirtualDesktopPinnedApps.cs" />
     <Compile Include="Internal\VirtualDesktop\Interop\NativeMethods.cs" />
     <Compile Include="Internal\VirtualDesktop\Interop\VirtualDesktopManagerInternal.cs" />
+    <Compile Include="Internal\WindowHandle.cs" />
+    <Compile Include="Internal\WindowHandleExtensions.cs" />
+    <Compile Include="Internal\Windows.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\Zomp\Reference.cs">
