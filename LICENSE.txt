@@ -24,3 +24,7 @@ SOFTWARE.
 
 
 ===================================================================================
+
+
+Wrapper for API to Virtual Desktop on Windows 10.
+Copyright (c) 2015 Manato KAMEYA

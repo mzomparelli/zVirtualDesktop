@@ -60,6 +60,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAbout.Designer.cs">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </Compile>
     <Compile Include="Internal\Hook\CbtHook.cs" />
     <Compile Include="Internal\Hook\LocalWindowsHook.cs" />
     <Compile Include="Internal\Hook\MouseHook.cs" />
@@ -147,6 +153,9 @@
     <Compile Include="Internal\WindowsInput\NATIVE\XButton.cs" />
     <Compile Include="Internal\WindowsInput\WindowsInputDeviceStateAdaptor.cs" />
     <Compile Include="Internal\WindowsInput\WindowsInputMessageDispatcher.cs" />
+    <EmbeddedResource Include="frmAbout.resx">
+      <DependentUpon>frmAbout.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmHotKey.resx">
       <DependentUpon>frmHotKey.cs</DependentUpon>
     </EmbeddedResource>

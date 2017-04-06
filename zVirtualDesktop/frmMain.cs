@@ -2107,6 +2107,13 @@ namespace zVirtualDesktop
             System.Diagnostics.Process.Start("https://github.com/mzomparelli/zVirtualDesktop");
         }
 
+        private void lblEasterEgg_Click(object sender, EventArgs e)
+        {
+            picMax.Visible = true;
+            lblEasterEgg.Text = "X";
+            Log.LogEvent("Easter Egg Found", "", "", "frmMain", null);
+        }
+
         #region "Hotkey Tab"
 
         private void btnAddHotkey_Click(object sender, EventArgs e)
@@ -2303,12 +2310,7 @@ namespace zVirtualDesktop
 
         #endregion
 
-        private void lblEasterEgg_Click(object sender, EventArgs e)
-        {
-            picMax.Visible = true;
-            lblEasterEgg.Text = "X";
-            Log.LogEvent("Easter Egg Found", "", "", "frmMain", null);
-        }
+        
 
    
     }
