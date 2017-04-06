@@ -5,6 +5,13 @@ I'm no longer doing official GitHub releases so please use the download button t
 [![Download](https://github.com/mzomparelli/zVirtualDesktop/blob/master/download.png?raw=true)](https://github.com/mzomparelli/zVirtualDesktop/blob/master/zVirtualDesktop/bin/Release/zVirtualDesktop.zip?raw=true)
 [![Donate](https://github.com/mzomparelli/zVirtualDesktop/blob/master/Donate1.png?raw=true)](https://www.paypal.me/MichaelZomparelli/)
 
+__Installation__  
+This program uses `IsolatedStorage` for the settings file so in order for each new version to read the same settings file it is important that the program be unzipped and run from the same location everytime.
+
+It's preferable to run directly from the `Startup` folder
+
+You can get to the `Startup` folder by typing `Startup` into the address bar of any Windows Explorer window. Simply copy the file into that folder.
+
 __Supported Versions__  
 I'm currently running this app perfectly on version:  
 Version 1607 (OS Build 14393.953)  
