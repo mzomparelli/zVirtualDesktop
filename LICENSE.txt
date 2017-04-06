@@ -7,8 +7,10 @@ Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to use the 
 software without restrictions. If you upload a binary to another site, I ask that 
 you do your best to keep the file updated to the current version. This will provide 
-the best possible experience for the end user. If you like the utility please consider
-donating.
+the best possible experience for the end user. Additionally, this license must be
+included with all distributions of the software.
+
+If you like the utility please consider donating.
 
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
