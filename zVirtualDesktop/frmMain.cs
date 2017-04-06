@@ -20,7 +20,7 @@ namespace zVirtualDesktop
     public partial class frmMain : Form
     { 
         private bool ExitClicked = false;
-        private Timer timerSystemTray = new Timer();
+        private Timer timerCheckVersion = new Timer();
 
         public frmMain()
         {
@@ -103,9 +103,9 @@ namespace zVirtualDesktop
                 //{
                 //    VirtualDesktop.Create();
                 //}
-                timerSystemTray.Tick += timerGrabForegroundWindow_Tick;
-                timerSystemTray.Interval = 500;
-                timerSystemTray.Start();
+                timerCheckVersion.Tick += timerCheckVersion_Tick;
+                timerCheckVersion.Interval = 600000; //10 minutes
+                timerCheckVersion.Start();
 
             }
             catch (Exception ex)
@@ -148,16 +148,9 @@ namespace zVirtualDesktop
 
         }
 
-        private void timerGrabForegroundWindow_Tick(object sender, EventArgs e)
+        private void timerCheckVersion_Tick(object sender, EventArgs e)
         {
-            //Grab some windows
-            IntPtr hWnd = PInvoke.GetForegroundWindow();
-            IEnumerable<Window> window = from Window w in Program.windows where w.Handle == hWnd select w;
-            if (window.Count() < 1)
-            {
-                Window win = new Window(hWnd);
-                Program.windows.Add(win);
-            }
+            Program.CheckVersion();
         }
 
 

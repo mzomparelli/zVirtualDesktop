@@ -21,17 +21,7 @@ namespace zVirtualDesktop
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            //Check Version
-            string latestversion = GetCurrentVersion();
-            if(latestversion != "" && latestversion != version)
-            {
-                DialogResult result = MessageBox.Show("There is a newer version available. Would you like to download it now?", "New Version", MessageBoxButtons.YesNo);
-                if(result == DialogResult.Yes)
-                {
-                    System.Diagnostics.Process.Start("https://github.com/mzomparelli/zVirtualDesktop/blob/master/zVirtualDesktop/bin/Release/zVirtualDesktop.zip?raw=true");
-                    Environment.Exit(0);
-                }
-            }
+            CheckVersion();
 
             //Add Excluded windows
             ExcludedWindowCaptions.Add("ASUS_Check");
@@ -44,7 +34,7 @@ namespace zVirtualDesktop
         }
 
         public static frmMain MainForm;
-        public const string version = "1.0.18";
+        public const string version = "1.0.19";
 
         public static IsolatedStorageFile storage = IsolatedStorageFile.GetUserStoreForAssembly();
         public static List<string> WallpaperStyles = new List<string>();
@@ -86,7 +76,19 @@ namespace zVirtualDesktop
             return false;
         }
 
-
+        public static void CheckVersion()
+        {
+            string latestversion = GetCurrentVersion();
+            if (latestversion != "" && latestversion != version)
+            {
+                DialogResult result = MessageBox.Show("There is a newer version available. Would you like to download it now?", "zVirtualDesktop", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    System.Diagnostics.Process.Start("https://github.com/mzomparelli/zVirtualDesktop/blob/master/zVirtualDesktop/bin/Release/zVirtualDesktop.zip?raw=true");
+                    Environment.Exit(0);
+                }
+            }
+        }
 
         public static string GetCurrentVersion()
         {
