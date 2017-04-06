@@ -434,6 +434,12 @@ namespace zVirtualDesktop.Zomp {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SendEmail", ReplyAction="http://tempuri.org/IService/SendEmailResponse")]
         System.Threading.Tasks.Task SendEmailAsync(zVirtualDesktop.Zomp.EmailData d);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/zVD_CurrentVersion", ReplyAction="http://tempuri.org/IService/zVD_CurrentVersionResponse")]
+        string zVD_CurrentVersion();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/zVD_CurrentVersion", ReplyAction="http://tempuri.org/IService/zVD_CurrentVersionResponse")]
+        System.Threading.Tasks.Task<string> zVD_CurrentVersionAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -493,6 +499,14 @@ namespace zVirtualDesktop.Zomp {
         
         public System.Threading.Tasks.Task SendEmailAsync(zVirtualDesktop.Zomp.EmailData d) {
             return base.Channel.SendEmailAsync(d);
+        }
+        
+        public string zVD_CurrentVersion() {
+            return base.Channel.zVD_CurrentVersion();
+        }
+        
+        public System.Threading.Tasks.Task<string> zVD_CurrentVersionAsync() {
+            return base.Channel.zVD_CurrentVersionAsync();
         }
     }
 }

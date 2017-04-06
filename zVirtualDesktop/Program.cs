@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO.IsolatedStorage;
 using System.Linq;
+using System.ServiceModel;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsDesktop;
@@ -19,6 +20,18 @@ namespace zVirtualDesktop
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            //Check Version
+            string latestversion = GetCurrentVersion();
+            if(latestversion != "" && latestversion != version)
+            {
+                DialogResult result = MessageBox.Show("There is a newer version available. Would you like to download it now?", "New Version", MessageBoxButtons.YesNo);
+                if(result == DialogResult.Yes)
+                {
+                    System.Diagnostics.Process.Start("https://github.com/mzomparelli/zVirtualDesktop/blob/master/zVirtualDesktop/bin/Release/zVirtualDesktop.zip?raw=true");
+                    Environment.Exit(0);
+                }
+            }
 
             //Add Excluded windows
             ExcludedWindowCaptions.Add("ASUS_Check");
@@ -71,6 +84,32 @@ namespace zVirtualDesktop
             }
 
             return false;
+        }
+
+
+
+        public static string GetCurrentVersion()
+        {
+            try
+            {
+                WSHttpBinding b = new WSHttpBinding(SecurityMode.Transport);
+                b.Security.Transport.ClientCredentialType = HttpClientCredentialType.None;
+                b.Name = "WSHttpBinding_IService";
+                EndpointAddress address = new EndpointAddress("https://zomp.co/z/ZompWebService.svc");
+
+                using (Zomp.ServiceClient z = new Zomp.ServiceClient(b, address))
+                {
+                    return z.zVD_CurrentVersion();
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                return "";
+            }
+
+
         }
 
     }

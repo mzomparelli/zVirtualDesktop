@@ -60,6 +60,12 @@
   <wsdl:message name="IService_SendEmail_OutputMessage">
     <wsdl:part name="parameters" element="tns:SendEmailResponse" />
   </wsdl:message>
+  <wsdl:message name="IService_zVD_CurrentVersion_InputMessage">
+    <wsdl:part name="parameters" element="tns:zVD_CurrentVersion" />
+  </wsdl:message>
+  <wsdl:message name="IService_zVD_CurrentVersion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:zVD_CurrentVersionResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService">
     <wsdl:operation name="UploadFile">
       <wsdl:input wsaw:Action="http://tempuri.org/IService/UploadFile" message="tns:IService_UploadFile_InputMessage" />
@@ -76,6 +82,10 @@
     <wsdl:operation name="SendEmail">
       <wsdl:input wsaw:Action="http://tempuri.org/IService/SendEmail" message="tns:IService_SendEmail_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService/SendEmailResponse" message="tns:IService_SendEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="zVD_CurrentVersion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/zVD_CurrentVersion" message="tns:IService_zVD_CurrentVersion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/zVD_CurrentVersionResponse" message="tns:IService_zVD_CurrentVersion_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="WSHttpBinding_IService" type="tns:IService">
@@ -110,6 +120,15 @@
     </wsdl:operation>
     <wsdl:operation name="SendEmail">
       <soap12:operation soapAction="http://tempuri.org/IService/SendEmail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="zVD_CurrentVersion">
+      <soap12:operation soapAction="http://tempuri.org/IService/zVD_CurrentVersion" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

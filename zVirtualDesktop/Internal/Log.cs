@@ -53,19 +53,19 @@ namespace zVirtualDesktop
             {
                 StackFrame stackframe1 = new StackFrame(1 + stackLevel);
                 ParameterInfo[] parameters = stackframe1.GetMethod().GetParameters();
-                string method = (moduleName + Convert.ToString("::")) + stackframe1.GetMethod().Name;
-                method = method + Convert.ToString("(");
+                string method = moduleName + "::" + stackframe1.GetMethod().Name;
+                method = method + "(";
                 int i = 0;
                 foreach (ParameterInfo param in parameters.OrderBy(p => p.Position))
                 {
-                    method = (method + param.ParameterType.Name + Convert.ToString(" ")) + param.Name;
+                    method = (method + param.ParameterType.Name + " ") + param.Name;
                     if (i < parameters.Count() - 1)
                     {
-                        method = method + Convert.ToString(", ");
+                        method = method + ", ";
                     }
                     i += 1;
                 }
-                method = method + Convert.ToString(")");
+                method = method + ")";
 
 
 
