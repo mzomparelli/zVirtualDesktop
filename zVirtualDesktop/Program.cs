@@ -19,12 +19,19 @@ namespace zVirtualDesktop
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            //Add Excluded windows
+            ExcludedWindowCaptions.Add("ASUS_Check");
+            ExcludedWindowCaptions.Add("NVIDIA GeForce Overlay");
+            ExcludedWindowCaptions.Add("zVirtualDesktop Settings");
+
+            //Run the main form
             Application.Run(MainForm = new frmMain());
 
         }
 
         public static frmMain MainForm;
-        public const string version = "1.0.14";
+        public const string version = "1.0.15";
 
         public static IsolatedStorageFile storage = IsolatedStorageFile.GetUserStoreForAssembly();
         public static List<string> WallpaperStyles = new List<string>();
@@ -32,6 +39,8 @@ namespace zVirtualDesktop
         public static List<Window> windows = new List<Window>();
         public static List<HotkeyItem> hotkeys = new List<HotkeyItem>();
         public static VirtualDesktop[] Desktops = VirtualDesktop.GetDesktops();
+        public static List<string> ExcludedWindowCaptions = new List<string>();
+        
 
         public static string IconTheme = "White Box";
 
@@ -51,7 +60,18 @@ namespace zVirtualDesktop
             }
         }
 
+        public static bool IsExcludedWindow(string caption)
+        {
+            foreach(string s in ExcludedWindowCaptions)
+            {
+                if(caption == s)
+                {
+                    return true;
+                }
+            }
 
+            return false;
+        }
 
     }
 }

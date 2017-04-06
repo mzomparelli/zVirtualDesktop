@@ -87,6 +87,10 @@ namespace zVirtualDesktop
             {
                 try
                 {
+                    if (Program.IsExcludedWindow(this.Caption))
+                    {
+                        return 1;
+                    }
                     return GetDesktopNumber(VirtualDesktop.FromHwnd(hWnd).Id);
                 }catch(Exception ex)
                 {
@@ -334,6 +338,10 @@ namespace zVirtualDesktop
         {
             try
             {
+                if(Program.IsExcludedWindow(this.Caption))
+                {
+                    return;
+                }
                 //Create addtional desktops if necessary
                 VirtualDesktop[] Desktops = VirtualDesktop.GetDesktops();
                 if (Desktops.Count() < desktopNumber)
