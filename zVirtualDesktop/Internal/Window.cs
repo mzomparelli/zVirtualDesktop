@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsDesktop;
+using WindowsDesktop.Internal;
 
 namespace zVirtualDesktop
 {
@@ -50,6 +51,7 @@ namespace zVirtualDesktop
         {
             this.hWnd = hWnd;
         }
+
 
 
         private IntPtr hWnd;
@@ -245,7 +247,12 @@ namespace zVirtualDesktop
                 MessageBox.Show("An error occured unpinning the specified window. See additional details below." + Environment.NewLine + Environment.NewLine +
                     ex.Message + Environment.NewLine +
                     ex.Source + "::" + ex.TargetSite.Name);
-                Log.LogEvent("Exception", "", "", "Window", ex);
+                Log.LogEvent("Exception", "",
+                             "Window Handle: " + this.Handle.ToString() + Environment.NewLine +
+                             "Window Caption: " + this.Caption + Environment.NewLine +
+                             "Application: " + this.ApplicationName,
+                             "Window",
+                             ex);
             }
         } 
 
@@ -260,7 +267,12 @@ namespace zVirtualDesktop
                 MessageBox.Show("An error occured unpinning the specified application. See additional details below." + Environment.NewLine + Environment.NewLine +
                     ex.Message + Environment.NewLine +
                     ex.Source + "::" + ex.TargetSite.Name);
-                Log.LogEvent("Exception", "", "", "Window", ex);
+                Log.LogEvent("Exception", "",
+                             "Window Handle: " + this.Handle.ToString() + Environment.NewLine +
+                             "Window Caption: " + this.Caption + Environment.NewLine +
+                             "Application: " + this.ApplicationName,
+                             "Window",
+                             ex);
 
             }
         }
@@ -277,7 +289,12 @@ namespace zVirtualDesktop
                 MessageBox.Show("An error occured pinning the specified window. See additional details below." + Environment.NewLine + Environment.NewLine +
                     ex.Message + Environment.NewLine +
                     ex.Source + "::" + ex.TargetSite.Name);
-                Log.LogEvent("Exception", "", "", "Window", ex);
+                Log.LogEvent("Exception", "",
+                             "Window Handle: " + this.Handle.ToString() + Environment.NewLine +
+                             "Window Caption: " + this.Caption + Environment.NewLine +
+                             "Application: " + this.ApplicationName,
+                             "Window",
+                             ex);
             }
         }
 
@@ -293,7 +310,12 @@ namespace zVirtualDesktop
                 MessageBox.Show("An error occured pinning the specified application. See additional details below." + Environment.NewLine + Environment.NewLine +
                     ex.Message + Environment.NewLine +
                     ex.Source + "::" + ex.TargetSite.Name);
-                Log.LogEvent("Exception", "", "", "Window", ex);
+                Log.LogEvent("Exception", "",
+                             "Window Handle: " + this.Handle.ToString() + Environment.NewLine +
+                             "Window Caption: " + this.Caption + Environment.NewLine +
+                             "Application: " + this.ApplicationName,
+                             "Window",
+                             ex);
             }
         }
 

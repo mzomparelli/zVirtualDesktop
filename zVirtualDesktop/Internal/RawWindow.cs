@@ -6,7 +6,7 @@ using WindowsDesktop.Interop;
 
 namespace WindowsDesktop.Internal
 {
-	internal abstract class RawWindow
+	public abstract class RawWindow
 	{
 		public string Name { get; set; }
 
