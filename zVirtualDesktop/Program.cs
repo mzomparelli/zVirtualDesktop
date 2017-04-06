@@ -34,7 +34,7 @@ namespace zVirtualDesktop
         }
 
         public static frmMain MainForm;
-        public const string version = "1.0.19";
+        public const string version = "1.0.20";
 
         public static IsolatedStorageFile storage = IsolatedStorageFile.GetUserStoreForAssembly();
         public static List<string> WallpaperStyles = new List<string>();
@@ -81,7 +81,9 @@ namespace zVirtualDesktop
             string latestversion = GetCurrentVersion();
             if (latestversion != "" && latestversion != version)
             {
-                DialogResult result = MessageBox.Show("There is a newer version available. Would you like to download it now?", "zVirtualDesktop", MessageBoxButtons.YesNo);
+                DialogResult result = MessageBox.Show("zVirtualDesktop " + latestversion + " is available.\r\n" +
+                    "You are currently running version "+ version + "\r\n" + 
+                    "Would you like to download it now?", "zVirtualDesktop", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
                 {
                     System.Diagnostics.Process.Start("https://github.com/mzomparelli/zVirtualDesktop/blob/master/zVirtualDesktop/bin/Release/zVirtualDesktop.zip?raw=true");
