@@ -32,17 +32,21 @@ __Navigate Desktops:__
 <kbd>WIN</kbd>+<kbd>CTRL</kbd>+<kbd>LEFT</kbd> or <kbd>RIGHT</kbd> - this is Windows Default
 
 Move Windows:  
+The foreground window will be the window which moves  
 <kbd>WIN</kbd>+<kbd>ALT</kbd>+<kbd>Numpad</kbd>  
 <kbd>WIN</kbd>+<kbd>ALT</kbd>+<kbd>LEFT</kbd> or <kbd>RIGHT</kbd>
 
 Move Window & Follow:  
+The foreground window will be the window which moves  
 <kbd>WIN</kbd>+<kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Numpad</kbd>  
 <kbd>WIN</kbd>+<kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>LEFT</kbd> or <kbd>RIGHT</kbd>
 
 Pin/Unpin Windows:  
+The foreground window will be the window which is pinned  
 <kbd>WIN</kbd>+<kbd>ALT</kbd>+<kbd>Z</kbd>
 
 Pin/Unpin Applications:  
+The foreground window will be the window which is pinned  
 <kbd>WIN</kbd>+<kbd>ALT</kbd>+<kbd>A</kbd>
 
 __What is the difference between pin app and pin window?__  
