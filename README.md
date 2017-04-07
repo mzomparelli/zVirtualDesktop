@@ -58,7 +58,9 @@ all chrome windows would show up on all desktops. This includes new chrome windo
 __System Tray Icon:__  
 -Choose from several sets of icons  
 -The icons indicate which desktop you are viewing  
--`Left-Click` the system tray icon to bring up the default Task View overlay.
+-`Left-Click` the system tray icon to bring up the default Task View overlay.  
+-`Double-Left-Click` the system tray icon to minimize all windows.  
+-`Right-Click` the system tray icon to bring up the main menu.
 
 ![](https://github.com/mzomparelli/zVirtualDesktop/blob/master/Icons.png?raw=true)
 
