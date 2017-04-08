@@ -74,7 +74,9 @@ __Wallpapers:__
 -Set a different wallpaper for each desktop  
 -Specify the style for each (Center, Stretch, or Tile)
 
-
+__Move All Windows__  
+I added a really handy feature which you can also create a hotkey for.
+This feature lets you move all open windows across all desktops to the currently active desktop.
 
 ![](https://github.com/mzomparelli/zVirtualDesktop/blob/master/Screenshot.png?raw=true)
 
