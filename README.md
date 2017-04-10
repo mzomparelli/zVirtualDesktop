@@ -2,7 +2,10 @@
 Windows 10 Virtual Desktop Hotkeys and System Tray Icon  
 I'm no longer doing official GitHub releases so please use the download button to get the most recent version
 
-You can now use the number keys above the letters in addtion to the numpad. You can also create any hotkey you'd like by overriding defaults
+__Change Log:__  
+v1.0.26
+--You can now use the number keys above the letters in addtion to the numpad  
+--You can also create any hotkey you'd like by overriding defaults  
 
 [![Download](https://github.com/mzomparelli/zVirtualDesktop/blob/master/download.png?raw=true)](http://zomp.co/Files.aspx?id=zVD)
 [![Donate](https://github.com/mzomparelli/zVirtualDesktop/blob/master/Donate1.png?raw=true)](https://www.paypal.me/MichaelZomparelli/)
