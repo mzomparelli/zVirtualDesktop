@@ -11,7 +11,7 @@ v1.0.26
 --You can now use the number keys above the letters in addtion to the numpad  
 --You can also create any hotkey you'd like by overriding defaults  
 --Open a file with a hotkey - any file (Application, image, text, and even a URL..just include the http:// or https:// when tryping it)  
---Use the "Disable Default" hotkey type to disable a Windows default hotkey (for me that is WIN+Left or Right)
+--Use the "Disable Default" hotkey type to disable a Windows default hotkey (for me that is WIN+Left or Right)  
 --Settings file has been redesigned. It's much better, but you have to redo your settings....sorry
 
 __Installation__  
