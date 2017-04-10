@@ -9,7 +9,8 @@ I'm no longer doing official GitHub releases so please use the download button t
 __Change Log:__  
 v1.0.26  
 --You can now use the number keys above the letters in addtion to the numpad  
---You can also create any hotkey you'd like by overriding defaults
+--You can also create any hotkey you'd like by overriding defaults  
+--Settings file has been redesigned. It's much better, but you have to redo your settings....sorry
 
 __Installation__  
 This program uses `IsolatedStorage` for the settings file so in order for each new version to read the same settings file it is important that the program be unzipped and run from the same location everytime.
