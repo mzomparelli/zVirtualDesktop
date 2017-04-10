@@ -3,7 +3,7 @@ Windows 10 Virtual Desktop Hotkeys and System Tray Icon
 I'm no longer doing official GitHub releases so please use the download button to get the most recent version
 
 __Change Log:__  
-v1.0.26
+v1.0.26  
 --You can now use the number keys above the letters in addtion to the numpad  
 --You can also create any hotkey you'd like by overriding defaults  
 
