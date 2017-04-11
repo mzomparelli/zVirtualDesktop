@@ -7,10 +7,17 @@ I'm no longer doing official GitHub releases so please use the download button t
 [![Donate](https://github.com/mzomparelli/zVirtualDesktop/blob/master/Donate1.png?raw=true)](https://www.paypal.me/MichaelZomparelli/)
 
 __Change Log:__  
+1.0.27  
+--Added new hotkey actions  
+--You can edit hotkeys now  
+--Add hotkey shortcuts to the menu items  
+--Sorry, I lost your settings again. I'm working on a new feature for making windows stick to a desktop and this is the reason.  
+--I'll try to prevent this from happening again  
+
 v1.0.26  
 --You can now use the number keys above the letters in addtion to the numpad  
 --You can also create any hotkey you'd like by overriding defaults  
---Open a file with a hotkey - any file (Application, image, text, and even a URL..just include the http:// or https:// when tryping it)  
+--Open a file with a hotkey - any file (Application, image, text, and even a URL..just include the http:// or https:// when typing it)  
 --Use the "Disable Default" hotkey type to disable a Windows default hotkey (for me that is WIN+Left or Right)  
 --Settings file has been redesigned. It's much better, but you have to redo your settings....sorry
 
