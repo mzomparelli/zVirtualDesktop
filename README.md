@@ -12,7 +12,7 @@ __Change Log:__
 --Fixed where some keys were duplicated or missing from the hotkey form drop down  
 --Made the drop down box on the hotkey form easier to find what you are looking for  
 --The above changes to the drop down on the hotkey form made previous settings incompatible with this version. I'm sooo sorry :(  
---Fixed WIN key sticking in keydown position when locking your machine  
+--Fixed WIN key sticking in keydown position when locking your machine with WIN+L  
 
 1.0.27  
 --Added new hotkey actions  
