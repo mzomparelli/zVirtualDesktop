@@ -25,23 +25,23 @@ __Navigate Desktops:__
 <kbd>WIN</kbd>+<kbd>CTRL</kbd>+<kbd>NumberKeys</kbd>  
 <kbd>WIN</kbd>+<kbd>CTRL</kbd>+<kbd>LEFT</kbd> or <kbd>RIGHT</kbd> - this is Windows Default and can be overridden to allow "Round Robin"   
 
-Move Windows:  
+__Move Windows:__  
 The foreground window will be the window which moves  
 <kbd>WIN</kbd>+<kbd>ALT</kbd>+<kbd>Numpad</kbd>  
 <kbd>WIN</kbd>+<kbd>ALT</kbd>+<kbd>NumberKeys</kbd>  
 <kbd>WIN</kbd>+<kbd>ALT</kbd>+<kbd>LEFT</kbd> or <kbd>RIGHT</kbd>
 
-Move Window & Follow:  
+__Move Window & Follow:__  
 The foreground window will be the window which moves  
 <kbd>WIN</kbd>+<kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Numpad</kbd>  
 <kbd>WIN</kbd>+<kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>NumberKeys</kbd>  
 <kbd>WIN</kbd>+<kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>LEFT</kbd> or <kbd>RIGHT</kbd>
 
-Pin/Unpin Windows:  
+__Pin/Unpin Windows:__  
 The foreground window will be the window which is pinned  
 <kbd>WIN</kbd>+<kbd>ALT</kbd>+<kbd>Z</kbd>
 
-Pin/Unpin Applications:  
+__Pin/Unpin Applications:__  
 The foreground window will be the window which is pinned  
 <kbd>WIN</kbd>+<kbd>ALT</kbd>+<kbd>A</kbd>
 
