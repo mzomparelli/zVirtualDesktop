@@ -6,27 +6,6 @@ I'm no longer doing official GitHub releases so please use the download button t
 [![Download](https://github.com/mzomparelli/zVirtualDesktop/blob/master/download.png?raw=true)](http://zomp.co/Files.aspx?id=zVD)
 [![Donate](https://github.com/mzomparelli/zVirtualDesktop/blob/master/Donate1.png?raw=true)](https://www.paypal.me/MichaelZomparelli/)
 
-__Change Log:__  
-1.0.28  
---Testing the fix for the international keyboard key AltGr  
---Fixed where some keys were duplicated or missing from the hotkey form drop down  
---Made the drop down box on the hotkey form easier to find what you are looking for  
---The above changes to the drop down on the hotkey form made previous settings incompatible with this version. I'm sooo sorry :(  
---Fixed WIN key sticking in keydown position when locking your machine with WIN+L  
-
-1.0.27  
---Added new hotkey actions  
---You can edit hotkeys now  
---Add hotkey shortcuts to the menu items  
---Sorry, I lost your settings again. I'm working on a new feature for making windows stick to a desktop and this is the reason.  
---I'll try to prevent this from happening again  
-
-v1.0.26  
---You can now use the number keys above the letters in addtion to the numpad  
---You can also create any hotkey you'd like by overriding defaults  
---Open a file with a hotkey - any file (Application, image, text, and even a URL..just include the http:// or https:// when typing it)  
---Use the "Disable Default" hotkey type to disable a Windows default hotkey (for me that is WIN+Left or Right)  
---Settings file has been redesigned. It's much better, but you have to redo your settings....sorry
 
 __Installation__  
 This program uses `IsolatedStorage` for the settings file so in order for each new version to read the same settings file it is important that the program be unzipped and run from the same location everytime.
@@ -34,15 +13,6 @@ This program uses `IsolatedStorage` for the settings file so in order for each n
 It's preferable to run directly from the `Startup` folder
 
 You can get to the `Startup` folder by typing `Startup` into the address bar of any Windows Explorer window. Simply copy the file into that folder.
-
-__Supported Versions__  
-I'm currently running this app perfectly on version:  
-Version 1607 (OS Build 14393.953)  
-
-If the app doesn't work for you then I would first try getting Windows Updates and if that doesn't work then please open an issue with your version.
-
-To find your version simply press <kbd>WIN</kbd>+<kbd>R</kbd> then type WinVer into the box and hit enter.
-
 
 __Features:__
 
