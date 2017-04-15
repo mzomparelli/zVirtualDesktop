@@ -55,8 +55,8 @@ __System Tray Icon:__
 -Choose from several sets of icons  
 -The icons indicate which desktop you are viewing  
 -`Left-Click` the system tray icon to bring up the default Task View overlay.  
--`Double-Left-Click` the system tray icon to minimize all windows.  
--`Right-Click` the system tray icon to bring up the main menu.
+-`Double-Left-Click` the system tray icon to show the settings form.  
+-`Right-Click` the system tray icon to bring up the main menu. You can donate to me in this menu since you love this app :)
 
 ![](https://github.com/mzomparelli/zVirtualDesktop/blob/master/Icons.png?raw=true)
 
