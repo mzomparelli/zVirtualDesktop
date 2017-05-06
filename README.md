@@ -69,13 +69,13 @@ Download the current icons and alter ones you like. I ask that you come up with 
 __Wallpapers:__  
 -Set a different wallpaper for each desktop  
 -Specify the style for each (Center, Stretch, or Tile)
-
+Z
 __Move All Windows__  
 I added a really handy feature which you can also create a hotkey for.
 This feature lets you move all open windows across all desktops to the currently active desktop.
 
-![](https://github.com/mzomparelli/zVirtualDesktop/blob/master/Screenshot.png?raw=true)
-![](https://github.com/mzomparelli/zVirtualDesktop/blob/master/DesktopView.png?raw=true)
+![](https://github.com/mzomparelli/zVirtualDesktop/blob/master/Screenshot1.png?raw=true)
+![](https://github.com/mzomparelli/zVirtualDesktop/blob/master/DesktopView1.png?raw=true)
 
 [![Download](https://github.com/mzomparelli/zVirtualDesktop/blob/master/download.png?raw=true)](http://zomp.co/Files.aspx?id=zVD)
 [![Donate](https://github.com/mzomparelli/zVirtualDesktop/blob/master/Donate1.png?raw=true)](https://www.paypal.me/MichaelZomparelli/)
