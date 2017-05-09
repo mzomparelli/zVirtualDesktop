@@ -75,7 +75,7 @@ I added a really handy feature which you can also create a hotkey for.
 This feature lets you move all open windows across all desktops to the currently active desktop.
 
 ![](https://github.com/mzomparelli/zVirtualDesktop/blob/master/Screenshot1.png?raw=true)
-![](https://github.com/mzomparelli/zVirtualDesktop/blob/master/DesktopView1.png?raw=true)
+![](https://github.com/mzomparelli/zVirtualDesktop/blob/master/DesktopView2.png?raw=true)
 
 [![Download](https://github.com/mzomparelli/zVirtualDesktop/blob/master/download.png?raw=true)](https://www.dropbox.com/s/vsjs8ov69xjbcvy/zVirtualDesktop.zip?dl=1)
 [![Donate](https://github.com/mzomparelli/zVirtualDesktop/blob/master/Donate1.png?raw=true)](https://www.paypal.me/MichaelZomparelli/)
