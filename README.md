@@ -1,6 +1,9 @@
 # zVirtualDesktop  
 Windows 10 Virtual Desktop Hotkeys and System Tray Icon  
 I'm no longer doing official GitHub releases so please use the download button to get the most recent version
+
+See what I'm working on via the Trello board.  
+https://trello.com/b/w6ZA0g5y/zvirtualdesktop    
   
 
 [![Download](https://github.com/mzomparelli/zVirtualDesktop/blob/master/download.png?raw=true)](https://zomp.co/files.aspx?id=zvd)
