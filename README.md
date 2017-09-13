@@ -5,6 +5,8 @@ I'm no longer doing official GitHub releases so please use the download button t
 See what I'm working on via the Trello board.  
 https://trello.com/b/w6ZA0g5y/zvirtualdesktop    
   
+On the Trello board you can vote and comment on items while monitoring the progress of zVD.  
+  
 
 [![Download](https://github.com/mzomparelli/zVirtualDesktop/blob/master/download.png?raw=true)](https://zomp.co/files.aspx?id=zvd)
 [![Donate](https://github.com/mzomparelli/zVirtualDesktop/blob/master/Donate1.png?raw=true)](https://www.paypal.me/MichaelZomparelli/)
