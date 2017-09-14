@@ -78,7 +78,7 @@ __Wallpapers:__
 __Desktop Names:__  
 -Rename desktops directly in DesktopView  
   
-![](https://github.com/mzomparelli/zVirtualDesktop/blob/master/DesktopNames.png?raw=true)  
+![](https://github.com/mzomparelli/zVirtualDesktop/blob/master/RenameDesktops.png?raw=true)  
 
 
 __Move All Windows__  
