@@ -9,7 +9,7 @@ https://trello.com/b/w6ZA0g5y/zvirtualdesktop
 On the Trello board you can vote and comment on items while monitoring the progress of zVD.  
   
 
-[![Download](https://github.com/mzomparelli/zVirtualDesktop/blob/master/download.png?raw=true)](https://www.dropbox.com/s/vsjs8ov69xjbcvy/zVirtualDesktop.zip?dl=1)
+[![Download](https://github.com/mzomparelli/zVirtualDesktop/blob/master/download.png?raw=true)](https://zomp.co/Files.aspx?id=zVD)
 
 
 It's preferable to run directly from the `Startup` folder
@@ -85,6 +85,6 @@ This feature lets you move all open windows across all desktops to the currently
 ![](https://github.com/mzomparelli/zVirtualDesktop/blob/master/Screenshot1.png?raw=true)
 ![](https://github.com/mzomparelli/zVirtualDesktop/blob/master/DesktopView2.png?raw=true)
 
-[![Download](https://github.com/mzomparelli/zVirtualDesktop/blob/master/download.png?raw=true)](https://www.dropbox.com/s/vsjs8ov69xjbcvy/zVirtualDesktop.zip?dl=1)
+[![Download](https://github.com/mzomparelli/zVirtualDesktop/blob/master/download.png?raw=true)](https://zomp.co/Files.aspx?id=zVD)
 
 
