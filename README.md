@@ -7,9 +7,9 @@ It's preferable to run directly from the `Startup` folder
 
 You can get to the `Startup` folder by typing `Startup` into the address bar of any Windows Explorer window. Simply copy the file into that folder.
 
-__Features:__
+# Features  
 
-__Hotkeys:__
+# Hotkeys:  
 
 Hotkeys are not limited to virtual desktops. You can choose any hotkey for any of the following actions  
   
@@ -80,7 +80,7 @@ only that window will be visible on all desktops. Any other chrome windows would
 stay on a single desktop. If you were to `pin application` on a chrome window then 
 all chrome windows would show up on all desktops. This includes new chrome windows.
 
-__System Tray Icon:__  
+# System Tray Icon  
 -Choose from several sets of icons  
 -The icons indicate which desktop you are viewing  
 -`Left-Click` the system tray icon to bring up the default Task View overlay.  
@@ -95,17 +95,17 @@ Make your own icons and attach them to an issue then I will add them to the prog
 Download the current icons and alter ones you like. I ask that you come up with a name for your icon theme.  
 [Icons.zip](https://github.com/mzomparelli/zVirtualDesktop/blob/master/zVirtualDesktop/Icons.zip?raw=true)
 
-__Wallpapers:__  
+# Wallpapers  
 -Set a different wallpaper for each desktop  
 -Specify the style for each (Center, Stretch, or Tile)
 
-__Desktop Names:__  
+# Desktop Names  
 -Rename desktops directly in DesktopView  
   
 ![](https://github.com/mzomparelli/zVirtualDesktop/blob/master/RenameDesktops.png?raw=true)  
 
 
-__Move All Windows__  
+# Move All Windows  
 I added a really handy feature which you can also create a hotkey for.
 This feature lets you move all open windows across all desktops to the currently active desktop.
 
