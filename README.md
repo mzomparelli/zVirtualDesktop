@@ -13,7 +13,7 @@ __Hotkeys:__
 
 Hotkeys are not limited to virtual desktops. You can choose any hotkey for any of the follwing actions  
   
---Disable Default  
+-Disable Default
 --Keyboard Application Menu  
 --Toggle Auto-hide Taskbar  
 --Open a File  
