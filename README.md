@@ -11,7 +11,7 @@ __Features:__
 
 __Hotkeys:__
 
-Hotkeys are not limited to virtual desktops. You can choose any hotkey for any of the follwing actions  
+Hotkeys are not limited to virtual desktops. You can choose any hotkey for any of the following actions  
   
 --Disable Default  
 --Keyboard Application Menu  
