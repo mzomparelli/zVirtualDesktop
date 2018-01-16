@@ -85,7 +85,7 @@ all chrome windows would show up on all desktops. This includes new chrome windo
 - The icons indicate which desktop you are viewing  
 - `Left-Click` the system tray icon to bring up the default Task View overlay.  
 - `Double-Left-Click` the system tray icon to show the settings form.  
-- `Right-Click` the system tray icon to bring up the main menu. You can donate to me in this menu since you love this app :)
+- `Right-Click` the system tray icon to bring up the main menu.
 
 ![](https://github.com/mzomparelli/zVirtualDesktop/blob/master/Icons.png?raw=true)
 
