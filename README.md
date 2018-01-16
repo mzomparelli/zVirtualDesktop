@@ -1,16 +1,7 @@
 # zVirtualDesktop  
-Windows 10 Virtual Desktop Hotkeys and System Tray Icon  
-  
-Help get zVirtualDesktop known by starring on GitHub and sharing with your friends and coworkers. I'd like to see zVD on the trending list at least once. That would be awesome!
-
-See what I'm working on via the Trello board.  
-https://trello.com/b/w6ZA0g5y/zvirtualdesktop    
-  
-On the Trello board you can vote and comment on items while monitoring the progress of zVD.  
-  
+Windows 10 Virtual Desktop Hotkeys and System Tray Icon    
 
 [![Download](https://github.com/mzomparelli/zVirtualDesktop/blob/master/download.png?raw=true)](https://zomp.co/Files.aspx?id=zVD)
-
 
 It's preferable to run directly from the `Startup` folder
 
@@ -20,7 +11,43 @@ __Features:__
 
 __Hotkeys:__
 
-These are the default hotkeys. You can configure these any way you'd like.
+Hotkeys are not limited to virtual desktops. You can choose any hotkey for any of the follwing actions  
+  
+Disable Default
+Keyboard Application Menu
+Toggle Auto-hide Taskbar
+Open a File
+Copy
+Paste
+Toggle Desktop View
+Toggle zVirtualDesktop Settings
+Show Window Menu
+Navigate to Desktop
+Move Window to Desktop
+Move Window to Desktop & Follow
+Pin/Unpin Window
+Pin/Unpin Application
+Bring All Windows Here
+Remove Empty Desktops
+Close Foreground Window
+Minimize Foreground Window
+Toggle Foreground Window Top Most
+Multimedia - Play/Pause
+Multimedia - Next
+Multimedia - Previous
+Volume Up
+Volume Down
+Volume Mute
+Browser Back
+Browser Forward
+Browser Reload
+ClipboardEx Copy
+ClipboardEx Paste
+ClipboardEx Clone
+Send Keystroke
+Send Text Entry  
+
+Below are the default hotkeys for virtual desktops. You can configure these any way you'd like.
 
 __Navigate Desktops:__  
 <kbd>WIN</kbd>+<kbd>CTRL</kbd>+<kbd>Numpad</kbd>  
