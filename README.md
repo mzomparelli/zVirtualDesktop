@@ -13,39 +13,39 @@ __Hotkeys:__
 
 Hotkeys are not limited to virtual desktops. You can choose any hotkey for any of the follwing actions  
   
-Disable Default
-Keyboard Application Menu
-Toggle Auto-hide Taskbar
-Open a File
-Copy
-Paste
-Toggle Desktop View
-Toggle zVirtualDesktop Settings
-Show Window Menu
-Navigate to Desktop
-Move Window to Desktop
-Move Window to Desktop & Follow
-Pin/Unpin Window
-Pin/Unpin Application
-Bring All Windows Here
-Remove Empty Desktops
-Close Foreground Window
-Minimize Foreground Window
-Toggle Foreground Window Top Most
-Multimedia - Play/Pause
-Multimedia - Next
-Multimedia - Previous
-Volume Up
-Volume Down
-Volume Mute
-Browser Back
-Browser Forward
-Browser Reload
-ClipboardEx Copy
-ClipboardEx Paste
-ClipboardEx Clone
-Send Keystroke
-Send Text Entry  
+--Disable Default  
+--Keyboard Application Menu  
+--Toggle Auto-hide Taskbar  
+--Open a File  
+--Copy  
+--Paste  
+--Toggle Desktop View  
+--Toggle zVirtualDesktop Settings  
+--Show Window Menu  
+--Navigate to Desktop  
+--Move Window to Desktop
+--Move Window to Desktop & Follow
+--Pin/Unpin Window
+--Pin/Unpin Application
+--Bring All Windows Here
+--Remove Empty Desktops
+--Close Foreground Window
+--Minimize Foreground Window
+--Toggle Foreground Window Top Most
+--Multimedia - Play/Pause
+--Multimedia - Next
+--Multimedia - Previous
+--Volume Up
+--Volume Down
+--Volume Mute
+--Browser Back
+--Browser Forward
+--Browser Reload
+--ClipboardEx Copy
+--ClipboardEx Paste
+--ClipboardEx Clone
+--Send Keystroke
+--Send Text Entry  
 
 Below are the default hotkeys for virtual desktops. You can configure these any way you'd like.
 
