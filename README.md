@@ -13,39 +13,39 @@ You can get to the `Startup` folder by typing `Startup` into the address bar of 
 
 Hotkeys are not limited to virtual desktops. You can choose any hotkey for any of the following actions  
   
---Disable Default  
---Keyboard Application Menu  
---Toggle Auto-hide Taskbar  
---Open a File  
---Copy  
---Paste  
---Toggle Desktop View  
---Toggle zVirtualDesktop Settings  
---Show Window Menu  
---Navigate to Desktop  
---Move Window to Desktop  
---Move Window to Desktop & Follow  
---Pin/Unpin Window  
---Pin/Unpin Application  
---Bring All Windows Here  
---Remove Empty Desktops  
---Close Foreground Window  
---Minimize Foreground Window  
---Toggle Foreground Window Top Most  
---Multimedia - Play/Pause  
---Multimedia - Next  
---Multimedia - Previous  
---Volume Up  
---Volume Down  
---Volume Mute  
---Browser Back  
---Browser Forward  
---Browser Reload  
---ClipboardEx Copy  
---ClipboardEx Paste  
---ClipboardEx Clone  
---Send Keystroke  
---Send Text Entry  
+- Disable Default  
+- Keyboard Application Menu  
+- Toggle Auto-hide Taskbar  
+- Open a File  
+- Copy  
+- Paste  
+- Toggle Desktop View  
+- Toggle zVirtualDesktop Settings  
+- Show Window Menu  
+- Navigate to Desktop  
+- Move Window to Desktop  
+- Move Window to Desktop & Follow  
+- Pin/Unpin Window  
+- Pin/Unpin Application  
+- Bring All Windows Here  
+- Remove Empty Desktops  
+- Close Foreground Window  
+- Minimize Foreground Window  
+- Toggle Foreground Window Top Most  
+- Multimedia - Play/Pause  
+- Multimedia - Next  
+- Multimedia - Previous  
+- Volume Up  
+- Volume Down  
+- Volume Mute  
+- Browser Back  
+- Browser Forward  
+- Browser Reload  
+- ClipboardEx Copy  
+- ClipboardEx Paste  
+- ClipboardEx Clone  
+- Send Keystroke  
+- Send Text Entry  
 
 Below are the default hotkeys for virtual desktops. You can configure these any way you'd like.
 
@@ -81,11 +81,11 @@ stay on a single desktop. If you were to `pin application` on a chrome window th
 all chrome windows would show up on all desktops. This includes new chrome windows.
 
 # System Tray Icon  
--Choose from several sets of icons  
--The icons indicate which desktop you are viewing  
--`Left-Click` the system tray icon to bring up the default Task View overlay.  
--`Double-Left-Click` the system tray icon to show the settings form.  
--`Right-Click` the system tray icon to bring up the main menu. You can donate to me in this menu since you love this app :)
+- Choose from several sets of icons  
+- The icons indicate which desktop you are viewing  
+- `Left-Click` the system tray icon to bring up the default Task View overlay.  
+- `Double-Left-Click` the system tray icon to show the settings form.  
+- `Right-Click` the system tray icon to bring up the main menu. You can donate to me in this menu since you love this app :)
 
 ![](https://github.com/mzomparelli/zVirtualDesktop/blob/master/Icons.png?raw=true)
 
@@ -96,11 +96,11 @@ Download the current icons and alter ones you like. I ask that you come up with 
 [Icons.zip](https://github.com/mzomparelli/zVirtualDesktop/blob/master/zVirtualDesktop/Icons.zip?raw=true)
 
 # Wallpapers  
--Set a different wallpaper for each desktop  
--Specify the style for each (Center, Stretch, or Tile)
+- Set a different wallpaper for each desktop  
+- Specify the style for each (Center, Stretch, or Tile)
 
 # Desktop Names  
--Rename desktops directly in DesktopView  
+- Rename desktops directly in DesktopView  
   
 ![](https://github.com/mzomparelli/zVirtualDesktop/blob/master/RenameDesktops.png?raw=true)  
 
