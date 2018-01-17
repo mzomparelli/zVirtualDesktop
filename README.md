@@ -86,7 +86,7 @@ all chrome windows would show up on all desktops. This includes new chrome windo
 - `Left-Click` the system tray icon to display or hide DesktopView.  
 - `Right-Click` the system tray icon to bring up the main menu.
 
-![](https://github.com/mzomparelli/zVirtualDesktop/blob/master/Icons.png?raw=true)
+![](https://github.com/mzomparelli/zVirtualDesktop/blob/master/zVDIcons.png?raw=true)
 
 Make your own icons and attach them to an issue then I will add them to the program.  
 [How to submit icon files](https://github.com/mzomparelli/zVirtualDesktop/issues/23)
@@ -99,17 +99,11 @@ Download the current icons and alter ones you like. I ask that you come up with 
 - Specify the style for each (Center, Stretch, or Tile)
 
 # Desktop Names  
-- Rename desktops directly in DesktopView  
-  
-![](https://github.com/mzomparelli/zVirtualDesktop/blob/master/RenameDesktops.png?raw=true)  
+- Rename desktops directly in DesktopView or in the settings window   
 
 
-# Move All Windows  
-I added a really handy feature which you can also create a hotkey for.
-This feature lets you move all open windows across all desktops to the currently active desktop.
-
-![](https://github.com/mzomparelli/zVirtualDesktop/blob/master/Screenshot1.png?raw=true)
-![](https://github.com/mzomparelli/zVirtualDesktop/blob/master/DesktopView2.png?raw=true)
+![](https://github.com/mzomparelli/zVirtualDesktop/blob/master/Screenshot2.png?raw=true)
+![](https://github.com/mzomparelli/zVirtualDesktop/blob/master/DesktopView3.png?raw=true)
 
 [![Download](https://github.com/mzomparelli/zVirtualDesktop/blob/master/download.png?raw=true)](https://zomp.co/Files.aspx?id=zVD)
 
