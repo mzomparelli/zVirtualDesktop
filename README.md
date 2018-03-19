@@ -13,7 +13,7 @@ You can get to the `Startup` folder by typing `Startup` into the address bar of 
 
 Hotkeys are not limited to virtual desktops. You can choose any hotkey for any of the following actions  
   
-- Disable Default  
+- Disable Default (if you wanted to disable a built-in Windows default and do nothing instead)  
 - Keyboard Application Menu  
 - Toggle Auto-hide Taskbar  
 - Open a File  
