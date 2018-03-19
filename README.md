@@ -16,12 +16,12 @@ Hotkeys are not limited to virtual desktops. You can choose any hotkey for any o
 - Disable Default (if you wanted to disable a built-in Windows default and do nothing instead)  
 - Keyboard Application Menu  
 - Toggle Auto-hide Taskbar  
-- Open a File  
+- Open a file, folder, or URL  
 - Copy  
 - Paste  
-- Toggle Desktop View  
+- Toggle Desktop View (a Task View replacement)  
 - Toggle zVirtualDesktop Settings  
-- Show Window Menu  
+- Show Window Menu (a handy window context menu)  
 - Navigate to Desktop  
 - Move Window to Desktop  
 - Move Window to Desktop & Follow  
