@@ -105,7 +105,7 @@ Download the current icons and alter ones you like. I ask that you come up with 
 - Rename desktops directly in DesktopView or in the settings window   
 
 
-![](https://github.com/mzomparelli/zVirtualDesktop/blob/master/zVD Settings.gif?raw=true)
+![](https://github.com/mzomparelli/zVirtualDesktop/blob/master/zVD_Settings.gif?raw=true)
 ![](https://github.com/mzomparelli/zVirtualDesktop/blob/master/DesktopView.gif?raw=true)
 
 [![Download](https://github.com/mzomparelli/zVirtualDesktop/blob/master/download.png?raw=true)](https://zomp.co/Files.aspx?id=zVD)
