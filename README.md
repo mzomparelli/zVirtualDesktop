@@ -106,7 +106,7 @@ Download the current icons and alter ones you like. I ask that you come up with 
 
 
 ![](https://github.com/mzomparelli/zVirtualDesktop/blob/master/Screenshot2.png?raw=true)
-![](https://github.com/mzomparelli/zVirtualDesktop/blob/master/DesktopView3.png?raw=true)
+![](https://github.com/mzomparelli/zVirtualDesktop/blob/master/DesktopView.gif?raw=true)
 
 [![Download](https://github.com/mzomparelli/zVirtualDesktop/blob/master/download.png?raw=true)](https://zomp.co/Files.aspx?id=zVD)
 
