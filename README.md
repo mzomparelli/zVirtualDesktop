@@ -1,7 +1,7 @@
 # zVirtualDesktop  
 Windows 10 Virtual Desktop Hotkeys and System Tray Icon    
 
-[![Download](https://github.com/mzomparelli/zVirtualDesktop/blob/master/download.png?raw=true)](https://zomp.co/Files.aspx?id=zVD)  
+[![Download](https://github.com/mzomparelli/zVirtualDesktop/blob/master/download.png?raw=true)](https://www.dropbox.com/s/vsjs8ov69xjbcvy/zVirtualDesktop.zip?dl=1)  
 
 [100% CLEAN award granted by Softpedia](http://www.softpedia.com/get/Desktop-Enhancements/Other-Desktop-Enhancements/zVirtualDesktop.shtml#status)  
 [![Softpedia](https://github.com/mzomparelli/zVirtualDesktop/blob/master/sp100clean.png?raw=true)](http://www.softpedia.com/get/Desktop-Enhancements/Other-Desktop-Enhancements/zVirtualDesktop.shtml#status)  
@@ -108,6 +108,6 @@ Download the current icons and alter ones you like. I ask that you come up with 
 ![](https://github.com/mzomparelli/zVirtualDesktop/blob/master/zVD_Settings.gif?raw=true)
 ![](https://github.com/mzomparelli/zVirtualDesktop/blob/master/DesktopView.gif?raw=true)
 
-[![Download](https://github.com/mzomparelli/zVirtualDesktop/blob/master/download.png?raw=true)](https://zomp.co/Files.aspx?id=zVD)
+[![Download](https://github.com/mzomparelli/zVirtualDesktop/blob/master/download.png?raw=true)](https://www.dropbox.com/s/vsjs8ov69xjbcvy/zVirtualDesktop.zip?dl=1)
 
 
