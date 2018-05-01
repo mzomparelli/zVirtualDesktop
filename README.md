@@ -1,11 +1,13 @@
 # zVirtualDesktop  
-Windows 10 Virtual Desktop Hotkeys and System Tray Icon    
+Windows 10 Virtual Desktop Hotkeys and System Tray Icon
+Compatible with Windows 10 1709 and earlie    
 
 [![Download](https://github.com/mzomparelli/zVirtualDesktop/blob/master/download.png?raw=true)](https://zomp.co/Files.aspx?id=zVD)  
-
+[Download version compatible with Windows 10 1803](https://zomp.co/Files.aspx?id=zVD1803)  
+_
 [100% CLEAN award granted by Softpedia](http://www.softpedia.com/get/Desktop-Enhancements/Other-Desktop-Enhancements/zVirtualDesktop.shtml#status)  
-[![Softpedia](https://github.com/mzomparelli/zVirtualDesktop/blob/master/sp100clean.png?raw=true)](http://www.softpedia.com/get/Desktop-Enhancements/Other-Desktop-Enhancements/zVirtualDesktop.shtml#status)  
 
+_  
 It's preferable to run directly from the `Startup` folder
 
 You can get to the `Startup` folder by typing `Startup` into the address bar of any Windows Explorer window. Simply copy the file into that folder.
