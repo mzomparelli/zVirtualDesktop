@@ -4,7 +4,8 @@ Compatible with Windows 10 1709 and earlie
 
 [![Download](https://github.com/mzomparelli/zVirtualDesktop/blob/master/download.png?raw=true)](https://zomp.co/Files.aspx?id=zVD)  
 [Download version compatible with Windows 10 1803](https://zomp.co/Files.aspx?id=zVD1803)  
-_
+_  
+_  
 [100% CLEAN award granted by Softpedia](http://www.softpedia.com/get/Desktop-Enhancements/Other-Desktop-Enhancements/zVirtualDesktop.shtml#status)  
 
 _  
