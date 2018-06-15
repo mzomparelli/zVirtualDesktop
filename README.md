@@ -1,6 +1,10 @@
 # zVirtualDesktop  
 Windows 10 Virtual Desktop Hotkeys and System Tray Icon  
 
+# This project is no longer an open source project
+It now have a trial period of one month since first run and you'll have to purchase a license to continue using zVirtualDesktop after that.
+For more informations see [this thread](https://github.com/mzomparelli/zVirtualDesktop/issues/142)
+
 
 [![Download](https://github.com/mzomparelli/zVirtualDesktop/blob/master/download.png?raw=true)](https://zomp.co/Files.aspx?id=zVD)  
 [Download version compatible with Windows 10 1709 and earlier](https://zomp.co/Files.aspx?id=zVD1709)  
