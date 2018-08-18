@@ -9,12 +9,6 @@ _
 [100% CLEAN award granted by Softpedia](http://www.softpedia.com/get/Desktop-Enhancements/Other-Desktop-Enhancements/zVirtualDesktop.shtml#status)  
 
 _  
-It's preferable to run directly from the `Startup` folder
-
-You can get to the `Startup` folder by typing `Startup` into the address bar of any Windows Explorer window. Simply copy the file into that folder.  
-  
-To be able to move elevated windows like Task Manager, zVD itself must be executed with elevated permissions. This means you run zVD as administrator.
-
 # Features  
 
 # Hotkeys:  
