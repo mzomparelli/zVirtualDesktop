@@ -3,7 +3,6 @@ Windows 10 Virtual Desktop Hotkeys and System Tray Icon
 
 
 [![Download](https://github.com/mzomparelli/zVirtualDesktop/blob/master/download.png?raw=true)](https://zomp.co/Files.aspx?id=zVD)  
-[Download version compatible with Windows 10 1709 and earlier](https://zomp.co/Files.aspx?id=zVD1709)  
 _  
 _  
 [100% CLEAN award granted by Softpedia](http://www.softpedia.com/get/Desktop-Enhancements/Other-Desktop-Enhancements/zVirtualDesktop.shtml#status)  
