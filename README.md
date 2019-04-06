@@ -1,7 +1,7 @@
 # zVirtualDesktop  
 Windows 10 Virtual Desktop Hotkeys and System Tray Icon  
 
-
+This is commercial software. All users will be given a 10 day trial and you will need to purchase a license to continuing using when the trial expires.  
 [![Download](https://github.com/mzomparelli/zVirtualDesktop/blob/master/download.png?raw=true)](https://zomp.co/Files.aspx?id=zVD)  
 _  
 _  
