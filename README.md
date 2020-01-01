@@ -108,4 +108,4 @@ Download the current icons and alter ones you like. I ask that you come up with 
 
 [![Download](https://github.com/mzomparelli/zVirtualDesktop/blob/master/download.png?raw=true)](https://zomp.co/Files.aspx?id=zVD)
 
-
+[![HitCount](http://hits.dwyl.io/mzomparelli/zVirtualDesktop.svg)](http://hits.dwyl.io/mzomparelli/zVirtualDesktop})
