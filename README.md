@@ -1,7 +1,3 @@
-# Raising $5k with a virtual 5k to help fight Alzheimer's disease  
-zVirtualDesktop is pledging all profits to this cause during the event. Please visit the site if you would like to donate or participate in the event.  
-[RunAgainstAlzheimers.org](https://runagainstalzheimers.org/)
-
 # zVirtualDesktop  
 Windows 10 Virtual Desktop Hotkeys and System Tray Icon  
 
