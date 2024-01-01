@@ -2,7 +2,7 @@
 Windows 10 Virtual Desktop Hotkeys and System Tray Icon  
 
 zVirtualDesktop is now a free utility. I am working on version 2 which will be free and open source.   
-[Download](https://1drv.ms/f/s!As6Ykrdw1TCG7OAX05AHPe7cCbdqiw?e=Qjw5tH)       
+[Download](https://1drv.ms/f/s!As6Ykrdw1TCG7OAXn3fEnmOgBKc5nA?e=akWEdl)      
 _  
 _  
 [100% CLEAN award granted by Softpedia](http://www.softpedia.com/get/Desktop-Enhancements/Other-Desktop-Enhancements/zVirtualDesktop.shtml#status)  
